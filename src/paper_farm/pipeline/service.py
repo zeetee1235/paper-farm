@@ -6,6 +6,7 @@ from pathlib import Path
 from paper_farm.config import Settings
 from paper_farm.exporters import MarkdownExporter
 from paper_farm.extractors import DocStructExtractorStub, SimpleTextExtractor
+from paper_farm.models.artifacts import CleanedArtifact, ExtractedArtifact
 from paper_farm.models.paper import PaperMetadata
 from paper_farm.normalizers import BasicTextNormalizer
 from paper_farm.storage.repository import PaperRepository
@@ -28,15 +29,24 @@ class PipelineService:
         self.exporter = MarkdownExporter()
 
     def ingest(self, pdf_path: Path) -> str:
-        """Register a paper from local PDF and persist metadata."""
+        """Register a paper from local PDF and persist metadata.
+
+        The paper ID is derived from SHA256 and ingestion is idempotent.
+        """
         if not pdf_path.exists():
             raise FileNotFoundError(f"PDF not found: {pdf_path}")
 
         digest = sha256_file(pdf_path)
         paper_id = digest[:12]
         self.repo.create_paper_dir(paper_id)
-        self.repo.save_original_pdf(paper_id, pdf_path)
 
+        paper_dir = self.repo.paper_dir(paper_id)
+        metadata_path = paper_dir / "metadata.json"
+        if metadata_path.exists():
+            logger.info("Paper %s already registered; reusing existing record", paper_id)
+            return paper_id
+
+        self.repo.save_original_pdf(paper_id, pdf_path)
         metadata = PaperMetadata(
             paper_id=paper_id,
             original_filename=pdf_path.name,
@@ -49,14 +59,17 @@ class PipelineService:
     def extract(self, paper_id: str) -> Path:
         """Run extraction stage and persist extracted.json."""
         pdf_path = self.repo.paper_dir(paper_id) / "original.pdf"
+        if not pdf_path.exists():
+            raise FileNotFoundError(
+                f"Missing source PDF for paper_id={paper_id}. "
+                "Run `paper-farm ingest <pdf_path>` first."
+            )
         extracted = self.extractor.extract(pdf_path)
         return self.repo.save_artifact(paper_id, "extracted.json", extracted)
 
     def normalize(self, paper_id: str) -> Path:
         """Run normalization stage and persist cleaned.json."""
         extracted_payload = self.repo.load_artifact(paper_id, "extracted.json")
-        from paper_farm.models.artifacts import ExtractedArtifact
-
         extracted = ExtractedArtifact(**extracted_payload)
         cleaned = self.normalizer.normalize(extracted)
         return self.repo.save_artifact(paper_id, "cleaned.json", cleaned)
@@ -64,8 +77,6 @@ class PipelineService:
     def summarize(self, paper_id: str, mode: str) -> Path:
         """Run summary stage in selected mode."""
         cleaned_payload = self.repo.load_artifact(paper_id, "cleaned.json")
-        from paper_farm.models.artifacts import CleanedArtifact
-
         cleaned = CleanedArtifact(**cleaned_payload)
         paper_dir = self.repo.paper_dir(paper_id)
 

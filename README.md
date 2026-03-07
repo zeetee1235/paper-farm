@@ -96,3 +96,16 @@ tests/
 - Add a real local LLM backend behind the summary interface.
 - Add an agent execution workflow that consumes `agent_package/` and produces PR-ready artifacts.
 
+## Next steps
+
+1. **Real DocStruct integration**
+   - Implement a production `DocStructExtractor` that returns rich structural blocks (title/authors/sections/tables/references) and register it as a selectable extractor backend.
+   - Preserve both raw DocStruct output and mapped `extracted.json` for debugging.
+
+2. **Real local LLM integration**
+   - Add a model-backed summary backend (e.g., llama.cpp/Ollama) behind the existing summary interface.
+   - Keep the current summary schema unchanged, and add prompt/version metadata to `summary.local.json` for reproducibility.
+
+3. **Git-based agent PR automation**
+   - Add a command that consumes `agent_package/`, runs an external coding/research agent, writes returned artifacts, and optionally opens a git commit + PR draft.
+   - Keep this opt-in and transparent (dry-run + explicit target branch/repo options).

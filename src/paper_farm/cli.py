@@ -1,5 +1,6 @@
 """CLI entrypoint for paper-farm."""
 
+from enum import Enum
 import json
 from pathlib import Path
 
@@ -10,6 +11,19 @@ from paper_farm.logging import configure_logging
 from paper_farm.pipeline import PipelineService
 
 app = typer.Typer(help="paper-farm: local-first paper ingestion and summarization MVP")
+
+
+class SummaryMode(str, Enum):
+    """Supported summary mode options."""
+
+    local = "local"
+    agent_pr = "agent-pr"
+
+
+class ExportSource(str, Enum):
+    """Supported exporter source options."""
+
+    local = "local"
 
 
 @app.callback()
@@ -46,30 +60,30 @@ def normalize(paper_id: str) -> None:
 @app.command()
 def summarize(
     paper_id: str,
-    mode: str = typer.Option("local", "--mode", help="Summary mode: local or agent-pr"),
+    mode: SummaryMode = typer.Option(SummaryMode.local, "--mode", help="Summary mode: local or agent-pr"),
 ) -> None:
     """Produce summary artifacts."""
-    out = _service().summarize(paper_id, mode=mode)
+    out = _service().summarize(paper_id, mode=mode.value)
     typer.echo(str(out))
 
 
 @app.command()
 def export(
     paper_id: str,
-    source: str = typer.Option("local", "--source", help="Summary source mode for export."),
+    source: ExportSource = typer.Option(ExportSource.local, "--source", help="Summary source mode for export."),
 ) -> None:
     """Export a markdown note."""
-    out = _service().export(paper_id, source=source)
+    out = _service().export(paper_id, source=source.value)
     typer.echo(str(out))
 
 
 @app.command()
 def run(
     pdf_path: Path,
-    summary_mode: str = typer.Option("local", "--summary-mode", help="Summary mode used by run."),
+    summary_mode: SummaryMode = typer.Option(SummaryMode.local, "--summary-mode", help="Summary mode used by run."),
 ) -> None:
     """Run full pipeline for one PDF."""
-    paper_id = _service().run(pdf_path, summary_mode=summary_mode)
+    paper_id = _service().run(pdf_path, summary_mode=summary_mode.value)
     typer.echo(paper_id)
 
 

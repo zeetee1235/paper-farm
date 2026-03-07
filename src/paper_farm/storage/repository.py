@@ -20,10 +20,14 @@ class PaperRepository:
         """Return paper directory for paper ID."""
         return self._settings.papers_root / paper_id
 
+    def paper_exists(self, paper_id: str) -> bool:
+        """Return whether paper directory exists."""
+        return self.paper_dir(paper_id).exists()
+
     def create_paper_dir(self, paper_id: str) -> Path:
-        """Create and return paper directory."""
+        """Create and return paper directory if missing."""
         path = self.paper_dir(paper_id)
-        path.mkdir(parents=True, exist_ok=False)
+        path.mkdir(parents=True, exist_ok=True)
         return path
 
     def save_original_pdf(self, paper_id: str, source_pdf: Path) -> Path:
@@ -53,7 +57,11 @@ class PaperRepository:
         return read_json(self.paper_dir(paper_id) / filename)
 
     def list_papers(self) -> list[str]:
-        """List known paper IDs."""
+        """List known paper IDs that contain metadata.json."""
         if not self._settings.papers_root.exists():
             return []
-        return sorted([p.name for p in self._settings.papers_root.iterdir() if p.is_dir()])
+        paper_ids: list[str] = []
+        for path in sorted(self._settings.papers_root.iterdir()):
+            if path.is_dir() and (path / "metadata.json").exists():
+                paper_ids.append(path.name)
+        return paper_ids

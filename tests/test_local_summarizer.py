@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from paper_farm.models.artifacts import CleanedArtifact
 from paper_farm.summarizers.local_backend import LocalSummaryBackend
 
@@ -10,7 +12,7 @@ def test_local_summary_schema_has_expected_fields() -> None:
         normalizer_name="basic-text",
     )
 
-    summary = LocalSummaryBackend().summarize("pid", cleaned, paper_dir=__import__("pathlib").Path("."))
+    summary = LocalSummaryBackend().summarize("pid", cleaned, paper_dir=Path("."))
 
     assert summary.mode == "local"
     assert isinstance(summary.contributions, list)
