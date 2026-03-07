@@ -1,5 +1,6 @@
 """Agent package generator backend."""
 
+import json
 from pathlib import Path
 
 from paper_farm.models.artifacts import CleanedArtifact
@@ -50,3 +51,43 @@ class AgentPRSummaryBackend:
 
         write_json(package_dir / "summary_request.json", request)
         write_json(package_dir / "output_contract.json", contract)
+        self._write_agent_md(package_dir, prompt, request, contract)
+
+    def _write_agent_md(self, package_dir: Path, prompt: str, request: dict, contract: dict) -> None:
+        """Write a single-file handoff for external agents."""
+        contract_json = json.dumps(contract, ensure_ascii=False, indent=2)
+        request_json = json.dumps(request, ensure_ascii=False, indent=2)
+        agent_md = f"""# Agent Handoff
+
+Use this single file as the source of truth.
+
+## Goal
+
+Create two files in this directory:
+
+- `summary.agent.json`
+- `note.agent.md` (Obsidian-ready)
+
+## Prompt
+
+{prompt}
+
+## Output Contract
+
+```json
+{contract_json}
+```
+
+## Request Payload
+
+```json
+{request_json}
+```
+
+## Required Output Files
+
+1. `summary.agent.json`: Must include every field from `required_summary_fields`.
+2. `note.agent.md`: Clean Markdown for Obsidian.
+3. Keep uncertain claims explicit. Do not fabricate details.
+"""
+        (package_dir / "agent.md").write_text(agent_md, encoding="utf-8")
