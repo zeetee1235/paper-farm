@@ -1,0 +1,3 @@
+[submodule "external/DocStruct"]
+	path = external/DocStruct
+	url = https://github.com/zeetee1235/DocStruct.git

@@ -1,3 +1,14 @@
+Metadata-Version: 2.4
+Name: paper-farm
+Version: 0.1.0
+Summary: MVP local-first paper ingestion and summarization pipeline
+Author: paper-farm contributors
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: typer>=0.12.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+
 # paper-farm (MVP)
 
 `paper-farm` is a **local-first MVP** for ingesting one research paper PDF at a time and generating structured outputs that are easy to inspect and extend.
@@ -37,19 +48,10 @@ git submodule update --init --recursive
 cargo build --release --manifest-path external/DocStruct/Cargo.toml
 ```
 
-Install DocStruct OCR Python dependencies into your project venv.
-
-```bash
-.venv/bin/pip install numpy "Pillow>=11,<12" pytesseract pdf2image "opencv-python>=4.8,<5"
-```
-
-Optional: set explicit runtime paths/tuning.
+Optional: set an explicit binary path.
 
 ```bash
 export DOCSTRUCT_BIN=/absolute/path/to/docstruct
-export DOCSTRUCT_PYTHON=/absolute/path/to/python
-export DOCSTRUCT_DPI=120
-export DOCSTRUCT_TIMEOUT_SEC=900
 ```
 
 ### Run end-to-end

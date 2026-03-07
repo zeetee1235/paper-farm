@@ -1,11 +1,12 @@
 """Main pipeline orchestration service."""
 
 import logging
+import os
 from pathlib import Path
 
 from paper_farm.config import Settings
 from paper_farm.exporters import MarkdownExporter
-from paper_farm.extractors import DocStructExtractorStub, SimpleTextExtractor
+from paper_farm.extractors import DocStructExtractor, SimpleTextExtractor
 from paper_farm.models.artifacts import CleanedArtifact, ExtractedArtifact
 from paper_farm.models.paper import PaperMetadata
 from paper_farm.normalizers import BasicTextNormalizer
@@ -16,13 +17,30 @@ from paper_farm.utils.hashing import sha256_file
 logger = logging.getLogger(__name__)
 
 
+def _env_int(name: str, default: int) -> int:
+    value = os.environ.get(name)
+    if value is None:
+        return default
+    try:
+        return int(value)
+    except ValueError:
+        logger.warning("Invalid %s=%r. Falling back to %d", name, value, default)
+        return default
+
+
 class PipelineService:
     """Coordinates end-to-end processing for a single paper."""
 
     def __init__(self, settings: Settings):
         self.repo = PaperRepository(settings)
-        self.extractor = SimpleTextExtractor()
-        self.docstruct_stub = DocStructExtractorStub()
+        self.simple_extractor = SimpleTextExtractor()
+        docstruct_dpi = _env_int("DOCSTRUCT_DPI", 120)
+        docstruct_timeout_sec = _env_int("DOCSTRUCT_TIMEOUT_SEC", 900)
+        self.extractor = DocStructExtractor(
+            fallback=self.simple_extractor,
+            dpi=docstruct_dpi,
+            timeout_sec=docstruct_timeout_sec,
+        )
         self.normalizer = BasicTextNormalizer()
         self.local_summarizer = LocalSummaryBackend()
         self.agent_backend = AgentPRSummaryBackend()
