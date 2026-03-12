@@ -1,0 +1,28 @@
+{
+  "title": "BRPL: Backpressure RPL for High-throughput and Mobile IoTs",
+  "summary": "이 논문은 RPL의 통신 성능과 동적 네트워크 적응성을 개선하기 위해 BRPL을 개발하였으며, 이는 높은 통신 부하와 이동성이 있는 IoT 환경에서의 실용성을 높이는 것을 목표로 한다.",
+  "problem": "RPL이 통신 성능과 네트워크 동적성 적응성에 있어 제한을 보여, 실제 IoT 환경에서의 적용 범위가 제한되는 문제를 해결해야 한다.",
+  "key_idea": "BRPL은 RPL에 Backpressure Routing을 적용하여 RPL Object Function과 결합하며, 네트워크 통신 부하 변동과 이동성을 지원하는 QuickTheta와 QuickBeta 알고리즘을 도입한다.",
+  "method": "BRPL은 Contiki OS에 구현되었으며, FIT IoT-LAB 테스트베드와 Cooja 시뮬레이터를 사용한 실제 실험 및 대규모 시뮬레이션이 수행되었다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: Cooja\n- **Metric**: 통신 효율성, 네트워크 토폴로지 변동 및 데이터 통신 부하 적응성, 패킷 손실률",
+  "results": "BRPL은 RPL과 완전히 후방 호환되며, 네트워크 통신 효율성과 네트워크 토폴로지 변동 및 데이터 통신 부하 적응성이 크게 향상되었으며, 이동성 네트워크에서의 패킷 손실률이 최소 60% 감소하고 극단적인 경우 1000%까지 감소할 수 있음을 보여준다.",
+  "contributions": [
+    "RPL에 Backpressure Routing을 통합하는 BRPL 개발",
+    "QuickTheta와 QuickBeta 알고리즘을 통한 통신 부하와 이동성 처리",
+    "RPL과의 완전한 후방 호환성과 네트워크 성능 개선 증명"
+  ],
+  "limitations": "실험 환경이 특정한 테스트베드와 시뮬레이터를 기반으로 하기 때문에 다른 환경에서의 적용성에 대한 제한이 있을 수 있다.",
+  "future_work": "다양한 실제 환경에서의 추가적인 평가 및 BRPL의 더욱 다양한 IoT 응용 시나리오에서의 적용 가능성 탐구가 필요하다.",
+  "keywords": [
+    "RPL",
+    "Internet of Things",
+    "IPv6",
+    "Backpressure Routing",
+    "Low-power Lossy Networks",
+    "Wireless Sensor Networks",
+    "BRPL",
+    "QuickTheta",
+    "QuickBeta"
+  ],
+  "obsidian_markdown": "# BRPL: Backpressure RPL for High-throughput and Mobile IoTs\n\n## One-line Summary\n이 논문은 RPL의 통신 성능과 동적 네트워크 적응성을 개선하기 위해 BRPL을 개발하였으며, 이는 높은 통신 부하와 이동성이 있는 IoT 환경에서의 실용성을 높이는 것을 목표로 한다.\n\n## Problem\nRPL이 통신 성능과 네트워크 동적성 적응성에 있어 제한을 보여, 실제 IoT 환경에서의 적용 범위가 제한되는 문제를 해결해야 한다.\n\n## Key Idea\nBRPL은 RPL에 Backpressure Routing을 적용하여 RPL Object Function과 결합하며, 네트워크 통신 부하 변동과 이동성을 지원하는 QuickTheta와 QuickBeta 알고리즘을 도입한다.\n\n## Method\nBRPL은 Contiki OS에 구현되었으며, FIT IoT-LAB 테스트베드와 Cooja 시뮬레이터를 사용한 실제 실험 및 대규모 시뮬레이션이 수행되었다.\n\n## Experiment\n- **Simulator**: Cooja\n- **Metric**: 통신 효율성, 네트워크 토폴로지 변동 및 데이터 통신 부하 적응성, 패킷 손실률\n\n## Results\nBRPL은 RPL과 완전히 후방 호환되며, 네트워크 통신 효율성과 네트워크 토폴로지 변동 및 데이터 통신 부하 적응성이 크게 향상되었으며, 이동성 네트워크에서의 패킷 손실률이 최소 60% 감소하고 극단적인 경우 1000%까지 감소할 수 있음을 보여준다.\n\n## Contributions\n- RPL에 Backpressure Routing을 통합하는 BRPL 개발\n- QuickTheta와 QuickBeta 알고리즘을 통한 통신 부하와 이동성 처리\n- RPL과의 완전한 후방 호환성과 네트워크 성능 개선 증명\n\n## Limitations\n실험 환경이 특정한 테스트베드와 시뮬레이터를 기반으로 하기 때문에 다른 환경에서의 적용성에 대한 제한이 있을 수 있다.\n\n## Future Work\n다양한 실제 환경에서의 추가적인 평가 및 BRPL의 더욱 다양한 IoT 응용 시나리오에서의 적용 가능성 탐구가 필요하다.\n\n## Keywords\nRPL, Internet of Things, IPv6, Backpressure Routing, Low-power Lossy Networks, Wireless Sensor Networks, BRPL, QuickTheta, QuickBeta\n"
+}

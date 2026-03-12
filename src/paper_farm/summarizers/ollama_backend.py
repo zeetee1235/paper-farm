@@ -8,6 +8,16 @@ import urllib.request
 
 from paper_farm.models.artifacts import PaperStruct, SummaryResult
 
+# Sections that carry the most signal for a summary
+_HIGH_PRIORITY_SECTIONS = frozenset({
+    "abstract", "introduction", "conclusion", "results",
+    "discussion", "limitations", "future work", "body",
+})
+# Sections that add no value for summarization
+_SKIP_SECTIONS = frozenset({
+    "references", "acknowledgment", "acknowledgments", "appendix",
+})
+
 
 def _build_system_prompt(language_name: str) -> str:
     return f"""\
@@ -87,9 +97,15 @@ class OllamaSummaryBackend:
         parts = [f"Title: {paper.title}"]
         if paper.abstract:
             parts.append(f"\nAbstract:\n{paper.abstract}")
+        high_limit = self.section_char_limit * 2
         for section in paper.sections:
-            content = section.content[:self.section_char_limit]
-            parts.append(f"\n## {section.name}\n{content}")
+            name_lower = section.name.lower()
+            if name_lower in _SKIP_SECTIONS:
+                continue
+            if name_lower == "abstract":
+                continue  # already included above
+            limit = high_limit if name_lower in _HIGH_PRIORITY_SECTIONS else self.section_char_limit
+            parts.append(f"\n## {section.name}\n{section.content[:limit]}")
         return "\n".join(parts)[:self.total_char_limit]
 
     def _call_ollama(self, user_content: str) -> str:

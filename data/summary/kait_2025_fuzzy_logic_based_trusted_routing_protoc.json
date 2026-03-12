@@ -1,0 +1,27 @@
+{
+  "title": "Fuzzy logic‐based trusted routing protocol using vehicular cloud networks for smart cities",
+  "summary": "이 연구는 모바일 노드의 특성과 무선 연결의 불안정성에 대응하기 위해 차량 클라우드 네트워크에서 Fuzzy Logic 기반 신뢰 경로 프로토콜(FTRP)을 제안하여 데이터 전달 경로를 보안화하는 데 초점을 맞추고 있습니다.",
+  "problem": "차량 통신 네트워크에서 노드의 이동성과 무선 연결의 불안정성이 라우팅에 큰 도전 과제를 제공하며, 또한 이러한 네트워크는 공격에 취약하므로 출발지와 목적지 노드 간의 인증이 필요합니다.",
+  "key_idea": "FTRP은 Fuzzy Logic를 사용하여 노드 후보 값을 결정하고, 신뢰, 속도, 다른 노드와의 거리, 신호 강도 등의 요소를 고려하여 보안 경로를 식별하는 것입니다.",
+  "method": "Fuzzy Logic를 통해 노드 후보 값을 결정하고, 클라우드가 노드와의 상호작용 후 수집한 데이터에 기반하여 차량에 신뢰 점수를 할당합니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 패킷 전달 비율, 오버헤드, 지연 시간",
+  "results": "FTRP은 고 비율의 패킷 전달을 유지하며, 오버헤드가 적고 지연 시간이 낮은 것으로 시뮬레이션에서 시연되었습니다.",
+  "contributions": [
+    "FTRP을 통해 차량 클라우드 네트워크에서 보안 경로 식별 방법을 제안함",
+    "Fuzzy Logic를 활용한 노드 후보 평가 및 경로 선택 메커니즘을 제안함",
+    "클라우드 기반의 신뢰 점수 할당 방식을 제시함"
+  ],
+  "limitations": "실제 환경에서의 검증이 부족하며, 특정 시뮬레이션 환경에 대한 세부 정보가 부족합니다.",
+  "future_work": "실제 환경에서의 검증, 다양한 시뮬레이션 환경에서의 성능 테스트, 보안성 및 효율성 향상 방안 탐색 등이 필요합니다.",
+  "keywords": [
+    "fuzzy routing",
+    "smart cities",
+    "trust computation",
+    "vehicular cloud networks",
+    "VANETs",
+    "IoT",
+    "security",
+    "mobility"
+  ],
+  "obsidian_markdown": "# Fuzzy logic‐based trusted routing protocol using vehicular cloud networks for smart cities\n\n## One-line Summary\n이 연구는 모바일 노드의 특성과 무선 연결의 불안정성에 대응하기 위해 차량 클라우드 네트워크에서 Fuzzy Logic 기반 신뢰 경로 프로토콜(FTRP)을 제안하여 데이터 전달 경로를 보안화하는 데 초점을 맞추고 있습니다.\n\n## Problem\n차량 통신 네트워크에서 노드의 이동성과 무선 연결의 불안정성이 라우팅에 큰 도전 과제를 제공하며, 또한 이러한 네트워크는 공격에 취약하므로 출발지와 목적지 노드 간의 인증이 필요합니다.\n\n## Key Idea\nFTRP은 Fuzzy Logic를 사용하여 노드 후보 값을 결정하고, 신뢰, 속도, 다른 노드와의 거리, 신호 강도 등의 요소를 고려하여 보안 경로를 식별하는 것입니다.\n\n## Method\nFuzzy Logic를 통해 노드 후보 값을 결정하고, 클라우드가 노드와의 상호작용 후 수집한 데이터에 기반하여 차량에 신뢰 점수를 할당합니다.\n\n## Experiment\n- **Metric**: 패킷 전달 비율, 오버헤드, 지연 시간\n\n## Results\nFTRP은 고 비율의 패킷 전달을 유지하며, 오버헤드가 적고 지연 시간이 낮은 것으로 시뮬레이션에서 시연되었습니다.\n\n## Contributions\n- FTRP을 통해 차량 클라우드 네트워크에서 보안 경로 식별 방법을 제안함\n- Fuzzy Logic를 활용한 노드 후보 평가 및 경로 선택 메커니즘을 제안함\n- 클라우드 기반의 신뢰 점수 할당 방식을 제시함\n\n## Limitations\n실제 환경에서의 검증이 부족하며, 특정 시뮬레이션 환경에 대한 세부 정보가 부족합니다.\n\n## Future Work\n실제 환경에서의 검증, 다양한 시뮬레이션 환경에서의 성능 테스트, 보안성 및 효율성 향상 방안 탐색 등이 필요합니다.\n\n## Keywords\nfuzzy routing, smart cities, trust computation, vehicular cloud networks, VANETs, IoT, security, mobility\n"
+}

@@ -1,27 +1,27 @@
 {
   "title": "A Security Scheme for Statistical Anomaly Detection and the Mitigation of Rank Attacks in RPL Networks (IoT Environment)",
-  "summary": "이 논문은 RPL 네트워크에서 통계적 이상 탐지 스키마(SARPL)를 통해 Rank Attack을 탐지하고 완화하는 방법을 제시합니다.",
-  "problem": "RPL 네트워크는 Rank 값의 남용을 통한 공격에 취약하며, 이는 네트워크 성능을 저하시킬 수 있습니다.",
-  "key_idea": "SARPL은 통계적 이상 탐지를 통해 Rank Attack을 탐지하고 완화하는 것입니다.",
-  "method": "SARPL은 통계적 이상 탐지를 기반으로 Rank Attack을 탐지하며, 시뮬레이션을 통해 성능을 평가합니다.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: 시뮬레이터를 사용한 실험\n- **Metric**: 패킷 전달율 및 종단 간 지연 등의 네트워크 성능 매개변수",
-  "results": "SARPL은 RA1 공격을 모든 시나리오에서 성공적으로 탐지하며, RA2 공격의 탐지율은 약 93%입니다. 네트워크 성능 매개변수도 개선되었습니다.",
+  "summary": "이 논문은 RPL 네트워크에서 Rank Attack을 탐지하고 완화하는 Statistically-based Anomaly Detection Scheme(SARPL)을 제안한다.",
+  "problem": "RPL 네트워크의 부모 노드의 활동을 모니터링하지 않는 점을 악의적인 노드가 이용하여 Rank Attack을 수행할 수 있다.",
+  "key_idea": "통계적 방법을 기반으로 한 Rank Attack의 탐지 및 완화를 위한 SARPL 제안.",
+  "method": "통계적 방법과 시뮬레이션을 통한 Rank Attack 탐지 및 완화.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 패킷 전달율 및 엔드 투 엔드 지연",
+  "results": "RA1을 모든 시나리오에서 성공적으로 탐지하고, RA2의 탐지율은 약 93%이며, 네트워크 성능을 향상시킨다.",
   "contributions": [
-    "Rank Attack을 탐지하고 완화하는 통계적 이상 탐지 스키마(SARPL) 제안",
-    "RA1 공격의 100% 탐지 성공",
-    "RA2 공격의 약 93% 탐지 성공 및 네트워크 성능 개선"
+    "Rank Attack의 통계적 탐지 방법 제안",
+    "RA1과 RA2의 성공적인 탐지를 통한 네트워크 보안 향상",
+    "패킷 전달율과 엔드 투 엔드 지연을 포함한 네트워크 성능 개선"
   ],
-  "limitations": "시뮬레이션 환경에서의 실험으로 실제 환경에서의 성능에 대한 제한이 있을 수 있습니다.",
-  "future_work": "실제 환경에서 SARPL의 성능을 평가하고, 다른 유형의 공격에 대한 탐지 능력을 확장하는 연구가 필요합니다.",
+  "limitations": "실제 환경에서의 검증 및 더 다양한 시나리오에서의 실험 필요.",
+  "future_work": "더 많은 실제 네트워크 환경에서의 검증 및 다양한 유형의 공격에 대한 SARPL의 적용 가능성 탐색.",
   "keywords": [
     "anomaly detection",
     "rank attack",
     "RPL network",
     "low power lossy network",
-    "statistical",
-    "network performance",
-    "IPv6",
-    "DODAG"
+    "IoT",
+    "network security",
+    "statistical method",
+    "network performance"
   ],
-  "obsidian_markdown": "# A Security Scheme for Statistical Anomaly Detection and the Mitigation of Rank Attacks in RPL Networks (IoT Environment)\n\n## One-line Summary\n이 논문은 RPL 네트워크에서 통계적 이상 탐지 스키마(SARPL)를 통해 Rank Attack을 탐지하고 완화하는 방법을 제시합니다.\n\n## Problem\nRPL 네트워크는 Rank 값의 남용을 통한 공격에 취약하며, 이는 네트워크 성능을 저하시킬 수 있습니다.\n\n## Key Idea\nSARPL은 통계적 이상 탐지를 통해 Rank Attack을 탐지하고 완화하는 것입니다.\n\n## Method\nSARPL은 통계적 이상 탐지를 기반으로 Rank Attack을 탐지하며, 시뮬레이션을 통해 성능을 평가합니다.\n\n## Experiment\n- **Simulator**: 시뮬레이터를 사용한 실험\n- **Metric**: 패킷 전달율 및 종단 간 지연 등의 네트워크 성능 매개변수\n\n## Results\nSARPL은 RA1 공격을 모든 시나리오에서 성공적으로 탐지하며, RA2 공격의 탐지율은 약 93%입니다. 네트워크 성능 매개변수도 개선되었습니다.\n\n## Contributions\n- Rank Attack을 탐지하고 완화하는 통계적 이상 탐지 스키마(SARPL) 제안\n- RA1 공격의 100% 탐지 성공\n- RA2 공격의 약 93% 탐지 성공 및 네트워크 성능 개선\n\n## Limitations\n시뮬레이션 환경에서의 실험으로 실제 환경에서의 성능에 대한 제한이 있을 수 있습니다.\n\n## Future Work\n실제 환경에서 SARPL의 성능을 평가하고, 다른 유형의 공격에 대한 탐지 능력을 확장하는 연구가 필요합니다.\n\n## Keywords\nanomaly detection, rank attack, RPL network, low power lossy network, statistical, network performance, IPv6, DODAG\n"
+  "obsidian_markdown": "# A Security Scheme for Statistical Anomaly Detection and the Mitigation of Rank Attacks in RPL Networks (IoT Environment)\n\n## One-line Summary\n이 논문은 RPL 네트워크에서 Rank Attack을 탐지하고 완화하는 Statistically-based Anomaly Detection Scheme(SARPL)을 제안한다.\n\n## Problem\nRPL 네트워크의 부모 노드의 활동을 모니터링하지 않는 점을 악의적인 노드가 이용하여 Rank Attack을 수행할 수 있다.\n\n## Key Idea\n통계적 방법을 기반으로 한 Rank Attack의 탐지 및 완화를 위한 SARPL 제안.\n\n## Method\n통계적 방법과 시뮬레이션을 통한 Rank Attack 탐지 및 완화.\n\n## Experiment\n- **Metric**: 패킷 전달율 및 엔드 투 엔드 지연\n\n## Results\nRA1을 모든 시나리오에서 성공적으로 탐지하고, RA2의 탐지율은 약 93%이며, 네트워크 성능을 향상시킨다.\n\n## Contributions\n- Rank Attack의 통계적 탐지 방법 제안\n- RA1과 RA2의 성공적인 탐지를 통한 네트워크 보안 향상\n- 패킷 전달율과 엔드 투 엔드 지연을 포함한 네트워크 성능 개선\n\n## Limitations\n실제 환경에서의 검증 및 더 다양한 시나리오에서의 실험 필요.\n\n## Future Work\n더 많은 실제 네트워크 환경에서의 검증 및 다양한 유형의 공격에 대한 SARPL의 적용 가능성 탐색.\n\n## Keywords\nanomaly detection, rank attack, RPL network, low power lossy network, IoT, network security, statistical method, network performance\n"
 }

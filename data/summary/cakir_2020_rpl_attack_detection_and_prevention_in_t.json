@@ -1,0 +1,26 @@
+{
+  "title": "RPL Attack Detection and Prevention in the Internet of Things Networks Using a GRU Based Deep Learning",
+  "summary": "이 연구는 RPL 프로토콜에 대한 HF 공격을 예측하고 방지하기 위해 GRU 기반 딥러닝 모델을 제안하여 IoT 네트워크의 보안을 강화합니다.",
+  "problem": "RPL 프로토콜은 IoT 네트워크에서 중요한 역할을 하지만, 여러 가지 공격에 취약하여 데이터 전송 및 네트워크 토폴로지에 큰 손상을 줍니다.",
+  "key_idea": "Gated Recurrent Unit (GRU) 기반 딥러닝 모델을 사용하여 RPL 프로토콜에 대한 HF 공격을 예측하고 방지하는 것입니다.",
+  "method": "GRU 기반 딥러닝 모델을 제안하고, SVM 및 Logistic Regression 방법과 비교하여 다양한 노드의 전력 상태 및 총 에너지 소비를 고려하여 실험을 수행합니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 소스 효율성 및 IoT 보안 성능",
+  "results": "모델이 소스 효율성과 IoT 보안 측면에서 약속된 성능을 보여주며, 문헌에 비해 HF 공격 탐지의 오류율이 낮습니다.",
+  "contributions": [
+    "RPL 프로토콜에 대한 HF 공격을 탐지 및 방지하기 위한 GRU 기반 딥러닝 모델을 제안함",
+    "GRU 모델의 성능을 SVM 및 Logistic Regression 방법과 비교하여 평가함",
+    "노드의 전력 상태 및 총 에너지 소비를 고려하여 실험을 수행함"
+  ],
+  "limitations": "노드의 메모리, 처리 및 에너지 소비의 제약을 고려하지만, 실제 네트워크 환경에서의 성능은 검증되지 않았습니다.",
+  "future_work": "더 많은 실제 데이터셋을 사용한 실험 및 다른 유형의 공격에 대한 모델의 적용을 탐구함",
+  "keywords": [
+    "RPL",
+    "IoT",
+    "GRU",
+    "HF Attack",
+    "Deep Learning",
+    "SVM",
+    "Logistic Regression"
+  ],
+  "obsidian_markdown": "# RPL Attack Detection and Prevention in the Internet of Things Networks Using a GRU Based Deep Learning\n\n## One-line Summary\n이 연구는 RPL 프로토콜에 대한 HF 공격을 예측하고 방지하기 위해 GRU 기반 딥러닝 모델을 제안하여 IoT 네트워크의 보안을 강화합니다.\n\n## Problem\nRPL 프로토콜은 IoT 네트워크에서 중요한 역할을 하지만, 여러 가지 공격에 취약하여 데이터 전송 및 네트워크 토폴로지에 큰 손상을 줍니다.\n\n## Key Idea\nGated Recurrent Unit (GRU) 기반 딥러닝 모델을 사용하여 RPL 프로토콜에 대한 HF 공격을 예측하고 방지하는 것입니다.\n\n## Method\nGRU 기반 딥러닝 모델을 제안하고, SVM 및 Logistic Regression 방법과 비교하여 다양한 노드의 전력 상태 및 총 에너지 소비를 고려하여 실험을 수행합니다.\n\n## Experiment\n- **Metric**: 소스 효율성 및 IoT 보안 성능\n\n## Results\n모델이 소스 효율성과 IoT 보안 측면에서 약속된 성능을 보여주며, 문헌에 비해 HF 공격 탐지의 오류율이 낮습니다.\n\n## Contributions\n- RPL 프로토콜에 대한 HF 공격을 탐지 및 방지하기 위한 GRU 기반 딥러닝 모델을 제안함\n- GRU 모델의 성능을 SVM 및 Logistic Regression 방법과 비교하여 평가함\n- 노드의 전력 상태 및 총 에너지 소비를 고려하여 실험을 수행함\n\n## Limitations\n노드의 메모리, 처리 및 에너지 소비의 제약을 고려하지만, 실제 네트워크 환경에서의 성능은 검증되지 않았습니다.\n\n## Future Work\n더 많은 실제 데이터셋을 사용한 실험 및 다른 유형의 공격에 대한 모델의 적용을 탐구함\n\n## Keywords\nRPL, IoT, GRU, HF Attack, Deep Learning, SVM, Logistic Regression\n"
+}

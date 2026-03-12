@@ -1,27 +1,27 @@
 {
   "title": "Securing IoT Networks: RPL Attack Detection with Deep Learning GRU Networks",
-  "summary": "이 연구는 무선 개인 영역 네트워크에서 사용되는 RPL 프로토콜의 공격 탐지를 위해 딥러닝 기반 GRU 네트워크를 제안하였습니다.",
-  "problem": "IoT 네트워크에서 RPL 프로토콜의 내장 보안 기능이 대부분의 라우팅 공격을 막지 못합니다.",
-  "key_idea": "IoT 장치가 생성하는 대량의 데이터를 활용하여 딥러닝 기반 GRU 네트워크를 사용하여 RPL 기반 IoT 네트워크의 공격을 탐지합니다.",
-  "method": "딥러닝 기반 GRU 네트워크를 사용하여 공격 탐지를 수행합니다.",
-  "experiment": "- **Dataset**: 넷심 표준 버전 12.1 소프트웨어 도구를 사용하여 생성된 트래픽 추적 데이터셋, 정상 시나리오 및 공격 시나리오(Sinkhole, Blackhole, Sybil, Selective Forwarding, DIS flooding, DIO suppression) 포함, 21개의 특징과 20개의 정적 노드를 포함합니다.\n- **Simulator**: 넷심 표준 버전 12.1 소프트웨어 도구\n- **Metric**: 정확도, 정밀도, 재현율, f1-점수, AUC",
-  "results": "테스트 정확도는 95.51%, 공격 클래스의 정밀도, 재현율, f1-점수는 각각 0.94, 0.81, 0.87이고, 정상 클래스는 각각 0.96, 0.99, 0.97입니다. AUC 값은 0.899로 공격 및 정상 클래스를 약 90% 정확도로 구별할 수 있음을 나타냅니다. 거짓 긍정 비율은 1.13%로 매우 낮습니다.",
+  "summary": "이 연구에서는 RPL 기반 IoT 네트워크에서 공격을 감지하기 위해 딥러닝 기반 GRU 네트워크를 제안했습니다.",
+  "problem": "RPL의 내장 보안 기능은 대부분의 라우팅 공격을 방지하지 못하며, IoT 기기는 많은 양의 데이터를 생성하여 보안 위협을 감지하는 것이 중요합니다.",
+  "key_idea": "IoT 네트워크에서 RPL 기반 공격을 감지하기 위해 딥러닝 기반 GRU 네트워크를 사용합니다.",
+  "method": "NetSim Standard version 12.1을 사용하여 생성된 데이터 세트와 GRU 모델을 훈련 및 테스트합니다.",
+  "experiment": "- **Dataset**: 정상 및 공격 시나리오를 위한 트래픽 추적이 포함된 NetSim Standard version 12.1에 의해 생성된 합성 데이터 세트\n- **Simulator**: NetSim Standard version 12.1\n- **Metric**: 정확도, 정밀도, 재현율, F1 점수, AUC",
+  "results": "테스트 정확도는 95.51%, 공격 클래스의 정밀도, 재현율, F1 점수는 각각 0.94, 0.81, 0.87, 정상 클래스의 경우 0.96, 0.99, 0.97입니다. AUC 값은 0.899이며, 거짓 양성 비율은 1.13%입니다.",
   "contributions": [
-    "GRU 네트워크 기반 딥러닝 기술을 사용하여 RPL 기반 IoT 네트워크의 공격 탐지 모델을 제안함",
-    "포괄적인 시뮬레이션 데이터셋을 생성하여 정상 및 공격 시나리오를 효과적으로 평가함",
-    "모델의 성능을 평가하기 위해 정확도, 정밀도, 재현율, f1-점수, AUC 등의 다양한 메트릭을 사용함"
+    "RPL 기반 IoT 네트워크에서 공격을 감지하기 위한 GRU 모델 제안",
+    "GRU 모델의 성능을 평가하기 위한 80% 훈련 및 20% 테스트 데이터 분할",
+    "기존 모델에 비해 더 높은 정확도, 재현율, F1 점수, 정밀도를 보여줌"
   ],
-  "limitations": "이 모델은 이진 분류에만 적용되며, 다중 클래스 분류를 위한 확장은 아직 진행되지 않았습니다.",
-  "future_work": "다양한 딥러닝 기법(컨볼루션 신경망, LSTM 기반 RNN, 하이브리드 및 앙상블 방법)을 사용하여 RPL 라우팅 공격을 탐지하는 것을 목표로 하고 있으며, 이를 위한 최적화 기법을 통합할 예정입니다. 또한, GRU 모델을 사용하여 다중 클래스 분류를 수행할 계획입니다.",
+  "limitations": "현재 모델은 이진 분류만을 위한 것이며, 다중 클래스 분류를 다루지 않습니다.",
+  "future_work": "CNN, LSTM 기반 RNN, 하이브리드 및 앙상블 방법과 같은 다양한 딥러닝 기법을 사용하여 RPL 라우팅 공격을 감지하고, 다중 클래스 분류를 위한 GRU 모델을 구현할 계획입니다.",
   "keywords": [
-    "IoT Networks",
-    "RPL Protocol",
+    "IoT",
+    "RPL",
+    "GRU",
     "Deep Learning",
-    "GRU Networks",
     "Attack Detection",
-    "Routing Attacks",
-    "NetSim Simulator",
-    "Performance Metrics"
+    "NetSim",
+    "Binary Classification",
+    "Synthetic Dataset"
   ],
-  "obsidian_markdown": "# Securing IoT Networks: RPL Attack Detection with Deep Learning GRU Networks\n\n## One-line Summary\n이 연구는 무선 개인 영역 네트워크에서 사용되는 RPL 프로토콜의 공격 탐지를 위해 딥러닝 기반 GRU 네트워크를 제안하였습니다.\n\n## Problem\nIoT 네트워크에서 RPL 프로토콜의 내장 보안 기능이 대부분의 라우팅 공격을 막지 못합니다.\n\n## Key Idea\nIoT 장치가 생성하는 대량의 데이터를 활용하여 딥러닝 기반 GRU 네트워크를 사용하여 RPL 기반 IoT 네트워크의 공격을 탐지합니다.\n\n## Method\n딥러닝 기반 GRU 네트워크를 사용하여 공격 탐지를 수행합니다.\n\n## Experiment\n- **Dataset**: 넷심 표준 버전 12.1 소프트웨어 도구를 사용하여 생성된 트래픽 추적 데이터셋, 정상 시나리오 및 공격 시나리오(Sinkhole, Blackhole, Sybil, Selective Forwarding, DIS flooding, DIO suppression) 포함, 21개의 특징과 20개의 정적 노드를 포함합니다.\n- **Simulator**: 넷심 표준 버전 12.1 소프트웨어 도구\n- **Metric**: 정확도, 정밀도, 재현율, f1-점수, AUC\n\n## Results\n테스트 정확도는 95.51%, 공격 클래스의 정밀도, 재현율, f1-점수는 각각 0.94, 0.81, 0.87이고, 정상 클래스는 각각 0.96, 0.99, 0.97입니다. AUC 값은 0.899로 공격 및 정상 클래스를 약 90% 정확도로 구별할 수 있음을 나타냅니다. 거짓 긍정 비율은 1.13%로 매우 낮습니다.\n\n## Contributions\n- GRU 네트워크 기반 딥러닝 기술을 사용하여 RPL 기반 IoT 네트워크의 공격 탐지 모델을 제안함\n- 포괄적인 시뮬레이션 데이터셋을 생성하여 정상 및 공격 시나리오를 효과적으로 평가함\n- 모델의 성능을 평가하기 위해 정확도, 정밀도, 재현율, f1-점수, AUC 등의 다양한 메트릭을 사용함\n\n## Limitations\n이 모델은 이진 분류에만 적용되며, 다중 클래스 분류를 위한 확장은 아직 진행되지 않았습니다.\n\n## Future Work\n다양한 딥러닝 기법(컨볼루션 신경망, LSTM 기반 RNN, 하이브리드 및 앙상블 방법)을 사용하여 RPL 라우팅 공격을 탐지하는 것을 목표로 하고 있으며, 이를 위한 최적화 기법을 통합할 예정입니다. 또한, GRU 모델을 사용하여 다중 클래스 분류를 수행할 계획입니다.\n\n## Keywords\nIoT Networks, RPL Protocol, Deep Learning, GRU Networks, Attack Detection, Routing Attacks, NetSim Simulator, Performance Metrics\n"
+  "obsidian_markdown": "# Securing IoT Networks: RPL Attack Detection with Deep Learning GRU Networks\n\n## One-line Summary\n이 연구에서는 RPL 기반 IoT 네트워크에서 공격을 감지하기 위해 딥러닝 기반 GRU 네트워크를 제안했습니다.\n\n## Problem\nRPL의 내장 보안 기능은 대부분의 라우팅 공격을 방지하지 못하며, IoT 기기는 많은 양의 데이터를 생성하여 보안 위협을 감지하는 것이 중요합니다.\n\n## Key Idea\nIoT 네트워크에서 RPL 기반 공격을 감지하기 위해 딥러닝 기반 GRU 네트워크를 사용합니다.\n\n## Method\nNetSim Standard version 12.1을 사용하여 생성된 데이터 세트와 GRU 모델을 훈련 및 테스트합니다.\n\n## Experiment\n- **Dataset**: 정상 및 공격 시나리오를 위한 트래픽 추적이 포함된 NetSim Standard version 12.1에 의해 생성된 합성 데이터 세트\n- **Simulator**: NetSim Standard version 12.1\n- **Metric**: 정확도, 정밀도, 재현율, F1 점수, AUC\n\n## Results\n테스트 정확도는 95.51%, 공격 클래스의 정밀도, 재현율, F1 점수는 각각 0.94, 0.81, 0.87, 정상 클래스의 경우 0.96, 0.99, 0.97입니다. AUC 값은 0.899이며, 거짓 양성 비율은 1.13%입니다.\n\n## Contributions\n- RPL 기반 IoT 네트워크에서 공격을 감지하기 위한 GRU 모델 제안\n- GRU 모델의 성능을 평가하기 위한 80% 훈련 및 20% 테스트 데이터 분할\n- 기존 모델에 비해 더 높은 정확도, 재현율, F1 점수, 정밀도를 보여줌\n\n## Limitations\n현재 모델은 이진 분류만을 위한 것이며, 다중 클래스 분류를 다루지 않습니다.\n\n## Future Work\nCNN, LSTM 기반 RNN, 하이브리드 및 앙상블 방법과 같은 다양한 딥러닝 기법을 사용하여 RPL 라우팅 공격을 감지하고, 다중 클래스 분류를 위한 GRU 모델을 구현할 계획입니다.\n\n## Keywords\nIoT, RPL, GRU, Deep Learning, Attack Detection, NetSim, Binary Classification, Synthetic Dataset\n"
 }

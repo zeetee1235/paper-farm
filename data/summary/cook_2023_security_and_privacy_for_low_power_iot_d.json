@@ -1,27 +1,26 @@
 {
   "title": "Security and Privacy for Low Power IoT Devices on 5G and Beyond Networks: Challenges and Future Directions",
-  "summary": "이 연구는 5G 및 그 이후 네트워크에서 저전력 IoT 장치의 보안 및 개인정보 보호에 대한 도전 과제와 미래 방향을 심층적으로 조사합니다.",
-  "problem": "혁신적인 네트워크 기술과 기존의 개인 IoT 장치 취약점, 부족한 장치 보안 표준이 결합되어 새로운 데이터 보안 도전 과제를 제기합니다.",
-  "key_idea": "이 연구는 IoT 보안에 공통적인 영향을 미치는 요소들을 철저히 조사하여 네트워크와 IoT 기술을 별개로 보는 대신 통합적인 접근을 제안합니다.",
-  "method": "기존 연구는 주로 네트워크 또는 IoT 기술의 기술적 측면에 집중했지만, 이 연구는 보안 취약점과 솔루션을 모두 포괄적으로 조사합니다.",
+  "summary": "이 논문은 5G 및 그 이후 네트워크에서 저전력 IoT 장치의 보안 및 개인 정보 보호 문제를 다루고, 새로운 도전 과제와 미래 방향성을 제시합니다.",
+  "problem": "저전력 IoT 장치의 보안 및 개인 정보 보호 문제는 혁신적인 네트워크 기술과 기존 취약점, 그리고 부족한 장치 보안 표준으로 인해 새로운 도전 과제로 발전하고 있습니다.",
+  "key_idea": "이 논문은 IoT 보안에 영향을 미치는 공통 요소를 철저히 조사하여 5G 네트워크 기술과 IoT 기술 간의 보안 문제를 통합적으로 다룹니다.",
+  "method": "기존 문헌과 최신 보안 도전 과제에 대한 문헌 고찰 방법을 사용하여 5G 및 IoT 네트워크에 대한 보안 도전 과제를 분석했습니다.",
   "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
-  "results": "이 연구는 IoT 보안에 영향을 미치는 공통적인 도전 과제와 이에 대한 해결책을 식별했습니다.",
+  "results": "특정 실험 결과나 메트릭은 제시되지 않았지만, IoT 보안의 기술적 측면과 혁신적인 네트워크 기술의 도입이 가져오는 도전 과제가 논의되었습니다.",
   "contributions": [
-    "5G 및 그 이후 네트워크에서 저전력 IoT 장치의 보안 및 개인정보 보호에 대한 철저한 조사",
-    "네트워크와 IoT 기술을 통합적으로 접근한 새로운 관점 제시",
-    "IoT 보안에 대한 공통적인 도전 과제와 해결책 식별"
+    "5G 및 그 이후 네트워크에서 IoT 장치의 보안 및 개인 정보 보호 문제를 통합적으로 조사함",
+    "혁신적인 네트워크 기술과 IoT 장치의 기존 취약점이 가져오는 새로운 보안 도전 과제를 강조함",
+    "IoT 보안에 대한 미래 연구 방향을 제시함"
   ],
-  "limitations": "이 연구는 구체적인 실험 데이터 세트나 시뮬레이터를 사용하지 않았으며, 결과는 주로 문헌 조사에 기초합니다.",
-  "future_work": "미래 연구는 구체적인 보안 프레임워크 개발과 실제 IoT 장치에서의 테스트를 포함할 것을 제안합니다.",
+  "limitations": "이 논문은 특정 실험을 수행하거나 구체적인 데이터셋을 분석하지 않았으며, 기존 문헌을 기반으로 한 개념적 분석에 국한됩니다.",
+  "future_work": "IoT 장치 보안을 개선하기 위해 혁신적인 네트워크 기술을 활용한 보안 솔루션 개발과 보안 기준 강화를 제안합니다.",
   "keywords": [
     "IoT",
     "5G",
-    "Security",
-    "Privacy",
-    "Low Power Devices",
-    "Future Directions",
-    "Network Technologies",
-    "Data Protection"
+    "security",
+    "privacy",
+    "network technologies",
+    "challenges",
+    "future directions"
   ],
-  "obsidian_markdown": "# Security and Privacy for Low Power IoT Devices on 5G and Beyond Networks: Challenges and Future Directions\n\n## One-line Summary\n이 연구는 5G 및 그 이후 네트워크에서 저전력 IoT 장치의 보안 및 개인정보 보호에 대한 도전 과제와 미래 방향을 심층적으로 조사합니다.\n\n## Problem\n혁신적인 네트워크 기술과 기존의 개인 IoT 장치 취약점, 부족한 장치 보안 표준이 결합되어 새로운 데이터 보안 도전 과제를 제기합니다.\n\n## Key Idea\n이 연구는 IoT 보안에 공통적인 영향을 미치는 요소들을 철저히 조사하여 네트워크와 IoT 기술을 별개로 보는 대신 통합적인 접근을 제안합니다.\n\n## Method\n기존 연구는 주로 네트워크 또는 IoT 기술의 기술적 측면에 집중했지만, 이 연구는 보안 취약점과 솔루션을 모두 포괄적으로 조사합니다.\n\n## Experiment\nN/A\n\n## Results\n이 연구는 IoT 보안에 영향을 미치는 공통적인 도전 과제와 이에 대한 해결책을 식별했습니다.\n\n## Contributions\n- 5G 및 그 이후 네트워크에서 저전력 IoT 장치의 보안 및 개인정보 보호에 대한 철저한 조사\n- 네트워크와 IoT 기술을 통합적으로 접근한 새로운 관점 제시\n- IoT 보안에 대한 공통적인 도전 과제와 해결책 식별\n\n## Limitations\n이 연구는 구체적인 실험 데이터 세트나 시뮬레이터를 사용하지 않았으며, 결과는 주로 문헌 조사에 기초합니다.\n\n## Future Work\n미래 연구는 구체적인 보안 프레임워크 개발과 실제 IoT 장치에서의 테스트를 포함할 것을 제안합니다.\n\n## Keywords\nIoT, 5G, Security, Privacy, Low Power Devices, Future Directions, Network Technologies, Data Protection\n"
+  "obsidian_markdown": "# Security and Privacy for Low Power IoT Devices on 5G and Beyond Networks: Challenges and Future Directions\n\n## One-line Summary\n이 논문은 5G 및 그 이후 네트워크에서 저전력 IoT 장치의 보안 및 개인 정보 보호 문제를 다루고, 새로운 도전 과제와 미래 방향성을 제시합니다.\n\n## Problem\n저전력 IoT 장치의 보안 및 개인 정보 보호 문제는 혁신적인 네트워크 기술과 기존 취약점, 그리고 부족한 장치 보안 표준으로 인해 새로운 도전 과제로 발전하고 있습니다.\n\n## Key Idea\n이 논문은 IoT 보안에 영향을 미치는 공통 요소를 철저히 조사하여 5G 네트워크 기술과 IoT 기술 간의 보안 문제를 통합적으로 다룹니다.\n\n## Method\n기존 문헌과 최신 보안 도전 과제에 대한 문헌 고찰 방법을 사용하여 5G 및 IoT 네트워크에 대한 보안 도전 과제를 분석했습니다.\n\n## Experiment\nN/A\n\n## Results\n특정 실험 결과나 메트릭은 제시되지 않았지만, IoT 보안의 기술적 측면과 혁신적인 네트워크 기술의 도입이 가져오는 도전 과제가 논의되었습니다.\n\n## Contributions\n- 5G 및 그 이후 네트워크에서 IoT 장치의 보안 및 개인 정보 보호 문제를 통합적으로 조사함\n- 혁신적인 네트워크 기술과 IoT 장치의 기존 취약점이 가져오는 새로운 보안 도전 과제를 강조함\n- IoT 보안에 대한 미래 연구 방향을 제시함\n\n## Limitations\n이 논문은 특정 실험을 수행하거나 구체적인 데이터셋을 분석하지 않았으며, 기존 문헌을 기반으로 한 개념적 분석에 국한됩니다.\n\n## Future Work\nIoT 장치 보안을 개선하기 위해 혁신적인 네트워크 기술을 활용한 보안 솔루션 개발과 보안 기준 강화를 제안합니다.\n\n## Keywords\nIoT, 5G, security, privacy, network technologies, challenges, future directions\n"
 }

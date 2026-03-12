@@ -1,0 +1,25 @@
+{
+  "title": "A Systematic Literature Review on Machine and Deep Learning Approaches for Detecting Attacks in RPL-Based 6LoWPAN of Internet of Things",
+  "summary": "이 논문은 IoT 환경에서 RPL 기반 6LoWPAN에서 공격 탐지를 위한 기계 학습 및 딥러닝 접근법에 대한 체계적 문헌 고찰을 제공합니다.",
+  "problem": "6LoWPAN 노드의 제한된 자원으로 인해 IoT 환경을 보호하기가 어렵고, 이는 다양한 위협에 취약해집니다.",
+  "key_idea": "이 논문은 RPL 기반 6LoWPAN 환경에서 공격을 탐지하기 위한 기계 학습 및 딥러닝 접근법의 체계적 문헌 고찰을 제공합니다.",
+  "method": "기계 학습 및 딥러닝 접근법이 RPL 기반 6LoWPAN 환경에서 공격 탐지에 어떻게 적용되는지에 대한 문헌 검토",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
+  "results": "RPL 기반 6LoWPAN 환경에서 공격 탐지를 위한 기계 학습 및 딥러닝 접근법의 적용에 대한 문헌에서의 주요 결과 및 메트릭을 요약합니다.",
+  "contributions": [
+    "RPL 기반 6LoWPAN 환경에서 공격 탐지를 위한 기계 학습 및 딥러닝 접근법에 대한 체계적 문헌 고찰 제공",
+    "기존 연구의 효과와 한계 분석",
+    "RPL 기반 6LoWPAN 환경에서 기계 학습 및 딥러닝 접근법의 효과성을 평가하는 방법론적 프레임워크 제안"
+  ],
+  "limitations": "논문은 특정 실험적 분석이나 데이터셋을 다루지 않으며, 문헌 고찰에 기반합니다.",
+  "future_work": "RPL 기반 6LoWPAN 환경에서 공격 탐지를 위한 기계 학습 및 딥러닝 접근법을 개선하고, 실시간 분석 및 자동화된 방어 메커니즘을 탐구할 필요가 있습니다.",
+  "keywords": [
+    "RPL",
+    "6LoWPAN",
+    "IoT",
+    "Machine Learning",
+    "Deep Learning",
+    "Attack Detection"
+  ],
+  "obsidian_markdown": "# A Systematic Literature Review on Machine and Deep Learning Approaches for Detecting Attacks in RPL-Based 6LoWPAN of Internet of Things\n\n## One-line Summary\n이 논문은 IoT 환경에서 RPL 기반 6LoWPAN에서 공격 탐지를 위한 기계 학습 및 딥러닝 접근법에 대한 체계적 문헌 고찰을 제공합니다.\n\n## Problem\n6LoWPAN 노드의 제한된 자원으로 인해 IoT 환경을 보호하기가 어렵고, 이는 다양한 위협에 취약해집니다.\n\n## Key Idea\n이 논문은 RPL 기반 6LoWPAN 환경에서 공격을 탐지하기 위한 기계 학습 및 딥러닝 접근법의 체계적 문헌 고찰을 제공합니다.\n\n## Method\n기계 학습 및 딥러닝 접근법이 RPL 기반 6LoWPAN 환경에서 공격 탐지에 어떻게 적용되는지에 대한 문헌 검토\n\n## Experiment\nN/A\n\n## Results\nRPL 기반 6LoWPAN 환경에서 공격 탐지를 위한 기계 학습 및 딥러닝 접근법의 적용에 대한 문헌에서의 주요 결과 및 메트릭을 요약합니다.\n\n## Contributions\n- RPL 기반 6LoWPAN 환경에서 공격 탐지를 위한 기계 학습 및 딥러닝 접근법에 대한 체계적 문헌 고찰 제공\n- 기존 연구의 효과와 한계 분석\n- RPL 기반 6LoWPAN 환경에서 기계 학습 및 딥러닝 접근법의 효과성을 평가하는 방법론적 프레임워크 제안\n\n## Limitations\n논문은 특정 실험적 분석이나 데이터셋을 다루지 않으며, 문헌 고찰에 기반합니다.\n\n## Future Work\nRPL 기반 6LoWPAN 환경에서 공격 탐지를 위한 기계 학습 및 딥러닝 접근법을 개선하고, 실시간 분석 및 자동화된 방어 메커니즘을 탐구할 필요가 있습니다.\n\n## Keywords\nRPL, 6LoWPAN, IoT, Machine Learning, Deep Learning, Attack Detection\n"
+}

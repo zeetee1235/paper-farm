@@ -1,26 +1,24 @@
 {
   "title": "Generative Adversarial Networks for Distributed Intrusion Detection in the Internet of Things",
-  "summary": "이 논문은 IoT 환경에서 분산 IDS를 제공하기 위해 분산 GAN을 제안하여 중앙 컨트롤러에 의존하지 않고 비정상적인 행동을 감지하는 방법을 제시합니다.",
-  "problem": "IoT 시스템에서 큰 규모의 분산 IDS를 중앙 컨트롤러에 의존하지 않고 데이터 개인 정보 보호를 유지하면서 효과적으로 구현하는 문제를 다룹니다.",
-  "key_idea": "분산 GAN을 사용하여 각 IoTD가 자체 데이터 및 이웃 IoTDs의 데이터를 모니터링하여 내부 및 외부 공격을 감지하는 방법을 제안합니다.",
-  "method": "분산 GAN, 분산 IDS, 내부 및 외부 공격 감지를 위한 기존 GAN 기반 IDS와의 비교 분석을 사용합니다.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 정확도, 정밀도, 잘못된 양성 비율",
-  "results": "제안된 분산 GAN 기반 IDS는 단독 GAN 기반 IDS에 비해 최대 20% 더 높은 정확도, 25% 더 높은 정밀도, 60% 낮은 잘못된 양성 비율을 보였습니다.",
+  "summary": "이 논문은 IoT에서 분산된 GAN을 제안하여 IoT 장치 간 데이터 공유 없이 침입 탐지의 정확도를 향상시킵니다.",
+  "problem": "IoT 시스템의 대규모 분산성과 데이터 프라이버시 요구로 인해 중앙 컨트롤러에 의존하지 않고 침입을 탐지할 수 있는 분산된 IDS가 필요합니다.",
+  "key_idea": "분산된 GAN을 사용하여 IoT 장치가 자체 데이터와 이웃 장치의 데이터를 모니터링하여 중앙 컨트롤러 없이 내부 및 외부 침입을 탐지합니다.",
+  "method": "분산된 GAN 모델을 사용하여 각 IoT 장치가 자체 데이터와 이웃 IoT 장치의 데이터를 모니터링하고 비교하여 침입을 탐지합니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 정확도, 정밀도, 잘못된 긍정 비율",
+  "results": "제안된 분산된 GAN 기반 IDS는 단일 IoT 장치 데이터를 사용하는 독립적인 GAN 기반 IDS에 비해 최대 20% 더 높은 정확도, 25% 더 높은 정밀도, 60% 낮은 잘못된 긍정 비율을 달성했습니다.",
   "contributions": [
-    "IoT 환경에서 분산 IDS를 위한 분산 GAN을 제안했습니다.",
-    "분산 GAN을 사용하여 비정상적인 행동을 감지하는 방법을 제시했습니다.",
-    "제안된 방법이 단독 IDS와 비교하여 더 높은 성능을 보여준다는 것을 분석적으로 증명했습니다."
+    "프라이버시를 유지하면서 IoT에서 분산된 IDS를 제공하는 분산된 GAN 아키텍처를 제안합니다.",
+    "분산된 GAN 기반 IDS의 정확도가 단일 IoT 장치 데이터를 사용하는 IDS보다 높음을 분석적으로 증명합니다.",
+    "실제 시뮬레이션 결과를 통해 분산된 GAN 기반 IDS의 성능 향상을 입증합니다."
   ],
-  "limitations": "실제 IoT 시스템에서의 구현 및 실제 데이터셋을 사용한 실험이 부족합니다.",
-  "future_work": "다양한 실제 IoT 시스템에서의 실험 및 더 다양한 공격 시나리오에서의 성능 평가가 필요합니다.",
+  "limitations": "실험은 시뮬레이션 환경에서 수행되었으며 실제 IoT 환경에서의 효과는 추가적인 검증이 필요합니다.",
+  "future_work": "실제 IoT 환경에서의 분산된 GAN 기반 IDS의 효과를 검증하고, 다양한 IoT 응용 분야에서의 적용 가능성을 탐구하는 것이 제안됩니다.",
   "keywords": [
     "Generative Adversarial Networks",
     "Distributed Intrusion Detection",
     "Internet of Things",
-    "Privacy-Preserving",
-    "Cyber Security",
-    "Anomaly Detection",
-    "Machine Learning"
+    "Privacy",
+    "Security"
   ],
-  "obsidian_markdown": "# Generative Adversarial Networks for Distributed Intrusion Detection in the Internet of Things\n\n## One-line Summary\n이 논문은 IoT 환경에서 분산 IDS를 제공하기 위해 분산 GAN을 제안하여 중앙 컨트롤러에 의존하지 않고 비정상적인 행동을 감지하는 방법을 제시합니다.\n\n## Problem\nIoT 시스템에서 큰 규모의 분산 IDS를 중앙 컨트롤러에 의존하지 않고 데이터 개인 정보 보호를 유지하면서 효과적으로 구현하는 문제를 다룹니다.\n\n## Key Idea\n분산 GAN을 사용하여 각 IoTD가 자체 데이터 및 이웃 IoTDs의 데이터를 모니터링하여 내부 및 외부 공격을 감지하는 방법을 제안합니다.\n\n## Method\n분산 GAN, 분산 IDS, 내부 및 외부 공격 감지를 위한 기존 GAN 기반 IDS와의 비교 분석을 사용합니다.\n\n## Experiment\n- **Metric**: 정확도, 정밀도, 잘못된 양성 비율\n\n## Results\n제안된 분산 GAN 기반 IDS는 단독 GAN 기반 IDS에 비해 최대 20% 더 높은 정확도, 25% 더 높은 정밀도, 60% 낮은 잘못된 양성 비율을 보였습니다.\n\n## Contributions\n- IoT 환경에서 분산 IDS를 위한 분산 GAN을 제안했습니다.\n- 분산 GAN을 사용하여 비정상적인 행동을 감지하는 방법을 제시했습니다.\n- 제안된 방법이 단독 IDS와 비교하여 더 높은 성능을 보여준다는 것을 분석적으로 증명했습니다.\n\n## Limitations\n실제 IoT 시스템에서의 구현 및 실제 데이터셋을 사용한 실험이 부족합니다.\n\n## Future Work\n다양한 실제 IoT 시스템에서의 실험 및 더 다양한 공격 시나리오에서의 성능 평가가 필요합니다.\n\n## Keywords\nGenerative Adversarial Networks, Distributed Intrusion Detection, Internet of Things, Privacy-Preserving, Cyber Security, Anomaly Detection, Machine Learning\n"
+  "obsidian_markdown": "# Generative Adversarial Networks for Distributed Intrusion Detection in the Internet of Things\n\n## One-line Summary\n이 논문은 IoT에서 분산된 GAN을 제안하여 IoT 장치 간 데이터 공유 없이 침입 탐지의 정확도를 향상시킵니다.\n\n## Problem\nIoT 시스템의 대규모 분산성과 데이터 프라이버시 요구로 인해 중앙 컨트롤러에 의존하지 않고 침입을 탐지할 수 있는 분산된 IDS가 필요합니다.\n\n## Key Idea\n분산된 GAN을 사용하여 IoT 장치가 자체 데이터와 이웃 장치의 데이터를 모니터링하여 중앙 컨트롤러 없이 내부 및 외부 침입을 탐지합니다.\n\n## Method\n분산된 GAN 모델을 사용하여 각 IoT 장치가 자체 데이터와 이웃 IoT 장치의 데이터를 모니터링하고 비교하여 침입을 탐지합니다.\n\n## Experiment\n- **Metric**: 정확도, 정밀도, 잘못된 긍정 비율\n\n## Results\n제안된 분산된 GAN 기반 IDS는 단일 IoT 장치 데이터를 사용하는 독립적인 GAN 기반 IDS에 비해 최대 20% 더 높은 정확도, 25% 더 높은 정밀도, 60% 낮은 잘못된 긍정 비율을 달성했습니다.\n\n## Contributions\n- 프라이버시를 유지하면서 IoT에서 분산된 IDS를 제공하는 분산된 GAN 아키텍처를 제안합니다.\n- 분산된 GAN 기반 IDS의 정확도가 단일 IoT 장치 데이터를 사용하는 IDS보다 높음을 분석적으로 증명합니다.\n- 실제 시뮬레이션 결과를 통해 분산된 GAN 기반 IDS의 성능 향상을 입증합니다.\n\n## Limitations\n실험은 시뮬레이션 환경에서 수행되었으며 실제 IoT 환경에서의 효과는 추가적인 검증이 필요합니다.\n\n## Future Work\n실제 IoT 환경에서의 분산된 GAN 기반 IDS의 효과를 검증하고, 다양한 IoT 응용 분야에서의 적용 가능성을 탐구하는 것이 제안됩니다.\n\n## Keywords\nGenerative Adversarial Networks, Distributed Intrusion Detection, Internet of Things, Privacy, Security\n"
 }

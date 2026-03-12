@@ -1,27 +1,27 @@
 {
   "title": "Reputation-Based Trust Systems for Wireless Sensor Networks: A Comprehensive Review",
-  "summary": "이 논문은 무선 센서 네트워크에서 평판 기반 신뢰 시스템에 대한 포괄적인 검토를 제공하여 센서 노드 간 신뢰성을 향상시키는 방법을 탐구합니다.",
-  "problem": "암호 메커니즘만으로는 무선 센서 네트워크(WSN)를 보호하기에 부족하여, 적대적 환경에서의 물리적 공격에 취약하다는 문제를 다룹니다.",
-  "key_idea": "평판 기반 신뢰 시스템을 WSN에 통합하여 센서 노드 간 신뢰성을 높이고, 네트워크의 전반적인 성능을 개선하는 것입니다.",
-  "method": "평판 기반 신뢰 시스템의 주요 구성 요소와 공격 유형에 대한 분류, 그리고 WSN에서의 상태-of-the-art를 검토합니다.",
+  "summary": "이 논문은 무선 센서 네트워크(WSN)에서 평판 기반 신뢰 시스템의 포괄적인 검토를 제공하며, 센서 노드 간의 신뢰도를 향상시키는 동기, 잠재적인 위협, 그리고 현재의 시스템을 분류하고 비교합니다.",
+  "problem": "암호화 메커니즘만으로는 WSN을 충분히 보호할 수 없으며, 센서 노드의 탈취가 가능하여 신뢰성 문제가 발생할 수 있습니다.",
+  "key_idea": "무선 센서 네트워크에서의 신뢰도를 향상시키기 위한 평판 기반 신뢰 시스템의 통합",
+  "method": "평판 시스템의 구성 요소와 보호하는 공격 유형을 비교하며, 다섯 가지 범주로 분류: 일반적, 위치 기반, 이동성, 라우팅, 집계",
   "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
-  "results": "평판 기반 신뢰 시스템의 기본 구성 요소와 보호하는 공격 유형을 비교하고 분류합니다.",
+  "results": "신뢰 기반 시스템의 취약점을 이해하고, 현재의 시스템을 다양한 기준으로 분석하고 비교함으로써, WSN에서의 신뢰성을 향상시키는 방법을 제시",
   "contributions": [
-    "WSN에 평판 기반 신뢰 시스템을 통합하는 중요성을 설명합니다.",
-    "평판 기반 신뢰 시스템이 WSN에 대한 잠재적인 위협을 논의합니다.",
-    "평판 기반 신뢰 시스템을 통합, 위치, 이동성, 라우팅, 집계 등 다섯 가지 범주로 분류합니다."
+    "WSN에 평판 기반 신뢰 시스템의 중요성을 설명함",
+    "WSN과 평판 시스템의 통합에 따른 잠재적 위협을 분석함",
+    "현재의 평판 기반 신뢰 시스템을 분류하고 비교함"
   ],
-  "limitations": "실제 WSN 환경에서의 실험적 검증이 부족하며, 특정 시스템의 세부 구현은 다루지 않습니다.",
-  "future_work": "WSN에서 평판 기반 신뢰 시스템의 보안성과 효율성을 개선하기 위한 추가 연구가 제안됩니다.",
+  "limitations": "현재 시스템의 성능을 시뮬레이션하거나 구체적인 메트릭 데이터를 제공하지 않음",
+  "future_work": "신뢰 평가를 위한 보안 솔루션 개선 및 더 많은 실제 환경에서의 테스트",
   "keywords": [
-    "Reputation-Based Trust Systems",
+    "Reputation-based Trust Systems",
     "Wireless Sensor Networks",
-    "WSN Security",
+    "Trust",
+    "Reputation",
     "Node Compromise",
-    "Adversarial Attacks",
-    "Trust Management",
-    "Reputation Calculation",
-    "Network Performance"
+    "Security",
+    "WSN Security",
+    "Trust Management"
   ],
-  "obsidian_markdown": "# Reputation-Based Trust Systems for Wireless Sensor Networks: A Comprehensive Review\n\n## One-line Summary\n이 논문은 무선 센서 네트워크에서 평판 기반 신뢰 시스템에 대한 포괄적인 검토를 제공하여 센서 노드 간 신뢰성을 향상시키는 방법을 탐구합니다.\n\n## Problem\n암호 메커니즘만으로는 무선 센서 네트워크(WSN)를 보호하기에 부족하여, 적대적 환경에서의 물리적 공격에 취약하다는 문제를 다룹니다.\n\n## Key Idea\n평판 기반 신뢰 시스템을 WSN에 통합하여 센서 노드 간 신뢰성을 높이고, 네트워크의 전반적인 성능을 개선하는 것입니다.\n\n## Method\n평판 기반 신뢰 시스템의 주요 구성 요소와 공격 유형에 대한 분류, 그리고 WSN에서의 상태-of-the-art를 검토합니다.\n\n## Experiment\nN/A\n\n## Results\n평판 기반 신뢰 시스템의 기본 구성 요소와 보호하는 공격 유형을 비교하고 분류합니다.\n\n## Contributions\n- WSN에 평판 기반 신뢰 시스템을 통합하는 중요성을 설명합니다.\n- 평판 기반 신뢰 시스템이 WSN에 대한 잠재적인 위협을 논의합니다.\n- 평판 기반 신뢰 시스템을 통합, 위치, 이동성, 라우팅, 집계 등 다섯 가지 범주로 분류합니다.\n\n## Limitations\n실제 WSN 환경에서의 실험적 검증이 부족하며, 특정 시스템의 세부 구현은 다루지 않습니다.\n\n## Future Work\nWSN에서 평판 기반 신뢰 시스템의 보안성과 효율성을 개선하기 위한 추가 연구가 제안됩니다.\n\n## Keywords\nReputation-Based Trust Systems, Wireless Sensor Networks, WSN Security, Node Compromise, Adversarial Attacks, Trust Management, Reputation Calculation, Network Performance\n"
+  "obsidian_markdown": "# Reputation-Based Trust Systems for Wireless Sensor Networks: A Comprehensive Review\n\n## One-line Summary\n이 논문은 무선 센서 네트워크(WSN)에서 평판 기반 신뢰 시스템의 포괄적인 검토를 제공하며, 센서 노드 간의 신뢰도를 향상시키는 동기, 잠재적인 위협, 그리고 현재의 시스템을 분류하고 비교합니다.\n\n## Problem\n암호화 메커니즘만으로는 WSN을 충분히 보호할 수 없으며, 센서 노드의 탈취가 가능하여 신뢰성 문제가 발생할 수 있습니다.\n\n## Key Idea\n무선 센서 네트워크에서의 신뢰도를 향상시키기 위한 평판 기반 신뢰 시스템의 통합\n\n## Method\n평판 시스템의 구성 요소와 보호하는 공격 유형을 비교하며, 다섯 가지 범주로 분류: 일반적, 위치 기반, 이동성, 라우팅, 집계\n\n## Experiment\nN/A\n\n## Results\n신뢰 기반 시스템의 취약점을 이해하고, 현재의 시스템을 다양한 기준으로 분석하고 비교함으로써, WSN에서의 신뢰성을 향상시키는 방법을 제시\n\n## Contributions\n- WSN에 평판 기반 신뢰 시스템의 중요성을 설명함\n- WSN과 평판 시스템의 통합에 따른 잠재적 위협을 분석함\n- 현재의 평판 기반 신뢰 시스템을 분류하고 비교함\n\n## Limitations\n현재 시스템의 성능을 시뮬레이션하거나 구체적인 메트릭 데이터를 제공하지 않음\n\n## Future Work\n신뢰 평가를 위한 보안 솔루션 개선 및 더 많은 실제 환경에서의 테스트\n\n## Keywords\nReputation-based Trust Systems, Wireless Sensor Networks, Trust, Reputation, Node Compromise, Security, WSN Security, Trust Management\n"
 }

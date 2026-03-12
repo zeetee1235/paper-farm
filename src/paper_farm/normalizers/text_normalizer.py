@@ -30,9 +30,9 @@ class BasicTextNormalizer:
         sections = self._split_sections(cleaned)
         abstract = sections.get("Abstract", "")[:2500]
         normalized_sections = [
-            PaperSection(name=name, content=content[:20000])
+            PaperSection(name=name, content=content)
             for name, content in sections.items()
-            if content and name != "Abstract"
+            if content
         ]
         return PaperStruct(title=title, abstract=abstract, sections=normalized_sections)
 

@@ -1,27 +1,26 @@
 {
   "title": "A survey on routing protocols for wireless sensor networks",
-  "summary": "이 논문은 센서 네트워크에서 에너지에 민감한 라우팅 프로토콜을 분류하고 검토합니다.",
-  "problem": "센서 네트워크에서의 라우팅 프로토콜은 응용 프로그램과 네트워크 아키텍처에 따라 다양하며, 에너지 효율성이 중요한 고려 사항입니다.",
-  "key_idea": "데이터 중심, 계층적, 위치 기반 세 가지 주요 범주로 센서 네트워크의 라우팅 프로토콜을 분류하고 설명합니다.",
-  "method": "연구에서는 데이터 중심, 계층적, 위치 기반 라우팅 프로토콜의 설명과 분석을 통해 다양한 접근 방식을 분류합니다.",
+  "summary": "이 논문은 센서 네트워크에서의 최근 라우팅 프로토콜을 조사하고 다양한 접근 방식을 분류하는 것을 주요 기여로 제시합니다.",
+  "problem": "센서 네트워크의 에너지 제약과 라우팅 프로토콜 설계의 도전 과제를 해결하는 것",
+  "key_idea": "데이터 중심, 계층적, 위치 기반 라우팅 프로토콜의 분류",
+  "method": "문헌 조사와 다양한 라우팅 프로토콜의 분류",
   "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
-  "results": "N/A",
+  "results": "데이터 중심, 계층적, 위치 기반 라우팅 프로토콜의 분류와 분석",
   "contributions": [
-    "센서 네트워크의 라우팅 프로토콜을 분류했습니다.",
-    "데이터 중심, 계층적, 위치 기반 라우팅 프로토콜의 설명을 제공했습니다.",
-    "응용 프로그램과 네트워크 아키텍처에 따른 라우팅 프로토콜의 차이를 탐구했습니다."
+    "센서 네트워크에서의 최근 라우팅 프로토콜 조사",
+    "라우팅 프로토콜의 분류 체계 제시",
+    "오픈 연구 문제 제시"
   ],
-  "limitations": "실험 데이터 세트나 시뮬레이션 환경이 제시되지 않았으며, 결과 메트릭도 제공되지 않았습니다.",
-  "future_work": "센서 네트워크에서의 라우팅 프로토콜에 대한 개방적인 연구 문제를 제시했습니다.",
+  "limitations": "실제 실험 결과 및 비교 분석 부재",
+  "future_work": "라우팅 프로토콜의 효율성 개선과 실제 응용 시나리오에 대한 연구 필요성",
   "keywords": [
     "Sensor networks",
     "Energy-aware routing",
     "Routing protocols",
     "Classification of protocols",
-    "Wireless sensor networks",
     "Data-centric",
     "Hierarchical",
     "Location-based"
   ],
-  "obsidian_markdown": "# A survey on routing protocols for wireless sensor networks\n\n## One-line Summary\n이 논문은 센서 네트워크에서 에너지에 민감한 라우팅 프로토콜을 분류하고 검토합니다.\n\n## Problem\n센서 네트워크에서의 라우팅 프로토콜은 응용 프로그램과 네트워크 아키텍처에 따라 다양하며, 에너지 효율성이 중요한 고려 사항입니다.\n\n## Key Idea\n데이터 중심, 계층적, 위치 기반 세 가지 주요 범주로 센서 네트워크의 라우팅 프로토콜을 분류하고 설명합니다.\n\n## Method\n연구에서는 데이터 중심, 계층적, 위치 기반 라우팅 프로토콜의 설명과 분석을 통해 다양한 접근 방식을 분류합니다.\n\n## Experiment\nN/A\n\n## Results\nN/A\n\n## Contributions\n- 센서 네트워크의 라우팅 프로토콜을 분류했습니다.\n- 데이터 중심, 계층적, 위치 기반 라우팅 프로토콜의 설명을 제공했습니다.\n- 응용 프로그램과 네트워크 아키텍처에 따른 라우팅 프로토콜의 차이를 탐구했습니다.\n\n## Limitations\n실험 데이터 세트나 시뮬레이션 환경이 제시되지 않았으며, 결과 메트릭도 제공되지 않았습니다.\n\n## Future Work\n센서 네트워크에서의 라우팅 프로토콜에 대한 개방적인 연구 문제를 제시했습니다.\n\n## Keywords\nSensor networks, Energy-aware routing, Routing protocols, Classification of protocols, Wireless sensor networks, Data-centric, Hierarchical, Location-based\n"
+  "obsidian_markdown": "# A survey on routing protocols for wireless sensor networks\n\n## One-line Summary\n이 논문은 센서 네트워크에서의 최근 라우팅 프로토콜을 조사하고 다양한 접근 방식을 분류하는 것을 주요 기여로 제시합니다.\n\n## Problem\n센서 네트워크의 에너지 제약과 라우팅 프로토콜 설계의 도전 과제를 해결하는 것\n\n## Key Idea\n데이터 중심, 계층적, 위치 기반 라우팅 프로토콜의 분류\n\n## Method\n문헌 조사와 다양한 라우팅 프로토콜의 분류\n\n## Experiment\nN/A\n\n## Results\n데이터 중심, 계층적, 위치 기반 라우팅 프로토콜의 분류와 분석\n\n## Contributions\n- 센서 네트워크에서의 최근 라우팅 프로토콜 조사\n- 라우팅 프로토콜의 분류 체계 제시\n- 오픈 연구 문제 제시\n\n## Limitations\n실제 실험 결과 및 비교 분석 부재\n\n## Future Work\n라우팅 프로토콜의 효율성 개선과 실제 응용 시나리오에 대한 연구 필요성\n\n## Keywords\nSensor networks, Energy-aware routing, Routing protocols, Classification of protocols, Data-centric, Hierarchical, Location-based\n"
 }

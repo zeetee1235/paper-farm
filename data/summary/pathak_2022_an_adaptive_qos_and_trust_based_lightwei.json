@@ -1,0 +1,26 @@
+{
+  "title": "An Adaptive QoS and Trust-Based Lightweight Secure Routing Algorithm for WSNs",
+  "summary": "이 논문은 WSNs의 제한된 자원과 낮은 계산 능력으로 인해 보안 공격에 취약하게 되는 문제를 해결하기 위해, 새로운 LSR 알고리즘을 제시하여 QoS 유지와 에너지 효율성을 향상시키는 것을 제안합니다.",
+  "problem": "WSNs의 제한된 자원과 낮은 계산 능력으로 인해 보안 공격에 취약하며, 전통적인 보안 메커니즘은 WSNs의 신뢰할 수 있는 운영을 위해 너무 많은 자원을 요구합니다. 또한, QoS 보장이 필요하며, 에너지-홀 문제를 해결해야 합니다.",
+  "key_idea": "이 논문은 WSNs의 다목적 최적화 문제를 해결하기 위해 새로운 LSR 알고리즘을 제시하며, 이는 안티콜로니 최적화, 적응 보안 모델, 적응 QoS 모델, 혼합 배치 모델, 그리고 적응적 연결 모델을 사용합니다.",
+  "method": "안티콜로니 최적화(ACO), 직접 및 간접 신뢰 계산을 기반으로 한 적응 보안 모델, 적응 QoS 모델, 2-D 가우시안 및 균일 분포를 기반으로 한 혼합 배치 모델, 그리고 적절한 통신 반경을 사용한 적응적 연결 모델을 사용합니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 신뢰 값 계산을 위한 에너지 소비, 신뢰 값 수렴, 네트워크 수명, 평균 라우팅 지연, 패킷 전달 비율",
+  "results": "LSR은 기존 기법에 비해 신뢰 값 계산을 위한 에너지 소비, 신뢰 값 수렴, 네트워크 수명, 평균 라우팅 지연, 패킷 전달 비율 측면에서 우수한 성능을 보여줍니다.",
+  "contributions": [
+    "신뢰 기반 보안 모델과 적응 QoS 모델을 결합한 LSR 알고리즘을 제안합니다.",
+    "2-D 가우시안 및 균일 분포를 기반으로 한 혼합 배치 모델을 사용하여 에너지-홀 문제를 해결합니다.",
+    "적절한 통신 반경을 사용한 적응적 연결 모델을 통해 높은 감지 노드 간 연결성을 보장합니다."
+  ],
+  "limitations": "실제 세계 환경에서의 실험과 확장성 분석이 필요합니다.",
+  "future_work": "실제 배치에서의 성능 평가, 다양한 환경 조건 하에서의 효과성 향상, 그리고 새로운 보안 위협에 대한 대응 방안 개발이 필요합니다.",
+  "keywords": [
+    "Wireless Sensor Networks",
+    "QoS",
+    "Trust",
+    "Security",
+    "Ant Colony Optimization",
+    "Energy Efficiency",
+    "WSN Optimization"
+  ],
+  "obsidian_markdown": "# An Adaptive QoS and Trust-Based Lightweight Secure Routing Algorithm for WSNs\n\n## One-line Summary\n이 논문은 WSNs의 제한된 자원과 낮은 계산 능력으로 인해 보안 공격에 취약하게 되는 문제를 해결하기 위해, 새로운 LSR 알고리즘을 제시하여 QoS 유지와 에너지 효율성을 향상시키는 것을 제안합니다.\n\n## Problem\nWSNs의 제한된 자원과 낮은 계산 능력으로 인해 보안 공격에 취약하며, 전통적인 보안 메커니즘은 WSNs의 신뢰할 수 있는 운영을 위해 너무 많은 자원을 요구합니다. 또한, QoS 보장이 필요하며, 에너지-홀 문제를 해결해야 합니다.\n\n## Key Idea\n이 논문은 WSNs의 다목적 최적화 문제를 해결하기 위해 새로운 LSR 알고리즘을 제시하며, 이는 안티콜로니 최적화, 적응 보안 모델, 적응 QoS 모델, 혼합 배치 모델, 그리고 적응적 연결 모델을 사용합니다.\n\n## Method\n안티콜로니 최적화(ACO), 직접 및 간접 신뢰 계산을 기반으로 한 적응 보안 모델, 적응 QoS 모델, 2-D 가우시안 및 균일 분포를 기반으로 한 혼합 배치 모델, 그리고 적절한 통신 반경을 사용한 적응적 연결 모델을 사용합니다.\n\n## Experiment\n- **Metric**: 신뢰 값 계산을 위한 에너지 소비, 신뢰 값 수렴, 네트워크 수명, 평균 라우팅 지연, 패킷 전달 비율\n\n## Results\nLSR은 기존 기법에 비해 신뢰 값 계산을 위한 에너지 소비, 신뢰 값 수렴, 네트워크 수명, 평균 라우팅 지연, 패킷 전달 비율 측면에서 우수한 성능을 보여줍니다.\n\n## Contributions\n- 신뢰 기반 보안 모델과 적응 QoS 모델을 결합한 LSR 알고리즘을 제안합니다.\n- 2-D 가우시안 및 균일 분포를 기반으로 한 혼합 배치 모델을 사용하여 에너지-홀 문제를 해결합니다.\n- 적절한 통신 반경을 사용한 적응적 연결 모델을 통해 높은 감지 노드 간 연결성을 보장합니다.\n\n## Limitations\n실제 세계 환경에서의 실험과 확장성 분석이 필요합니다.\n\n## Future Work\n실제 배치에서의 성능 평가, 다양한 환경 조건 하에서의 효과성 향상, 그리고 새로운 보안 위협에 대한 대응 방안 개발이 필요합니다.\n\n## Keywords\nWireless Sensor Networks, QoS, Trust, Security, Ant Colony Optimization, Energy Efficiency, WSN Optimization\n"
+}
