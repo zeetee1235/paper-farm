@@ -113,7 +113,7 @@ class MarkdownExporter:
 
         lines = [
             "# Paper Index\n",
-            f"> 총 {len(entries)}편의 논문\n",
+            f"> total {len(entries)} papers\n",
             "",
             "| # | title | year | authors | keywords |",
             "|---|------|------|------|--------|",
@@ -123,7 +123,7 @@ class MarkdownExporter:
             year = entry["year"]
             authors = ", ".join(entry["authors"][:2])
             if len(entry["authors"]) > 2:
-                authors += " 외"
+                authors += " et al."
             pid = entry["id"]
             kw_str = ", ".join(entry["keywords"][:3])
             lines.append(f"| {i} | [[{pid}/summary\\|{title}]] | {year} | {authors} | {kw_str} |")
