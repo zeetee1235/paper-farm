@@ -24,7 +24,7 @@ done
 # ── Python 렌더러 (unicode 너비 정확 계산) ─────────────────
 render() {
   python3 - "$PROJECT_ROOT" "$INTERVAL" "$LIVE" <<'PYEOF'
-import sys, json, datetime, pathlib, subprocess, unicodedata, urllib.request, re
+import sys, json, datetime, pathlib, subprocess, unicodedata, urllib.request, re, tomllib
 
 PROJECT_ROOT = pathlib.Path(sys.argv[1])
 INTERVAL     = int(sys.argv[2])
@@ -66,32 +66,46 @@ def divrow(label: str) -> str:
 def sep(left="╠", mid="═", right="╣") -> str:
     return f"{B}{left}{mid * W}{right}{R}"
 
-def read_config(key: str, default: str = "") -> str:
-    if not CONFIG.exists():
-        return default
-    for line in CONFIG.read_text().splitlines():
-        line = line.strip()
-        if line.startswith(key) and "=" in line:
-            val = line.split("=", 1)[1].strip().strip('"').strip("'")
-            return val.replace("~", str(pathlib.Path.home()))
-    return default
+config_data: dict = {}
+if CONFIG.exists():
+    try:
+        config_data = tomllib.loads(CONFIG.read_text(encoding="utf-8"))
+    except Exception:
+        config_data = {}
+
+def read_config(section: str, key: str, default=""):
+    value = config_data.get(section, {}).get(key, default)
+    if isinstance(value, str) and value.startswith("~"):
+        return str(pathlib.Path(value).expanduser())
+    return value
 
 # ── 경로 ────────────────────────────────────────────────────
-zotero_storage  = pathlib.Path(read_config("zotero_storage", "~/Zotero/storage"))
-obsidian_vault  = pathlib.Path(read_config("obsidian_vault",
-    str(PROJECT_ROOT / "obsidian" / "vault" / "papers")))
-backend = read_config("backend", "rule-based")
-model   = read_config("model", "llama3:8b")
+configured_root = read_config("paths", "project_root", str(PROJECT_ROOT))
+PROJECT_ROOT = pathlib.Path(configured_root).expanduser()
+CONFIG            = PROJECT_ROOT / "paper-farm.toml"
+STATE_FILE        = PROJECT_ROOT / ".zotero_watcher_state.json"
+QUEUE_STATUS_FILE = PROJECT_ROOT / ".queue_status.json"
+WATCH_LOG         = PROJECT_ROOT / "logs" / "paper-farm.log"
 
-metadata_root = PROJECT_ROOT / "metadata" / "normalized"
-parsed_root   = PROJECT_ROOT / "parsed" / "paper_struct"
-summary_root  = PROJECT_ROOT / "summary"
+zotero_storage  = pathlib.Path(read_config("watcher", "zotero_storage", "~/Zotero/storage"))
+obsidian_vault  = pathlib.Path(read_config("paths", "obsidian_vault",
+    str(PROJECT_ROOT / "obsidian" / "vault" / "papers")))
+backend = read_config("llm", "backend", "rule-based")
+model   = read_config("llm", "model", "llama3:8b")
+base_url = read_config("llm", "base_url", "http://localhost:11434")
+
+raw_pdf_root  = PROJECT_ROOT / "data" / "raw_pdf"
+parsed_root   = PROJECT_ROOT / "data" / "parsed"
+summary_root  = PROJECT_ROOT / "data" / "summary"
+legacy_raw_pdf_root = PROJECT_ROOT / "papers" / "raw_pdf"
+legacy_parsed_root  = PROJECT_ROOT / "parsed" / "paper_struct"
+legacy_summary_root = PROJECT_ROOT / "summary"
 
 # ── 시스템 상태 ──────────────────────────────────────────────
 ollama_ok = False
 ollama_models = ""
 try:
-    with urllib.request.urlopen("http://localhost:11434/api/tags", timeout=1) as r:
+    with urllib.request.urlopen(f"{base_url.rstrip('/')}/api/tags", timeout=1) as r:
         d = json.loads(r.read())
         ollama_models = ", ".join(m["name"] for m in d.get("models", []))
         ollama_ok = True
@@ -118,11 +132,20 @@ STAGES = [
 
 def stage_done(paper_id: str, stage: str) -> bool:
     if stage == "ingest":
-        return (PROJECT_ROOT / "papers" / "raw_pdf" / f"{paper_id}.pdf").exists()
+        return (
+            (raw_pdf_root / f"{paper_id}.pdf").exists()
+            or (legacy_raw_pdf_root / f"{paper_id}.pdf").exists()
+        )
     if stage == "parse":
-        return (parsed_root / f"{paper_id}.json").exists()
+        return (
+            (parsed_root / f"{paper_id}.json").exists()
+            or (legacy_parsed_root / f"{paper_id}.json").exists()
+        )
     if stage == "summarize":
-        return (summary_root / f"{paper_id}.json").exists()
+        return (
+            (summary_root / f"{paper_id}.json").exists()
+            or (legacy_summary_root / f"{paper_id}.json").exists()
+        )
     if stage == "obsidian":
         return (obsidian_vault / paper_id / "summary.md").exists()
     return False
@@ -191,7 +214,25 @@ if zotero_storage.is_dir():
 
 log_lines: list[str] = []
 if WATCH_LOG.exists():
-    log_lines = WATCH_LOG.read_text(errors="replace").splitlines()[-8:]
+    all_log_lines = WATCH_LOG.read_text(errors="replace").splitlines()[-200:]
+    important = [
+        line for line in all_log_lines
+        if (
+            "ERROR" in line
+            or "Traceback" in line
+            or "Exception" in line
+            or "failed" in line.lower()
+            or "timeout" in line.lower()
+        )
+    ]
+    log_lines = (important or all_log_lines)[-8:]
+
+queue_age = None
+if QUEUE_STATUS_FILE.exists():
+    try:
+        queue_age = max(0, int(datetime.datetime.now().timestamp() - QUEUE_STATUS_FILE.stat().st_mtime))
+    except Exception:
+        queue_age = None
 
 # ── output ───────────────────────────────────────────────────
 now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -243,6 +284,9 @@ if processing_name or queue_size > 0:
     wait_str = f"  {DIM}queued: {queue_size}{R}" if queue_size > 0 else ""
     done_str = f"  {GRN}session done: {completed_sess}{R}" if completed_sess > 0 else ""
     print(row(f"  queue           :{proc_str}{wait_str}{done_str}"))
+elif queue_age is not None:
+    freshness = f"{GRN}fresh{R}" if queue_age <= INTERVAL * 3 else f"{YLW}stale{R}"
+    print(row(f"  queue status    : {freshness}  {DIM}{queue_age}s ago{R}"))
 
 print(sep())
 
@@ -252,6 +296,11 @@ print(divrow(""))
 
 if papers:
     def sort_key(p):
+        raw_name = p.get("raw_name", "")
+        if raw_name == processing_name:
+            return (-2, 0, p["filename"])
+        if raw_name in failed_names:
+            return (-1, 0, p["filename"])
         if not p["paper_id"]:
             return (2, "")
         done_count = sum(stage_done(p["paper_id"], k) for _, k, _ in STAGES)
@@ -299,7 +348,13 @@ print(sep())
 print(row(f"  {B}[ Recent Log ]{R}"))
 if log_lines:
     for line in log_lines:
-        color = RED if "ERROR" in line or "failed" in line.lower() else DIM
+        color = RED if (
+            "ERROR" in line
+            or "Traceback" in line
+            or "Exception" in line
+            or "failed" in line.lower()
+            or "timeout" in line.lower()
+        ) else DIM
         plain = re.sub(r"\033\[[0-9;]*m", "", line)
         trimmed = plain[:W - 4]
         print(row(f"  {color}{trimmed}{R}"))

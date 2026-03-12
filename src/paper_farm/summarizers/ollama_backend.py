@@ -11,19 +11,25 @@ from paper_farm.models.artifacts import PaperStruct, SummaryResult
 
 def _build_system_prompt(language_name: str) -> str:
     return f"""\
-You are a research assistant. Read the paper content and return a JSON object with exactly these fields:
-- summary: one paragraph summary in {language_name}
-- contributions: list of 3 main contributions (strings, {language_name})
-- method: description of methods/approach ({language_name})
+You are a research paper analysis assistant. Read the paper content and return a JSON object with exactly these fields. Write all text fields in {language_name}.
+
+Fields:
+- summary: one-sentence summary of the paper's core contribution ({language_name})
+- problem: the problem this paper addresses ({language_name})
+- key_idea: the core idea or approach ({language_name})
+- method: methods, models, or algorithms used ({language_name})
+- experiment: a JSON object with keys "dataset", "simulator", "metric" ({language_name})
 - results: key results and metrics ({language_name})
-- limitations: limitations or future work ({language_name})
-- keywords: list of 5-8 English keywords (always in English regardless of language setting)
+- contributions: list of 3 actual contributions (strings, {language_name})
+- limitations: limitations of the paper ({language_name})
+- future_work: future work suggested by the paper ({language_name})
+- keywords: list of 5-8 English keywords (always in English)
 
 Rules:
-- Answer only with a valid JSON object, no markdown fences, no extra text
-- Keywords are always in English
-- If information is unclear, write "unclear" for that field
-- Do not hallucinate details not in the paper
+- Return only a valid JSON object, no markdown fences, no extra text
+- keywords must always be in English
+- If information is unclear, write "N/A"
+- Do not hallucinate details not present in the paper
 """
 
 
@@ -51,13 +57,24 @@ class OllamaSummaryBackend:
         raw = self._call_ollama(user_content)
         parsed = self._parse_response(raw)
         obsidian_markdown = self._build_markdown(paper.title, parsed)
+        experiment_raw = parsed.get("experiment", {})
+        if isinstance(experiment_raw, dict):
+            experiment_str = "\n".join(
+                f"- **{k.capitalize()}**: {v}" for k, v in experiment_raw.items()
+            )
+        else:
+            experiment_str = str(experiment_raw)
         return SummaryResult(
             title=paper.title,
             summary=parsed.get("summary", ""),
-            contributions=parsed.get("contributions", []),
+            problem=parsed.get("problem", ""),
+            key_idea=parsed.get("key_idea", ""),
             method=parsed.get("method", ""),
+            experiment=experiment_str,
             results=parsed.get("results", ""),
+            contributions=parsed.get("contributions", []),
             limitations=parsed.get("limitations", ""),
+            future_work=parsed.get("future_work", ""),
             keywords=parsed.get("keywords", []),
             obsidian_markdown=obsidian_markdown,
         )
@@ -119,18 +136,35 @@ class OllamaSummaryBackend:
     def _build_markdown(title: str, d: dict) -> str:
         contributions = "\n".join(f"- {c}" for c in d.get("contributions", []))
         keywords = ", ".join(d.get("keywords", []))
+        experiment_raw = d.get("experiment", {})
+        if isinstance(experiment_raw, dict):
+            non_na = {k: v for k, v in experiment_raw.items() if v and str(v).upper() != "N/A"}
+            if non_na:
+                experiment_lines = "\n".join(f"- **{k.capitalize()}**: {v}" for k, v in non_na.items())
+            else:
+                experiment_lines = "N/A"
+        else:
+            experiment_lines = str(experiment_raw)
         return (
             f"# {title}\n\n"
-            "## Summary\n"
+            "## One-line Summary\n"
             f"{d.get('summary', '')}\n\n"
-            "## Contributions\n"
-            f"{contributions}\n\n"
+            "## Problem\n"
+            f"{d.get('problem', '')}\n\n"
+            "## Key Idea\n"
+            f"{d.get('key_idea', '')}\n\n"
             "## Method\n"
             f"{d.get('method', '')}\n\n"
+            "## Experiment\n"
+            f"{experiment_lines}\n\n"
             "## Results\n"
             f"{d.get('results', '')}\n\n"
+            "## Contributions\n"
+            f"{contributions}\n\n"
             "## Limitations\n"
             f"{d.get('limitations', '')}\n\n"
+            "## Future Work\n"
+            f"{d.get('future_work', '')}\n\n"
             "## Keywords\n"
             f"{keywords}\n"
         )

@@ -47,9 +47,13 @@ class SummaryResult:
 
     title: str
     summary: str
-    contributions: list[str]
+    problem: str
+    key_idea: str
     method: str
+    experiment: str
     results: str
+    contributions: list[str]
     limitations: str
+    future_work: str
     keywords: list[str]
     obsidian_markdown: str

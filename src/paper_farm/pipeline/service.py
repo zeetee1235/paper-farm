@@ -177,10 +177,14 @@ class PipelineService:
         contract = {
             "title": "",
             "summary": "",
-            "contributions": [],
+            "problem": "",
+            "key_idea": "",
             "method": "",
+            "experiment": "",
             "results": "",
+            "contributions": [],
             "limitations": "",
+            "future_work": "",
             "keywords": [],
             "obsidian_markdown": "",
         }

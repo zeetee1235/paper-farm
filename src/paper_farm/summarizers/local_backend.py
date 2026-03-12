@@ -38,10 +38,14 @@ class LocalSummaryBackend:
         return SummaryResult(
             title=paper.title,
             summary=summary,
-            contributions=contributions,
+            problem="",
+            key_idea="",
             method=method,
+            experiment="",
             results=results,
+            contributions=contributions,
             limitations=limitations,
+            future_work="",
             keywords=keywords,
             obsidian_markdown=obsidian_markdown,
         )
@@ -76,16 +80,20 @@ class LocalSummaryBackend:
         contribution_lines = "\n".join(f"- {c}" for c in contributions)
         return (
             f"# {title}\n\n"
-            "## Summary\n"
+            "## One-line Summary\n"
             f"{summary}\n\n"
-            "## Contributions\n"
-            f"{contribution_lines}\n\n"
+            "## Problem\n\n"
+            "## Key Idea\n\n"
             "## Method\n"
             f"{method}\n\n"
+            "## Experiment\n\n"
             "## Results\n"
             f"{results}\n\n"
+            "## Contributions\n"
+            f"{contribution_lines}\n\n"
             "## Limitations\n"
             f"{limitations}\n\n"
+            "## Future Work\n\n"
             "## Keywords\n"
             f"{keyword_line}\n"
         )
