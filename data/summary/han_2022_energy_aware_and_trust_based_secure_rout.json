@@ -1,0 +1,24 @@
+{
+  "title": "Energy-Aware and Trust-Based Secure Routing Protocol for Wireless Sensor Networks Using Adaptive Genetic Algorithm",
+  "summary": "이 연구는 전자기기 네트워크의 수명을 연장하고 네트워크 보안을 강화하기 위해 적응형 유전 알고리즘을 사용한 에너지 의식적이고 신뢰 기반의 안전한 라우팅 프로토콜을 제안한다.",
+  "problem": "무선 센서 네트워크는 에너지 최적화와 보안 강화를 포함한 여러 도전 과제를 직면하고 있으며, 이는 네트워크 수명을 연장하고 네트워크 보안을 보장하는 데 중요하다.",
+  "key_idea": "TAGA라는 적응형 유전 알고리즘을 사용하여 무선 센서 네트워크의 에너지와 신뢰 기반의 안전한 라우팅 프로토콜을 구현한다.",
+  "method": "직접 신뢰 값과 간접 신뢰 값을 고려한 노드의 종합 신뢰 값을 구성하고, 새로운 임계값 함수를 제시하여 클러스터 헤드를 선택하며, 적응형 교차 확률과 돌연변이 확률을 사용한 유전 알고리즘을 적용한다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
+  "results": "TAGA는 일반 공격에 직면했을 때 악성 노드에 의해 폐기된 패킷 수를 줄일 수 있으며, 에너지 소비와 보안을 최적화한다.",
+  "contributions": [
+    "에너지 최적화와 보안 강화를 위한 신뢰 기반 라우팅 프로토콜을 제안한다.",
+    "적응형 유전 알고리즘을 사용하여 최적의 보안 라우팅을 찾는다.",
+    "노드의 종합 신뢰 값을 구성하기 위한 새로운 임계값 함수를 제시한다."
+  ],
+  "limitations": "실험 세부 정보와 결과를 더욱 구체적으로 설명하지 않았다.",
+  "future_work": "더 다양한 시나리오와 실제 환경에서 TAGA의 성능을 평가하고 더욱 개선된 알고리즘을 개발하는 것을 제안한다.",
+  "keywords": [
+    "Wireless Sensor Networks",
+    "Energy Optimization",
+    "Trust-Based Security",
+    "Adaptive Genetic Algorithm",
+    "Routing Protocol"
+  ],
+  "obsidian_markdown": "# Energy-Aware and Trust-Based Secure Routing Protocol for Wireless Sensor Networks Using Adaptive Genetic Algorithm\n\n## One-line Summary\n이 연구는 전자기기 네트워크의 수명을 연장하고 네트워크 보안을 강화하기 위해 적응형 유전 알고리즘을 사용한 에너지 의식적이고 신뢰 기반의 안전한 라우팅 프로토콜을 제안한다.\n\n## Problem\n무선 센서 네트워크는 에너지 최적화와 보안 강화를 포함한 여러 도전 과제를 직면하고 있으며, 이는 네트워크 수명을 연장하고 네트워크 보안을 보장하는 데 중요하다.\n\n## Key Idea\nTAGA라는 적응형 유전 알고리즘을 사용하여 무선 센서 네트워크의 에너지와 신뢰 기반의 안전한 라우팅 프로토콜을 구현한다.\n\n## Method\n직접 신뢰 값과 간접 신뢰 값을 고려한 노드의 종합 신뢰 값을 구성하고, 새로운 임계값 함수를 제시하여 클러스터 헤드를 선택하며, 적응형 교차 확률과 돌연변이 확률을 사용한 유전 알고리즘을 적용한다.\n\n## Experiment\nN/A\n\n## Results\nTAGA는 일반 공격에 직면했을 때 악성 노드에 의해 폐기된 패킷 수를 줄일 수 있으며, 에너지 소비와 보안을 최적화한다.\n\n## Contributions\n- 에너지 최적화와 보안 강화를 위한 신뢰 기반 라우팅 프로토콜을 제안한다.\n- 적응형 유전 알고리즘을 사용하여 최적의 보안 라우팅을 찾는다.\n- 노드의 종합 신뢰 값을 구성하기 위한 새로운 임계값 함수를 제시한다.\n\n## Limitations\n실험 세부 정보와 결과를 더욱 구체적으로 설명하지 않았다.\n\n## Future Work\n더 다양한 시나리오와 실제 환경에서 TAGA의 성능을 평가하고 더욱 개선된 알고리즘을 개발하는 것을 제안한다.\n\n## Keywords\nWireless Sensor Networks, Energy Optimization, Trust-Based Security, Adaptive Genetic Algorithm, Routing Protocol\n"
+}

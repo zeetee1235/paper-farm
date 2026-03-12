@@ -1,0 +1,25 @@
+{
+  "title": "An Energy-Efficient and Secure Routing Protocol for Intrusion Avoidance in IoT-Based WSN",
+  "summary": "이 논문은 IoT 기반 WSN에서 침입 회피를 위한 에너지 효율적이고 보안적인 라우팅 프로토콜(ESR)을 제안하여 네트워크 수명을 증가시키고 데이터 신뢰성을 높이는 것을 목표로 합니다.",
+  "problem": "IoT 기반 WSN에서 민감한 환경에서의 데이터 전송 보안을 달성하고, 저렴한 스마트 장치의 제약 사항을 고려하여 네트워크의 신뢰성을 향상하는 것입니다.",
+  "key_idea": "노드의 내재적 특성을 기반으로 에너지 효율적인 클러스터를 생성하고, (k,n) 임계값 기반 Shamir 비밀 공유 스키마를 사용하여 센서 정보의 신뢰성과 보안성을 달성하는 것입니다.",
+  "method": "노드의 내재적 특성에 기반한 에너지 효율적인 클러스터 생성, (k,n) 임계값 기반 Shamir 비밀 공유 스키마 사용",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 네트워크 수명 및 데이터 신뢰성",
+  "results": "제안된 프로토콜은 에너지 효율성과 보안성을 향상시켜 네트워크 수명을 증가시키고 데이터 신뢰성을 높였습니다.",
+  "contributions": [
+    "노드의 내재적 특성에 기반한 에너지 효율적인 클러스터 생성",
+    "(k,n) 임계값 기반 Shamir 비밀 공유 스키마를 통한 신뢰성과 보안성 제공",
+    "IoT 기반 WSN에서 침입 회피를 위한 새로운 라우팅 프로토콜 제안"
+  ],
+  "limitations": "실제 시나리오에서의 확장성과 다양한 공격 모델에 대한 평가 부족",
+  "future_work": "다양한 공격 모델에 대한 평가, 프로토콜의 확장성 및 실제 응용에 대한 연구",
+  "keywords": [
+    "Internet of Things",
+    "Wireless Sensor Networks",
+    "Energy Efficiency",
+    "Secure Routing Protocol",
+    "Intrusion Avoidance",
+    "Shamir Secret Sharing"
+  ],
+  "obsidian_markdown": "# An Energy-Efficient and Secure Routing Protocol for Intrusion Avoidance in IoT-Based WSN\n\n## One-line Summary\n이 논문은 IoT 기반 WSN에서 침입 회피를 위한 에너지 효율적이고 보안적인 라우팅 프로토콜(ESR)을 제안하여 네트워크 수명을 증가시키고 데이터 신뢰성을 높이는 것을 목표로 합니다.\n\n## Problem\nIoT 기반 WSN에서 민감한 환경에서의 데이터 전송 보안을 달성하고, 저렴한 스마트 장치의 제약 사항을 고려하여 네트워크의 신뢰성을 향상하는 것입니다.\n\n## Key Idea\n노드의 내재적 특성을 기반으로 에너지 효율적인 클러스터를 생성하고, (k,n) 임계값 기반 Shamir 비밀 공유 스키마를 사용하여 센서 정보의 신뢰성과 보안성을 달성하는 것입니다.\n\n## Method\n노드의 내재적 특성에 기반한 에너지 효율적인 클러스터 생성, (k,n) 임계값 기반 Shamir 비밀 공유 스키마 사용\n\n## Experiment\n- **Metric**: 네트워크 수명 및 데이터 신뢰성\n\n## Results\n제안된 프로토콜은 에너지 효율성과 보안성을 향상시켜 네트워크 수명을 증가시키고 데이터 신뢰성을 높였습니다.\n\n## Contributions\n- 노드의 내재적 특성에 기반한 에너지 효율적인 클러스터 생성\n- (k,n) 임계값 기반 Shamir 비밀 공유 스키마를 통한 신뢰성과 보안성 제공\n- IoT 기반 WSN에서 침입 회피를 위한 새로운 라우팅 프로토콜 제안\n\n## Limitations\n실제 시나리오에서의 확장성과 다양한 공격 모델에 대한 평가 부족\n\n## Future Work\n다양한 공격 모델에 대한 평가, 프로토콜의 확장성 및 실제 응용에 대한 연구\n\n## Keywords\nInternet of Things, Wireless Sensor Networks, Energy Efficiency, Secure Routing Protocol, Intrusion Avoidance, Shamir Secret Sharing\n"
+}

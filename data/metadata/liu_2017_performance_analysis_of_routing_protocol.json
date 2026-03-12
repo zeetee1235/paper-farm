@@ -1,0 +1,18 @@
+{
+  "id": "liu_2017_performance_analysis_of_routing_protocol",
+  "title": "Performance Analysis of Routing Protocol for Low Power and Lossy Networks (RPL) in Large Scale Networks",
+  "authors": [
+    "Liu Xiyuan",
+    "Sheng Zhengguo",
+    "Yin Changchuan",
+    "Ali Falah",
+    "Roggen Daniel"
+  ],
+  "year": 2017,
+  "venue": "IEEE Internet of Things Journal",
+  "doi": "10.1109/JIOT.2017.2755980",
+  "pdf_path": "/home/dev/paper-farm-lab/data/raw_pdf/liu_2017_performance_analysis_of_routing_protocol.pdf",
+  "tags": [],
+  "source": "zotero-scan",
+  "created_at": "2026-03-12T06:23:48.274219+00:00"
+}

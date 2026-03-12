@@ -1,0 +1,27 @@
+{
+  "title": "Attacks against RPL in IoT: A Survey",
+  "summary": "이 논문은 IoT 환경에서 사용되는 RPL 프로토콜에 대한 다양한 공격을 분류하고 분석하여 구분하는 데 중점을 둔다.",
+  "problem": "RPL 프로토콜은 IoT 환경에서 사용되지만, 보안 취약점을 통해 다양한 공격에 취약하다.",
+  "key_idea": "RPL 프로토콜에 대한 다양한 공격을 나열, 분석하고 구분하여 보안 위협을 이해하고 완화 방안을 제시하는 것.",
+  "method": "이 논문은 문헌 조사를 통해 RPL 공격을 분류하고 분석한다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
+  "results": "RPL 프로토콜에 대한 다양한 공격을 식별하고 분류하여 보안 위협을 명확히 설명했다.",
+  "contributions": [
+    "IoT에서 RPL 프로토콜에 대한 다양한 공격을 체계적으로 나열했다.",
+    "각 유형의 공격을 분석하고 구분하고 논의했다.",
+    "이러한 공격을 완화하기 위한 새로운 기술을 제공할 필요성을 강조했다."
+  ],
+  "limitations": "실험적 검증이나 구체적인 완화 방안이 제시되지 않았다.",
+  "future_work": "RPL 공격을 완화하기 위한 새로운 기술의 개발과 실험적 검증을 제안한다.",
+  "keywords": [
+    "IoT",
+    "Attacks",
+    "Security",
+    "RPL",
+    "IPv6",
+    "Routing Protocol",
+    "Low Power",
+    "Lossy Networks"
+  ],
+  "obsidian_markdown": "# Attacks against RPL in IoT: A Survey\n\n## One-line Summary\n이 논문은 IoT 환경에서 사용되는 RPL 프로토콜에 대한 다양한 공격을 분류하고 분석하여 구분하는 데 중점을 둔다.\n\n## Problem\nRPL 프로토콜은 IoT 환경에서 사용되지만, 보안 취약점을 통해 다양한 공격에 취약하다.\n\n## Key Idea\nRPL 프로토콜에 대한 다양한 공격을 나열, 분석하고 구분하여 보안 위협을 이해하고 완화 방안을 제시하는 것.\n\n## Method\n이 논문은 문헌 조사를 통해 RPL 공격을 분류하고 분석한다.\n\n## Experiment\nN/A\n\n## Results\nRPL 프로토콜에 대한 다양한 공격을 식별하고 분류하여 보안 위협을 명확히 설명했다.\n\n## Contributions\n- IoT에서 RPL 프로토콜에 대한 다양한 공격을 체계적으로 나열했다.\n- 각 유형의 공격을 분석하고 구분하고 논의했다.\n- 이러한 공격을 완화하기 위한 새로운 기술을 제공할 필요성을 강조했다.\n\n## Limitations\n실험적 검증이나 구체적인 완화 방안이 제시되지 않았다.\n\n## Future Work\nRPL 공격을 완화하기 위한 새로운 기술의 개발과 실험적 검증을 제안한다.\n\n## Keywords\nIoT, Attacks, Security, RPL, IPv6, Routing Protocol, Low Power, Lossy Networks\n"
+}

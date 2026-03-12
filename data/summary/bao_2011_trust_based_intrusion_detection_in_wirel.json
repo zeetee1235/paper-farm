@@ -1,0 +1,27 @@
+{
+  "title": "Trust-Based Intrusion Detection in Wireless Sensor Networks",
+  "summary": "이 논문은 클러스터형 무선 센서 네트워크에서 트러스트 기반 침입 탐지 방식을 제안하여 품질 서비스 트러스트와 사회 트러스트를 활용해 악성 노드를 탐지하는 방법을 제시하였다.",
+  "problem": "무선 센서 네트워크에서의 보안 위협, 특히 악성 노드 탐지의 어려움",
+  "key_idea": "트러스트 메트릭을 활용하여 품질 서비스 트러스트와 사회 트러스트를 결합하여 악성 노드를 탐지하는 트러스트 기반 침입 탐지 방식",
+  "method": "클러스터 헤드가 트러스트 기반 침입 탐지를 적용하여 각 클러스터 내 센서 노드의 신뢰성과 악성 여부를 평가하며, 기저국이 클러스터 헤드를 평가하는 방식과 스토캐스틱 페트리 네트를 기반으로 한 성능 분석 모델, 오류 확률을 계산하는 통계적 방법",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: 스토캐스틱 페트리 네트를 사용한 시뮬레이션\n- **Metric**: 거짓 경보 확률, 최적 트러스트 임계값, 거짓 양성 및 거짓 음성",
+  "results": "거짓 경보 확률의 민감도 분석 및 최적 트러스트 임계값이 최소화된 거짓 양성 및 거짓 음성을 제공함을 보여주었으며, 이 최적 임계값은 예상 무선 센서 네트워크 수명에 따라 다르다는 것을 발견했다.",
+  "contributions": [
+    "클러스터형 무선 센서 네트워크에서의 트러스트 기반 침입 탐지 방식을 제안하였다.",
+    "품질 서비스 트러스트와 사회 트러스트를 결합한 트러스트 메트릭을 개발하였다.",
+    "스토캐스틱 페트리 네트를 기반으로 한 성능 분석 모델 및 통계적 방법을 통해 최적 트러스트 임계값을 분석하였다."
+  ],
+  "limitations": "실제 환경에서의 확장성과 다양한 트러스트 메트릭에 대한 보다 광범위한 실험 부족",
+  "future_work": "다양한 환경 및 시나리오에서의 확장성 검증, 다양한 트러스트 메트릭 및 임계값 조정을 통한 성능 최적화",
+  "keywords": [
+    "Trust management",
+    "Intrusion detection",
+    "Wireless sensor networks",
+    "Security",
+    "False positives",
+    "False negatives",
+    "Hierarchical trust management",
+    "Quality of service trust"
+  ],
+  "obsidian_markdown": "# Trust-Based Intrusion Detection in Wireless Sensor Networks\n\n## One-line Summary\n이 논문은 클러스터형 무선 센서 네트워크에서 트러스트 기반 침입 탐지 방식을 제안하여 품질 서비스 트러스트와 사회 트러스트를 활용해 악성 노드를 탐지하는 방법을 제시하였다.\n\n## Problem\n무선 센서 네트워크에서의 보안 위협, 특히 악성 노드 탐지의 어려움\n\n## Key Idea\n트러스트 메트릭을 활용하여 품질 서비스 트러스트와 사회 트러스트를 결합하여 악성 노드를 탐지하는 트러스트 기반 침입 탐지 방식\n\n## Method\n클러스터 헤드가 트러스트 기반 침입 탐지를 적용하여 각 클러스터 내 센서 노드의 신뢰성과 악성 여부를 평가하며, 기저국이 클러스터 헤드를 평가하는 방식과 스토캐스틱 페트리 네트를 기반으로 한 성능 분석 모델, 오류 확률을 계산하는 통계적 방법\n\n## Experiment\n- **Simulator**: 스토캐스틱 페트리 네트를 사용한 시뮬레이션\n- **Metric**: 거짓 경보 확률, 최적 트러스트 임계값, 거짓 양성 및 거짓 음성\n\n## Results\n거짓 경보 확률의 민감도 분석 및 최적 트러스트 임계값이 최소화된 거짓 양성 및 거짓 음성을 제공함을 보여주었으며, 이 최적 임계값은 예상 무선 센서 네트워크 수명에 따라 다르다는 것을 발견했다.\n\n## Contributions\n- 클러스터형 무선 센서 네트워크에서의 트러스트 기반 침입 탐지 방식을 제안하였다.\n- 품질 서비스 트러스트와 사회 트러스트를 결합한 트러스트 메트릭을 개발하였다.\n- 스토캐스틱 페트리 네트를 기반으로 한 성능 분석 모델 및 통계적 방법을 통해 최적 트러스트 임계값을 분석하였다.\n\n## Limitations\n실제 환경에서의 확장성과 다양한 트러스트 메트릭에 대한 보다 광범위한 실험 부족\n\n## Future Work\n다양한 환경 및 시나리오에서의 확장성 검증, 다양한 트러스트 메트릭 및 임계값 조정을 통한 성능 최적화\n\n## Keywords\nTrust management, Intrusion detection, Wireless sensor networks, Security, False positives, False negatives, Hierarchical trust management, Quality of service trust\n"
+}

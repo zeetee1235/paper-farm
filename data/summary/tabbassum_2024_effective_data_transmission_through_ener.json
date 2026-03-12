@@ -1,0 +1,25 @@
+{
+  "title": "Effective data transmission through energy-efficient clustering and Fuzzy-Based IDS routing approach in WSNs",
+  "summary": "이 연구는 WSNs에서 에너지 효율적 클러스터링과 Fuzzy 기반 IDS 라우팅 접근 방식을 통해 효과적인 데이터 전송을 개발하였다.",
+  "problem": "WSNs에서 에너지 효율성과 안전한 데이터 전송 문제를 해결하는 것",
+  "key_idea": "에너지 효율적 클러스터링과 Fuzzy 기반 IDS 라우팅 접근 방식을 통해 안전하고 효과적인 데이터 전송을 개발하는 것",
+  "method": "LEACH(낮은 에너지 적응형 클러스터링 계층), Fuzzy 논리, 인공 신경망(ANN)을 사용",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 정확도(97%), 정밀도(97%), 오류 값(0.03), 특이도(97%), 민감도(95%), F1_Score(96%), FNR(0.032), FPR(0.025), 카파 값(94%)",
+  "results": "평가 지표에서 높은 성능을 달성, 예를 들어 정확도 97%, 정밀도 97%, 오류 값 0.03 등",
+  "contributions": [
+    "LEACH와 Fuzzy 기반 IDS 접근 방식을 통한 WSN에서의 데이터 전송 개선",
+    "LEACH를 사용하여 에너지 효율적 데이터 전송 구현",
+    "Fuzzy 논리와 ANN을 사용한 IDS 구현"
+  ],
+  "limitations": "정확한 데이터셋과 시뮬레이터에 대한 설명이 누락되어 있음",
+  "future_work": "미래 연구에서는 더 고급 프로토콜을 사용하여 데이터를 효율적으로 전송하고, 인공지능 모델을 사용하여 손상된 및 죽은 네트워크 경로 문제를 극복하기 위해 죽은 클러스터 헤드를 감지할 것",
+  "keywords": [
+    "Wireless Sensor Networks",
+    "Energy-efficient Clustering",
+    "Fuzzy Logic",
+    "Intrusion Detection Systems",
+    "ANN",
+    "LEACH"
+  ],
+  "obsidian_markdown": "# Effective data transmission through energy-efficient clustering and Fuzzy-Based IDS routing approach in WSNs\n\n## One-line Summary\n이 연구는 WSNs에서 에너지 효율적 클러스터링과 Fuzzy 기반 IDS 라우팅 접근 방식을 통해 효과적인 데이터 전송을 개발하였다.\n\n## Problem\nWSNs에서 에너지 효율성과 안전한 데이터 전송 문제를 해결하는 것\n\n## Key Idea\n에너지 효율적 클러스터링과 Fuzzy 기반 IDS 라우팅 접근 방식을 통해 안전하고 효과적인 데이터 전송을 개발하는 것\n\n## Method\nLEACH(낮은 에너지 적응형 클러스터링 계층), Fuzzy 논리, 인공 신경망(ANN)을 사용\n\n## Experiment\n- **Metric**: 정확도(97%), 정밀도(97%), 오류 값(0.03), 특이도(97%), 민감도(95%), F1_Score(96%), FNR(0.032), FPR(0.025), 카파 값(94%)\n\n## Results\n평가 지표에서 높은 성능을 달성, 예를 들어 정확도 97%, 정밀도 97%, 오류 값 0.03 등\n\n## Contributions\n- LEACH와 Fuzzy 기반 IDS 접근 방식을 통한 WSN에서의 데이터 전송 개선\n- LEACH를 사용하여 에너지 효율적 데이터 전송 구현\n- Fuzzy 논리와 ANN을 사용한 IDS 구현\n\n## Limitations\n정확한 데이터셋과 시뮬레이터에 대한 설명이 누락되어 있음\n\n## Future Work\n미래 연구에서는 더 고급 프로토콜을 사용하여 데이터를 효율적으로 전송하고, 인공지능 모델을 사용하여 손상된 및 죽은 네트워크 경로 문제를 극복하기 위해 죽은 클러스터 헤드를 감지할 것\n\n## Keywords\nWireless Sensor Networks, Energy-efficient Clustering, Fuzzy Logic, Intrusion Detection Systems, ANN, LEACH\n"
+}

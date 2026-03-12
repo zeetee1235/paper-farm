@@ -1,0 +1,27 @@
+{
+  "title": "A modified SPIN for wireless sensor networks",
+  "summary": "본 논문은 데이터 전송 효율성을 높이기 위한 SPIN 프로토콜의 수정된 버전인 M-SPIN을 제안하고, 기존 SPIN 프로토콜과의 성능을 비교하는 것을 핵심 기여로 한다.",
+  "problem": "무선 센서 네트워크(WSN)에서의 데이터 전송은 에너지 절약과 효율적인 데이터 전달을 필요로 하는 주요 도전 과제이다.",
+  "key_idea": "데이터 중심 접근 방식에 기반한 M-SPIN 프로토콜은 네트워크 내 데이터 집계를 통해 에너지 절약 데이터 전송을 수행한다.",
+  "method": "본 논문에서는 SPIN 프로토콜을 기반으로 한 M-SPIN 프로토콜을 제안하고, TOSSIM 시뮬레이션 환경에서 성능 평가를 수행한다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: TOSSIM\n- **Metric**: 에너지 절약 및 성능 향상",
+  "results": "M-SPIN은 기존 SPIN 프로토콜에 비해 상당한 성능 향상을 보여준다.",
+  "contributions": [
+    "데이터 중심 접근 방식에 기반한 M-SPIN 프로토콜 제안",
+    "TOSSIM 시뮬레이션 환경에서 M-SPIN 프로토콜 평가",
+    "기존 SPIN 프로토콜과의 성능 비교"
+  ],
+  "limitations": "실제 네트워크 환경에서의 실험이 이루어지지 않았으며, 시뮬레이션 환경의 한계가 있을 수 있다.",
+  "future_work": "실제 네트워크 환경에서의 실험 수행 및 다양한 네트워크 환경에서의 성능 평가가 필요하다.",
+  "keywords": [
+    "Routing protocols",
+    "SPIN",
+    "Wireless Sensor Network",
+    "TOSSIM",
+    "Data-centric",
+    "Energy efficiency",
+    "Simulation",
+    "Performance evaluation"
+  ],
+  "obsidian_markdown": "# A modified SPIN for wireless sensor networks\n\n## One-line Summary\n본 논문은 데이터 전송 효율성을 높이기 위한 SPIN 프로토콜의 수정된 버전인 M-SPIN을 제안하고, 기존 SPIN 프로토콜과의 성능을 비교하는 것을 핵심 기여로 한다.\n\n## Problem\n무선 센서 네트워크(WSN)에서의 데이터 전송은 에너지 절약과 효율적인 데이터 전달을 필요로 하는 주요 도전 과제이다.\n\n## Key Idea\n데이터 중심 접근 방식에 기반한 M-SPIN 프로토콜은 네트워크 내 데이터 집계를 통해 에너지 절약 데이터 전송을 수행한다.\n\n## Method\n본 논문에서는 SPIN 프로토콜을 기반으로 한 M-SPIN 프로토콜을 제안하고, TOSSIM 시뮬레이션 환경에서 성능 평가를 수행한다.\n\n## Experiment\n- **Simulator**: TOSSIM\n- **Metric**: 에너지 절약 및 성능 향상\n\n## Results\nM-SPIN은 기존 SPIN 프로토콜에 비해 상당한 성능 향상을 보여준다.\n\n## Contributions\n- 데이터 중심 접근 방식에 기반한 M-SPIN 프로토콜 제안\n- TOSSIM 시뮬레이션 환경에서 M-SPIN 프로토콜 평가\n- 기존 SPIN 프로토콜과의 성능 비교\n\n## Limitations\n실제 네트워크 환경에서의 실험이 이루어지지 않았으며, 시뮬레이션 환경의 한계가 있을 수 있다.\n\n## Future Work\n실제 네트워크 환경에서의 실험 수행 및 다양한 네트워크 환경에서의 성능 평가가 필요하다.\n\n## Keywords\nRouting protocols, SPIN, Wireless Sensor Network, TOSSIM, Data-centric, Energy efficiency, Simulation, Performance evaluation\n"
+}

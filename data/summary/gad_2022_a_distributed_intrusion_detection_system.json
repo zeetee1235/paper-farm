@@ -1,0 +1,27 @@
+{
+  "title": "A Distributed Intrusion Detection System using Machine Learning for IoT based on ToN-IoT Dataset",
+  "summary": "이 논문은 ToN-IoT 데이터셋을 기반으로 IoT의 기계 학습 접근 방식을 사용한 분산 침입 탐지 시스템을 제안하며, 이는 IoT에서 새로운 공격을 감지하고 악의적 사건을 완화하는 데 기여합니다.",
+  "problem": "IoT 네트워크는 인기가 증가함에 따라 증가하는 보안 위협에 노출되어 있으며, 기계 학습 기반의 침입 탐지 시스템을 통해 보안을 강화해야 합니다.",
+  "key_idea": "IoT에서 새로운 공격을 감지하고 악의적 사건을 완화하기 위한 기계 학습 접근 방식을 사용한 분산 침입 탐지 시스템을 제안합니다.",
+  "method": "ToN-IoT 데이터셋을 사용하여 다양한 기계 학습 방법을 테스트하고, 각 IoT 시스템의 모든 계층에서 수집된 데이터를 기반으로 새로운 모델을 제안합니다.",
+  "experiment": "- **Dataset**: ToN-IoT 데이터셋은 IoT 네트워크에서 수집된 데이터를 기반으로 하며, 클라우드, 퓨전 및 엣지 계층의 데이터를 반영합니다.\n- **Simulator**: N/A\n- **Metric**: 정확도, 정밀도, 재현율, F1 점수 등",
+  "results": "제안된 모델은 모든 계층에서 수집된 데이터를 사용하여 공격 탐지에 높은 정확도를 보여줍니다.",
+  "contributions": [
+    "IoT 시스템의 모든 계층에서 수집된 데이터를 기반으로 한 새로운 분산 침입 탐지 모델을 제안합니다.",
+    "ToN-IoT 데이터셋을 사용하여 기계 학습 방법을 테스트하고 개선합니다.",
+    "기존 데이터셋과는 달리 최신 공격을 반영하는 ToN-IoT 데이터셋을 활용합니다."
+  ],
+  "limitations": "제안된 모델은 특정 IoT 환경에서 테스트되었으며, 다양한 IoT 환경에서의 일반화 가능성이 제한될 수 있습니다.",
+  "future_work": "다양한 IoT 환경에서 제안된 모델의 일반화 가능성을 더욱 탐구하고, 실시간 데이터를 통합하여 효율성을 향상시키는 데 중점을 둘 것을 제안합니다.",
+  "keywords": [
+    "IoT",
+    "Intrusion Detection System",
+    "Machine Learning",
+    "ToN-IoT Dataset",
+    "Cyber Security",
+    "Data Analysis",
+    "Network Security",
+    "Anomaly Detection"
+  ],
+  "obsidian_markdown": "# A Distributed Intrusion Detection System using Machine Learning for IoT based on ToN-IoT Dataset\n\n## One-line Summary\n이 논문은 ToN-IoT 데이터셋을 기반으로 IoT의 기계 학습 접근 방식을 사용한 분산 침입 탐지 시스템을 제안하며, 이는 IoT에서 새로운 공격을 감지하고 악의적 사건을 완화하는 데 기여합니다.\n\n## Problem\nIoT 네트워크는 인기가 증가함에 따라 증가하는 보안 위협에 노출되어 있으며, 기계 학습 기반의 침입 탐지 시스템을 통해 보안을 강화해야 합니다.\n\n## Key Idea\nIoT에서 새로운 공격을 감지하고 악의적 사건을 완화하기 위한 기계 학습 접근 방식을 사용한 분산 침입 탐지 시스템을 제안합니다.\n\n## Method\nToN-IoT 데이터셋을 사용하여 다양한 기계 학습 방법을 테스트하고, 각 IoT 시스템의 모든 계층에서 수집된 데이터를 기반으로 새로운 모델을 제안합니다.\n\n## Experiment\n- **Dataset**: ToN-IoT 데이터셋은 IoT 네트워크에서 수집된 데이터를 기반으로 하며, 클라우드, 퓨전 및 엣지 계층의 데이터를 반영합니다.\n- **Metric**: 정확도, 정밀도, 재현율, F1 점수 등\n\n## Results\n제안된 모델은 모든 계층에서 수집된 데이터를 사용하여 공격 탐지에 높은 정확도를 보여줍니다.\n\n## Contributions\n- IoT 시스템의 모든 계층에서 수집된 데이터를 기반으로 한 새로운 분산 침입 탐지 모델을 제안합니다.\n- ToN-IoT 데이터셋을 사용하여 기계 학습 방법을 테스트하고 개선합니다.\n- 기존 데이터셋과는 달리 최신 공격을 반영하는 ToN-IoT 데이터셋을 활용합니다.\n\n## Limitations\n제안된 모델은 특정 IoT 환경에서 테스트되었으며, 다양한 IoT 환경에서의 일반화 가능성이 제한될 수 있습니다.\n\n## Future Work\n다양한 IoT 환경에서 제안된 모델의 일반화 가능성을 더욱 탐구하고, 실시간 데이터를 통합하여 효율성을 향상시키는 데 중점을 둘 것을 제안합니다.\n\n## Keywords\nIoT, Intrusion Detection System, Machine Learning, ToN-IoT Dataset, Cyber Security, Data Analysis, Network Security, Anomaly Detection\n"
+}

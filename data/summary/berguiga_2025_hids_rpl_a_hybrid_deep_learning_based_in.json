@@ -1,0 +1,26 @@
+{
+  "title": "HIDS-RPL: A Hybrid Deep Learning-Based Intrusion Detection System for RPL in Internet of Medical Things Network",
+  "summary": "이 논문은 RPL 프로토콜을 사용한 IoMT 네트워크에 대한 하이브리드 딥러닝 기반 침입 탐지 시스템(HIDS-RPL)을 제안하며, CNN과 LSTM을 사용하여 특징 추출 및 시퀀스 데이터 예측을 수행하여 DDoS 공격을 탐지합니다.",
+  "problem": "IoMT 네트워크의 증가된 연결성은 다양한 사이버 공격, 특히 DDoS 공격에 취약하게 만들며, 기존의 침입 탐지 시스템은 이러한 복잡한 공격을 충분히 대처할 수 없습니다.",
+  "key_idea": "RPL 프로토콜을 사용한 IoMT 네트워크를 위한 하이브리드 딥러닝 기반 침입 탐지 시스템(HIDS-RPL)을 제안하여 CNN과 LSTM을 사용하여 특징 추출 및 시퀀스 데이터 예측을 통해 침입을 탐지합니다.",
+  "method": "Convolutional Neural Network(CNN)을 사용한 특징 추출과 Long Short Term Memory(Long Short Term Memory)을 사용한 시퀀스 데이터 예측을 통합한 하이브리드 딥러닝 모델을 사용합니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
+  "results": "제안된 알고리즘은 DDoS 공격 탐지에서 향상된 성능을 보였습니다.",
+  "contributions": [
+    "RPL 프로토콜을 사용한 IoMT 네트워크를 위한 하이브리드 딥러닝 기반 침입 탐지 시스템(HIDS-RPL) 제안",
+    "CNN과 LSTM을 사용한 특징 추출 및 시퀀스 데이터 예측을 통한 침입 탐지",
+    "제안된 모델의 평가 및 DDoS 공격 탐지 성능 향상"
+  ],
+  "limitations": "실험에서 사용된 데이터셋, 시뮬레이터, 메트릭에 대한 구체적인 정보가 제공되지 않았습니다.",
+  "future_work": "다양한 데이터셋과 시뮬레이터 환경에서 제안된 알고리즘의 효과를 검증하고, 보안 탐지 메트릭을 확장하는 미래 연구가 필요합니다.",
+  "keywords": [
+    "IoMT",
+    "Intrusion Detection System",
+    "RPL Protocol",
+    "Deep Learning",
+    "DDoS Attacks",
+    "CNN",
+    "LSTM"
+  ],
+  "obsidian_markdown": "# HIDS-RPL: A Hybrid Deep Learning-Based Intrusion Detection System for RPL in Internet of Medical Things Network\n\n## One-line Summary\n이 논문은 RPL 프로토콜을 사용한 IoMT 네트워크에 대한 하이브리드 딥러닝 기반 침입 탐지 시스템(HIDS-RPL)을 제안하며, CNN과 LSTM을 사용하여 특징 추출 및 시퀀스 데이터 예측을 수행하여 DDoS 공격을 탐지합니다.\n\n## Problem\nIoMT 네트워크의 증가된 연결성은 다양한 사이버 공격, 특히 DDoS 공격에 취약하게 만들며, 기존의 침입 탐지 시스템은 이러한 복잡한 공격을 충분히 대처할 수 없습니다.\n\n## Key Idea\nRPL 프로토콜을 사용한 IoMT 네트워크를 위한 하이브리드 딥러닝 기반 침입 탐지 시스템(HIDS-RPL)을 제안하여 CNN과 LSTM을 사용하여 특징 추출 및 시퀀스 데이터 예측을 통해 침입을 탐지합니다.\n\n## Method\nConvolutional Neural Network(CNN)을 사용한 특징 추출과 Long Short Term Memory(Long Short Term Memory)을 사용한 시퀀스 데이터 예측을 통합한 하이브리드 딥러닝 모델을 사용합니다.\n\n## Experiment\nN/A\n\n## Results\n제안된 알고리즘은 DDoS 공격 탐지에서 향상된 성능을 보였습니다.\n\n## Contributions\n- RPL 프로토콜을 사용한 IoMT 네트워크를 위한 하이브리드 딥러닝 기반 침입 탐지 시스템(HIDS-RPL) 제안\n- CNN과 LSTM을 사용한 특징 추출 및 시퀀스 데이터 예측을 통한 침입 탐지\n- 제안된 모델의 평가 및 DDoS 공격 탐지 성능 향상\n\n## Limitations\n실험에서 사용된 데이터셋, 시뮬레이터, 메트릭에 대한 구체적인 정보가 제공되지 않았습니다.\n\n## Future Work\n다양한 데이터셋과 시뮬레이터 환경에서 제안된 알고리즘의 효과를 검증하고, 보안 탐지 메트릭을 확장하는 미래 연구가 필요합니다.\n\n## Keywords\nIoMT, Intrusion Detection System, RPL Protocol, Deep Learning, DDoS Attacks, CNN, LSTM\n"
+}

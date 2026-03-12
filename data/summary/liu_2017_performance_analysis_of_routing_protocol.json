@@ -1,0 +1,24 @@
+{
+  "title": "Performance Analysis of Routing Protocol for Low Power and Lossy Networks (RPL) in Large Scale Networks",
+  "summary": "이 논문은 대규모 네트워크에서 RPL 프로토콜의 성능 분석을 제시합니다.",
+  "problem": "대규모 네트워크에서 RPL 프로토콜의 성능을 분석하는 것이 어렵습니다.",
+  "key_idea": "대규모 네트워크 환경에서 RPL 프로토콜의 성능을 분석하여 성능 개선 방안을 제시합니다.",
+  "method": "대규모 시뮬레이션을 통해 RPL 프로토콜의 성능을 평가합니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: 네트워크 시뮬레이터\n- **Metric**: 지연 시간, 패킷 손실률, 처리량 등",
+  "results": "대규모 네트워크에서 RPL 프로토콜의 지연 시간이 증가하고, 패킷 손실률이 높아지는 것을 확인했습니다.",
+  "contributions": [
+    "대규모 네트워크에서 RPL 프로토콜의 성능 분석",
+    "RPL 프로토콜 성능을 개선하기 위한 제안",
+    "대규모 네트워크 환경에서의 RPL 프로토콜 사용에 대한 이해"
+  ],
+  "limitations": "실제 환경에서의 검증이 부족하며, 특정 네트워크 구성에 대한 분석만 수행되었습니다.",
+  "future_work": "실제 네트워크 환경에서의 실험과 다양한 네트워크 구성에 대한 성능 분석을 계획합니다.",
+  "keywords": [
+    "RPL",
+    "Low Power and Lossy Networks",
+    "Large Scale Networks",
+    "Routing Protocol",
+    "Performance Analysis"
+  ],
+  "obsidian_markdown": "# Performance Analysis of Routing Protocol for Low Power and Lossy Networks (RPL) in Large Scale Networks\n\n## One-line Summary\n이 논문은 대규모 네트워크에서 RPL 프로토콜의 성능 분석을 제시합니다.\n\n## Problem\n대규모 네트워크에서 RPL 프로토콜의 성능을 분석하는 것이 어렵습니다.\n\n## Key Idea\n대규모 네트워크 환경에서 RPL 프로토콜의 성능을 분석하여 성능 개선 방안을 제시합니다.\n\n## Method\n대규모 시뮬레이션을 통해 RPL 프로토콜의 성능을 평가합니다.\n\n## Experiment\n- **Simulator**: 네트워크 시뮬레이터\n- **Metric**: 지연 시간, 패킷 손실률, 처리량 등\n\n## Results\n대규모 네트워크에서 RPL 프로토콜의 지연 시간이 증가하고, 패킷 손실률이 높아지는 것을 확인했습니다.\n\n## Contributions\n- 대규모 네트워크에서 RPL 프로토콜의 성능 분석\n- RPL 프로토콜 성능을 개선하기 위한 제안\n- 대규모 네트워크 환경에서의 RPL 프로토콜 사용에 대한 이해\n\n## Limitations\n실제 환경에서의 검증이 부족하며, 특정 네트워크 구성에 대한 분석만 수행되었습니다.\n\n## Future Work\n실제 네트워크 환경에서의 실험과 다양한 네트워크 구성에 대한 성능 분석을 계획합니다.\n\n## Keywords\nRPL, Low Power and Lossy Networks, Large Scale Networks, Routing Protocol, Performance Analysis\n"
+}

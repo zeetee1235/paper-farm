@@ -1,0 +1,27 @@
+{
+  "title": "iTRPL: An Intelligent and Trusted RPL Protocol based on Multi-Agent Reinforcement Learning",
+  "summary": "이 논문은 RPL 내부 공격에 대응하기 위해 Multi-Agent Reinforcement Learning(MARL)을 활용한 신뢰 기반 프레임워크인 iTRPL을 제안한다.",
+  "problem": "RPL은 IoT 네트워크에서 널리 사용되지만, 내부 공격에 취약하며, 이는 전통적인 강력한 보안 메커니즘으로는 감지 및 방지하기 어렵다.",
+  "key_idea": "신뢰 기반의 iTRPL 프레임워크를 제안하여 DODAG 내부의 정직한 노드와 악성 노드를 구분하고, MARL을 활용해 자율적인 결정을 내리는 것.",
+  "method": "신뢰 점수를 관리하고 MARL을 사용하여 DODAG 루트가 신뢰 기반의 결정을 내릴 수 있도록 하는 알고리즘 및 모델.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: 시뮬레이션 기반 성능 평가\n- **Metric**: 성능 분석을 통한 결정의 타당성",
+  "results": "iTRPL은 시간이 지남에 따라 최적의 결정을 내리는 능력을 배우며, DODAG의 성능에 긍정적인 영향을 미친다.",
+  "contributions": [
+    "RPL 내부 공격에 대응하기 위한 신뢰 기반 프레임워크 iTRPL을 제안함.",
+    "MARL을 사용해 DODAG의 자율적인 결정을 내리는 방법을 제시함.",
+    "신뢰 기반 접근 방식을 통해 DODAG의 성능을 향상시키는 것을 시뮬레이션 기반으로 입증함."
+  ],
+  "limitations": "현재 연구는 단일 DODAG에 집중하고 있으며, 다중 연결된 DODAG 및 다중 루트가 있는 환경의 성능은 미래 연구가 필요함.",
+  "future_work": "실제 시나리오에서 다중 연결된 DODAG과 다중 루트를 포함한 환경의 성능을 확장하고 연구하는 것.",
+  "keywords": [
+    "RPL",
+    "Trust-based systems",
+    "Ad hoc networks",
+    "Multi-agent reinforcement learning",
+    "Insider attacks",
+    "IoT",
+    "Security mechanisms",
+    "DODAG"
+  ],
+  "obsidian_markdown": "# iTRPL: An Intelligent and Trusted RPL Protocol based on Multi-Agent Reinforcement Learning\n\n## One-line Summary\n이 논문은 RPL 내부 공격에 대응하기 위해 Multi-Agent Reinforcement Learning(MARL)을 활용한 신뢰 기반 프레임워크인 iTRPL을 제안한다.\n\n## Problem\nRPL은 IoT 네트워크에서 널리 사용되지만, 내부 공격에 취약하며, 이는 전통적인 강력한 보안 메커니즘으로는 감지 및 방지하기 어렵다.\n\n## Key Idea\n신뢰 기반의 iTRPL 프레임워크를 제안하여 DODAG 내부의 정직한 노드와 악성 노드를 구분하고, MARL을 활용해 자율적인 결정을 내리는 것.\n\n## Method\n신뢰 점수를 관리하고 MARL을 사용하여 DODAG 루트가 신뢰 기반의 결정을 내릴 수 있도록 하는 알고리즘 및 모델.\n\n## Experiment\n- **Simulator**: 시뮬레이션 기반 성능 평가\n- **Metric**: 성능 분석을 통한 결정의 타당성\n\n## Results\niTRPL은 시간이 지남에 따라 최적의 결정을 내리는 능력을 배우며, DODAG의 성능에 긍정적인 영향을 미친다.\n\n## Contributions\n- RPL 내부 공격에 대응하기 위한 신뢰 기반 프레임워크 iTRPL을 제안함.\n- MARL을 사용해 DODAG의 자율적인 결정을 내리는 방법을 제시함.\n- 신뢰 기반 접근 방식을 통해 DODAG의 성능을 향상시키는 것을 시뮬레이션 기반으로 입증함.\n\n## Limitations\n현재 연구는 단일 DODAG에 집중하고 있으며, 다중 연결된 DODAG 및 다중 루트가 있는 환경의 성능은 미래 연구가 필요함.\n\n## Future Work\n실제 시나리오에서 다중 연결된 DODAG과 다중 루트를 포함한 환경의 성능을 확장하고 연구하는 것.\n\n## Keywords\nRPL, Trust-based systems, Ad hoc networks, Multi-agent reinforcement learning, Insider attacks, IoT, Security mechanisms, DODAG\n"
+}

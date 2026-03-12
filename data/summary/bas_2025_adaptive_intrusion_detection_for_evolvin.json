@@ -1,0 +1,27 @@
+{
+  "title": "Adaptive Intrusion Detection for Evolving RPL IoT Attacks Using Incremental Learning",
+  "summary": "이 논문은 RPL 기반 IoT 네트워크의 진화하는 공격에 대한 적응형 침입 탐지를 위해 증분 학습을 활용한 실용적 접근 방식을 조사하여 효율성과 잊기 행동을 개선하였다.",
+  "problem": "RPL IoT 네트워크의 경량 설계는 헬로 폭우, 랭크 감소, 버전 번호 조작과 같은 다양한 라우팅 계층 공격에 취약하며, 전통적인 대응책은 알려진 위협에 대해 높은 정확도를 달성하지만 새로운 또는 제로데이 공격에는 실패한다.",
+  "key_idea": "증분 학습은 동적 IoT 환경에서 알려지지 않은 공격에 대한 실용적이고 적응적인 침입 탐지를 위한 효과적인 방법으로 제안된다.",
+  "method": "이 연구는 증분 학습을 기반으로 다섯 가지 모델 패밀리, 특히 앙상블 모델과 딥러닝 모델을 체계적으로 평가하였다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
+  "results": "증분 학습은 새로운 공격 클래스에 대한 탐지 성능을 복원하고 이전에 학습한 위협의 잊기 행동을 완화시키며, 완전한 재학습에 비해 학습 시간을 줄였다.",
+  "contributions": [
+    "증분 학습을 활용한 RPL 기반 네트워크의 적응형 침입 탐지 방식을 제안",
+    "다양한 모델과 공격별 분석을 결합하여 증분 학습의 시스템적 증거를 제공",
+    "증분 학습을 통해 새로운 및 이전 공격에 대한 탐지 성능을 개선하고 잊기 행동을 완화"
+  ],
+  "limitations": "데이터셋, 시뮬레이터 및 평가 지표가 명시되지 않았으며, 제한된 실험 환경에서의 증분 학습의 보편성을 검증하기 위한 추가 연구가 필요하다.",
+  "future_work": "다양한 실험 환경에서의 증분 학습의 보편성을 더 탐구하고, 보안 및 성능 관점에서의 더 광범위한 평가를 수행하는 것을 제안한다.",
+  "keywords": [
+    "IoT",
+    "RPL",
+    "Intrusion Detection",
+    "Incremental Learning",
+    "Machine Learning",
+    "Cybersecurity",
+    "Dynamic Networks",
+    "Adaptive Strategies"
+  ],
+  "obsidian_markdown": "# Adaptive Intrusion Detection for Evolving RPL IoT Attacks Using Incremental Learning\n\n## One-line Summary\n이 논문은 RPL 기반 IoT 네트워크의 진화하는 공격에 대한 적응형 침입 탐지를 위해 증분 학습을 활용한 실용적 접근 방식을 조사하여 효율성과 잊기 행동을 개선하였다.\n\n## Problem\nRPL IoT 네트워크의 경량 설계는 헬로 폭우, 랭크 감소, 버전 번호 조작과 같은 다양한 라우팅 계층 공격에 취약하며, 전통적인 대응책은 알려진 위협에 대해 높은 정확도를 달성하지만 새로운 또는 제로데이 공격에는 실패한다.\n\n## Key Idea\n증분 학습은 동적 IoT 환경에서 알려지지 않은 공격에 대한 실용적이고 적응적인 침입 탐지를 위한 효과적인 방법으로 제안된다.\n\n## Method\n이 연구는 증분 학습을 기반으로 다섯 가지 모델 패밀리, 특히 앙상블 모델과 딥러닝 모델을 체계적으로 평가하였다.\n\n## Experiment\nN/A\n\n## Results\n증분 학습은 새로운 공격 클래스에 대한 탐지 성능을 복원하고 이전에 학습한 위협의 잊기 행동을 완화시키며, 완전한 재학습에 비해 학습 시간을 줄였다.\n\n## Contributions\n- 증분 학습을 활용한 RPL 기반 네트워크의 적응형 침입 탐지 방식을 제안\n- 다양한 모델과 공격별 분석을 결합하여 증분 학습의 시스템적 증거를 제공\n- 증분 학습을 통해 새로운 및 이전 공격에 대한 탐지 성능을 개선하고 잊기 행동을 완화\n\n## Limitations\n데이터셋, 시뮬레이터 및 평가 지표가 명시되지 않았으며, 제한된 실험 환경에서의 증분 학습의 보편성을 검증하기 위한 추가 연구가 필요하다.\n\n## Future Work\n다양한 실험 환경에서의 증분 학습의 보편성을 더 탐구하고, 보안 및 성능 관점에서의 더 광범위한 평가를 수행하는 것을 제안한다.\n\n## Keywords\nIoT, RPL, Intrusion Detection, Incremental Learning, Machine Learning, Cybersecurity, Dynamic Networks, Adaptive Strategies\n"
+}

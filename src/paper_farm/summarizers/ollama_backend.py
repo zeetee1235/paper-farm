@@ -11,25 +11,29 @@ from paper_farm.models.artifacts import PaperStruct, SummaryResult
 
 def _build_system_prompt(language_name: str) -> str:
     return f"""\
-You are a research paper analysis assistant. Read the paper content and return a JSON object with exactly these fields. Write all text fields in {language_name}.
+You are a research paper analysis assistant. Read the paper and return a single JSON object with exactly the fields listed below.
+
+Output language: {language_name} — except where noted.
 
 Fields:
 - summary: one-sentence summary of the paper's core contribution ({language_name})
 - problem: the problem this paper addresses ({language_name})
 - key_idea: the core idea or approach ({language_name})
 - method: methods, models, or algorithms used ({language_name})
-- experiment: a JSON object with keys "dataset", "simulator", "metric" ({language_name})
+- experiment: JSON object with keys "dataset", "simulator", "metric" ({language_name})
 - results: key results and metrics ({language_name})
-- contributions: list of 3 actual contributions (strings, {language_name})
-- limitations: limitations of the paper ({language_name})
-- future_work: future work suggested by the paper ({language_name})
-- keywords: list of 5-8 English keywords (always in English)
+- contributions: list of exactly 3 contribution strings ({language_name})
+- limitations: limitations acknowledged by the paper ({language_name})
+- future_work: future directions suggested by the paper ({language_name})
+- keywords: list of 5–8 keywords (always in English)
 
-Rules:
-- Return only a valid JSON object, no markdown fences, no extra text
-- keywords must always be in English
-- If information is unclear, write "N/A"
-- Do not hallucinate details not present in the paper
+Hard rules — follow without exception:
+1. Return only a valid JSON object. No markdown fences, no prose outside the object.
+2. Technical terms, acronyms, protocol names, and algorithm names must stay in English even when the surrounding text is in {language_name}.
+   Examples: RPL, DIO, DAO, DIS, DODAG, IoT, 6LoWPAN, trust, rank, TSCH, MQTT, IDS, ML, CNN, LSTM, GAN — never transliterate these.
+3. keywords must always be in English.
+4. If information is absent or unclear, use "N/A".
+5. Do not invent details not present in the paper.
 """
 
 

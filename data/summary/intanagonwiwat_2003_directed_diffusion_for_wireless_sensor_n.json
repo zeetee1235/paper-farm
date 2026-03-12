@@ -1,0 +1,24 @@
+{
+  "title": "Directed diffusion for wireless sensor networking",
+  "summary": "이 논문은 무선 센서 네트워크에서 지향된 확산 패러다임을 탐구하고 평가하여 에너지 절약과 전통적인 방식에 비해 우수한 성능을 달성하는 방법을 보여줍니다.",
+  "problem": "무선 센서 네트워크에서 효율적인 데이터 전송과 에너지 절약을 달성하는 것",
+  "key_idea": "데이터 중심의 지향된 확산 패러다임을 사용하여 효과적인 경로 선택, 캐싱 및 네트워크 내부 처리를 통해 에너지 절약을 달성하는 것",
+  "method": "데이터 중심의 경로 선택, 네트워크 내부 데이터 집계, 지향된 확산 기반의 분산 감지를 활용",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: 분석적 및 실험적 평가\n- **Metric**: 에너지 절약 및 성능 평가",
+  "results": "지향된 확산은 특정 시나리오에서 상당한 에너지 절약을 달성하고 이상적인 전통적인 방식에 비해 우수한 성능을 발휘할 수 있음을 보여줍니다.",
+  "contributions": [
+    "데이터 중심의 지향된 확산 패러다임을 무선 센서 네트워크에 적용",
+    "에너지 절약을 위한 경험적으로 좋은 경로 선택 및 네트워크 내부 데이터 처리를 보여줌",
+    "단순 원격 감시 센서 네트워크에서 지향된 확산의 분석적 및 실험적 평가"
+  ],
+  "limitations": "조사된 시나리오에 대해서만 평가되며, 다양한 네트워크 환경에서의 보다 폭넓은 적용 가능성은 검토되지 않았습니다.",
+  "future_work": "다양한 네트워크 환경에서 지향된 확산의 적용 가능성과 성능을 더 광범위하게 평가하는 것",
+  "keywords": [
+    "data aggregation",
+    "data-centric routing",
+    "distributed sensing",
+    "in-network processing",
+    "wireless sensor networks"
+  ],
+  "obsidian_markdown": "# Directed diffusion for wireless sensor networking\n\n## One-line Summary\n이 논문은 무선 센서 네트워크에서 지향된 확산 패러다임을 탐구하고 평가하여 에너지 절약과 전통적인 방식에 비해 우수한 성능을 달성하는 방법을 보여줍니다.\n\n## Problem\n무선 센서 네트워크에서 효율적인 데이터 전송과 에너지 절약을 달성하는 것\n\n## Key Idea\n데이터 중심의 지향된 확산 패러다임을 사용하여 효과적인 경로 선택, 캐싱 및 네트워크 내부 처리를 통해 에너지 절약을 달성하는 것\n\n## Method\n데이터 중심의 경로 선택, 네트워크 내부 데이터 집계, 지향된 확산 기반의 분산 감지를 활용\n\n## Experiment\n- **Simulator**: 분석적 및 실험적 평가\n- **Metric**: 에너지 절약 및 성능 평가\n\n## Results\n지향된 확산은 특정 시나리오에서 상당한 에너지 절약을 달성하고 이상적인 전통적인 방식에 비해 우수한 성능을 발휘할 수 있음을 보여줍니다.\n\n## Contributions\n- 데이터 중심의 지향된 확산 패러다임을 무선 센서 네트워크에 적용\n- 에너지 절약을 위한 경험적으로 좋은 경로 선택 및 네트워크 내부 데이터 처리를 보여줌\n- 단순 원격 감시 센서 네트워크에서 지향된 확산의 분석적 및 실험적 평가\n\n## Limitations\n조사된 시나리오에 대해서만 평가되며, 다양한 네트워크 환경에서의 보다 폭넓은 적용 가능성은 검토되지 않았습니다.\n\n## Future Work\n다양한 네트워크 환경에서 지향된 확산의 적용 가능성과 성능을 더 광범위하게 평가하는 것\n\n## Keywords\ndata aggregation, data-centric routing, distributed sensing, in-network processing, wireless sensor networks\n"
+}

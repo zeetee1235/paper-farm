@@ -1,0 +1,26 @@
+{
+  "title": "A fuzzy logic-based secure hierarchical routing scheme using firefly algorithm in Internet of Things for healthcare",
+  "summary": "이 논문은 의료 IoT 시스템을 위한 퍼지 논리 기반 안전 계층적 라우팅 방식을 제시하며, 이 방식은 파이어플라이 알고리즘을 활용하여 네트워크 보안성과 에너지 효율성을 향상시킵니다.",
+  "problem": "의료 IoT 시스템에서 보안 및 에너지 효율성을 개선하는 것이 문제입니다.",
+  "key_idea": "퍼지 논리 기반의 신뢰 프레임워크와 파이어플라이 알고리즘 기반 클러스터링 프레임워크를 사용하여 안전하고 에너지 효율적인 라우팅 방식을 제안합니다.",
+  "method": "퍼지 논리 기반 신뢰 프레임워크, 파이어플라이 알고리즘 기반 클러스터링 프레임워크, 그리고 인터클러스터 라우팅 프레임워크를 사용합니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 에너지 효율성, 네트워크 수명, 신뢰도, 전달율(PDR)",
+  "results": "FSRF는 EEMSR 및 E-BEENISH에 비해 네트워크 수명을 10.34%와 56.35% 향상시키고, 노드 에너지를 10.79%와 28.51% 증가시켰습니다. 하지만, FSRF는 EEMSR보다 보안성이 약하고 PDR가 1.4% 낮습니다.",
+  "contributions": [
+    "의료 IoT 시스템을 위한 퍼지 논리 기반 안전 계층적 라우팅 방식 제안",
+    "파이어플라이 알고리즘을 활용한 클러스터링 프레임워크 도입",
+    "신뢰 프레임워크와 인터클러스터 라우팅 프레임워크 설계"
+  ],
+  "limitations": "FSRF는 EEMSR보다 보안성이 약하며, PDR가 낮습니다.",
+  "future_work": "FSRF를 더 많은 시나리오에서 평가하여 그 이점과 단점을 보여주고, 다양한 공격에 대한 견고성과 효율성을 테스트합니다. 또한, Q-learning과 인공신경망(ANN)을 활용한 더 견고한 신뢰 프레임워크를 설계할 계획입니다.",
+  "keywords": [
+    "Internet of Things",
+    "healthcare",
+    "fuzzy logic",
+    "firefly algorithm",
+    "secure routing",
+    "energy efficiency",
+    "IoT devices"
+  ],
+  "obsidian_markdown": "# A fuzzy logic-based secure hierarchical routing scheme using firefly algorithm in Internet of Things for healthcare\n\n## One-line Summary\n이 논문은 의료 IoT 시스템을 위한 퍼지 논리 기반 안전 계층적 라우팅 방식을 제시하며, 이 방식은 파이어플라이 알고리즘을 활용하여 네트워크 보안성과 에너지 효율성을 향상시킵니다.\n\n## Problem\n의료 IoT 시스템에서 보안 및 에너지 효율성을 개선하는 것이 문제입니다.\n\n## Key Idea\n퍼지 논리 기반의 신뢰 프레임워크와 파이어플라이 알고리즘 기반 클러스터링 프레임워크를 사용하여 안전하고 에너지 효율적인 라우팅 방식을 제안합니다.\n\n## Method\n퍼지 논리 기반 신뢰 프레임워크, 파이어플라이 알고리즘 기반 클러스터링 프레임워크, 그리고 인터클러스터 라우팅 프레임워크를 사용합니다.\n\n## Experiment\n- **Metric**: 에너지 효율성, 네트워크 수명, 신뢰도, 전달율(PDR)\n\n## Results\nFSRF는 EEMSR 및 E-BEENISH에 비해 네트워크 수명을 10.34%와 56.35% 향상시키고, 노드 에너지를 10.79%와 28.51% 증가시켰습니다. 하지만, FSRF는 EEMSR보다 보안성이 약하고 PDR가 1.4% 낮습니다.\n\n## Contributions\n- 의료 IoT 시스템을 위한 퍼지 논리 기반 안전 계층적 라우팅 방식 제안\n- 파이어플라이 알고리즘을 활용한 클러스터링 프레임워크 도입\n- 신뢰 프레임워크와 인터클러스터 라우팅 프레임워크 설계\n\n## Limitations\nFSRF는 EEMSR보다 보안성이 약하며, PDR가 낮습니다.\n\n## Future Work\nFSRF를 더 많은 시나리오에서 평가하여 그 이점과 단점을 보여주고, 다양한 공격에 대한 견고성과 효율성을 테스트합니다. 또한, Q-learning과 인공신경망(ANN)을 활용한 더 견고한 신뢰 프레임워크를 설계할 계획입니다.\n\n## Keywords\nInternet of Things, healthcare, fuzzy logic, firefly algorithm, secure routing, energy efficiency, IoT devices\n"
+}

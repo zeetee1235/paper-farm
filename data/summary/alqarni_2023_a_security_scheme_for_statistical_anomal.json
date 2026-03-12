@@ -1,0 +1,27 @@
+{
+  "title": "A Security Scheme for Statistical Anomaly Detection and the Mitigation of Rank Attacks in RPL Networks (IoT Environment)",
+  "summary": "이 논문은 RPL 네트워크에서 통계적 이상 탐지 스키마(SARPL)를 통해 Rank Attack을 탐지하고 완화하는 방법을 제시합니다.",
+  "problem": "RPL 네트워크는 Rank 값의 남용을 통한 공격에 취약하며, 이는 네트워크 성능을 저하시킬 수 있습니다.",
+  "key_idea": "SARPL은 통계적 이상 탐지를 통해 Rank Attack을 탐지하고 완화하는 것입니다.",
+  "method": "SARPL은 통계적 이상 탐지를 기반으로 Rank Attack을 탐지하며, 시뮬레이션을 통해 성능을 평가합니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: 시뮬레이터를 사용한 실험\n- **Metric**: 패킷 전달율 및 종단 간 지연 등의 네트워크 성능 매개변수",
+  "results": "SARPL은 RA1 공격을 모든 시나리오에서 성공적으로 탐지하며, RA2 공격의 탐지율은 약 93%입니다. 네트워크 성능 매개변수도 개선되었습니다.",
+  "contributions": [
+    "Rank Attack을 탐지하고 완화하는 통계적 이상 탐지 스키마(SARPL) 제안",
+    "RA1 공격의 100% 탐지 성공",
+    "RA2 공격의 약 93% 탐지 성공 및 네트워크 성능 개선"
+  ],
+  "limitations": "시뮬레이션 환경에서의 실험으로 실제 환경에서의 성능에 대한 제한이 있을 수 있습니다.",
+  "future_work": "실제 환경에서 SARPL의 성능을 평가하고, 다른 유형의 공격에 대한 탐지 능력을 확장하는 연구가 필요합니다.",
+  "keywords": [
+    "anomaly detection",
+    "rank attack",
+    "RPL network",
+    "low power lossy network",
+    "statistical",
+    "network performance",
+    "IPv6",
+    "DODAG"
+  ],
+  "obsidian_markdown": "# A Security Scheme for Statistical Anomaly Detection and the Mitigation of Rank Attacks in RPL Networks (IoT Environment)\n\n## One-line Summary\n이 논문은 RPL 네트워크에서 통계적 이상 탐지 스키마(SARPL)를 통해 Rank Attack을 탐지하고 완화하는 방법을 제시합니다.\n\n## Problem\nRPL 네트워크는 Rank 값의 남용을 통한 공격에 취약하며, 이는 네트워크 성능을 저하시킬 수 있습니다.\n\n## Key Idea\nSARPL은 통계적 이상 탐지를 통해 Rank Attack을 탐지하고 완화하는 것입니다.\n\n## Method\nSARPL은 통계적 이상 탐지를 기반으로 Rank Attack을 탐지하며, 시뮬레이션을 통해 성능을 평가합니다.\n\n## Experiment\n- **Simulator**: 시뮬레이터를 사용한 실험\n- **Metric**: 패킷 전달율 및 종단 간 지연 등의 네트워크 성능 매개변수\n\n## Results\nSARPL은 RA1 공격을 모든 시나리오에서 성공적으로 탐지하며, RA2 공격의 탐지율은 약 93%입니다. 네트워크 성능 매개변수도 개선되었습니다.\n\n## Contributions\n- Rank Attack을 탐지하고 완화하는 통계적 이상 탐지 스키마(SARPL) 제안\n- RA1 공격의 100% 탐지 성공\n- RA2 공격의 약 93% 탐지 성공 및 네트워크 성능 개선\n\n## Limitations\n시뮬레이션 환경에서의 실험으로 실제 환경에서의 성능에 대한 제한이 있을 수 있습니다.\n\n## Future Work\n실제 환경에서 SARPL의 성능을 평가하고, 다른 유형의 공격에 대한 탐지 능력을 확장하는 연구가 필요합니다.\n\n## Keywords\nanomaly detection, rank attack, RPL network, low power lossy network, statistical, network performance, IPv6, DODAG\n"
+}

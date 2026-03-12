@@ -1,0 +1,26 @@
+{
+  "title": "Optimization on TEEN routing protocol in cognitive wireless sensor network",
+  "summary": "이 논문은 노드 에너지 효율성과 수명을 향상시키기 위해 TEEN 라우팅 프로토콜을 개선하여 A-TEEN을 제시하고, 클러스터 헤드 선정 방법을 최적화함으로써 무선 센서 네트워크의 성능을 개선합니다.",
+  "problem": "인지 무선 센서 네트워크의 노드 에너지가 제한적이며, 에너지 효율성과 네트워크 수명을 개선하는 것이 필요합니다.",
+  "key_idea": "TEEN 라우팅 프로토콜을 개선하여 클러스터 헤드 선정 방법을 최적화하고, A-TEEN을 통해 라우팅과 스펙트럼 안정성을 높이는 것입니다.",
+  "method": "이 논문은 TEEN 라우팅 프로토콜을 인지 무선 센서 네트워크에 적용하고, 클러스터 헤드 선정 방법을 개선한 A-TEEN을 제안합니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 에너지 효율성 및 네트워크 수명",
+  "results": "A-TEEN은 TEEN보다 더 높은 에너지 효율성과 더 긴 네트워크 수명을 보여주며, 이는 동일한 설정에서 운영될 때 더욱 향상됩니다.",
+  "contributions": [
+    "TEEN 라우팅 프로토콜의 클러스터 헤드 선정 방법을 최적화하여 A-TEEN을 제안합니다.",
+    "인지 무선 센서 네트워크의 에너지 효율성과 수명을 개선합니다.",
+    "A-TEEN을 사용하면 TEEN보다 더 안정적인 라우팅과 스펙트럼을 달성할 수 있습니다."
+  ],
+  "limitations": "실제 네트워크 환경에서의 검증과 다양한 스펙트럼 환경에서의 성능 평가가 필요합니다.",
+  "future_work": "다양한 스펙트럼 환경에서 A-TEEN의 성능을 검증하고, 실제 네트워크 환경에서의 적용 가능성을 탐구할 것을 제안합니다.",
+  "keywords": [
+    "Cognitive wireless sensor network",
+    "TEEN routing protocol",
+    "Cluster head election",
+    "Energy efficiency",
+    "A-TEEN",
+    "Routing stability",
+    "Spectrum variability"
+  ],
+  "obsidian_markdown": "# Optimization on TEEN routing protocol in cognitive wireless sensor network\n\n## One-line Summary\n이 논문은 노드 에너지 효율성과 수명을 향상시키기 위해 TEEN 라우팅 프로토콜을 개선하여 A-TEEN을 제시하고, 클러스터 헤드 선정 방법을 최적화함으로써 무선 센서 네트워크의 성능을 개선합니다.\n\n## Problem\n인지 무선 센서 네트워크의 노드 에너지가 제한적이며, 에너지 효율성과 네트워크 수명을 개선하는 것이 필요합니다.\n\n## Key Idea\nTEEN 라우팅 프로토콜을 개선하여 클러스터 헤드 선정 방법을 최적화하고, A-TEEN을 통해 라우팅과 스펙트럼 안정성을 높이는 것입니다.\n\n## Method\n이 논문은 TEEN 라우팅 프로토콜을 인지 무선 센서 네트워크에 적용하고, 클러스터 헤드 선정 방법을 개선한 A-TEEN을 제안합니다.\n\n## Experiment\n- **Metric**: 에너지 효율성 및 네트워크 수명\n\n## Results\nA-TEEN은 TEEN보다 더 높은 에너지 효율성과 더 긴 네트워크 수명을 보여주며, 이는 동일한 설정에서 운영될 때 더욱 향상됩니다.\n\n## Contributions\n- TEEN 라우팅 프로토콜의 클러스터 헤드 선정 방법을 최적화하여 A-TEEN을 제안합니다.\n- 인지 무선 센서 네트워크의 에너지 효율성과 수명을 개선합니다.\n- A-TEEN을 사용하면 TEEN보다 더 안정적인 라우팅과 스펙트럼을 달성할 수 있습니다.\n\n## Limitations\n실제 네트워크 환경에서의 검증과 다양한 스펙트럼 환경에서의 성능 평가가 필요합니다.\n\n## Future Work\n다양한 스펙트럼 환경에서 A-TEEN의 성능을 검증하고, 실제 네트워크 환경에서의 적용 가능성을 탐구할 것을 제안합니다.\n\n## Keywords\nCognitive wireless sensor network, TEEN routing protocol, Cluster head election, Energy efficiency, A-TEEN, Routing stability, Spectrum variability\n"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Secure Routing in IoT: Evaluation of RPL Secure Mode under Attacks",
+  "summary": "이 논문은 RPL 프로토콜의 보안 모드가 일반적인 라우팅 공격에 노출되었을 때의 성능과 도전 과제를 평가합니다.",
+  "problem": "IoT 네트워크에서 RPL 프로토콜의 보안 기능이 라우팅 공격에 노출될 때의 효과와 도전 과제를 연구하지 않은 문제입니다.",
+  "key_idea": "RPL의 보안 기능을 사용하여 라우팅 공격에 대한 효과를 평가하고, 이러한 공격의 영향을 줄이기 위한 제안을 제시하는 것입니다.",
+  "method": "RPL의 보안 기능이 활성화되었을 때와 비활성화되었을 때 세 가지 라우팅 공격(블랙홀, 선택적 전달, 이웃 공격) 하에서의 성능을 비교하여 여러 메트릭을 사용한 실험적 평가입니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: 컨티키 운영 시스템에서 RPL의 보안 기능의 부분적 구현을 사용한 시뮬레이션\n- **Metric**: 평균 데이터 패킷 전달율, 평균 데이터 패킷 지연, 평균 전력 소비 등",
+  "results": "RPL의 보안 기능이 활성화됨에 따라 공격의 영향을 줄일 수 있는 방법에 대한 관찰 및 제안",
+  "contributions": [
+    "RPL의 보안 기능을 사용한 첫 번째 실험적 평가",
+    "라우팅 공격에 대한 RPL 보안 기능의 성능 비교",
+    "공격의 영향을 줄이기 위한 새로운 제안"
+  ],
+  "limitations": "실험은 컨티키 운영 시스템에서의 부분적 구현을 기반으로 하고 있어 다른 운영 시스템으로의 일반화가 제한될 수 있습니다.",
+  "future_work": "다른 IoT 운영 시스템에서의 RPL 보안 기능의 전체 구현 및 다양한 공격 유형에 대한 추가 평가가 필요합니다.",
+  "keywords": [
+    "IoT",
+    "RPL",
+    "Secure Routing",
+    "IoT Networks",
+    "Routing Attacks",
+    "Security Mechanisms"
+  ],
+  "obsidian_markdown": "# Secure Routing in IoT: Evaluation of RPL Secure Mode under Attacks\n\n## One-line Summary\n이 논문은 RPL 프로토콜의 보안 모드가 일반적인 라우팅 공격에 노출되었을 때의 성능과 도전 과제를 평가합니다.\n\n## Problem\nIoT 네트워크에서 RPL 프로토콜의 보안 기능이 라우팅 공격에 노출될 때의 효과와 도전 과제를 연구하지 않은 문제입니다.\n\n## Key Idea\nRPL의 보안 기능을 사용하여 라우팅 공격에 대한 효과를 평가하고, 이러한 공격의 영향을 줄이기 위한 제안을 제시하는 것입니다.\n\n## Method\nRPL의 보안 기능이 활성화되었을 때와 비활성화되었을 때 세 가지 라우팅 공격(블랙홀, 선택적 전달, 이웃 공격) 하에서의 성능을 비교하여 여러 메트릭을 사용한 실험적 평가입니다.\n\n## Experiment\n- **Simulator**: 컨티키 운영 시스템에서 RPL의 보안 기능의 부분적 구현을 사용한 시뮬레이션\n- **Metric**: 평균 데이터 패킷 전달율, 평균 데이터 패킷 지연, 평균 전력 소비 등\n\n## Results\nRPL의 보안 기능이 활성화됨에 따라 공격의 영향을 줄일 수 있는 방법에 대한 관찰 및 제안\n\n## Contributions\n- RPL의 보안 기능을 사용한 첫 번째 실험적 평가\n- 라우팅 공격에 대한 RPL 보안 기능의 성능 비교\n- 공격의 영향을 줄이기 위한 새로운 제안\n\n## Limitations\n실험은 컨티키 운영 시스템에서의 부분적 구현을 기반으로 하고 있어 다른 운영 시스템으로의 일반화가 제한될 수 있습니다.\n\n## Future Work\n다른 IoT 운영 시스템에서의 RPL 보안 기능의 전체 구현 및 다양한 공격 유형에 대한 추가 평가가 필요합니다.\n\n## Keywords\nIoT, RPL, Secure Routing, IoT Networks, Routing Attacks, Security Mechanisms\n"
+}

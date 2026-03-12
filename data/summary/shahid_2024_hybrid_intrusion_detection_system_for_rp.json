@@ -1,0 +1,27 @@
+{
+  "title": "Hybrid Intrusion Detection System for RPL IoT Networks Using Machine Learning and Deep Learning",
+  "summary": "본 논문은 IoT 네트워크의 RPL 프로토콜에서 보안 위협을 탐지하기 위한 하이브리드 Intrusion Detection System(IDS)를 제안하여 머신러닝과 딥러닝 기법을 결합한 접근 방식을 소개합니다.",
+  "problem": "IoT 장치의 제한된 메모리, 처리 능력, 그리고 네트워크 능력으로 인해 보안 침해에 취약한 것과 RPL 프로토콜이 직면한 중요한 보안 도전 과제들입니다.",
+  "key_idea": "RPL IoT 네트워크에서 보안 침입을 탐지하기 위해 머신러닝과 딥러닝을 결합하여 하이브리드 Intrusion Detection System을 제안합니다.",
+  "method": "ROUT-4-2023 데이터셋을 사용하여 통계 정보 그래프를 통해 네트워크 트래픽 특성을 조사하고, 다양한 머신러닝 모델과 딥러닝 아키텍처를 비교 분석하며, 혼란 행렬 결과와 계산 효율성을 중점적으로 다룹니다.",
+  "experiment": "- **Dataset**: ROUT-4-2023\n- **Simulator**: N/A\n- **Metric**: 혼란 행렬 결과 및 계산 효율성",
+  "results": "랜덤 포레스트 분류기가 좋은 성능을 보였으며, 다양한 공격 유형의 탐지 정확도를 높였습니다.",
+  "contributions": [
+    "RPL IoT 네트워크에 대한 하이브리드 Intrusion Detection System 제안",
+    "RPL 네트워크에 대한 다양한 보안 공격의 네트워크 트래픽 특성 분석",
+    "다양한 머신러닝 모델과 딥러닝 아키텍처의 비교 분석"
+  ],
+  "limitations": "실험은 특정 데이터셋을 기반으로 하고 있어, 다른 데이터셋에서의 일반화성이 제한될 수 있으며, 실제 네트워크 환경에서의 성능은 더 많은 평가가 필요합니다.",
+  "future_work": "다양한 데이터셋을 사용한 추가 실험 및 실제 IoT 네트워크 환경에서의 성능 평가, 보다 넓은 범위의 공격 유형에 대한 탐지 능력 개선을 제안합니다.",
+  "keywords": [
+    "IoT",
+    "RPL",
+    "Intrusion Detection System",
+    "Machine Learning",
+    "Deep Learning",
+    "Routing Attacks",
+    "Hybrid System",
+    "Security"
+  ],
+  "obsidian_markdown": "# Hybrid Intrusion Detection System for RPL IoT Networks Using Machine Learning and Deep Learning\n\n## One-line Summary\n본 논문은 IoT 네트워크의 RPL 프로토콜에서 보안 위협을 탐지하기 위한 하이브리드 Intrusion Detection System(IDS)를 제안하여 머신러닝과 딥러닝 기법을 결합한 접근 방식을 소개합니다.\n\n## Problem\nIoT 장치의 제한된 메모리, 처리 능력, 그리고 네트워크 능력으로 인해 보안 침해에 취약한 것과 RPL 프로토콜이 직면한 중요한 보안 도전 과제들입니다.\n\n## Key Idea\nRPL IoT 네트워크에서 보안 침입을 탐지하기 위해 머신러닝과 딥러닝을 결합하여 하이브리드 Intrusion Detection System을 제안합니다.\n\n## Method\nROUT-4-2023 데이터셋을 사용하여 통계 정보 그래프를 통해 네트워크 트래픽 특성을 조사하고, 다양한 머신러닝 모델과 딥러닝 아키텍처를 비교 분석하며, 혼란 행렬 결과와 계산 효율성을 중점적으로 다룹니다.\n\n## Experiment\n- **Dataset**: ROUT-4-2023\n- **Metric**: 혼란 행렬 결과 및 계산 효율성\n\n## Results\n랜덤 포레스트 분류기가 좋은 성능을 보였으며, 다양한 공격 유형의 탐지 정확도를 높였습니다.\n\n## Contributions\n- RPL IoT 네트워크에 대한 하이브리드 Intrusion Detection System 제안\n- RPL 네트워크에 대한 다양한 보안 공격의 네트워크 트래픽 특성 분석\n- 다양한 머신러닝 모델과 딥러닝 아키텍처의 비교 분석\n\n## Limitations\n실험은 특정 데이터셋을 기반으로 하고 있어, 다른 데이터셋에서의 일반화성이 제한될 수 있으며, 실제 네트워크 환경에서의 성능은 더 많은 평가가 필요합니다.\n\n## Future Work\n다양한 데이터셋을 사용한 추가 실험 및 실제 IoT 네트워크 환경에서의 성능 평가, 보다 넓은 범위의 공격 유형에 대한 탐지 능력 개선을 제안합니다.\n\n## Keywords\nIoT, RPL, Intrusion Detection System, Machine Learning, Deep Learning, Routing Attacks, Hybrid System, Security\n"
+}

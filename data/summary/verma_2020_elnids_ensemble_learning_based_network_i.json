@@ -1,0 +1,27 @@
+{
+  "title": "ELNIDS: Ensemble Learning based Network Intrusion Detection System for RPL based Internet of Things",
+  "summary": "이 논문은 자원 제한형 네트워크에서의 라우팅 공격을 감지하기 위한 앙상블 학습 기반 네트워크 침입 탐지 시스템인 ELNIDS를 제안하였습니다.",
+  "problem": "IoT 환경에서의 라우팅 공격으로 인한 보안 문제를 해결합니다.",
+  "key_idea": "라우팅 공격을 감지하기 위해 앙상블 학습 기반 네트워크 침입 탐지 시스템을 제안합니다.",
+  "method": "Boosted Trees, Bagged Trees, Subspace Discriminant, RUSBoosted Trees 앙상블 기반의 기계 학습 분류 모델을 구현합니다.",
+  "experiment": "- **Dataset**: RPL-NIDDS17 데이터셋\n- **Simulator**: N/A\n- **Metric**: 정확도와 ROC 곡선 아래 영역",
+  "results": "Boosted Trees 앙상블이 가장 높은 정확도(94.5%)를, RUSBoosted Trees 앙상블이 가장 높은 ROC 곡선 아래 영역(0.98)을 달성하였습니다.",
+  "contributions": [
+    "앙상블 학습 기반 네트워크 침입 탐지 시스템인 ELNIDS 제안",
+    "다양한 라우팅 공격을 감지하는 시스템 설계",
+    "앙상블 기반 분류 모델의 성능 평가 및 비교"
+  ],
+  "limitations": "실제 스마트 노드에 ELNIDS를 구현하고 평가하지 않은 점이 제한입니다.",
+  "future_work": "ELNIDS를 스마트 노드에 구현하고 평가하며, IoT를 보안하기 위한 가벼운 방어 솔루션 개발을 목표로 합니다.",
+  "keywords": [
+    "IoT",
+    "Network Intrusion Detection",
+    "Ensemble Learning",
+    "RPL",
+    "Routing Attacks",
+    "Machine Learning",
+    "Boosted Trees",
+    "RUSBoosted Trees"
+  ],
+  "obsidian_markdown": "# ELNIDS: Ensemble Learning based Network Intrusion Detection System for RPL based Internet of Things\n\n## One-line Summary\n이 논문은 자원 제한형 네트워크에서의 라우팅 공격을 감지하기 위한 앙상블 학습 기반 네트워크 침입 탐지 시스템인 ELNIDS를 제안하였습니다.\n\n## Problem\nIoT 환경에서의 라우팅 공격으로 인한 보안 문제를 해결합니다.\n\n## Key Idea\n라우팅 공격을 감지하기 위해 앙상블 학습 기반 네트워크 침입 탐지 시스템을 제안합니다.\n\n## Method\nBoosted Trees, Bagged Trees, Subspace Discriminant, RUSBoosted Trees 앙상블 기반의 기계 학습 분류 모델을 구현합니다.\n\n## Experiment\n- **Dataset**: RPL-NIDDS17 데이터셋\n- **Metric**: 정확도와 ROC 곡선 아래 영역\n\n## Results\nBoosted Trees 앙상블이 가장 높은 정확도(94.5%)를, RUSBoosted Trees 앙상블이 가장 높은 ROC 곡선 아래 영역(0.98)을 달성하였습니다.\n\n## Contributions\n- 앙상블 학습 기반 네트워크 침입 탐지 시스템인 ELNIDS 제안\n- 다양한 라우팅 공격을 감지하는 시스템 설계\n- 앙상블 기반 분류 모델의 성능 평가 및 비교\n\n## Limitations\n실제 스마트 노드에 ELNIDS를 구현하고 평가하지 않은 점이 제한입니다.\n\n## Future Work\nELNIDS를 스마트 노드에 구현하고 평가하며, IoT를 보안하기 위한 가벼운 방어 솔루션 개발을 목표로 합니다.\n\n## Keywords\nIoT, Network Intrusion Detection, Ensemble Learning, RPL, Routing Attacks, Machine Learning, Boosted Trees, RUSBoosted Trees\n"
+}

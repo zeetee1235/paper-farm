@@ -1,0 +1,28 @@
+{
+  "title": "Enhancing Routing Security in IoT: Performance Evaluation of RPL Secure Mode under Attacks",
+  "summary": "이 논문은 IoT 네트워크에서 RPL의 보안 모드의 성능을 공격 상황에서 평가하며, 추가 보안 메커니즘 없이 공격 효과를 줄이는 기법을 제안합니다.",
+  "problem": "RPL의 표준 보안 메커니즘의 적용과 IoT 네트워크에서의 보안 공격의 영향을 조사하는 것입니다.",
+  "key_idea": "RPL의 보안 메커니즘의 효과를 공격 상황에서 평가하고, 추가 보안 기능 없이 공격 효과를 줄이는 방법을 제안하는 것입니다.",
+  "method": "RPL의 보안 메커니즘을 적용한 경우와 적용하지 않은 경우의 성능 비교, 두 가지 일반적인 무선 동작 주기 프로토콜을 사용한 공격 효과를 줄이는 두 가지 기법 제안.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: Contiki 운영 체제를 사용한 시뮬레이션\n- **Metric**: 평균 데이터 패킷 전달율, 평균 데이터 패킷 지연, 평균 전력 소비 등",
+  "results": "RPL의 보안 메커니즘을 적용한 경우 공격에 대한 성능이 향상되었으나, 웜홀 공격은 제외됩니다.",
+  "contributions": [
+    "RPL의 보안 메커니즘의 효과를 공격 상황에서 평가",
+    "RPL의 보안 메커니즘 없이 공격 효과를 줄이는 두 가지 기법 제안",
+    "제안된 기법의 평가와 성능 향상 결과 제시"
+  ],
+  "limitations": "웜홀 공격에 대한 제안된 기법의 효과는 제한적입니다.",
+  "future_work": "RPL의 보안 메커니즘을 기반으로 웜홀 공격에 대한 해결책을 모색할 필요가 있습니다.",
+  "keywords": [
+    "Security and Privacy",
+    "Resource-Constrained Networks",
+    "Secure Communication",
+    "Secure RPL",
+    "Routing Attacks",
+    "IoT",
+    "RPL",
+    "Blackhole Attack",
+    "Wormhole Attack"
+  ],
+  "obsidian_markdown": "# Enhancing Routing Security in IoT: Performance Evaluation of RPL Secure Mode under Attacks\n\n## One-line Summary\n이 논문은 IoT 네트워크에서 RPL의 보안 모드의 성능을 공격 상황에서 평가하며, 추가 보안 메커니즘 없이 공격 효과를 줄이는 기법을 제안합니다.\n\n## Problem\nRPL의 표준 보안 메커니즘의 적용과 IoT 네트워크에서의 보안 공격의 영향을 조사하는 것입니다.\n\n## Key Idea\nRPL의 보안 메커니즘의 효과를 공격 상황에서 평가하고, 추가 보안 기능 없이 공격 효과를 줄이는 방법을 제안하는 것입니다.\n\n## Method\nRPL의 보안 메커니즘을 적용한 경우와 적용하지 않은 경우의 성능 비교, 두 가지 일반적인 무선 동작 주기 프로토콜을 사용한 공격 효과를 줄이는 두 가지 기법 제안.\n\n## Experiment\n- **Simulator**: Contiki 운영 체제를 사용한 시뮬레이션\n- **Metric**: 평균 데이터 패킷 전달율, 평균 데이터 패킷 지연, 평균 전력 소비 등\n\n## Results\nRPL의 보안 메커니즘을 적용한 경우 공격에 대한 성능이 향상되었으나, 웜홀 공격은 제외됩니다.\n\n## Contributions\n- RPL의 보안 메커니즘의 효과를 공격 상황에서 평가\n- RPL의 보안 메커니즘 없이 공격 효과를 줄이는 두 가지 기법 제안\n- 제안된 기법의 평가와 성능 향상 결과 제시\n\n## Limitations\n웜홀 공격에 대한 제안된 기법의 효과는 제한적입니다.\n\n## Future Work\nRPL의 보안 메커니즘을 기반으로 웜홀 공격에 대한 해결책을 모색할 필요가 있습니다.\n\n## Keywords\nSecurity and Privacy, Resource-Constrained Networks, Secure Communication, Secure RPL, Routing Attacks, IoT, RPL, Blackhole Attack, Wormhole Attack\n"
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Routing Attacks and Mitigation Methods for RPL-Based Internet of Things",
+  "summary": "이 논문은 IoT에서 RPL 사용 시 발생할 수 있는 라우팅 공격과 이를 완화하는 방법에 대한 포괄적인 연구를 제공한다.",
+  "problem": "IoT 환경에서 RPL 사용 시 보안 취약점과 라우팅 공격이 발생한다.",
+  "key_idea": "RPL의 라우팅 공격을 분류하고, 이를 완화하기 위한 새로운 분류 체계를 제시한다.",
+  "method": "RPL 표준의 자세한 검토와 최근 제안된 수정 사항, 공격 및 완화 방법의 문헌 조사, RPL 기반 침입 탐지 시스템(IDS)의 분류 제안.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
+  "results": "RPL 공격과 완화 방법에 대한 첫 번째 분류 체계 제안, RPL 기반 IDS의 분류 및 최근 제안된 IDS의 논의.",
+  "contributions": [
+    "RPL 공격의 첫 번째 분류 체계 제안",
+    "RPL 기반 IDS의 분류 및 논의",
+    "완화 방법의 기술 기반 분류 체계 개발"
+  ],
+  "limitations": "실험 데이터셋 및 시뮬레이터가 제공되지 않았다.",
+  "future_work": "다양한 공격 유형을 처리할 수 있는 더 효율적인 IDS 개발 및 RPL 표준의 보안 강화.",
+  "keywords": [
+    "RPL",
+    "Internet of Things",
+    "Routing Attacks",
+    "IoT Security",
+    "IDS",
+    "Attacks Classification",
+    "Mitigation Methods",
+    "Intrusion Detection Systems"
+  ],
+  "obsidian_markdown": "# Routing Attacks and Mitigation Methods for RPL-Based Internet of Things\n\n## One-line Summary\n이 논문은 IoT에서 RPL 사용 시 발생할 수 있는 라우팅 공격과 이를 완화하는 방법에 대한 포괄적인 연구를 제공한다.\n\n## Problem\nIoT 환경에서 RPL 사용 시 보안 취약점과 라우팅 공격이 발생한다.\n\n## Key Idea\nRPL의 라우팅 공격을 분류하고, 이를 완화하기 위한 새로운 분류 체계를 제시한다.\n\n## Method\nRPL 표준의 자세한 검토와 최근 제안된 수정 사항, 공격 및 완화 방법의 문헌 조사, RPL 기반 침입 탐지 시스템(IDS)의 분류 제안.\n\n## Experiment\nN/A\n\n## Results\nRPL 공격과 완화 방법에 대한 첫 번째 분류 체계 제안, RPL 기반 IDS의 분류 및 최근 제안된 IDS의 논의.\n\n## Contributions\n- RPL 공격의 첫 번째 분류 체계 제안\n- RPL 기반 IDS의 분류 및 논의\n- 완화 방법의 기술 기반 분류 체계 개발\n\n## Limitations\n실험 데이터셋 및 시뮬레이터가 제공되지 않았다.\n\n## Future Work\n다양한 공격 유형을 처리할 수 있는 더 효율적인 IDS 개발 및 RPL 표준의 보안 강화.\n\n## Keywords\nRPL, Internet of Things, Routing Attacks, IoT Security, IDS, Attacks Classification, Mitigation Methods, Intrusion Detection Systems\n"
+}
