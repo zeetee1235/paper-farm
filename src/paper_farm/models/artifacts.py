@@ -5,7 +5,7 @@ from dataclasses import dataclass
 
 @dataclass(slots=True)
 class ExtractedArtifact:
-    """Result produced by an extraction backend."""
+    """Extractor output used by DocStruct/SimpleText backends."""
 
     raw_text: str
     title_guess: str | None
@@ -16,7 +16,7 @@ class ExtractedArtifact:
 
 @dataclass(slots=True)
 class CleanedArtifact:
-    """Result produced by the text normalizer."""
+    """Legacy normalization model kept for compatibility."""
 
     cleaned_text: str
     sections: dict[str, str]
@@ -25,14 +25,31 @@ class CleanedArtifact:
 
 
 @dataclass(slots=True)
-class SummaryResult:
-    """Stable summary schema shared across summary backends."""
+class PaperSection:
+    """A normalized section block."""
 
-    mode: str
-    one_line: str
-    short_summary: str
+    name: str
+    content: str
+
+
+@dataclass(slots=True)
+class PaperStruct:
+    """Standardized paper structure consumed by summarizers."""
+
+    title: str
+    abstract: str
+    sections: list[PaperSection]
+
+
+@dataclass(slots=True)
+class SummaryResult:
+    """Summary contract compatible with agent.md output_contract.json."""
+
+    title: str
+    summary: str
     contributions: list[str]
-    methods: list[str]
-    experiments: list[str]
-    limitations: list[str]
+    method: str
+    results: str
+    limitations: str
     keywords: list[str]
+    obsidian_markdown: str

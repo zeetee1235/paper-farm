@@ -1,182 +1,161 @@
-# paper-farm (MVP)
+# paper-farm
 
-`paper-farm` is a **local-first MVP** for ingesting one research paper PDF at a time and generating structured outputs that are easy to inspect and extend.
+Zotero → LLM summarization → Obsidian. Watches your Zotero storage, runs each new PDF through a text extraction and summarization pipeline, and writes a structured Markdown note into your Obsidian vault.
 
-한국어 전체 사용 가이드: [README.ko.md](./README.ko.md)
+```
+Zotero storage  →  paper-farm watch  →  Obsidian vault/
+                                          <paper-id>/
+                                            summary.md
+                                            metadata.json
+                                            notes.md
+                                            paper.pdf
+```
 
-## MVP scope
-
-This project currently focuses on a practical single-paper pipeline:
-
-1. Register PDF and metadata
-2. Extract text
-3. Normalize/clean text + detect sections
-4. Summarize in either:
-   - `local` mode (deterministic heuristic summary)
-   - `agent-pr` mode (agent-ready package generation)
-5. Export an Obsidian-friendly Markdown note (for local summaries)
-
-It is intentionally lean: no web frontend, no queueing layer, and no vector DB.
+---
 
 ## Requirements
 
 - Python 3.11+
+- [Ollama](https://ollama.com) running locally (`ollama serve`)
+- A pulled model, e.g. `ollama pull phi4:14b`
+- *(Optional)* Rust toolchain — only needed for DocStruct OCR on scanned PDFs
 
-## Quick start
+---
+
+## Install
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
+git clone --recurse-submodules <repo-url>
+cd paper-farm-lab
+
+# with uv (recommended)
+uv sync
+
+# or pip
 pip install -e .
 ```
 
-### Enable DocStruct extractor (submodule)
+---
 
-`paper-farm` now includes `DocStruct` as a git submodule at `external/DocStruct`.
+## Configure
+
+```bash
+paper-farm init-config        # creates paper-farm.toml
+```
+
+Edit the generated file:
+
+```toml
+[paths]
+obsidian_vault = "~/Documents/Obsidian/Research/papers"
+
+[llm]
+backend  = "ollama"
+model    = "phi4:14b"
+timeout  = 600
+
+[summary]
+language = "en"   # en / ko / ja / zh / fr / de / es
+
+[watcher]
+zotero_storage = "~/Zotero/storage"
+poll_interval  = 30
+```
+
+---
+
+## Usage
+
+### Automatic (recommended)
+
+Watch Zotero and process new papers as they arrive:
+
+```bash
+paper-farm watch
+```
+
+Or use the helper scripts:
+
+```bash
+scripts/start-watch.sh       # starts watcher + logs to logs/
+scripts/monitor.sh           # live dashboard (queue, progress, recent logs)
+```
+
+### Manual (single paper)
+
+```bash
+# Full pipeline in one command
+paper-farm run /path/to/paper.pdf
+
+# Step by step
+paper-farm ingest /path/to/paper.pdf --title "..." --authors "A, B" --year 2024
+paper-farm parse   <paper-id>
+paper-farm summarize <paper-id>
+paper-farm export  <paper-id>
+```
+
+### Inspect
+
+```bash
+paper-farm list               # all registered papers
+paper-farm show <paper-id>    # metadata + artifact status
+```
+
+---
+
+## Output (per paper in Obsidian)
+
+| File | Contents |
+|------|----------|
+| `summary.md` | LLM-generated structured summary with YAML front-matter |
+| `metadata.json` | Title, authors, year, venue, DOI, tags |
+| `notes.md` | Blank note template (Research Ideas / Questions / Follow-up Papers) |
+| `paper.pdf` | Copy of the original PDF |
+
+---
+
+## Extraction
+
+paper-farm uses a two-stage extraction strategy to avoid slow OCR on text-based PDFs:
+
+1. **pypdf** — extracts text directly (~1 s/paper). Used when the quality score ≥ 60/100.
+2. **DocStruct OCR** — full OCR via Tesseract (~2–10 min/paper). Used only for scanned PDFs.
+
+Quality is scored across five signals: characters/page, non-whitespace ratio, printable-character ratio, academic keyword presence, and per-page yield.
+
+### Build DocStruct (optional, for scanned PDFs)
 
 ```bash
 git submodule update --init --recursive
 cargo build --release --manifest-path external/DocStruct/Cargo.toml
+pip install "Pillow>=11,<12" pytesseract pdf2image "opencv-python>=4.8,<5" numpy
 ```
 
-Install DocStruct OCR Python dependencies into your project venv.
+---
 
-```bash
-.venv/bin/pip install numpy "Pillow>=11,<12" pytesseract pdf2image "opencv-python>=4.8,<5"
+## Project layout
+
 ```
-
-Optional: set explicit runtime paths/tuning.
-
-```bash
-export DOCSTRUCT_BIN=/absolute/path/to/docstruct
-export DOCSTRUCT_PYTHON=/absolute/path/to/python
-export DOCSTRUCT_DPI=120
-export DOCSTRUCT_TIMEOUT_SEC=900
-```
-
-### Run end-to-end
-
-```bash
-paper-farm run /path/to/paper.pdf --summary-mode local
-```
-
-### Stage-by-stage commands
-
-```bash
-paper-farm ingest <pdf_path>
-paper-farm extract <paper_id>
-paper-farm normalize <paper_id>
-paper-farm summarize <paper_id> --mode local
-paper-farm summarize <paper_id> --mode agent-pr
-paper-farm export <paper_id> --source local
-paper-farm list
-paper-farm show <paper_id>
-```
-
-### Batch automation (.sh)
-
-If you already have many PDFs, run one shell script to generate `agent_package/agent.md` for all of them.
-
-```bash
-scripts/agent_package_batch.sh /path/to/papers_or_pdf
-```
-
-You can pass multiple files/directories.
-
-No-argument mode:
-
-```bash
-mkdir -p obsidian/vault/00_Inbox_PDFs
-# put PDFs into obsidian/vault/00_Inbox_PDFs
-scripts/agent_package_batch.sh
-```
-
-Obsidian sync output (default):
-
-- `obsidian/vault/10_Papers/<paper_id>/paper.pdf`
-- `obsidian/vault/10_Papers/<paper_id>/agent.md`
-- `obsidian/vault/10_Papers/<paper_id>/metadata.json`
-- `obsidian/vault/10_Papers/<paper_id>/note.agent.md` (if generated by external agent)
-
-Default inbox/archive:
-
-- Put new PDFs in: `obsidian/vault/00_Inbox_PDFs/`
-- Processed PDFs move to: `obsidian/vault/00_Inbox_PDFs/_processed/`
-
-### Auto add loop (.sh)
-
-To continuously process new PDFs dropped into the inbox folder:
-
-```bash
-scripts/obsidian_auto_add.sh
-```
-
-One scan/process cycle only:
-
-```bash
-scripts/obsidian_auto_add.sh --once
-```
-
-## Data layout
-
-```text
-data/
-  papers/
-    <paper_id>/
-      original.pdf
-      metadata.json
-      extracted.json
-      cleaned.json
-      summary.local.json
-      note.local.md
-      agent_package/
-        prompt.txt
-        summary_request.json
-        output_contract.json
-```
-
-## Project structure
-
-```text
 src/paper_farm/
-  cli.py
-  config.py
-  logging.py
-  models/
-  storage/
-  pipeline/
-  extractors/
-  normalizers/
-  summarizers/
-  exporters/
-  utils/
-tests/
+  cli.py            CLI entry point
+  config.py         Settings (loaded from paper-farm.toml)
+  pipeline/         Orchestration service
+  extractors/       pypdf + DocStruct OCR + SmartExtractor
+  normalizers/      Text cleaning and section detection
+  summarizers/      Ollama and rule-based backends
+  exporters/        Obsidian Markdown writer
+  watchers/         Zotero file watcher (queue-based)
+  storage/          File-backed repository
+data/               Pipeline cache (excluded from git — see .gitignore)
+scripts/            Shell helpers (start-watch, monitor, sync)
+external/DocStruct  OCR submodule (Rust)
 ```
 
-## Current limitations
+---
 
-- `DocStruct` requires Rust toolchain and external OCR dependencies (e.g., Tesseract/Poppler).
-- If `DocStruct` binary is unavailable, extraction automatically falls back to `SimpleTextExtractor`.
-- Local summarization is deterministic heuristics, not an LLM.
-- `agent-pr` mode only prepares a package; it does not call external agents.
-- Metadata enrichment (authors/year/source parsing) is minimal.
+## Development
 
-## Extension points
-
-- Improve `DocStructExtractor` mapping to preserve richer block/table/reference structure.
-- Add a real local LLM backend behind the summary interface.
-- Add an agent execution workflow that consumes `agent_package/` and produces PR-ready artifacts.
-
-## Next steps
-
-1. **DocStruct output hardening**
-   - Preserve both raw DocStruct output and mapped `extracted.json` for debugging.
-   - Add richer extraction schema for title/authors/sections/tables/references.
-
-2. **Real local LLM integration**
-   - Add a model-backed summary backend (e.g., llama.cpp/Ollama) behind the existing summary interface.
-   - Keep the current summary schema unchanged, and add prompt/version metadata to `summary.local.json` for reproducibility.
-
-3. **Git-based agent PR automation**
-   - Add a command that consumes `agent_package/`, runs an external coding/research agent, writes returned artifacts, and optionally opens a git commit + PR draft.
-   - Keep this opt-in and transparent (dry-run + explicit target branch/repo options).
+```bash
+uv sync
+uv run pytest
+```

@@ -1,36 +1,40 @@
-"""Text normalization for extracted paper text."""
+"""Text normalization and section split for paper struct creation."""
 
 import re
 
-from paper_farm.models.artifacts import CleanedArtifact, ExtractedArtifact
+from paper_farm.models.artifacts import PaperSection, PaperStruct
 
 
 class BasicTextNormalizer:
-    """Simple deterministic text cleaner + section detector."""
-
-    name = "basic-text"
+    """Deterministic normalizer that converts raw text into paper_struct."""
 
     HEADING_PATTERNS = [
         "Abstract",
         "Introduction",
+        "Background",
+        "Related Work",
         "Method",
         "Methods",
+        "Approach",
+        "Experiment",
+        "Experiments",
         "Results",
         "Discussion",
         "Conclusion",
+        "Limitations",
         "References",
     ]
 
-    def normalize(self, extracted: ExtractedArtifact) -> CleanedArtifact:
-        cleaned_text = self._cleanup(extracted.raw_text)
-        sections = self._split_sections(cleaned_text)
-        references_detected = "references" in cleaned_text.lower()
-        return CleanedArtifact(
-            cleaned_text=cleaned_text,
-            sections=sections,
-            references_detected=references_detected,
-            normalizer_name=self.name,
-        )
+    def to_paper_struct(self, title: str, raw_text: str) -> PaperStruct:
+        cleaned = self._cleanup(raw_text)
+        sections = self._split_sections(cleaned)
+        abstract = sections.get("Abstract", "")[:2500]
+        normalized_sections = [
+            PaperSection(name=name, content=content[:20000])
+            for name, content in sections.items()
+            if content and name != "Abstract"
+        ]
+        return PaperStruct(title=title, abstract=abstract, sections=normalized_sections)
 
     def _cleanup(self, text: str) -> str:
         text = text.replace("\r\n", "\n").replace("\r", "\n")

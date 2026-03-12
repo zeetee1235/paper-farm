@@ -1,0 +1,52 @@
+# ============================================================
+# paper-farm.example.toml  —  configuration template
+#
+# Copy and fill in your paths:
+#   cp paper-farm.example.toml paper-farm.toml
+# ============================================================
+
+# ── paths ──────────────────────────────────────────────────
+[paths]
+# Internal data directory (default: current directory)
+# project_root = "."
+
+# Path to the papers folder inside your Obsidian vault
+# obsidian_vault = "~/Documents/Obsidian/Research/papers"
+
+
+# ── LLM (summarization model) ──────────────────────────────
+[llm]
+# "ollama" or "rule-based"
+# For ollama: run `ollama serve` and pull a model first
+backend  = "ollama"
+model    = "phi4:14b"
+base_url = "http://localhost:11434"
+
+# Max seconds to wait for LLM response
+# Recommended: 8B model→300s, 14B model→600s
+timeout  = 600
+
+# Text size limits sent to the LLM
+# Too large → context overflow; too small → information loss
+section_char_limit = 2000   # max chars per section
+total_char_limit   = 16000  # max total chars per paper
+
+
+# ── summary output ──────────────────────────────────────────
+[summary]
+# Output language for summaries
+# "en"=English  "ko"=Korean  "ja"=Japanese  "zh"=Chinese
+# "fr"=French   "de"=German  "es"=Spanish
+language = "en"
+
+
+# ── Zotero watcher ─────────────────────────────────────────
+[watcher]
+# Path to Zotero storage folder
+# macOS:        ~/Zotero/storage
+# Linux (snap): ~/snap/zotero-snap/common/Zotero/storage
+# Windows:      ~/Zotero/storage
+zotero_storage = "~/Zotero/storage"
+
+# Seconds between Zotero scans
+poll_interval  = 30

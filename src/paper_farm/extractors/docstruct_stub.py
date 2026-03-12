@@ -79,6 +79,10 @@ class DocStructExtractor:
             ]
             env = os.environ.copy()
             env.setdefault("DOCSTRUCT_PYTHON", sys.executable)
+            if workdir is not None:
+                bridge = workdir / "ocr" / "bridge" / "ocr_bridge.py"
+                if bridge.exists():
+                    env["DOCSTRUCT_BRIDGE"] = str(bridge)
             completed = subprocess.run(
                 cmd,
                 cwd=str(workdir) if workdir is not None else None,

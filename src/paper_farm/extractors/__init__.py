@@ -5,3 +5,13 @@ from .docstruct_stub import DocStructExtractor, DocStructExtractorStub
 from .simple_text import SimpleTextExtractor
 
 __all__ = ["Extractor", "SimpleTextExtractor", "DocStructExtractor", "DocStructExtractorStub"]
+
+from .smart_extractor import SmartExtractor
+
+__all__ = [
+    "Extractor",
+    "SimpleTextExtractor",
+    "DocStructExtractor",
+    "DocStructExtractorStub",
+    "SmartExtractor",
+]

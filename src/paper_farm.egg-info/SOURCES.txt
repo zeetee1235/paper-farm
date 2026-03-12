@@ -29,9 +29,13 @@ src/paper_farm/summarizers/__init__.py
 src/paper_farm/summarizers/agent_pr_backend.py
 src/paper_farm/summarizers/base.py
 src/paper_farm/summarizers/local_backend.py
+src/paper_farm/summarizers/ollama_backend.py
 src/paper_farm/utils/__init__.py
 src/paper_farm/utils/hashing.py
 src/paper_farm/utils/jsonio.py
+src/paper_farm/watchers/__init__.py
+src/paper_farm/watchers/zotero_watcher.py
 tests/test_local_summarizer.py
 tests/test_normalizer.py
+tests/test_pipeline_end_to_end.py
 tests/test_pipeline_ingest.py

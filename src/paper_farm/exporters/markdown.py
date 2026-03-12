@@ -1,49 +1,43 @@
-"""Markdown note exporter."""
+"""Obsidian exporter for per-paper directory output."""
 
 from pathlib import Path
+import shutil
+
+from paper_farm.utils.jsonio import write_json
+
+NOTES_TEMPLATE = """# Notes
+
+## Research Ideas
+
+-
+
+## Questions
+
+-
+
+## Follow-up Papers
+
+-
+"""
 
 
 class MarkdownExporter:
-    """Builds Obsidian-friendly markdown notes from summary artifacts."""
+    """Export summary + notes + metadata into obsidian vault layout."""
 
-    def export(self, metadata: dict, summary: dict, output_path: Path) -> Path:
-        title = metadata.get("title") or summary.get("one_line") or metadata.get("original_filename", "Untitled")
-        keywords = " ".join(f"#{k.replace(' ', '_')}" for k in summary.get("keywords", []))
+    def export(self, *, paper_id: str, source_pdf: Path, metadata: dict, summary: dict, vault_root: Path) -> Path:
+        paper_dir = vault_root / paper_id
+        paper_dir.mkdir(parents=True, exist_ok=True)
 
-        content = f"""# {title}
+        pdf_target = paper_dir / "paper.pdf"
+        if not pdf_target.exists():
+            shutil.copy2(source_pdf, pdf_target)
 
-## Metadata
-- Authors: {", ".join(metadata.get("authors") or [])}
-- Year: {metadata.get("year") or ""}
-- Source: {metadata.get("source") or ""}
-- Paper ID: {metadata.get("paper_id")}
+        summary_md_path = paper_dir / "summary.md"
+        summary_md_path.write_text(summary.get("obsidian_markdown", ""), encoding="utf-8")
 
-## One-line summary
-{summary.get("one_line", "")}
+        notes_path = paper_dir / "notes.md"
+        if not notes_path.exists():
+            notes_path.write_text(NOTES_TEMPLATE, encoding="utf-8")
 
-## Short summary
-{summary.get("short_summary", "")}
-
-## Contributions
-{self._to_bullets(summary.get("contributions", []))}
-
-## Methods
-{self._to_bullets(summary.get("methods", []))}
-
-## Experiments
-{self._to_bullets(summary.get("experiments", []))}
-
-## Limitations
-{self._to_bullets(summary.get("limitations", []))}
-
-## Keywords
-{keywords}
-"""
-        output_path.write_text(content.strip() + "\n", encoding="utf-8")
-        return output_path
-
-    @staticmethod
-    def _to_bullets(items: list[str]) -> str:
-        if not items:
-            return "-"
-        return "\n".join(f"- {item}" for item in items)
+        write_json(paper_dir / "metadata.json", metadata)
+        return paper_dir

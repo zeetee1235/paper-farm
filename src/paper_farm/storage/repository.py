@@ -1,4 +1,4 @@
-"""File-backed repository for paper artifacts."""
+"""File-backed repository for Paper-Farm artifacts."""
 
 from pathlib import Path
 import shutil
@@ -10,58 +10,71 @@ from paper_farm.utils.jsonio import read_json, write_json
 
 
 class PaperRepository:
-    """Handles local file layout under `data/papers/<paper_id>/`."""
+    """Handles filesystem contracts defined in agent.md."""
 
     def __init__(self, settings: Settings):
         self._settings = settings
-        self._settings.papers_root.mkdir(parents=True, exist_ok=True)
+        for path in [
+            settings.raw_pdf_root,
+            settings.metadata_root,
+            settings.parsed_root,
+            settings.summary_root,
+            settings.obsidian_papers_root,
+        ]:
+            path.mkdir(parents=True, exist_ok=True)
 
-    def paper_dir(self, paper_id: str) -> Path:
-        """Return paper directory for paper ID."""
-        return self._settings.papers_root / paper_id
+    def raw_pdf_path(self, paper_id: str) -> Path:
+        return self._settings.raw_pdf_root / f"{paper_id}.pdf"
 
-    def paper_exists(self, paper_id: str) -> bool:
-        """Return whether paper directory exists."""
-        return self.paper_dir(paper_id).exists()
+    def metadata_path(self, paper_id: str) -> Path:
+        return self._settings.metadata_root / f"{paper_id}.json"
 
-    def create_paper_dir(self, paper_id: str) -> Path:
-        """Create and return paper directory if missing."""
-        path = self.paper_dir(paper_id)
-        path.mkdir(parents=True, exist_ok=True)
-        return path
+    def paper_struct_path(self, paper_id: str) -> Path:
+        return self._settings.parsed_root / f"{paper_id}.json"
 
-    def save_original_pdf(self, paper_id: str, source_pdf: Path) -> Path:
-        """Copy source PDF into local paper storage."""
-        target = self.paper_dir(paper_id) / "original.pdf"
-        shutil.copy2(source_pdf, target)
+    def summary_path(self, paper_id: str) -> Path:
+        return self._settings.summary_root / f"{paper_id}.json"
+
+    def output_contract_path(self) -> Path:
+        return self._settings.summary_root / "output_contract.json"
+
+    def vault_dir(self, paper_id: str) -> Path:
+        return self._settings.obsidian_papers_root / paper_id
+
+    def save_raw_pdf(self, paper_id: str, source_pdf: Path) -> Path:
+        target = self.raw_pdf_path(paper_id)
+        if not target.exists():
+            shutil.copy2(source_pdf, target)
         return target
 
-    def save_metadata(self, paper_id: str, metadata: PaperMetadata) -> Path:
-        """Persist metadata.json."""
-        path = self.paper_dir(paper_id) / "metadata.json"
+    def save_metadata(self, metadata: PaperMetadata) -> Path:
+        path = self.metadata_path(metadata.id)
         write_json(path, metadata)
         return path
 
     def load_metadata(self, paper_id: str) -> dict[str, Any]:
-        """Load metadata.json as dictionary."""
-        return read_json(self.paper_dir(paper_id) / "metadata.json")
+        return read_json(self.metadata_path(paper_id))
 
-    def save_artifact(self, paper_id: str, filename: str, payload: Any) -> Path:
-        """Persist an arbitrary JSON artifact."""
-        path = self.paper_dir(paper_id) / filename
+    def save_paper_struct(self, paper_id: str, payload: Any) -> Path:
+        path = self.paper_struct_path(paper_id)
         write_json(path, payload)
         return path
 
-    def load_artifact(self, paper_id: str, filename: str) -> dict[str, Any]:
-        """Load a JSON artifact."""
-        return read_json(self.paper_dir(paper_id) / filename)
+    def load_paper_struct(self, paper_id: str) -> dict[str, Any]:
+        return read_json(self.paper_struct_path(paper_id))
 
-    def list_papers(self) -> list[str]:
-        """List known paper IDs that contain metadata.json."""
-        if not self._settings.papers_root.exists():
-            return []
-        paper_ids: list[str] = []
-        for path in sorted(self._settings.papers_root.iterdir()):
-            if path.is_dir() and (path / "metadata.json").exists():
-                paper_ids.append(path.name)
-        return paper_ids
+    def save_summary(self, paper_id: str, payload: Any) -> Path:
+        path = self.summary_path(paper_id)
+        write_json(path, payload)
+        return path
+
+    def load_summary(self, paper_id: str) -> dict[str, Any]:
+        return read_json(self.summary_path(paper_id))
+
+    def save_output_contract(self, payload: Any) -> Path:
+        path = self.output_contract_path()
+        write_json(path, payload)
+        return path
+
+    def list_paper_ids(self) -> list[str]:
+        return sorted(path.stem for path in self._settings.metadata_root.glob("*.json"))

@@ -1,4 +1,45 @@
+# Python
 __pycache__/
 *.py[cod]
-.pytest_cache/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
 .venv/
+venv/
+
+# Tests / cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# paper-farm runtime data (copyright-sensitive + personal)
+data/              # pipeline cache: raw PDFs, metadata, parsed text, summaries
+logs/
+obsidian/          # if vault output lands inside the project
+summary/           # legacy path (now under data/)
+metadata/          # legacy path
+papers/            # legacy path
+parsed/            # legacy path
+
+# Per-user config (contains personal paths)
+paper-farm.toml
+
+# Watcher state
+.zotero_watcher_state.json
+*.queue_status.json
+
+# PDFs anywhere in the repo (belt + suspenders for copyright)
+*.pdf
+
+# macOS
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
+*.swp

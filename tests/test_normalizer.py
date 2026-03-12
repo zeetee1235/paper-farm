@@ -1,16 +1,18 @@
-from paper_farm.models.artifacts import ExtractedArtifact
 from paper_farm.normalizers import BasicTextNormalizer
 
 
-def test_normalizer_detects_sections_and_references() -> None:
-    extracted = ExtractedArtifact(
-        raw_text="""Abstract\nThis is abstract.\n\nIntroduction\nIntro text.\n\nReferences\n[1] Ref""",
-        title_guess="Title",
-        abstract_guess="This is abstract.",
-        section_hints=["Abstract", "Introduction", "References"],
-        extractor_name="simple-text",
+def test_normalizer_to_paper_struct_keeps_abstract_and_sections() -> None:
+    text = (
+        "Abstract\n"
+        "This paper proposes a new method.\n\n"
+        "Introduction\n"
+        "We tackle routing problems.\n\n"
+        "Method\n"
+        "Our model is lightweight.\n"
     )
-    normalized = BasicTextNormalizer().normalize(extracted)
+    paper = BasicTextNormalizer().to_paper_struct("Paper Title", text)
 
-    assert "Abstract" in normalized.sections
-    assert normalized.references_detected is True
+    assert paper.title == "Paper Title"
+    assert "proposes" in paper.abstract
+    assert any(section.name == "Introduction" for section in paper.sections)
+    assert any(section.name == "Method" for section in paper.sections)

@@ -1,7 +1,6 @@
 """Summary backends."""
 
-from .agent_pr_backend import AgentPRSummaryBackend
-from .base import SummaryBackend
 from .local_backend import LocalSummaryBackend
+from .ollama_backend import OllamaSummaryBackend
 
-__all__ = ["SummaryBackend", "LocalSummaryBackend", "AgentPRSummaryBackend"]
+__all__ = ["LocalSummaryBackend", "OllamaSummaryBackend"]
