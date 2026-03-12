@@ -1,0 +1,23 @@
+{
+  "title": "Fuzzy logic‐based trusted routing protocol using vehicular cloud networks for smart cities",
+  "summary": "This paper introduces a Fuzzy logic-based Trusted Routing Protocol (FTRP) for vehicular cloud networks in smart cities. Addressing the challenges of high mobility and inconsistent wireless connections in vehicular ad hoc networks (VANETs), the protocol ensures secure data routing by assigning confidence scores to vehicles based on historical data. The study proposes using fuzzy logic to evaluate node candidacy and select secure paths for data dissemination, aiming to enhance road safety and reduce traffic congestion.",
+  "contributions": [
+    "Introduction of a Fuzzy logic-based Trusted Routing Protocol (FTRP) for secure routing in vehicular cloud networks.",
+    "Utilization of vehicle confidence scores derived from historical data to determine secure paths.",
+    "Employment of fuzzy logic for evaluating node candidacy and path selection in VANETs."
+  ],
+  "method": "The study develops the FTRP which uses fuzzy logic to evaluate node candidacy values, assigning confidence scores to vehicles based on historical interaction data. This method determines secure paths for data dissemination by selecting or rejecting routes according to the calculated scores.",
+  "results": "The study shows that the FTRP effectively identifies secure paths for data routing in VANETs, improving security and reliability by leveraging fuzzy logic and historical data to assign vehicle confidence scores.",
+  "limitations": "The study does not specify limitations or future work, focusing primarily on the protocol's development and effectiveness.",
+  "keywords": [
+    "vehicular ad hoc networks",
+    "fuzzy logic",
+    "trusted routing protocol",
+    "vehicular cloud networks",
+    "smart cities",
+    "data dissemination",
+    "node mobility",
+    "confidence scores"
+  ],
+  "obsidian_markdown": "# Fuzzy logic‐based trusted routing protocol using vehicular cloud networks for smart cities\n\n## Summary\nThis paper introduces a Fuzzy logic-based Trusted Routing Protocol (FTRP) for vehicular cloud networks in smart cities. Addressing the challenges of high mobility and inconsistent wireless connections in vehicular ad hoc networks (VANETs), the protocol ensures secure data routing by assigning confidence scores to vehicles based on historical data. The study proposes using fuzzy logic to evaluate node candidacy and select secure paths for data dissemination, aiming to enhance road safety and reduce traffic congestion.\n\n## Contributions\n- Introduction of a Fuzzy logic-based Trusted Routing Protocol (FTRP) for secure routing in vehicular cloud networks.\n- Utilization of vehicle confidence scores derived from historical data to determine secure paths.\n- Employment of fuzzy logic for evaluating node candidacy and path selection in VANETs.\n\n## Method\nThe study develops the FTRP which uses fuzzy logic to evaluate node candidacy values, assigning confidence scores to vehicles based on historical interaction data. This method determines secure paths for data dissemination by selecting or rejecting routes according to the calculated scores.\n\n## Results\nThe study shows that the FTRP effectively identifies secure paths for data routing in VANETs, improving security and reliability by leveraging fuzzy logic and historical data to assign vehicle confidence scores.\n\n## Limitations\nThe study does not specify limitations or future work, focusing primarily on the protocol's development and effectiveness.\n\n## Keywords\nvehicular ad hoc networks, fuzzy logic, trusted routing protocol, vehicular cloud networks, smart cities, data dissemination, node mobility, confidence scores\n"
+}

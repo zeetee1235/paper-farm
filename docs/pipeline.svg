@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 870 148" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0,0 10,4 0,8" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="870" height="148" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Box 1: Zotero -->
+  <rect x="12" y="28" width="118" height="52" rx="6" fill="#1e3a5f"/>
+  <text x="71" y="50" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600">Zotero</text>
+  <text x="71" y="67" text-anchor="middle" fill="#7eb8e0" font-size="10">PDF storage</text>
+  <text x="71" y="97" text-anchor="middle" fill="#94a3b8" font-size="9">① source</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="130" y1="54" x2="152" y2="54" stroke="#64748b" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- Box 2: Watcher -->
+  <rect x="155" y="28" width="118" height="52" rx="6" fill="#1a4873"/>
+  <text x="214" y="50" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600">Watcher</text>
+  <text x="214" y="67" text-anchor="middle" fill="#7eb8e0" font-size="10">queue-based</text>
+  <text x="214" y="97" text-anchor="middle" fill="#94a3b8" font-size="9">② detect</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="273" y1="54" x2="295" y2="54" stroke="#64748b" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- Box 3: SmartExtractor -->
+  <rect x="298" y="28" width="118" height="52" rx="6" fill="#155785"/>
+  <text x="357" y="50" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600">Extractor</text>
+  <text x="357" y="67" text-anchor="middle" fill="#7eb8e0" font-size="10">pypdf · OCR</text>
+  <text x="357" y="97" text-anchor="middle" fill="#94a3b8" font-size="9">③ extract</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="416" y1="54" x2="438" y2="54" stroke="#64748b" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- Box 4: Normalizer -->
+  <rect x="441" y="28" width="118" height="52" rx="6" fill="#116495"/>
+  <text x="500" y="50" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600">Normalizer</text>
+  <text x="500" y="67" text-anchor="middle" fill="#7eb8e0" font-size="10">sections</text>
+  <text x="500" y="97" text-anchor="middle" fill="#94a3b8" font-size="9">④ normalize</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="559" y1="54" x2="581" y2="54" stroke="#64748b" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- Box 5: Summarizer -->
+  <rect x="584" y="28" width="118" height="52" rx="6" fill="#0d70a5"/>
+  <text x="643" y="50" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600">Summarizer</text>
+  <text x="643" y="67" text-anchor="middle" fill="#7eb8e0" font-size="10">Ollama LLM</text>
+  <text x="643" y="97" text-anchor="middle" fill="#94a3b8" font-size="9">⑤ summarize</text>
+
+  <!-- Arrow 5→6 -->
+  <line x1="702" y1="54" x2="724" y2="54" stroke="#64748b" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- Box 6: Obsidian -->
+  <rect x="727" y="28" width="118" height="52" rx="6" fill="#166534"/>
+  <text x="786" y="50" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600">Obsidian</text>
+  <text x="786" y="67" text-anchor="middle" fill="#86efac" font-size="10">vault</text>
+  <text x="786" y="97" text-anchor="middle" fill="#94a3b8" font-size="9">⑥ export</text>
+
+  <!-- Caption -->
+  <line x1="15" y1="118" x2="855" y2="118" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="435" y="134" text-anchor="middle" fill="#94a3b8" font-size="9">Fig. 1 — End-to-end processing pipeline: Zotero → extract → normalize → summarize → Obsidian vault</text>
+</svg>

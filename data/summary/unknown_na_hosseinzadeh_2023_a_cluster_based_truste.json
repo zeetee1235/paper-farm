@@ -1,0 +1,23 @@
+{
+  "title": "Hosseinzadeh 등 - 2023 - A cluster-based trusted routing method using fire hawk optimizer (FHO) in wireless sensor networks (",
+  "summary": "본 논문은 무선 센서 네트워크(WSNs)에서 데이터 전송 안전을 높이기 위한 클러스터 기반 신뢰 경로 방법을 제시합니다. 이 방법은 불꽃매 빠른 최적화(Fire Hawk Optimizer, FHO)를 사용하여 클러스터 헤드를 선택하며, 센서 노드 간 상호작용에 기반한 가중 신뢰 메커니즘(Weighted Trust Mechanism, WTM)을 적용합니다. WTM은 수신률, 중복률, 에너지 상태를 고려하여 노드의 신뢰 수준을 조정하며, 클러스터 메커니즘은 최적의 클러스터 헤드를 선택하는 새로운 비용 함수를 제시합니다. 결과적으로 CTRF는 에너지 수준, 처리량, 패킷 손실률, 지연, 탐지율 및 정확도에서 기존 방법보다 우수한 성능을 보였습니다.",
+  "contributions": [
+    "불꽃매 빠른 최적화 기반 클러스터링 메커니즘 개발",
+    "가중 신뢰 메커니즘(WTM) 도입",
+    "신뢰 경로에 의한 높은 품질, 신뢰성, 에너지 수준 경로 선택"
+  ],
+  "method": "본 연구는 WSNs에서 네트워크 보안을 강화하기 위해 FHO를 사용한 클러스터 기반 신뢰 경로 방법을 제안합니다. WTM은 수신률, 중복률, 에너지 상태 등의 신뢰 매개변수를 가중치로 적용하여 노드의 신뢰 수준을 조정합니다. 클러스터 메커니즘은 높은 에너지와 신뢰성을 갖는 노드를 선정하며, 새로운 비용 함수를 통해 클러스터 내외 거리, 클러스터 헤드와 기지국의 거리, 잔여 에너지, 클러스터 크기를 고려합니다.",
+  "results": "CTRF는 에너지 수준을 6.44%~16.15%, 처리량을 8.96%~43.09%, 지연을 32.20%~58.70%, 탐지율을 2.07%~6.26%, 정확도를 5.16%~14.64% 향상시켰습니다. 이는 3LWT-GWO, SASR, AFTNS에 비해 우수한 성능을 보였습니다.",
+  "limitations": "본 연구는 신뢰 메커니즘의 정확도를 향상시키기 위해 신경망 같은 새로운 기술을 추가하는 방향으로 미래 연구를 계획하고 있습니다.",
+  "keywords": [
+    "Wireless Sensor Networks",
+    "Trusted Routing",
+    "Fire Hawk Optimizer",
+    "Cluster-based Method",
+    "Weighted Trust Mechanism",
+    "Network Security",
+    "Residual Energy",
+    "Throughput"
+  ],
+  "obsidian_markdown": "# Hosseinzadeh 등 - 2023 - A cluster-based trusted routing method using fire hawk optimizer (FHO) in wireless sensor networks (\n\n## Summary\n본 논문은 무선 센서 네트워크(WSNs)에서 데이터 전송 안전을 높이기 위한 클러스터 기반 신뢰 경로 방법을 제시합니다. 이 방법은 불꽃매 빠른 최적화(Fire Hawk Optimizer, FHO)를 사용하여 클러스터 헤드를 선택하며, 센서 노드 간 상호작용에 기반한 가중 신뢰 메커니즘(Weighted Trust Mechanism, WTM)을 적용합니다. WTM은 수신률, 중복률, 에너지 상태를 고려하여 노드의 신뢰 수준을 조정하며, 클러스터 메커니즘은 최적의 클러스터 헤드를 선택하는 새로운 비용 함수를 제시합니다. 결과적으로 CTRF는 에너지 수준, 처리량, 패킷 손실률, 지연, 탐지율 및 정확도에서 기존 방법보다 우수한 성능을 보였습니다.\n\n## Contributions\n- 불꽃매 빠른 최적화 기반 클러스터링 메커니즘 개발\n- 가중 신뢰 메커니즘(WTM) 도입\n- 신뢰 경로에 의한 높은 품질, 신뢰성, 에너지 수준 경로 선택\n\n## Method\n본 연구는 WSNs에서 네트워크 보안을 강화하기 위해 FHO를 사용한 클러스터 기반 신뢰 경로 방법을 제안합니다. WTM은 수신률, 중복률, 에너지 상태 등의 신뢰 매개변수를 가중치로 적용하여 노드의 신뢰 수준을 조정합니다. 클러스터 메커니즘은 높은 에너지와 신뢰성을 갖는 노드를 선정하며, 새로운 비용 함수를 통해 클러스터 내외 거리, 클러스터 헤드와 기지국의 거리, 잔여 에너지, 클러스터 크기를 고려합니다.\n\n## Results\nCTRF는 에너지 수준을 6.44%~16.15%, 처리량을 8.96%~43.09%, 지연을 32.20%~58.70%, 탐지율을 2.07%~6.26%, 정확도를 5.16%~14.64% 향상시켰습니다. 이는 3LWT-GWO, SASR, AFTNS에 비해 우수한 성능을 보였습니다.\n\n## Limitations\n본 연구는 신뢰 메커니즘의 정확도를 향상시키기 위해 신경망 같은 새로운 기술을 추가하는 방향으로 미래 연구를 계획하고 있습니다.\n\n## Keywords\nWireless Sensor Networks, Trusted Routing, Fire Hawk Optimizer, Cluster-based Method, Weighted Trust Mechanism, Network Security, Residual Energy, Throughput\n"
+}
