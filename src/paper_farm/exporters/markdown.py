@@ -2,6 +2,7 @@
 
 import json
 from pathlib import Path
+import re
 import shutil
 
 from paper_farm.utils.jsonio import write_json
@@ -29,7 +30,16 @@ NOTES_TEMPLATE = """# Notes
 class MarkdownExporter:
     """Export summary + notes + metadata into obsidian vault layout."""
 
-    def export(self, *, paper_id: str, source_pdf: Path, metadata: dict, summary: dict, vault_root: Path) -> Path:
+    def export(
+        self,
+        *,
+        paper_id: str,
+        source_pdf: Path,
+        metadata: dict,
+        summary: dict,
+        vault_root: Path,
+        summary_root: Path | None = None,
+    ) -> Path:
         paper_dir = vault_root / paper_id
         paper_dir.mkdir(parents=True, exist_ok=True)
 
@@ -49,7 +59,13 @@ class MarkdownExporter:
 
         write_json(paper_dir / "metadata.json", metadata)
 
-        self._update_index(vault_root=vault_root, paper_id=paper_id, metadata=metadata, summary=summary)
+        self._update_index(
+            vault_root=vault_root,
+            paper_id=paper_id,
+            metadata=metadata,
+            summary=summary,
+            summary_root=summary_root,
+        )
 
         return paper_dir
 
@@ -82,7 +98,14 @@ class MarkdownExporter:
         return "\n".join(lines)
 
     @staticmethod
-    def _update_index(*, vault_root: Path, paper_id: str, metadata: dict, summary: dict) -> None:
+    def _update_index(
+        *,
+        vault_root: Path,
+        paper_id: str,
+        metadata: dict,
+        summary: dict,
+        summary_root: Path | None = None,
+    ) -> None:
         """Rebuild index.md in vault root with links to all paper summaries."""
         index_path = vault_root / "index.md"
 
@@ -92,20 +115,28 @@ class MarkdownExporter:
             try:
                 meta = json.loads(meta_file.read_text(encoding="utf-8"))
                 pid = meta_file.parent.name
-                # Load keywords from summary if available
-                summary_file = meta_file.parent / "../.." / "summary" / f"{pid}.json"
                 kws: list[str] = []
-                if summary_file.exists():
-                    try:
-                        s = json.loads(summary_file.read_text(encoding="utf-8"))
-                        kws = s.get("keywords", [])
-                    except Exception:
-                        pass
+                if pid == paper_id:
+                    kws = summary.get("keywords", [])
+                elif summary_root is not None:
+                    summary_file = summary_root / f"{pid}.json"
+                    if summary_file.exists():
+                        try:
+                            s = json.loads(summary_file.read_text(encoding="utf-8"))
+                            kws = s.get("keywords", [])
+                        except Exception:
+                            pass
+                authors = meta.get("authors", [])
+                year = meta.get("year")
+                if not authors:
+                    authors = MarkdownExporter._infer_authors_from_title(meta.get("title", pid))
+                if year in (None, "", "N/A"):
+                    year = MarkdownExporter._infer_year_from_title(meta.get("title", pid)) or "N/A"
                 entries.append({
                     "id": pid,
                     "title": meta.get("title", pid),
-                    "year": meta.get("year") or "N/A",
-                    "authors": meta.get("authors", []),
+                    "year": year,
+                    "authors": authors,
                     "keywords": kws or meta.get("tags", []),
                 })
             except Exception:
@@ -129,3 +160,16 @@ class MarkdownExporter:
             lines.append(f"| {i} | [[{pid}/summary\\|{title}]] | {year} | {authors} | {kw_str} |")
 
         index_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    @staticmethod
+    def _infer_authors_from_title(title: str) -> list[str]:
+        match = re.match(r"^(.*?)\s*-\s*\d{4}\s*-", title)
+        if not match:
+            return []
+        author_text = match.group(1).strip()
+        return [author_text] if author_text else []
+
+    @staticmethod
+    def _infer_year_from_title(title: str) -> int | None:
+        match = re.search(r"\b(19|20)\d{2}\b", title)
+        return int(match.group(0)) if match else None

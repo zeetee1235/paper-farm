@@ -110,6 +110,7 @@ class PipelineService:
             metadata=metadata,
             summary=summary,
             vault_root=self.settings.obsidian_papers_root,
+            summary_root=self.settings.summary_root,
         )
 
     def run(self, pdf_path: Path, **metadata: object) -> str:
