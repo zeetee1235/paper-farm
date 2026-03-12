@@ -1,27 +1,26 @@
 {
   "title": "SoS-RPL: Securing Internet of Things Against Sinkhole Attack Using RPL Protocol-Based Node Rating and Ranking Mechanism",
-  "summary": "이 논문은 RPL 프로토콜 기반 노드 평가 및 순위 메커니즘을 사용하여 IoT 네트워크에 대한 싱크홀 공격을 방지하는 SoS-RPL 방법을 제안한다.",
-  "problem": "IoT 네트워크는 싱크홀 공격과 같은 여러 공격에 취약하며, 이는 보안 문제를 일으킨다.",
-  "key_idea": "RPL 프로토콜 기반의 노드 평가 및 순위 메커니즘을 통해 싱크홀 공격을 감지하고 방지하는 것이 핵심 아이디어이다.",
-  "method": "RPL 프로토콜을 사용한 노드 평가 및 순위 메커니즘과 APT-RREQ 기반의 부정 행위 원천 탐지 방법을 사용한다.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: NS-3\n- **Metric**: 감지율, FNR, FPR, PDR, 최대 처리량, 패킷 손실율",
-  "results": "SoS-RPL 방법은 FPR이 4.16% 미만, FNR이 4.04% 미만, PLR이 2.16% 미만, 감지율이 96.19% 이상, PDR이 94.17% 이상, 처리량이 2700 kbps 이상으로 높은 수준의 성능을 보였다.",
+  "summary": "이 논문은 IoT 환경에서 싱크홀 공격에 대한 방어 메커니즘을 RPL 프로토콜 기반의 노드 평가 및 순위 시스템을 통해 제안한다.",
+  "problem": "IoT 환경에서 발생하는 싱크홀 공격을 효과적으로 탐지하고 방어하는 것",
+  "key_idea": "RPL 프로토콜을 사용하여 노드의 평가와 순위 매기기를 통해 싱크홀 공격을 탐지하는 방법",
+  "method": "RPL 프로토콜을 기반으로 노드의 평가와 순위 매기기를 통해 싱크홀 공격을 탐지하는 방법",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: NS-3\n- **Metric**: 탐지율, 거짓음성률, 거짓양성률, 패킷 전달율, 최대 처리량, 패킷 손실률",
+  "results": "고수준의 성능을 보였으며, FPR(4.16% 미만), FNR(4.04% 미만), PLR(2.16% 미만), 탐지율(96.19% 이상), PDR(94.17% 이상), 처리량(2700 kbps 이상)",
   "contributions": [
-    "RPL 프로토콜 기반 싱크홀 감지 메커니즘을 제안한다.",
-    "부정 행위 원천을 탐지하기 위한 APT-RREQ 기반 방법을 도입한다.",
-    "NS-3 환경에서 SoS-RPL 방법의 성능을 평가한다."
+    "RPL 프로토콜 기반의 싱크홀 탐지 방법 제안",
+    "IPV6 기반 IoT 네트워크의 보안 향상",
+    "싱크홀 공격에 대한 방어 메커니즘 개발"
   ],
-  "limitations": "추가 하드웨어 없이 RPL 프로토콜만 사용하므로 특정 네트워크 구성에서는 한계가 있을 수 있다.",
-  "future_work": "다양한 네트워크 환경에서의 성능을 더욱 향상시키기 위한 연구가 필요하며, 다른 유형의 공격에 대한 방어력도 개선해야 한다.",
+  "limitations": "실제 IoT 환경에서의 추가적인 검증 필요",
+  "future_work": "실제 IoT 환경에서의 보다 광범위한 검증 및 다양한 공격 시나리오에 대한 적용",
   "keywords": [
-    "Internet of Things (IoT)",
-    "Sinkhole attack",
+    "Internet of Things",
+    "sinkhole attack",
     "RPL",
-    "Rating and ranking mechanism",
-    "IoT security",
-    "Node behavior analysis",
-    "Network simulation",
-    "Malicious node detection"
+    "rating and ranking mechanism",
+    "NS-3",
+    "security",
+    "IoT network"
   ],
-  "obsidian_markdown": "# SoS-RPL: Securing Internet of Things Against Sinkhole Attack Using RPL Protocol-Based Node Rating and Ranking Mechanism\n\n## One-line Summary\n이 논문은 RPL 프로토콜 기반 노드 평가 및 순위 메커니즘을 사용하여 IoT 네트워크에 대한 싱크홀 공격을 방지하는 SoS-RPL 방법을 제안한다.\n\n## Problem\nIoT 네트워크는 싱크홀 공격과 같은 여러 공격에 취약하며, 이는 보안 문제를 일으킨다.\n\n## Key Idea\nRPL 프로토콜 기반의 노드 평가 및 순위 메커니즘을 통해 싱크홀 공격을 감지하고 방지하는 것이 핵심 아이디어이다.\n\n## Method\nRPL 프로토콜을 사용한 노드 평가 및 순위 메커니즘과 APT-RREQ 기반의 부정 행위 원천 탐지 방법을 사용한다.\n\n## Experiment\n- **Simulator**: NS-3\n- **Metric**: 감지율, FNR, FPR, PDR, 최대 처리량, 패킷 손실율\n\n## Results\nSoS-RPL 방법은 FPR이 4.16% 미만, FNR이 4.04% 미만, PLR이 2.16% 미만, 감지율이 96.19% 이상, PDR이 94.17% 이상, 처리량이 2700 kbps 이상으로 높은 수준의 성능을 보였다.\n\n## Contributions\n- RPL 프로토콜 기반 싱크홀 감지 메커니즘을 제안한다.\n- 부정 행위 원천을 탐지하기 위한 APT-RREQ 기반 방법을 도입한다.\n- NS-3 환경에서 SoS-RPL 방법의 성능을 평가한다.\n\n## Limitations\n추가 하드웨어 없이 RPL 프로토콜만 사용하므로 특정 네트워크 구성에서는 한계가 있을 수 있다.\n\n## Future Work\n다양한 네트워크 환경에서의 성능을 더욱 향상시키기 위한 연구가 필요하며, 다른 유형의 공격에 대한 방어력도 개선해야 한다.\n\n## Keywords\nInternet of Things (IoT), Sinkhole attack, RPL, Rating and ranking mechanism, IoT security, Node behavior analysis, Network simulation, Malicious node detection\n"
+  "obsidian_markdown": "# SoS-RPL: Securing Internet of Things Against Sinkhole Attack Using RPL Protocol-Based Node Rating and Ranking Mechanism\n\n## One-line Summary\n이 논문은 IoT 환경에서 싱크홀 공격에 대한 방어 메커니즘을 RPL 프로토콜 기반의 노드 평가 및 순위 시스템을 통해 제안한다.\n\n## Problem\nIoT 환경에서 발생하는 싱크홀 공격을 효과적으로 탐지하고 방어하는 것\n\n## Key Idea\nRPL 프로토콜을 사용하여 노드의 평가와 순위 매기기를 통해 싱크홀 공격을 탐지하는 방법\n\n## Method\nRPL 프로토콜을 기반으로 노드의 평가와 순위 매기기를 통해 싱크홀 공격을 탐지하는 방법\n\n## Experiment\n- **Simulator**: NS-3\n- **Metric**: 탐지율, 거짓음성률, 거짓양성률, 패킷 전달율, 최대 처리량, 패킷 손실률\n\n## Results\n고수준의 성능을 보였으며, FPR(4.16% 미만), FNR(4.04% 미만), PLR(2.16% 미만), 탐지율(96.19% 이상), PDR(94.17% 이상), 처리량(2700 kbps 이상)\n\n## Contributions\n- RPL 프로토콜 기반의 싱크홀 탐지 방법 제안\n- IPV6 기반 IoT 네트워크의 보안 향상\n- 싱크홀 공격에 대한 방어 메커니즘 개발\n\n## Limitations\n실제 IoT 환경에서의 추가적인 검증 필요\n\n## Future Work\n실제 IoT 환경에서의 보다 광범위한 검증 및 다양한 공격 시나리오에 대한 적용\n\n## Keywords\nInternet of Things, sinkhole attack, RPL, rating and ranking mechanism, NS-3, security, IoT network\n"
 }

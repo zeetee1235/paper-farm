@@ -1,27 +1,26 @@
 {
   "title": "A modified SPIN for wireless sensor networks",
-  "summary": "본 논문은 데이터 전송 효율성을 높이기 위한 SPIN 프로토콜의 수정된 버전인 M-SPIN을 제안하고, 기존 SPIN 프로토콜과의 성능을 비교하는 것을 핵심 기여로 한다.",
-  "problem": "무선 센서 네트워크(WSN)에서의 데이터 전송은 에너지 절약과 효율적인 데이터 전달을 필요로 하는 주요 도전 과제이다.",
-  "key_idea": "데이터 중심 접근 방식에 기반한 M-SPIN 프로토콜은 네트워크 내 데이터 집계를 통해 에너지 절약 데이터 전송을 수행한다.",
-  "method": "본 논문에서는 SPIN 프로토콜을 기반으로 한 M-SPIN 프로토콜을 제안하고, TOSSIM 시뮬레이션 환경에서 성능 평가를 수행한다.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: TOSSIM\n- **Metric**: 에너지 절약 및 성능 향상",
-  "results": "M-SPIN은 기존 SPIN 프로토콜에 비해 상당한 성능 향상을 보여준다.",
+  "summary": "The paper presents a modified SPIN protocol (M-SPIN) for energy-efficient data transmission in wireless sensor networks by reducing unnecessary packet transmissions.",
+  "problem": "Data transmission in wireless sensor networks is challenging due to energy constraints, requiring efficient routing protocols to save energy.",
+  "key_idea": "The core idea is to modify the SPIN protocol (M-SPIN) to transmit data directly to the sink node, reducing unnecessary transmissions and saving energy.",
+  "method": "The method involves modifying the SPIN protocol to implement M-SPIN, focusing on reducing packet transmissions by transmitting data only to the sink node.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: TOSSIM\n- **Metric**: Performance gains in terms of energy efficiency and packet transmissions",
+  "results": "M-SPIN exhibits significant performance gains over the traditional SPIN protocol, with reduced packet transmissions and increased energy efficiency.",
   "contributions": [
-    "데이터 중심 접근 방식에 기반한 M-SPIN 프로토콜 제안",
-    "TOSSIM 시뮬레이션 환경에서 M-SPIN 프로토콜 평가",
-    "기존 SPIN 프로토콜과의 성능 비교"
+    "Introduction of M-SPIN, a modified SPIN protocol for energy-efficient data transmission.",
+    "Performance evaluation of M-SPIN in the TOSSIM environment showing significant energy savings.",
+    "Demonstration of reduced packet transmissions in M-SPIN compared to traditional SPIN."
   ],
-  "limitations": "실제 네트워크 환경에서의 실험이 이루어지지 않았으며, 시뮬레이션 환경의 한계가 있을 수 있다.",
-  "future_work": "실제 네트워크 환경에서의 실험 수행 및 다양한 네트워크 환경에서의 성능 평가가 필요하다.",
+  "limitations": "The paper does not specify limitations, but potential limitations could include the scalability of M-SPIN in larger networks or different environments.",
+  "future_work": "Future work could involve evaluating M-SPIN in real-world environments and exploring its applicability to various WSN applications.",
   "keywords": [
     "Routing protocols",
     "SPIN",
     "Wireless Sensor Network",
     "TOSSIM",
-    "Data-centric",
     "Energy efficiency",
-    "Simulation",
-    "Performance evaluation"
+    "Data transmission",
+    "Packet transmissions"
   ],
-  "obsidian_markdown": "# A modified SPIN for wireless sensor networks\n\n## One-line Summary\n본 논문은 데이터 전송 효율성을 높이기 위한 SPIN 프로토콜의 수정된 버전인 M-SPIN을 제안하고, 기존 SPIN 프로토콜과의 성능을 비교하는 것을 핵심 기여로 한다.\n\n## Problem\n무선 센서 네트워크(WSN)에서의 데이터 전송은 에너지 절약과 효율적인 데이터 전달을 필요로 하는 주요 도전 과제이다.\n\n## Key Idea\n데이터 중심 접근 방식에 기반한 M-SPIN 프로토콜은 네트워크 내 데이터 집계를 통해 에너지 절약 데이터 전송을 수행한다.\n\n## Method\n본 논문에서는 SPIN 프로토콜을 기반으로 한 M-SPIN 프로토콜을 제안하고, TOSSIM 시뮬레이션 환경에서 성능 평가를 수행한다.\n\n## Experiment\n- **Simulator**: TOSSIM\n- **Metric**: 에너지 절약 및 성능 향상\n\n## Results\nM-SPIN은 기존 SPIN 프로토콜에 비해 상당한 성능 향상을 보여준다.\n\n## Contributions\n- 데이터 중심 접근 방식에 기반한 M-SPIN 프로토콜 제안\n- TOSSIM 시뮬레이션 환경에서 M-SPIN 프로토콜 평가\n- 기존 SPIN 프로토콜과의 성능 비교\n\n## Limitations\n실제 네트워크 환경에서의 실험이 이루어지지 않았으며, 시뮬레이션 환경의 한계가 있을 수 있다.\n\n## Future Work\n실제 네트워크 환경에서의 실험 수행 및 다양한 네트워크 환경에서의 성능 평가가 필요하다.\n\n## Keywords\nRouting protocols, SPIN, Wireless Sensor Network, TOSSIM, Data-centric, Energy efficiency, Simulation, Performance evaluation\n"
+  "obsidian_markdown": "# A modified SPIN for wireless sensor networks\n\n## One-line Summary\nThe paper presents a modified SPIN protocol (M-SPIN) for energy-efficient data transmission in wireless sensor networks by reducing unnecessary packet transmissions.\n\n## Problem\nData transmission in wireless sensor networks is challenging due to energy constraints, requiring efficient routing protocols to save energy.\n\n## Key Idea\nThe core idea is to modify the SPIN protocol (M-SPIN) to transmit data directly to the sink node, reducing unnecessary transmissions and saving energy.\n\n## Method\nThe method involves modifying the SPIN protocol to implement M-SPIN, focusing on reducing packet transmissions by transmitting data only to the sink node.\n\n## Experiment\n- **Simulator**: TOSSIM\n- **Metric**: Performance gains in terms of energy efficiency and packet transmissions\n\n## Results\nM-SPIN exhibits significant performance gains over the traditional SPIN protocol, with reduced packet transmissions and increased energy efficiency.\n\n## Contributions\n- Introduction of M-SPIN, a modified SPIN protocol for energy-efficient data transmission.\n- Performance evaluation of M-SPIN in the TOSSIM environment showing significant energy savings.\n- Demonstration of reduced packet transmissions in M-SPIN compared to traditional SPIN.\n\n## Limitations\nThe paper does not specify limitations, but potential limitations could include the scalability of M-SPIN in larger networks or different environments.\n\n## Future Work\nFuture work could involve evaluating M-SPIN in real-world environments and exploring its applicability to various WSN applications.\n\n## Keywords\nRouting protocols, SPIN, Wireless Sensor Network, TOSSIM, Energy efficiency, Data transmission, Packet transmissions\n"
 }

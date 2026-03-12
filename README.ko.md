@@ -2,7 +2,7 @@
 
 # paper-farm
 
-Zotero 스토리지를 자동으로 감시하여 새로운 연구 논문 PDF를 감지하고, 전문을 추출·정제한 뒤 로컬 LLM으로 구조화된 요약을 생성하여 Obsidian 볼트에 Markdown 노트로 저장하는 로컬-퍼스트 파이프라인입니다.
+로컬 환경에서 완결되는 체계적 문헌 관리 파이프라인. paper-farm은 Zotero 스토리지를 모니터링하여 새로운 연구 PDF를 감지하고, 다단계 텍스트 추출 및 정규화를 수행한 뒤 로컬에서 실행되는 LLM을 활용한 map-reduce 전략으로 구조화된 요약을 생성하여 Obsidian 볼트에 주석 포함 Markdown 노트로 저장합니다. 모든 처리는 외부 서비스로의 문서 전송 없이 로컬에서 완료됩니다.
 
 English: [README.md](./README.md)
 
@@ -10,24 +10,35 @@ English: [README.md](./README.md)
 
 ---
 
-## 개요
+## 아키텍처
 
 <p align="center">
   <img src="docs/pipeline.svg" alt="paper-farm pipeline" width="870"/>
 </p>
 
-> **Fig. 1.** 전체 처리 파이프라인. 큐 기반 워처 스레드가 Zotero 스토리지의 새 PDF를 감지하면, 각 논문을 추출 → 정규화 → LLM 요약 → Obsidian 내보내기 순서로 순차 처리합니다.
+> **Fig. 1.** 전체 처리 파이프라인. 큐 기반 워처 스레드가 설정된 주기로 Zotero 스토리지를 폴링하고, 감지된 PDF를 큐에 추가하여 텍스트 추출 → 정규화 → LLM 요약 → Obsidian 내보내기 4단계를 순차적으로 처리합니다. 각 단계의 결과는 다음 단계 시작 전 디스크에 저장됩니다.
+
+### 파이프라인 단계
+
+| 단계 | 모듈 | 설명 |
+|------|------|------|
+| **Ingest** | `watchers/` | Zotero 스토리지 폴링, 경로 해시 기반 중복 제거, 신규 PDF 큐 추가 |
+| **Extract & Normalize** | `extractors/`, `normalizers/` | 품질 게이팅을 포함한 2단계 텍스트 추출, 섹션 경계 감지 |
+| **Summarize** | `summarizers/` | Map-reduce LLM 요약, 구조화된 JSON 출력 |
+| **Export** | `exporters/` | YAML 프론트매터를 포함한 Markdown 렌더링, Obsidian 볼트 디렉터리 생성 |
 
 각 논문은 Obsidian 볼트 내 독립적인 디렉터리를 생성합니다:
 
 ```
 <obsidian-vault>/
-  <paper-id>/
-    summary.md      ← LLM이 생성한 구조화 요약 (YAML 프론트매터 포함)
-    metadata.json   ← 제목, 저자, 연도, 학회, DOI, 태그
-    notes.md        ← 빈 노트 템플릿 (연구 아이디어 / 질문 / 후속 논문)
+  NNN_<paper-id>/
+    summary.md      ← YAML 프론트매터 포함 구조화 요약 (LLM 생성)
+    metadata.json   ← 제목, 저자, 연도, 학회, DOI, paper_num, 태그
+    notes.md        ← 사용자 노트 템플릿 (연구 아이디어 / 질문 / 후속 논문)
     paper.pdf       ← 원본 PDF 사본
 ```
+
+`NNN`은 첫 내보내기 시 할당되는 3자리 고정 식별자로, `metadata.json`에 영구 저장됩니다. 이후 파이프라인 재실행 시에도 동일한 번호가 유지됩니다.
 
 ---
 
@@ -98,7 +109,7 @@ paper-farm watch
 또는 헬퍼 스크립트 사용:
 
 ```bash
-scripts/start-watch.sh       # 와처 실행 + logs/ 에 로그 저장
+scripts/start-watch.sh       # 워처 실행 + logs/ 에 로그 저장
 scripts/monitor.sh           # 실시간 대시보드 (큐 현황, 진행 상태, 최근 로그)
 ```
 
@@ -125,21 +136,28 @@ paper-farm show <paper-id>    # 각 단계별 아티팩트 상태 확인
 
 ---
 
-## 스마트 추출
+## 텍스트 추출
 
 <p align="center">
   <img src="docs/extraction.svg" alt="Smart extraction flow" width="500"/>
 </p>
 
-> **Fig. 2.** 2단계 추출 전략. pypdf를 먼저 시도하고, 5개 신호로 구성된 품질 점수(최대 100점)가 임계값 60점 미만이면 DocStruct OCR(Rust/Tesseract 기반)로 전환합니다.
+> **Fig. 2.** 2단계 추출 전략. pypdf를 먼저 시도하고, 5개 신호로 구성된 품질 점수가 임계값(60/100점) 미만이면 DocStruct OCR(Rust/Tesseract 기반)로 전환합니다.
 
-| 신호 | 가중치 | 설명 |
+텍스트 추출은 자동 품질 게이팅을 포함한 2단계 전략을 사용합니다:
+
+1. **1차 시도 (pypdf):** 텍스트 레이어 직접 추출. 디지털 조판 PDF에서 빠르고 충분한 결과를 제공합니다.
+2. **2차 시도 (DocStruct OCR):** 품질 점수가 임계값 미만일 때 활성화됩니다. 각 페이지를 래스터 이미지로 렌더링한 뒤 Tesseract OCR을 적용하여 스캔본 또는 이미지 기반 PDF에서 텍스트를 복원합니다.
+
+품질 점수는 5개 신호를 집계합니다:
+
+| 신호 | 가중치 | 근거 |
 |------|--------|------|
-| 페이지당 문자 수 | 30점 | 전체 문자 수 ÷ 페이지 수 |
-| 공백 제외 문자 비율 | 20점 | 비공백 문자의 비율 |
-| 출력 가능 문자 비율 | 20점 | ASCII 출력 가능 문자 비율; OCR 노이즈는 낮게 측정됨 |
-| 학술 키워드 적중 | 20점 | *abstract, introduction, references* 등 섹션 제목 존재 여부 |
-| 페이지 추출 성공률 | 10점 | 비어있지 않은 텍스트가 추출된 페이지 비율 |
+| 페이지당 문자 수 | 30점 | 콘텐츠 밀도의 대리 지표; 낮은 점수는 이미지 전용 페이지를 시사함 |
+| 공백 제외 문자 비율 | 20점 | 과도한 패딩이나 레이아웃 아티팩트가 포함된 페이지 감지 |
+| 출력 가능 문자 비율 | 20점 | 유효 텍스트와 OCR 노이즈 또는 바이너리 데이터를 구별 |
+| 학술 키워드 적중 | 20점 | 구조적 마커(*abstract*, *introduction*, *references* 등)의 존재 여부 확인 |
+| 페이지 추출 성공률 | 10점 | 비어있지 않은 텍스트가 추출된 페이지의 비율 |
 
 ### DocStruct 빌드 (선택 — 스캔본 PDF 전용)
 
@@ -153,6 +171,20 @@ pip install "Pillow>=11,<12" pytesseract pdf2image "opencv-python>=4.8,<5" numpy
 
 ---
 
+## 요약 생성
+
+paper-farm은 **map-reduce** 전략을 통해 논문의 모든 섹션에 걸쳐 균등한 커버리지를 제공하는 요약을 생성합니다. 단일 패스 방식은 단일 컨텍스트 창의 한계로 인해 방법론 및 실험 섹션 등 분량이 많은 부분을 잘라낼 수밖에 없는 반면, map-reduce는 이를 근본적으로 해결합니다.
+
+**Map 단계.** 설정된 임계값(기본값: 2,000자)을 초과하는 각 섹션에 대해 개별 LLM 호출을 통해 해당 섹션을 약 150단어로 압축합니다. 프롬프트는 해당 섹션의 핵심 기여, 방법론, 정량적 결과, 명시된 한계를 추출하도록 지시합니다. 짧은 섹션은 원문 그대로 전달됩니다.
+
+**Reduce 단계.** 압축된 섹션 텍스트를 연결하여 단일 구조화 추출 호출로 LLM에 제출합니다. 모델은 `summary`, `problem`, `key_idea`, `method`, `experiment`, `results`, `contributions`, `limitations`, `future_work`, `keywords`의 10개 필드를 포함하는 JSON 객체를 출력하며, 출력 언어에 관계없이 기술 용어는 영어를 유지하는 엄격한 규칙을 따릅니다.
+
+이 설계는 *커버리지*(map)와 *종합*(reduce)을 분리함으로써, reduce 호출의 컨텍스트 길이를 증가시키지 않고도 방법론·실험 섹션이 밀도 높은 논문에 대한 요약 충실도를 향상시킵니다.
+
+`experiment` 필드는 `dataset`, `simulator`, `metric` 키를 갖는 중첩 JSON 객체로, 코퍼스 전체에 걸친 구조화된 질의를 가능하게 합니다.
+
+---
+
 ## 프로젝트 구조
 
 ```
@@ -162,7 +194,7 @@ src/paper_farm/
   pipeline/         PipelineService: ingest → parse → summarize → export
   extractors/       SmartExtractor, SimpleTextExtractor, DocStructExtractor
   normalizers/      텍스트 정제 및 섹션 경계 감지
-  summarizers/      OllamaSummaryBackend, LocalSummaryBackend (규칙 기반)
+  summarizers/      OllamaSummaryBackend (map-reduce), LocalSummaryBackend (규칙 기반)
   exporters/        Obsidian Markdown + metadata.json 출력
   watchers/         ZoteroWatcher — 스캐너 스레드 + 워커 큐
   storage/          파일 기반 저장소 (data/)

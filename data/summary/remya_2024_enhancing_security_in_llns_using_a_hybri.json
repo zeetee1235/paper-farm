@@ -1,25 +1,25 @@
 {
   "title": "Enhancing Security in LLNs Using a Hybrid Trust-Based Intrusion Detection System for RPL",
-  "summary": "이 연구는 리소스 제한된 저전력 및 손실성 네트워크(LoWPAN)에서 라우팅 프로토콜을 보호하기 위한 하이브리드 신뢰 기반 침입 탐지 시스템을 제안합니다.",
-  "problem": "리소스 제한된 저전력 및 손실성 네트워크(LoWPAN)에서 라우팅 프로토콜을 보호하는 것은 그들의 간단함과 리소스 제약으로 인해 어려운 문제입니다.",
-  "key_idea": "이 연구는 신뢰 기반 메커니즘을 사용하여 LoWPAN의 라우팅 프로토콜을 보호하는 하이브리드 침입 탐지 시스템을 제안합니다.",
-  "method": "하이브리드 신뢰 기반 침입 탐지 시스템을 구현하며, RPL의 보안을 강화하기 위해 다양한 방법과 모델을 사용합니다.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
-  "results": "실험에서 제안된 시스템은 기존 방법에 비해 더 나은 보안 성능을 보였습니다.",
+  "summary": "이 연구 논문은 리소스 제약이 있는 LLN에서 RPL을 보호하기 위한 향상된 Trust-Based Intrusion Detection System인 TIDSRPL을 제안합니다.",
+  "problem": "LLN의 단순성을 이용한 보안 위협과 리소스 제약으로 인한 복잡한 계산의 어려움.",
+  "key_idea": "TIDSRPL은 복잡한 신뢰 계산을 루트 노드로 오프로드하여 리소스 소모를 줄이고 노드의 에너지, 저장, 계산 자원을 보존합니다.",
+  "method": "TIDSRPL은 루트 노드가 네트워크 동작에 기반하여 노드 신뢰를 평가하도록 설계되었습니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 평균 패킷 손실 비율 감소 및 에너지 효율성 증가",
+  "results": "TIDSRPL은 Sinkhole, Selective Forwarding, Sybil 공격을 탐지하고 격리하는 데 있어 기본 RPL OF와 MRHOF-RPL보다 우수한 성능을 보여, 평균 패킷 손실 비율을 20-35% 감소시키고 33-45% 더 높은 에너지 효율성을 달성했습니다.",
   "contributions": [
-    "하이브리드 신뢰 기반 침입 탐지 시스템을 제안함으로써 LLN의 보안을 강화",
-    "RPL 프로토콜을 보호하기 위한 새로운 접근 방식 제안",
-    "실제 네트워크 환경에서 시스템 성능 향상을 검증"
+    "TIDSRPL을 통한 복잡한 신뢰 계산의 루트 노드 오프로드",
+    "Sinkhole, Selective Forwarding, Sybil 공격 탐지 및 격리의 향상",
+    "에너지, 저장, 계산 자원 보존을 통한 리소스 효율성 개선"
   ],
-  "limitations": "실험 환경이 제한적이며, 다양한 실제 적용 시나리오에서의 효과를 평가하지 않았습니다.",
-  "future_work": "다양한 실제 적용 시나리오에서 제안된 시스템의 효과를 평가하고, 다양한 방법과 모델을 결합하여 보안을 더욱 강화하는 방법을 연구합니다.",
+  "limitations": "N/A",
+  "future_work": "N/A",
   "keywords": [
-    "Low Power and Lossy Networks",
-    "RPL",
-    "Intrusion Detection",
-    "Trust-based Security",
+    "Low power lossy networks",
+    "routing protocol",
+    "trust-based intrusion detection system",
     "IoT",
-    "Hybrid System"
+    "malicious node detection",
+    "energy efficiency"
   ],
-  "obsidian_markdown": "# Enhancing Security in LLNs Using a Hybrid Trust-Based Intrusion Detection System for RPL\n\n## One-line Summary\n이 연구는 리소스 제한된 저전력 및 손실성 네트워크(LoWPAN)에서 라우팅 프로토콜을 보호하기 위한 하이브리드 신뢰 기반 침입 탐지 시스템을 제안합니다.\n\n## Problem\n리소스 제한된 저전력 및 손실성 네트워크(LoWPAN)에서 라우팅 프로토콜을 보호하는 것은 그들의 간단함과 리소스 제약으로 인해 어려운 문제입니다.\n\n## Key Idea\n이 연구는 신뢰 기반 메커니즘을 사용하여 LoWPAN의 라우팅 프로토콜을 보호하는 하이브리드 침입 탐지 시스템을 제안합니다.\n\n## Method\n하이브리드 신뢰 기반 침입 탐지 시스템을 구현하며, RPL의 보안을 강화하기 위해 다양한 방법과 모델을 사용합니다.\n\n## Experiment\nN/A\n\n## Results\n실험에서 제안된 시스템은 기존 방법에 비해 더 나은 보안 성능을 보였습니다.\n\n## Contributions\n- 하이브리드 신뢰 기반 침입 탐지 시스템을 제안함으로써 LLN의 보안을 강화\n- RPL 프로토콜을 보호하기 위한 새로운 접근 방식 제안\n- 실제 네트워크 환경에서 시스템 성능 향상을 검증\n\n## Limitations\n실험 환경이 제한적이며, 다양한 실제 적용 시나리오에서의 효과를 평가하지 않았습니다.\n\n## Future Work\n다양한 실제 적용 시나리오에서 제안된 시스템의 효과를 평가하고, 다양한 방법과 모델을 결합하여 보안을 더욱 강화하는 방법을 연구합니다.\n\n## Keywords\nLow Power and Lossy Networks, RPL, Intrusion Detection, Trust-based Security, IoT, Hybrid System\n"
+  "obsidian_markdown": "# Enhancing Security in LLNs Using a Hybrid Trust-Based Intrusion Detection System for RPL\n\n## One-line Summary\n이 연구 논문은 리소스 제약이 있는 LLN에서 RPL을 보호하기 위한 향상된 Trust-Based Intrusion Detection System인 TIDSRPL을 제안합니다.\n\n## Problem\nLLN의 단순성을 이용한 보안 위협과 리소스 제약으로 인한 복잡한 계산의 어려움.\n\n## Key Idea\nTIDSRPL은 복잡한 신뢰 계산을 루트 노드로 오프로드하여 리소스 소모를 줄이고 노드의 에너지, 저장, 계산 자원을 보존합니다.\n\n## Method\nTIDSRPL은 루트 노드가 네트워크 동작에 기반하여 노드 신뢰를 평가하도록 설계되었습니다.\n\n## Experiment\n- **Metric**: 평균 패킷 손실 비율 감소 및 에너지 효율성 증가\n\n## Results\nTIDSRPL은 Sinkhole, Selective Forwarding, Sybil 공격을 탐지하고 격리하는 데 있어 기본 RPL OF와 MRHOF-RPL보다 우수한 성능을 보여, 평균 패킷 손실 비율을 20-35% 감소시키고 33-45% 더 높은 에너지 효율성을 달성했습니다.\n\n## Contributions\n- TIDSRPL을 통한 복잡한 신뢰 계산의 루트 노드 오프로드\n- Sinkhole, Selective Forwarding, Sybil 공격 탐지 및 격리의 향상\n- 에너지, 저장, 계산 자원 보존을 통한 리소스 효율성 개선\n\n## Limitations\nN/A\n\n## Future Work\nN/A\n\n## Keywords\nLow power lossy networks, routing protocol, trust-based intrusion detection system, IoT, malicious node detection, energy efficiency\n"
 }

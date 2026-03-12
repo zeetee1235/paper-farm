@@ -1,27 +1,24 @@
 {
   "title": "Security of RPL Based 6LoWPAN Networks in the Internet of Things: A Review",
-  "summary": "이 논문은 6LoWPAN 네트워크에서 사용되는 RPL의 보안 위협 및 방어 솔루션을 검토하고, 미래 연구 방향을 제시한다.",
-  "problem": "IoT의 보안 및 개인정보 보호 문제, 특히 RPL 기반 6LoWPAN 네트워크에서의 여러 공격에 대한 대응 필요성",
-  "key_idea": "RPL 기반 6LoWPAN 네트워크의 보안 위협을 체계적으로 분류하고, 기존 방어 솔루션을 검토하여 개방형 연구 문제와 미래 방향을 논의",
-  "method": "기존 문헌 조사를 통해 RPL 공격의 분류를 수행하고, 존재하는 방어 솔루션의 횡단 계층 및 네트워크 계층 접근 방식을 분석",
+  "summary": "이 논문은 RPL 기반 6LoWPAN 네트워크의 보안 문제를 검토하고, 다양한 공격 방법과 그에 대한 방어 솔루션을 제시한다.",
+  "problem": "IoT의 글로벌 커넥티비티와 리소스 제약된 특성은 다양한 내부자와 외부자 공격에 취약하게 만들어 사용자의 보안과 프라이버시를 위협한다.",
+  "key_idea": "RPL의 리소스 제약된 특성으로 인해 공격에 취약하며, 이러한 공격으로부터의 방어 솔루션을 연구하는 것이다.",
+  "method": "RPL 공격의 분류와 기존 문헌에서 제안된 교차 계층 및 RPL 전용 네트워크 계층 방어 솔루션을 연구한다.",
   "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
-  "results": "RPL 공격의 분류 및 존재하는 방어 솔루션의 분석, 개방형 연구 문제 및 미래 연구 방향 제시",
+  "results": "RPL 공격의 특성과 방어 솔루션에 대한 연구 결과를 제시하며, 개방적인 연구 문제와 미래 방향을 논의한다.",
   "contributions": [
-    "RPL 공격의 체계적인 분류 제시",
-    "기존 방어 솔루션의 횡단 계층 및 네트워크 계층 접근 방식의 검토",
-    "개방형 연구 문제 및 미래 연구 방향의 논의"
+    "RPL 공격의 분류와 관련 속성을 소개",
+    "기존 문헌에서 제안된 RPL 보안 방어 솔루션을 연구",
+    "RPL 보안의 개방적인 연구 문제와 미래 방향을 논의"
   ],
-  "limitations": "이 논문은 특정 실험 데이터셋이나 시뮬레이션을 사용하지 않으며, 실제 네트워크 환경에서의 실험 결과를 제공하지 않는다.",
-  "future_work": "RPL 보안을 위한 새로운 방어 메커니즘의 개발 및 실제 네트워크 환경에서의 평가",
+  "limitations": "실험 데이터셋, 시뮬레이터, 메트릭에 대한 정보는 제공되지 않았다.",
+  "future_work": "RPL 보안에 대한 미래 연구 방향과 개방적인 문제를 논의한다.",
   "keywords": [
     "Internet of Things",
     "RPL",
     "6LoWPAN",
-    "Network Security",
     "LLN",
-    "Routing Protocols",
-    "Security Threats",
-    "Defense Solutions"
+    "Network Security"
   ],
-  "obsidian_markdown": "# Security of RPL Based 6LoWPAN Networks in the Internet of Things: A Review\n\n## One-line Summary\n이 논문은 6LoWPAN 네트워크에서 사용되는 RPL의 보안 위협 및 방어 솔루션을 검토하고, 미래 연구 방향을 제시한다.\n\n## Problem\nIoT의 보안 및 개인정보 보호 문제, 특히 RPL 기반 6LoWPAN 네트워크에서의 여러 공격에 대한 대응 필요성\n\n## Key Idea\nRPL 기반 6LoWPAN 네트워크의 보안 위협을 체계적으로 분류하고, 기존 방어 솔루션을 검토하여 개방형 연구 문제와 미래 방향을 논의\n\n## Method\n기존 문헌 조사를 통해 RPL 공격의 분류를 수행하고, 존재하는 방어 솔루션의 횡단 계층 및 네트워크 계층 접근 방식을 분석\n\n## Experiment\nN/A\n\n## Results\nRPL 공격의 분류 및 존재하는 방어 솔루션의 분석, 개방형 연구 문제 및 미래 연구 방향 제시\n\n## Contributions\n- RPL 공격의 체계적인 분류 제시\n- 기존 방어 솔루션의 횡단 계층 및 네트워크 계층 접근 방식의 검토\n- 개방형 연구 문제 및 미래 연구 방향의 논의\n\n## Limitations\n이 논문은 특정 실험 데이터셋이나 시뮬레이션을 사용하지 않으며, 실제 네트워크 환경에서의 실험 결과를 제공하지 않는다.\n\n## Future Work\nRPL 보안을 위한 새로운 방어 메커니즘의 개발 및 실제 네트워크 환경에서의 평가\n\n## Keywords\nInternet of Things, RPL, 6LoWPAN, Network Security, LLN, Routing Protocols, Security Threats, Defense Solutions\n"
+  "obsidian_markdown": "# Security of RPL Based 6LoWPAN Networks in the Internet of Things: A Review\n\n## One-line Summary\n이 논문은 RPL 기반 6LoWPAN 네트워크의 보안 문제를 검토하고, 다양한 공격 방법과 그에 대한 방어 솔루션을 제시한다.\n\n## Problem\nIoT의 글로벌 커넥티비티와 리소스 제약된 특성은 다양한 내부자와 외부자 공격에 취약하게 만들어 사용자의 보안과 프라이버시를 위협한다.\n\n## Key Idea\nRPL의 리소스 제약된 특성으로 인해 공격에 취약하며, 이러한 공격으로부터의 방어 솔루션을 연구하는 것이다.\n\n## Method\nRPL 공격의 분류와 기존 문헌에서 제안된 교차 계층 및 RPL 전용 네트워크 계층 방어 솔루션을 연구한다.\n\n## Experiment\nN/A\n\n## Results\nRPL 공격의 특성과 방어 솔루션에 대한 연구 결과를 제시하며, 개방적인 연구 문제와 미래 방향을 논의한다.\n\n## Contributions\n- RPL 공격의 분류와 관련 속성을 소개\n- 기존 문헌에서 제안된 RPL 보안 방어 솔루션을 연구\n- RPL 보안의 개방적인 연구 문제와 미래 방향을 논의\n\n## Limitations\n실험 데이터셋, 시뮬레이터, 메트릭에 대한 정보는 제공되지 않았다.\n\n## Future Work\nRPL 보안에 대한 미래 연구 방향과 개방적인 문제를 논의한다.\n\n## Keywords\nInternet of Things, RPL, 6LoWPAN, LLN, Network Security\n"
 }

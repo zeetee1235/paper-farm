@@ -1,28 +1,24 @@
 {
   "title": "Enhancing Routing Security in IoT: Performance Evaluation of RPL Secure Mode under Attacks",
-  "summary": "이 논문은 IoT 네트워크에서 RPL의 보안 모드의 성능을 공격 상황에서 평가하며, 추가 보안 메커니즘 없이 공격 효과를 줄이는 기법을 제안합니다.",
-  "problem": "RPL의 표준 보안 메커니즘의 적용과 IoT 네트워크에서의 보안 공격의 영향을 조사하는 것입니다.",
-  "key_idea": "RPL의 보안 메커니즘의 효과를 공격 상황에서 평가하고, 추가 보안 기능 없이 공격 효과를 줄이는 방법을 제안하는 것입니다.",
-  "method": "RPL의 보안 메커니즘을 적용한 경우와 적용하지 않은 경우의 성능 비교, 두 가지 일반적인 무선 동작 주기 프로토콜을 사용한 공격 효과를 줄이는 두 가지 기법 제안.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: Contiki 운영 체제를 사용한 시뮬레이션\n- **Metric**: 평균 데이터 패킷 전달율, 평균 데이터 패킷 지연, 평균 전력 소비 등",
-  "results": "RPL의 보안 메커니즘을 적용한 경우 공격에 대한 성능이 향상되었으나, 웜홀 공격은 제외됩니다.",
+  "summary": "이 논문은 RPL의 보안 모드가 공격 상황에서 어떻게 성능에 영향을 미치는지를 실험적으로 조사하고, 공격 효과를 줄이기 위한 두 가지 기술을 제안하는 것을 중심으로 한다.",
+  "problem": "RPL의 보안 메커니즘이 IoT 네트워크에서 공격 상황에서 어떻게 효과적으로 작동하는지를 조사하지 않았으며, IoT 운영 체제에 구현이 부족한 상황이다.",
+  "key_idea": "RPL의 보안 메커니즘을 활성화하거나 비활성화한 상태에서 공격 상황에서의 성능을 비교하고, 공격 효과를 줄이는 기술을 제안하는 것이다.",
+  "method": "RPL의 보안 메커니즘이 활성화된 상태와 비활성화된 상태에서 네 가지 공통적인 라우팅 공격(Blackhole, Selective-Forward, Neighbor, Wormhole)을 비교하기 위해 여러 메트릭(예: 평균 데이터 패킷 전달율, 평균 데이터 패킷 지연, 평균 전력 소비 등)을 사용했다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 평균 데이터 패킷 전달율, 평균 데이터 패킷 지연, 평균 전력 소비",
+  "results": "RPL의 보안 메커니즘을 활성화하면 공격 시 성능이 향상되었으며, 제안된 두 가지 기술은 공격 효과를 줄이는 데 도움이 되었으나, Wormhole 공격은 예외였다.",
   "contributions": [
-    "RPL의 보안 메커니즘의 효과를 공격 상황에서 평가",
-    "RPL의 보안 메커니즘 없이 공격 효과를 줄이는 두 가지 기법 제안",
-    "제안된 기법의 평가와 성능 향상 결과 제시"
+    "RPL의 보안 메커니즘이 활성화된 상태와 비활성화된 상태에서의 성능을 공격 상황에서 비교한 것이다.",
+    "공격 효과를 줄이기 위한 두 가지 새로운 기술을 제안했다.",
+    "제안된 기술이 RPL의 성능을 공격 상황에서 개선시켰음을 보여주었다."
   ],
-  "limitations": "웜홀 공격에 대한 제안된 기법의 효과는 제한적입니다.",
-  "future_work": "RPL의 보안 메커니즘을 기반으로 웜홀 공격에 대한 해결책을 모색할 필요가 있습니다.",
+  "limitations": "Wormhole 공격 시 제안된 기술이 효과적이지 않았다는 점이다.",
+  "future_work": "Wormhole 공격에 대한 보다 효과적인 해결책을 제안하고, RPL의 보안 메커니즘을 더욱 발전시키는 것이다.",
   "keywords": [
     "Security and Privacy",
     "Resource-Constrained Networks",
     "Secure Communication",
     "Secure RPL",
-    "Routing Attacks",
-    "IoT",
-    "RPL",
-    "Blackhole Attack",
-    "Wormhole Attack"
+    "Routing Attacks"
   ],
-  "obsidian_markdown": "# Enhancing Routing Security in IoT: Performance Evaluation of RPL Secure Mode under Attacks\n\n## One-line Summary\n이 논문은 IoT 네트워크에서 RPL의 보안 모드의 성능을 공격 상황에서 평가하며, 추가 보안 메커니즘 없이 공격 효과를 줄이는 기법을 제안합니다.\n\n## Problem\nRPL의 표준 보안 메커니즘의 적용과 IoT 네트워크에서의 보안 공격의 영향을 조사하는 것입니다.\n\n## Key Idea\nRPL의 보안 메커니즘의 효과를 공격 상황에서 평가하고, 추가 보안 기능 없이 공격 효과를 줄이는 방법을 제안하는 것입니다.\n\n## Method\nRPL의 보안 메커니즘을 적용한 경우와 적용하지 않은 경우의 성능 비교, 두 가지 일반적인 무선 동작 주기 프로토콜을 사용한 공격 효과를 줄이는 두 가지 기법 제안.\n\n## Experiment\n- **Simulator**: Contiki 운영 체제를 사용한 시뮬레이션\n- **Metric**: 평균 데이터 패킷 전달율, 평균 데이터 패킷 지연, 평균 전력 소비 등\n\n## Results\nRPL의 보안 메커니즘을 적용한 경우 공격에 대한 성능이 향상되었으나, 웜홀 공격은 제외됩니다.\n\n## Contributions\n- RPL의 보안 메커니즘의 효과를 공격 상황에서 평가\n- RPL의 보안 메커니즘 없이 공격 효과를 줄이는 두 가지 기법 제안\n- 제안된 기법의 평가와 성능 향상 결과 제시\n\n## Limitations\n웜홀 공격에 대한 제안된 기법의 효과는 제한적입니다.\n\n## Future Work\nRPL의 보안 메커니즘을 기반으로 웜홀 공격에 대한 해결책을 모색할 필요가 있습니다.\n\n## Keywords\nSecurity and Privacy, Resource-Constrained Networks, Secure Communication, Secure RPL, Routing Attacks, IoT, RPL, Blackhole Attack, Wormhole Attack\n"
+  "obsidian_markdown": "# Enhancing Routing Security in IoT: Performance Evaluation of RPL Secure Mode under Attacks\n\n## One-line Summary\n이 논문은 RPL의 보안 모드가 공격 상황에서 어떻게 성능에 영향을 미치는지를 실험적으로 조사하고, 공격 효과를 줄이기 위한 두 가지 기술을 제안하는 것을 중심으로 한다.\n\n## Problem\nRPL의 보안 메커니즘이 IoT 네트워크에서 공격 상황에서 어떻게 효과적으로 작동하는지를 조사하지 않았으며, IoT 운영 체제에 구현이 부족한 상황이다.\n\n## Key Idea\nRPL의 보안 메커니즘을 활성화하거나 비활성화한 상태에서 공격 상황에서의 성능을 비교하고, 공격 효과를 줄이는 기술을 제안하는 것이다.\n\n## Method\nRPL의 보안 메커니즘이 활성화된 상태와 비활성화된 상태에서 네 가지 공통적인 라우팅 공격(Blackhole, Selective-Forward, Neighbor, Wormhole)을 비교하기 위해 여러 메트릭(예: 평균 데이터 패킷 전달율, 평균 데이터 패킷 지연, 평균 전력 소비 등)을 사용했다.\n\n## Experiment\n- **Metric**: 평균 데이터 패킷 전달율, 평균 데이터 패킷 지연, 평균 전력 소비\n\n## Results\nRPL의 보안 메커니즘을 활성화하면 공격 시 성능이 향상되었으며, 제안된 두 가지 기술은 공격 효과를 줄이는 데 도움이 되었으나, Wormhole 공격은 예외였다.\n\n## Contributions\n- RPL의 보안 메커니즘이 활성화된 상태와 비활성화된 상태에서의 성능을 공격 상황에서 비교한 것이다.\n- 공격 효과를 줄이기 위한 두 가지 새로운 기술을 제안했다.\n- 제안된 기술이 RPL의 성능을 공격 상황에서 개선시켰음을 보여주었다.\n\n## Limitations\nWormhole 공격 시 제안된 기술이 효과적이지 않았다는 점이다.\n\n## Future Work\nWormhole 공격에 대한 보다 효과적인 해결책을 제안하고, RPL의 보안 메커니즘을 더욱 발전시키는 것이다.\n\n## Keywords\nSecurity and Privacy, Resource-Constrained Networks, Secure Communication, Secure RPL, Routing Attacks\n"
 }

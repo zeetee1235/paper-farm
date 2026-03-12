@@ -8,20 +8,18 @@ import urllib.request
 
 from paper_farm.models.artifacts import PaperStruct, SummaryResult
 
-# Sections that carry the most signal for a summary
-_HIGH_PRIORITY_SECTIONS = frozenset({
-    "abstract", "introduction", "conclusion", "results",
-    "discussion", "limitations", "future work", "body",
-})
 # Sections that add no value for summarization
 _SKIP_SECTIONS = frozenset({
     "references", "acknowledgment", "acknowledgments", "appendix",
 })
 
+# Threshold: sections longer than this get map-extracted before the reduce pass
+_MAP_THRESHOLD = 2000
+
 
 def _build_system_prompt(language_name: str) -> str:
     return f"""\
-You are a research paper analysis assistant. Read the paper and return a single JSON object with exactly the fields listed below.
+You are a research paper analysis assistant. Read the extracted paper content and return a single JSON object with exactly the fields listed below.
 
 Output language: {language_name} — except where noted.
 
@@ -47,8 +45,24 @@ Hard rules — follow without exception:
 """
 
 
+def _build_map_prompt(section_name: str) -> str:
+    return (
+        f"Extract the key information from this '{section_name}' section of a research paper.\n"
+        "Be concise (100–150 words). Cover: core contribution or finding, method or approach used, "
+        "quantitative results if present, and any limitations mentioned.\n"
+        "Write plain prose, no JSON, no bullet points.\n\n"
+    )
+
+
 class OllamaSummaryBackend:
-    """Summarizes papers using a locally running Ollama model."""
+    """Summarizes papers using a locally running Ollama model.
+
+    Uses a map-reduce strategy:
+    - MAP:    sections longer than _MAP_THRESHOLD chars are condensed to ~150 words each
+              via a focused LLM call before the reduce pass.
+    - REDUCE: all (possibly condensed) section texts are assembled and sent in a
+              single structured JSON extraction call.
+    """
 
     def __init__(
         self,
@@ -66,9 +80,16 @@ class OllamaSummaryBackend:
         self.section_char_limit = section_char_limit
         self.total_char_limit   = total_char_limit
 
+    # ------------------------------------------------------------------
+    # Public
+    # ------------------------------------------------------------------
+
     def summarize(self, paper: PaperStruct) -> SummaryResult:
-        user_content = self._build_user_content(paper)
-        raw = self._call_ollama(user_content)
+        user_content = self._build_reduce_input(paper)
+        raw = self._call_ollama(
+            system=_build_system_prompt(self.language_name),
+            user=user_content,
+        )
         parsed = self._parse_response(raw)
         obsidian_markdown = self._build_markdown(paper.title, parsed)
         experiment_raw = parsed.get("experiment", {})
@@ -93,28 +114,47 @@ class OllamaSummaryBackend:
             obsidian_markdown=obsidian_markdown,
         )
 
-    def _build_user_content(self, paper: PaperStruct) -> str:
+    # ------------------------------------------------------------------
+    # Map-reduce helpers
+    # ------------------------------------------------------------------
+
+    def _build_reduce_input(self, paper: PaperStruct) -> str:
+        """Build the user message for the reduce (final JSON) call.
+
+        Long sections are condensed via a map call first; short ones are
+        included verbatim. The result is capped at total_char_limit so the
+        reduce call stays within context budget.
+        """
         parts = [f"Title: {paper.title}"]
-        if paper.abstract:
-            parts.append(f"\nAbstract:\n{paper.abstract}")
-        high_limit = self.section_char_limit * 2
         for section in paper.sections:
             name_lower = section.name.lower()
             if name_lower in _SKIP_SECTIONS:
                 continue
-            if name_lower == "abstract":
-                continue  # already included above
-            limit = high_limit if name_lower in _HIGH_PRIORITY_SECTIONS else self.section_char_limit
-            parts.append(f"\n## {section.name}\n{section.content[:limit]}")
+            content = section.content
+            if len(content) > _MAP_THRESHOLD:
+                content = self._map_section(section.name, content)
+            parts.append(f"\n## {section.name}\n{content}")
         return "\n".join(parts)[:self.total_char_limit]
 
-    def _call_ollama(self, user_content: str) -> str:
-        system_prompt = _build_system_prompt(self.language_name)
+    def _map_section(self, section_name: str, content: str) -> str:
+        """Condense a long section to ~150 words using a focused LLM call."""
+        prompt = _build_map_prompt(section_name) + content[:self.section_char_limit * 4]
+        try:
+            return self._call_ollama(system="You are a concise research assistant.", user=prompt)
+        except Exception:
+            # Fall back to simple truncation if map call fails
+            return content[:self.section_char_limit]
+
+    # ------------------------------------------------------------------
+    # Ollama transport
+    # ------------------------------------------------------------------
+
+    def _call_ollama(self, *, system: str, user: str) -> str:
         payload = {
             "model": self.model,
             "messages": [
-                {"role": "system", "content": system_prompt},
-                {"role": "user",   "content": user_content},
+                {"role": "system", "content": system},
+                {"role": "user",   "content": user},
             ],
             "stream": False,
         }

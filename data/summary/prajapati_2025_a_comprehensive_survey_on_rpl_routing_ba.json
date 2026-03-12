@@ -1,0 +1,27 @@
+{
+  "title": "A comprehensive survey on RPL routing-based attacks, defences and future directions in Internet of Things",
+  "summary": "이 논문은 RPL 기반 라우팅 공격과 방어 메커니즘, 그리고 IoT 네트워크에서의 미래 방향에 대한 포괄적인 조사를 제공하여 새로운 공격 및 방어 분류를 통해 보안 솔루션을 개선하는 기초를 마련합니다.",
+  "problem": "IoT 장치는 RPL 기반 라우팅 공격에 취약하며, 이는 보안 문제를 야기합니다.",
+  "key_idea": "RPL 기반 공격과 방어 메커니즘을 체계적으로 분류하고 분석하여 보안 솔루션을 개선하는 것입니다.",
+  "method": "기존 문헌을 주제 분석하여 RPL 기반 공격과 방어 메커니즘을 분류하고, 공격의 실제적 영향을 분석합니다.",
+  "experiment": "- **Dataset**: IRAD, RADAR, RPL-NIDDS17\n- **Simulator**: COOJA\n- **Metric**: 패킷 전달률, 에너지 소비, 탐지 정확도",
+  "results": "공격의 실제적 영향을 분석하고, 방어 메커니즘의 유효성을 평가하여 최적의 방어 솔루션을 제안합니다.",
+  "contributions": [
+    "RPL 기반 공격과 방어 메커니즘에 대한 새로운 분류 제안",
+    "실제적인 RPL 기반 라우팅 공격과 방어 메커니즘에 대한 체계적인 분석",
+    "공격의 실제적 영향과 방어 메커니즘의 실현 가능성을 평가"
+  ],
+  "limitations": "실제 구현은 미래 연구로 남겨져 있으며, 일부 공격에 대한 제한된 해결책이 있습니다.",
+  "future_work": "실시간 위협 모델링을 위한 인공지능 기반 보안 솔루션 개발 및 새로운 방향성의 공격에 대한 더 많은 연구 필요",
+  "keywords": [
+    "Internet of Things",
+    "RPL",
+    "6LoWPAN",
+    "Routing Attacks",
+    "Defense Mechanisms",
+    "IoT Security",
+    "Attack Taxonomy",
+    "Defense Taxonomy"
+  ],
+  "obsidian_markdown": "# A comprehensive survey on RPL routing-based attacks, defences and future directions in Internet of Things\n\n## One-line Summary\n이 논문은 RPL 기반 라우팅 공격과 방어 메커니즘, 그리고 IoT 네트워크에서의 미래 방향에 대한 포괄적인 조사를 제공하여 새로운 공격 및 방어 분류를 통해 보안 솔루션을 개선하는 기초를 마련합니다.\n\n## Problem\nIoT 장치는 RPL 기반 라우팅 공격에 취약하며, 이는 보안 문제를 야기합니다.\n\n## Key Idea\nRPL 기반 공격과 방어 메커니즘을 체계적으로 분류하고 분석하여 보안 솔루션을 개선하는 것입니다.\n\n## Method\n기존 문헌을 주제 분석하여 RPL 기반 공격과 방어 메커니즘을 분류하고, 공격의 실제적 영향을 분석합니다.\n\n## Experiment\n- **Dataset**: IRAD, RADAR, RPL-NIDDS17\n- **Simulator**: COOJA\n- **Metric**: 패킷 전달률, 에너지 소비, 탐지 정확도\n\n## Results\n공격의 실제적 영향을 분석하고, 방어 메커니즘의 유효성을 평가하여 최적의 방어 솔루션을 제안합니다.\n\n## Contributions\n- RPL 기반 공격과 방어 메커니즘에 대한 새로운 분류 제안\n- 실제적인 RPL 기반 라우팅 공격과 방어 메커니즘에 대한 체계적인 분석\n- 공격의 실제적 영향과 방어 메커니즘의 실현 가능성을 평가\n\n## Limitations\n실제 구현은 미래 연구로 남겨져 있으며, 일부 공격에 대한 제한된 해결책이 있습니다.\n\n## Future Work\n실시간 위협 모델링을 위한 인공지능 기반 보안 솔루션 개발 및 새로운 방향성의 공격에 대한 더 많은 연구 필요\n\n## Keywords\nInternet of Things, RPL, 6LoWPAN, Routing Attacks, Defense Mechanisms, IoT Security, Attack Taxonomy, Defense Taxonomy\n"
+}

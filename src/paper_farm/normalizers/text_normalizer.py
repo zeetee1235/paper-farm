@@ -28,7 +28,7 @@ class BasicTextNormalizer:
     def to_paper_struct(self, title: str, raw_text: str) -> PaperStruct:
         cleaned = self._cleanup(raw_text)
         sections = self._split_sections(cleaned)
-        abstract = sections.get("Abstract", "")[:2500]
+        abstract = sections.get("Abstract", "")
         normalized_sections = [
             PaperSection(name=name, content=content)
             for name, content in sections.items()

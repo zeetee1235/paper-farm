@@ -1,27 +1,26 @@
 {
   "title": "Securing RPL using Network Coding: The Chained Secure Mode (CSM)",
-  "summary": "본 논문은 RPL의 새로운 보안 모드인 'Chained Secure Mode' (CSM)을 제안하여 내부 및 외부 재생 공격에 대한 저항력을 강화하는 방법을 소개합니다.",
-  "problem": "RPL이 Preinstalled Secure Mode (PSM)에서도 여전히 내부 및 외부 많은 라우팅 공격에 취약하다는 문제를 해결합니다.",
-  "key_idea": "CSM은 'Intra-flow Network Coding (NC)' 개념을 사용하여 RPL의 재생 공격에 대한 저항력과 완화 능력을 강화하는 것입니다.",
-  "method": "CSM은 라우팅 공격에 대한 보안과 성능을 평가하기 위해 Neighbor Attack (NA), Wormhole (WH), CloneID Attack (CA)를 포함한 여러 공격을 통해 평가되었습니다.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 평균 패킷 전달율 (PDR), 종단간 지연 (E2E), 전력 소비",
-  "results": "CSM은 UM 및 PSM(재생 보호가 있는 경우 포함)보다 더 우수한 성능과 보안을 보여주며, NA와 WH 공격을 완화하고, CA의 영향을 상당히 줄였습니다.",
+  "summary": "이 논문은 라우팅 프로토콜을 보호하기 위해 새로운 'Chained Secure Mode (CSM)'을 제안하며, 네트워크 코딩을 사용하여 라우팅 공격에 대한 저항력을 강화한다.",
+  "problem": "RPL은 여전히 다양한 내부 및 외부 라우팅 공격에 취약하며, 특히 리플레이 공격에 취약하다.",
+  "key_idea": "CSM은 내흐름 네트워크 코딩(Network Coding)을 활용하여 RPL의 공격에 대한 저항력과 완화 능력을 강화한다.",
+  "method": "CSM은 라우팅 공격을 통합 및 완화하기 위해 Secret Chaining(Secret Chaining) 회복 메커니즘과 외부 보안 측정치를 통합한다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 평균 패킷 전달율(PDR), End-to-End(E2E) 지연 시간, 전력 소비",
+  "results": "CSM은 모두 NA와 WH 공격을 완화하고, CA 공격의 영향을 크게 감소시키며, UM과 PSM보다 더 나은 보안과 성능을 제공한다.",
   "contributions": [
-    "RPL의 새로운 보안 모드인 'Chained Secure Mode' (CSM)을 제안합니다.",
-    "CSM은 재생 공격에 대한 저항력과 완화 능력을 강화합니다.",
-    "CSM은 외부 보안 조치(예: IDS)와 통합할 수 있습니다."
+    "RPL을 위한 새로운 보안 모드인 CSM을 설계했다.",
+    "CSM에 적절한 Secret Chaining 회복 메커니즘을 추가했다.",
+    "CSM이 외부 보안 메커니즘과 통합될 수 있도록 했다."
   ],
-  "limitations": "선택한 시뮬레이션된 공격 및 메트릭에 기반한 평가로 인해 실제 IoT 네트워크에서의 완전한 영향은 제한될 수 있습니다.",
-  "future_work": "실제 IoT 네트워크 환경에서 CSM의 효과를 평가하고, 더 많은 공격 시나리오를 포함하며, 보안 및 성능을 더욱 최적화하는 것이 필요합니다.",
+  "limitations": "실험 세부 사항 및 사용된 시뮬레이터가 명시되지 않았다.",
+  "future_work": "CSM의 보안 효과와 성능을 다양한 시나리오와 환경에서 확장할 필요가 있다.",
   "keywords": [
     "IoT",
-    "Security",
-    "Privacy",
+    "Security and Privacy",
     "Secure Routing",
     "RPL",
     "Routing Attacks",
     "Chained Secure Mode",
     "CSM"
   ],
-  "obsidian_markdown": "# Securing RPL using Network Coding: The Chained Secure Mode (CSM)\n\n## One-line Summary\n본 논문은 RPL의 새로운 보안 모드인 'Chained Secure Mode' (CSM)을 제안하여 내부 및 외부 재생 공격에 대한 저항력을 강화하는 방법을 소개합니다.\n\n## Problem\nRPL이 Preinstalled Secure Mode (PSM)에서도 여전히 내부 및 외부 많은 라우팅 공격에 취약하다는 문제를 해결합니다.\n\n## Key Idea\nCSM은 'Intra-flow Network Coding (NC)' 개념을 사용하여 RPL의 재생 공격에 대한 저항력과 완화 능력을 강화하는 것입니다.\n\n## Method\nCSM은 라우팅 공격에 대한 보안과 성능을 평가하기 위해 Neighbor Attack (NA), Wormhole (WH), CloneID Attack (CA)를 포함한 여러 공격을 통해 평가되었습니다.\n\n## Experiment\n- **Metric**: 평균 패킷 전달율 (PDR), 종단간 지연 (E2E), 전력 소비\n\n## Results\nCSM은 UM 및 PSM(재생 보호가 있는 경우 포함)보다 더 우수한 성능과 보안을 보여주며, NA와 WH 공격을 완화하고, CA의 영향을 상당히 줄였습니다.\n\n## Contributions\n- RPL의 새로운 보안 모드인 'Chained Secure Mode' (CSM)을 제안합니다.\n- CSM은 재생 공격에 대한 저항력과 완화 능력을 강화합니다.\n- CSM은 외부 보안 조치(예: IDS)와 통합할 수 있습니다.\n\n## Limitations\n선택한 시뮬레이션된 공격 및 메트릭에 기반한 평가로 인해 실제 IoT 네트워크에서의 완전한 영향은 제한될 수 있습니다.\n\n## Future Work\n실제 IoT 네트워크 환경에서 CSM의 효과를 평가하고, 더 많은 공격 시나리오를 포함하며, 보안 및 성능을 더욱 최적화하는 것이 필요합니다.\n\n## Keywords\nIoT, Security, Privacy, Secure Routing, RPL, Routing Attacks, Chained Secure Mode, CSM\n"
+  "obsidian_markdown": "# Securing RPL using Network Coding: The Chained Secure Mode (CSM)\n\n## One-line Summary\n이 논문은 라우팅 프로토콜을 보호하기 위해 새로운 'Chained Secure Mode (CSM)'을 제안하며, 네트워크 코딩을 사용하여 라우팅 공격에 대한 저항력을 강화한다.\n\n## Problem\nRPL은 여전히 다양한 내부 및 외부 라우팅 공격에 취약하며, 특히 리플레이 공격에 취약하다.\n\n## Key Idea\nCSM은 내흐름 네트워크 코딩(Network Coding)을 활용하여 RPL의 공격에 대한 저항력과 완화 능력을 강화한다.\n\n## Method\nCSM은 라우팅 공격을 통합 및 완화하기 위해 Secret Chaining(Secret Chaining) 회복 메커니즘과 외부 보안 측정치를 통합한다.\n\n## Experiment\n- **Metric**: 평균 패킷 전달율(PDR), End-to-End(E2E) 지연 시간, 전력 소비\n\n## Results\nCSM은 모두 NA와 WH 공격을 완화하고, CA 공격의 영향을 크게 감소시키며, UM과 PSM보다 더 나은 보안과 성능을 제공한다.\n\n## Contributions\n- RPL을 위한 새로운 보안 모드인 CSM을 설계했다.\n- CSM에 적절한 Secret Chaining 회복 메커니즘을 추가했다.\n- CSM이 외부 보안 메커니즘과 통합될 수 있도록 했다.\n\n## Limitations\n실험 세부 사항 및 사용된 시뮬레이터가 명시되지 않았다.\n\n## Future Work\nCSM의 보안 효과와 성능을 다양한 시나리오와 환경에서 확장할 필요가 있다.\n\n## Keywords\nIoT, Security and Privacy, Secure Routing, RPL, Routing Attacks, Chained Secure Mode, CSM\n"
 }

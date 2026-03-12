@@ -1,25 +1,27 @@
 {
   "title": "Effective data transmission through energy-efficient clustering and Fuzzy-Based IDS routing approach in WSNs",
-  "summary": "이 연구는 WSNs에서 에너지 효율적 클러스터링과 Fuzzy 기반 IDS 라우팅 접근 방식을 통해 효과적인 데이터 전송을 개발하였다.",
-  "problem": "WSNs에서 에너지 효율성과 안전한 데이터 전송 문제를 해결하는 것",
-  "key_idea": "에너지 효율적 클러스터링과 Fuzzy 기반 IDS 라우팅 접근 방식을 통해 안전하고 효과적인 데이터 전송을 개발하는 것",
-  "method": "LEACH(낮은 에너지 적응형 클러스터링 계층), Fuzzy 논리, 인공 신경망(ANN)을 사용",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 정확도(97%), 정밀도(97%), 오류 값(0.03), 특이도(97%), 민감도(95%), F1_Score(96%), FNR(0.032), FPR(0.025), 카파 값(94%)",
-  "results": "평가 지표에서 높은 성능을 달성, 예를 들어 정확도 97%, 정밀도 97%, 오류 값 0.03 등",
+  "summary": "이 연구는 WSN에서 에너지 효율적인 클러스터링 및 Fuzzy-Based IDS 라우팅 접근 방식을 통해 데이터 전송을 개선하는 모델을 제안한다.",
+  "problem": "WSN에서 에너지 효율성과 보안성을 동시에 보장하면서 데이터를 효과적으로 전송하는 것이다.",
+  "key_idea": "LEACH 클러스터링 및 Fuzzy Logic과 ANN을 사용한 IDS 접근 방식을 결합하여 에너지 효율적인 데이터 전송과 보안성을 동시에 달성한다.",
+  "method": "LEACH(LOW energy adaptive clustering Hierarchy), Fuzzy Logic, ANN(artificial neural network)",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 정확도(accuracy), 특이도(specificity), 민감도(sensitivity), F1_Score, FNR, FPR, Kappa 값",
+  "results": "약 97%의 정확도, 97%의 특이도, 95%의 민감도, 0.03의 오류값, 96%의 F1_Score, 0.032의 FNR, 0.025의 FPR, 94%의 Kappa 값을 달성했다.",
   "contributions": [
-    "LEACH와 Fuzzy 기반 IDS 접근 방식을 통한 WSN에서의 데이터 전송 개선",
-    "LEACH를 사용하여 에너지 효율적 데이터 전송 구현",
-    "Fuzzy 논리와 ANN을 사용한 IDS 구현"
+    "LEACH 및 Fuzzy-Based IDS 접근 방식을 통한 에너지 효율적인 데이터 전송 모델 제안",
+    "Fuzzy Logic 및 ANN을 사용한 IDS 접근 방식을 통한 보안성 개선",
+    "클러스터 헤드 선택 및 에너지 소모 균등화를 통한 네트워크 수명 연장"
   ],
-  "limitations": "정확한 데이터셋과 시뮬레이터에 대한 설명이 누락되어 있음",
-  "future_work": "미래 연구에서는 더 고급 프로토콜을 사용하여 데이터를 효율적으로 전송하고, 인공지능 모델을 사용하여 손상된 및 죽은 네트워크 경로 문제를 극복하기 위해 죽은 클러스터 헤드를 감지할 것",
+  "limitations": "특정 데이터셋과 시뮬레이터를 사용한 실험으로 인해 다양한 환경에서의 확장성에 대한 제한이 있다.",
+  "future_work": "더 고급 프로토콜을 사용한 데이터 전송 효율성 향상 및 죽은 클러스터 헤드 탐지를 위한 인공지능 모델 개발을 제안한다.",
   "keywords": [
-    "Wireless Sensor Networks",
-    "Energy-efficient Clustering",
-    "Fuzzy Logic",
-    "Intrusion Detection Systems",
+    "LEACH",
+    "IDS",
+    "WSN",
+    "Fuzzy logic",
     "ANN",
-    "LEACH"
+    "Energy efficiency",
+    "Security",
+    "Clustering"
   ],
-  "obsidian_markdown": "# Effective data transmission through energy-efficient clustering and Fuzzy-Based IDS routing approach in WSNs\n\n## One-line Summary\n이 연구는 WSNs에서 에너지 효율적 클러스터링과 Fuzzy 기반 IDS 라우팅 접근 방식을 통해 효과적인 데이터 전송을 개발하였다.\n\n## Problem\nWSNs에서 에너지 효율성과 안전한 데이터 전송 문제를 해결하는 것\n\n## Key Idea\n에너지 효율적 클러스터링과 Fuzzy 기반 IDS 라우팅 접근 방식을 통해 안전하고 효과적인 데이터 전송을 개발하는 것\n\n## Method\nLEACH(낮은 에너지 적응형 클러스터링 계층), Fuzzy 논리, 인공 신경망(ANN)을 사용\n\n## Experiment\n- **Metric**: 정확도(97%), 정밀도(97%), 오류 값(0.03), 특이도(97%), 민감도(95%), F1_Score(96%), FNR(0.032), FPR(0.025), 카파 값(94%)\n\n## Results\n평가 지표에서 높은 성능을 달성, 예를 들어 정확도 97%, 정밀도 97%, 오류 값 0.03 등\n\n## Contributions\n- LEACH와 Fuzzy 기반 IDS 접근 방식을 통한 WSN에서의 데이터 전송 개선\n- LEACH를 사용하여 에너지 효율적 데이터 전송 구현\n- Fuzzy 논리와 ANN을 사용한 IDS 구현\n\n## Limitations\n정확한 데이터셋과 시뮬레이터에 대한 설명이 누락되어 있음\n\n## Future Work\n미래 연구에서는 더 고급 프로토콜을 사용하여 데이터를 효율적으로 전송하고, 인공지능 모델을 사용하여 손상된 및 죽은 네트워크 경로 문제를 극복하기 위해 죽은 클러스터 헤드를 감지할 것\n\n## Keywords\nWireless Sensor Networks, Energy-efficient Clustering, Fuzzy Logic, Intrusion Detection Systems, ANN, LEACH\n"
+  "obsidian_markdown": "# Effective data transmission through energy-efficient clustering and Fuzzy-Based IDS routing approach in WSNs\n\n## One-line Summary\n이 연구는 WSN에서 에너지 효율적인 클러스터링 및 Fuzzy-Based IDS 라우팅 접근 방식을 통해 데이터 전송을 개선하는 모델을 제안한다.\n\n## Problem\nWSN에서 에너지 효율성과 보안성을 동시에 보장하면서 데이터를 효과적으로 전송하는 것이다.\n\n## Key Idea\nLEACH 클러스터링 및 Fuzzy Logic과 ANN을 사용한 IDS 접근 방식을 결합하여 에너지 효율적인 데이터 전송과 보안성을 동시에 달성한다.\n\n## Method\nLEACH(LOW energy adaptive clustering Hierarchy), Fuzzy Logic, ANN(artificial neural network)\n\n## Experiment\n- **Metric**: 정확도(accuracy), 특이도(specificity), 민감도(sensitivity), F1_Score, FNR, FPR, Kappa 값\n\n## Results\n약 97%의 정확도, 97%의 특이도, 95%의 민감도, 0.03의 오류값, 96%의 F1_Score, 0.032의 FNR, 0.025의 FPR, 94%의 Kappa 값을 달성했다.\n\n## Contributions\n- LEACH 및 Fuzzy-Based IDS 접근 방식을 통한 에너지 효율적인 데이터 전송 모델 제안\n- Fuzzy Logic 및 ANN을 사용한 IDS 접근 방식을 통한 보안성 개선\n- 클러스터 헤드 선택 및 에너지 소모 균등화를 통한 네트워크 수명 연장\n\n## Limitations\n특정 데이터셋과 시뮬레이터를 사용한 실험으로 인해 다양한 환경에서의 확장성에 대한 제한이 있다.\n\n## Future Work\n더 고급 프로토콜을 사용한 데이터 전송 효율성 향상 및 죽은 클러스터 헤드 탐지를 위한 인공지능 모델 개발을 제안한다.\n\n## Keywords\nLEACH, IDS, WSN, Fuzzy logic, ANN, Energy efficiency, Security, Clustering\n"
 }

@@ -1,27 +1,25 @@
 {
   "title": "ELNIDS: Ensemble Learning based Network Intrusion Detection System for RPL based Internet of Things",
-  "summary": "이 논문은 자원 제한형 네트워크에서의 라우팅 공격을 감지하기 위한 앙상블 학습 기반 네트워크 침입 탐지 시스템인 ELNIDS를 제안하였습니다.",
-  "problem": "IoT 환경에서의 라우팅 공격으로 인한 보안 문제를 해결합니다.",
-  "key_idea": "라우팅 공격을 감지하기 위해 앙상블 학습 기반 네트워크 침입 탐지 시스템을 제안합니다.",
-  "method": "Boosted Trees, Bagged Trees, Subspace Discriminant, RUSBoosted Trees 앙상블 기반의 기계 학습 분류 모델을 구현합니다.",
-  "experiment": "- **Dataset**: RPL-NIDDS17 데이터셋\n- **Simulator**: N/A\n- **Metric**: 정확도와 ROC 곡선 아래 영역",
-  "results": "Boosted Trees 앙상블이 가장 높은 정확도(94.5%)를, RUSBoosted Trees 앙상블이 가장 높은 ROC 곡선 아래 영역(0.98)을 달성하였습니다.",
+  "summary": "이 논문은 RPL 프로토콜을 기반으로 한 IoT 네트워크를 보호하기 위한 Ensemble Learning 기반 네트워크 침입 탐지 시스템(ELNIDS)을 제안한다.",
+  "problem": "IoT는 개방적이고 전 세계적으로 연결되어 있으며 자원이 제한적인 센서 및 무선 네트워크를 활용하기 때문에 다양한 라우팅 공격에 취약하다.",
+  "key_idea": "ELNIDS는 RPL 기반 IoT 환경에서 라우팅 공격을 탐지하기 위한 Ensemble Learning 기반 네트워크 침입 탐지 시스템의 아키텍처를 제안한다.",
+  "method": "Boosted Trees, Bagged Trees, Subspace Discriminant, RUSBoosted Trees 등의 Ensemble 기반 기계 학습 분류기를 구현한다.",
+  "experiment": "- **Dataset**: RPL-NIDDS17\n- **Simulator**: N/A\n- **Metric**: 정확도(Accuracy), ROC 곡선 아래 면적(AUC)",
+  "results": "Boosted Trees의 Ensemble가 94.5%의 정확도를, RUSBoosted Trees의 Ensemble가 ROC 값의 0.98을 가장 높게 달성했다.",
   "contributions": [
-    "앙상블 학습 기반 네트워크 침입 탐지 시스템인 ELNIDS 제안",
-    "다양한 라우팅 공격을 감지하는 시스템 설계",
-    "앙상블 기반 분류 모델의 성능 평가 및 비교"
+    "ELNIDS: RPL 기반 IoT를 보호하기 위한 Ensemble Learning 기반 네트워크 침입 탐지 시스템의 아키텍처 제안.",
+    "라우팅 공격을 탐지하기 위해 다양한 Ensemble 기반 기계 학습 분류기를 구현하고 평가.",
+    "Boosted Trees와 RUSBoosted Trees의 Ensemble 분류기가 정확도와 ROC AUC 측면에서 가장 우수한 성능을 보였음을 보여준다."
   ],
-  "limitations": "실제 스마트 노드에 ELNIDS를 구현하고 평가하지 않은 점이 제한입니다.",
-  "future_work": "ELNIDS를 스마트 노드에 구현하고 평가하며, IoT를 보안하기 위한 가벼운 방어 솔루션 개발을 목표로 합니다.",
+  "limitations": "스마트 노드에서 ELNIDS를 구현하고 평가하지 않았으며, IoT 보안을 위한 가벼운 방어 솔루션 개발이 필요하다.",
+  "future_work": "ELNIDS를 스마트 노드에 구현하고 평가하며, 가벼운 방어 솔루션을 개발하여 IoT를 보다 안전하게 만드는 것이 미래 연구 방향이다.",
   "keywords": [
     "IoT",
-    "Network Intrusion Detection",
-    "Ensemble Learning",
     "RPL",
-    "Routing Attacks",
-    "Machine Learning",
-    "Boosted Trees",
-    "RUSBoosted Trees"
+    "network intrusion detection",
+    "ensemble learning",
+    "routing attacks",
+    "machine learning classifiers"
   ],
-  "obsidian_markdown": "# ELNIDS: Ensemble Learning based Network Intrusion Detection System for RPL based Internet of Things\n\n## One-line Summary\n이 논문은 자원 제한형 네트워크에서의 라우팅 공격을 감지하기 위한 앙상블 학습 기반 네트워크 침입 탐지 시스템인 ELNIDS를 제안하였습니다.\n\n## Problem\nIoT 환경에서의 라우팅 공격으로 인한 보안 문제를 해결합니다.\n\n## Key Idea\n라우팅 공격을 감지하기 위해 앙상블 학습 기반 네트워크 침입 탐지 시스템을 제안합니다.\n\n## Method\nBoosted Trees, Bagged Trees, Subspace Discriminant, RUSBoosted Trees 앙상블 기반의 기계 학습 분류 모델을 구현합니다.\n\n## Experiment\n- **Dataset**: RPL-NIDDS17 데이터셋\n- **Metric**: 정확도와 ROC 곡선 아래 영역\n\n## Results\nBoosted Trees 앙상블이 가장 높은 정확도(94.5%)를, RUSBoosted Trees 앙상블이 가장 높은 ROC 곡선 아래 영역(0.98)을 달성하였습니다.\n\n## Contributions\n- 앙상블 학습 기반 네트워크 침입 탐지 시스템인 ELNIDS 제안\n- 다양한 라우팅 공격을 감지하는 시스템 설계\n- 앙상블 기반 분류 모델의 성능 평가 및 비교\n\n## Limitations\n실제 스마트 노드에 ELNIDS를 구현하고 평가하지 않은 점이 제한입니다.\n\n## Future Work\nELNIDS를 스마트 노드에 구현하고 평가하며, IoT를 보안하기 위한 가벼운 방어 솔루션 개발을 목표로 합니다.\n\n## Keywords\nIoT, Network Intrusion Detection, Ensemble Learning, RPL, Routing Attacks, Machine Learning, Boosted Trees, RUSBoosted Trees\n"
+  "obsidian_markdown": "# ELNIDS: Ensemble Learning based Network Intrusion Detection System for RPL based Internet of Things\n\n## One-line Summary\n이 논문은 RPL 프로토콜을 기반으로 한 IoT 네트워크를 보호하기 위한 Ensemble Learning 기반 네트워크 침입 탐지 시스템(ELNIDS)을 제안한다.\n\n## Problem\nIoT는 개방적이고 전 세계적으로 연결되어 있으며 자원이 제한적인 센서 및 무선 네트워크를 활용하기 때문에 다양한 라우팅 공격에 취약하다.\n\n## Key Idea\nELNIDS는 RPL 기반 IoT 환경에서 라우팅 공격을 탐지하기 위한 Ensemble Learning 기반 네트워크 침입 탐지 시스템의 아키텍처를 제안한다.\n\n## Method\nBoosted Trees, Bagged Trees, Subspace Discriminant, RUSBoosted Trees 등의 Ensemble 기반 기계 학습 분류기를 구현한다.\n\n## Experiment\n- **Dataset**: RPL-NIDDS17\n- **Metric**: 정확도(Accuracy), ROC 곡선 아래 면적(AUC)\n\n## Results\nBoosted Trees의 Ensemble가 94.5%의 정확도를, RUSBoosted Trees의 Ensemble가 ROC 값의 0.98을 가장 높게 달성했다.\n\n## Contributions\n- ELNIDS: RPL 기반 IoT를 보호하기 위한 Ensemble Learning 기반 네트워크 침입 탐지 시스템의 아키텍처 제안.\n- 라우팅 공격을 탐지하기 위해 다양한 Ensemble 기반 기계 학습 분류기를 구현하고 평가.\n- Boosted Trees와 RUSBoosted Trees의 Ensemble 분류기가 정확도와 ROC AUC 측면에서 가장 우수한 성능을 보였음을 보여준다.\n\n## Limitations\n스마트 노드에서 ELNIDS를 구현하고 평가하지 않았으며, IoT 보안을 위한 가벼운 방어 솔루션 개발이 필요하다.\n\n## Future Work\nELNIDS를 스마트 노드에 구현하고 평가하며, 가벼운 방어 솔루션을 개발하여 IoT를 보다 안전하게 만드는 것이 미래 연구 방향이다.\n\n## Keywords\nIoT, RPL, network intrusion detection, ensemble learning, routing attacks, machine learning classifiers\n"
 }

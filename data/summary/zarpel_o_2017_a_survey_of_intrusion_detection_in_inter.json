@@ -1,27 +1,25 @@
 {
   "title": "A survey of intrusion detection in Internet of Things",
-  "summary": "이 논문은 IoT 환경에 적합한 침입 탐지 시스템(IDS)에 대한 연구 노력을 검토하고 주요 추세, 개방된 문제, 그리고 미래 연구 가능성을 식별한다.",
-  "problem": "전통적인 IDS 기술을 IoT 환경에 적용하는 것이 제약된 자원 장치, 특정 프로토콜 스택, 표준 등 IoT의 특성으로 인해 어렵다는 문제를 다룬다.",
-  "key_idea": "IoT에 특화된 IDS를 위한 기존 문헌에서 제안된 방법을 분류하고, 침입 탐지 전략을 분석하는 것이다.",
-  "method": "문헌에서 제안된 18편의 논문을 분류하기 위한 특정 특성에 기반한 분류법을 사용한다. 이는 탐지 방법, IDS 배치 전략, 보안 위협, 검증 전략 등을 포함한다.",
+  "summary": "이 논문은 IoT 환경에서의 침입 탐지 시스템(IDS) 연구 노력에 대한 조사를 제시하며, 주요 트렌드, 열린 문제, 그리고 미래 연구 가능성을 식별합니다.",
+  "problem": "전통적인 네트워크에 적합한 IDS 기술이 IoT의 특수한 특성에 적용되기 어렵습니다.",
+  "key_idea": "IoT 환경에 맞춘 IDS의 현재 제안된 해결책들이 다양한 공격과 IoT 기술을 충분히 포괄하지 못하며, IDS의 개발에 있어 가장 적합한 탐지 방법과 배치 전략도 명확하지 않다는 점을 조사하고, 이를 분류하기 위한 세분화된 분류법을 제안합니다.",
+  "method": "문헌에서 제안된 18개의 IDS 방안을 분석하고, 탐지 방법, IDS 배치 전략, 보안 위협, 검증 전략 등의 속성에 기반한 분류법을 제안합니다.",
   "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
-  "results": "최근 연구는 IoT 시스템을 위한 IDS 제안이 여전히 초기 단계임을 보여준다. 제안된 해결책은 다양한 공격과 IoT 기술을 다루지 않으며, 탐지 방법과 배치 전략의 적합성이 명확하지 않다. 또한 검증 전략이 잘 정립되지 않았다.",
+  "results": "조사 결과, IDS에 대한 연구 노력이 아직 초기 단계에 머물며, 제안된 솔루션들이 다양한 공격과 IoT 기술을 포괄하지 못하고 있음을 밝혔습니다. 또한, 탐지 방법과 배치 전략의 강점과 약점이 명확하지 않으며, 검증 전략도 잘 정립되어 있지 않습니다.",
   "contributions": [
-    "IoT를 위한 IDS에 관한 최근 연구 노력을 체계적으로 조사한다.",
-    "탐지 방법, IDS 배치 전략, 보안 위협, 검증 전략을 기반으로 한 분류법을 제안한다.",
-    "IoT 시스템을 위한 IDS 제안의 제한된 범위와 검증 전략의 부족을 지적한다."
+    "IoT 환경에 적합한 IDS에 대한 문헌 조사를 제시하고, 주요 트렌드 및 연구 가능성을 식별합니다.",
+    "IoT의 IDS 연구를 분류하기 위한 분류법을 제안하며, 이는 탐지 방법, IDS 배치 전략, 보안 위협, 검증 전략을 기반으로 합니다.",
+    "현재의 IDS 솔루션들이 다양한 공격과 IoT 기술을 충분히 포괄하지 못하며, 탐지 방법과 배치 전략의 적합성에 대한 명확성이 부족함을 지적합니다."
   ],
-  "limitations": "이 검토는 2009년부터 2016년 사이에 발표된 문헌을 기반으로 하며, 최신 연구는 포함되지 않았을 수 있다.",
-  "future_work": "다양한 탐지 방법과 배치 전략의 강점과 약점을 조사하고, 공격 탐지 범위를 넓히고, 더 많은 IoT 기술을 다루며, 검증 전략을 개선하고, 알림 트래픽과 관리의 보안을 강화하고, 알림 상관 및 자율 관리 시스템을 개발하는 것이다.",
+  "limitations": "조사된 문헌이 최근 7년간의 것으로 한정되어 있으며, 제안된 솔루션들이 다양한 공격과 IoT 기술을 충분히 포괄하지 못하고 있습니다.",
+  "future_work": "다양한 탐지 방법과 배치 전략의 강점과 약점을 조사하고, 공격 탐지 범위를 확대하며, 더 많은 IoT 기술을 다루고, 검증 전략을 개선하고, 경보 트래픽과 관리의 보안을 향상시키고, 경보 연관 및 자율적 관리 시스템을 개발하는 방향으로 미래 연구를 진행할 수 있습니다.",
   "keywords": [
     "Intrusion Detection System",
     "Internet of Things",
     "Cybersecurity",
     "IDS Placement Strategy",
-    "Detection Method",
-    "Validation Strategy",
-    "Security Threat",
-    "Attack Detection"
+    "Attack Detection",
+    "Validation Strategy"
   ],
-  "obsidian_markdown": "# A survey of intrusion detection in Internet of Things\n\n## One-line Summary\n이 논문은 IoT 환경에 적합한 침입 탐지 시스템(IDS)에 대한 연구 노력을 검토하고 주요 추세, 개방된 문제, 그리고 미래 연구 가능성을 식별한다.\n\n## Problem\n전통적인 IDS 기술을 IoT 환경에 적용하는 것이 제약된 자원 장치, 특정 프로토콜 스택, 표준 등 IoT의 특성으로 인해 어렵다는 문제를 다룬다.\n\n## Key Idea\nIoT에 특화된 IDS를 위한 기존 문헌에서 제안된 방법을 분류하고, 침입 탐지 전략을 분석하는 것이다.\n\n## Method\n문헌에서 제안된 18편의 논문을 분류하기 위한 특정 특성에 기반한 분류법을 사용한다. 이는 탐지 방법, IDS 배치 전략, 보안 위협, 검증 전략 등을 포함한다.\n\n## Experiment\nN/A\n\n## Results\n최근 연구는 IoT 시스템을 위한 IDS 제안이 여전히 초기 단계임을 보여준다. 제안된 해결책은 다양한 공격과 IoT 기술을 다루지 않으며, 탐지 방법과 배치 전략의 적합성이 명확하지 않다. 또한 검증 전략이 잘 정립되지 않았다.\n\n## Contributions\n- IoT를 위한 IDS에 관한 최근 연구 노력을 체계적으로 조사한다.\n- 탐지 방법, IDS 배치 전략, 보안 위협, 검증 전략을 기반으로 한 분류법을 제안한다.\n- IoT 시스템을 위한 IDS 제안의 제한된 범위와 검증 전략의 부족을 지적한다.\n\n## Limitations\n이 검토는 2009년부터 2016년 사이에 발표된 문헌을 기반으로 하며, 최신 연구는 포함되지 않았을 수 있다.\n\n## Future Work\n다양한 탐지 방법과 배치 전략의 강점과 약점을 조사하고, 공격 탐지 범위를 넓히고, 더 많은 IoT 기술을 다루며, 검증 전략을 개선하고, 알림 트래픽과 관리의 보안을 강화하고, 알림 상관 및 자율 관리 시스템을 개발하는 것이다.\n\n## Keywords\nIntrusion Detection System, Internet of Things, Cybersecurity, IDS Placement Strategy, Detection Method, Validation Strategy, Security Threat, Attack Detection\n"
+  "obsidian_markdown": "# A survey of intrusion detection in Internet of Things\n\n## One-line Summary\n이 논문은 IoT 환경에서의 침입 탐지 시스템(IDS) 연구 노력에 대한 조사를 제시하며, 주요 트렌드, 열린 문제, 그리고 미래 연구 가능성을 식별합니다.\n\n## Problem\n전통적인 네트워크에 적합한 IDS 기술이 IoT의 특수한 특성에 적용되기 어렵습니다.\n\n## Key Idea\nIoT 환경에 맞춘 IDS의 현재 제안된 해결책들이 다양한 공격과 IoT 기술을 충분히 포괄하지 못하며, IDS의 개발에 있어 가장 적합한 탐지 방법과 배치 전략도 명확하지 않다는 점을 조사하고, 이를 분류하기 위한 세분화된 분류법을 제안합니다.\n\n## Method\n문헌에서 제안된 18개의 IDS 방안을 분석하고, 탐지 방법, IDS 배치 전략, 보안 위협, 검증 전략 등의 속성에 기반한 분류법을 제안합니다.\n\n## Experiment\nN/A\n\n## Results\n조사 결과, IDS에 대한 연구 노력이 아직 초기 단계에 머물며, 제안된 솔루션들이 다양한 공격과 IoT 기술을 포괄하지 못하고 있음을 밝혔습니다. 또한, 탐지 방법과 배치 전략의 강점과 약점이 명확하지 않으며, 검증 전략도 잘 정립되어 있지 않습니다.\n\n## Contributions\n- IoT 환경에 적합한 IDS에 대한 문헌 조사를 제시하고, 주요 트렌드 및 연구 가능성을 식별합니다.\n- IoT의 IDS 연구를 분류하기 위한 분류법을 제안하며, 이는 탐지 방법, IDS 배치 전략, 보안 위협, 검증 전략을 기반으로 합니다.\n- 현재의 IDS 솔루션들이 다양한 공격과 IoT 기술을 충분히 포괄하지 못하며, 탐지 방법과 배치 전략의 적합성에 대한 명확성이 부족함을 지적합니다.\n\n## Limitations\n조사된 문헌이 최근 7년간의 것으로 한정되어 있으며, 제안된 솔루션들이 다양한 공격과 IoT 기술을 충분히 포괄하지 못하고 있습니다.\n\n## Future Work\n다양한 탐지 방법과 배치 전략의 강점과 약점을 조사하고, 공격 탐지 범위를 확대하며, 더 많은 IoT 기술을 다루고, 검증 전략을 개선하고, 경보 트래픽과 관리의 보안을 향상시키고, 경보 연관 및 자율적 관리 시스템을 개발하는 방향으로 미래 연구를 진행할 수 있습니다.\n\n## Keywords\nIntrusion Detection System, Internet of Things, Cybersecurity, IDS Placement Strategy, Attack Detection, Validation Strategy\n"
 }

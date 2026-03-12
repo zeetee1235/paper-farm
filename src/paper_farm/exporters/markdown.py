@@ -27,6 +27,13 @@ NOTES_TEMPLATE = """# Notes
 """
 
 
+def _vault_folder_name(paper_id: str, paper_num: int | None) -> str:
+    """Return the vault folder name, prefixed with zero-padded number if available."""
+    if paper_num is not None:
+        return f"{paper_num:03d}_{paper_id}"
+    return paper_id
+
+
 class MarkdownExporter:
     """Export summary + notes + metadata into obsidian vault layout."""
 
@@ -40,7 +47,12 @@ class MarkdownExporter:
         vault_root: Path,
         summary_root: Path | None = None,
     ) -> Path:
-        paper_dir = vault_root / paper_id
+        paper_num = metadata.get("paper_num")
+        if paper_num is None:
+            paper_num = self._assign_next_paper_num(vault_root)
+            metadata["paper_num"] = paper_num
+        folder_name = _vault_folder_name(paper_id, paper_num)
+        paper_dir = vault_root / folder_name
         paper_dir.mkdir(parents=True, exist_ok=True)
 
         pdf_target = paper_dir / "paper.pdf"
@@ -98,6 +110,20 @@ class MarkdownExporter:
         return "\n".join(lines)
 
     @staticmethod
+    def _assign_next_paper_num(vault_root: Path) -> int:
+        """Return the next available paper_num by scanning existing vault folders."""
+        max_num = 0
+        for meta_file in vault_root.glob("*/metadata.json"):
+            try:
+                m = json.loads(meta_file.read_text(encoding="utf-8"))
+                num = m.get("paper_num")
+                if isinstance(num, int):
+                    max_num = max(max_num, num)
+            except Exception:
+                pass
+        return max_num + 1
+
+    @staticmethod
     def _update_index(
         *,
         vault_root: Path,
@@ -109,12 +135,15 @@ class MarkdownExporter:
         """Rebuild index.md in vault root with links to all paper summaries."""
         index_path = vault_root / "index.md"
 
-        # Collect all existing papers from metadata.json files
         entries: list[dict] = []
         for meta_file in sorted(vault_root.glob("*/metadata.json")):
             try:
                 meta = json.loads(meta_file.read_text(encoding="utf-8"))
-                pid = meta_file.parent.name
+                folder_name = meta_file.parent.name
+                # paper_id is stored in metadata; fall back to stripping NNN_ prefix
+                pid = meta.get("id") or re.sub(r"^\d+_", "", folder_name)
+                num = meta.get("paper_num")
+
                 kws: list[str] = []
                 if pid == paper_id:
                     kws = summary.get("keywords", [])
@@ -126,6 +155,7 @@ class MarkdownExporter:
                             kws = s.get("keywords", [])
                         except Exception:
                             pass
+
                 authors = meta.get("authors", [])
                 year = meta.get("year")
                 if not authors:
@@ -133,7 +163,8 @@ class MarkdownExporter:
                 if year in (None, "", "N/A"):
                     year = MarkdownExporter._infer_year_from_title(meta.get("title", pid)) or "N/A"
                 entries.append({
-                    "id": pid,
+                    "num": num,
+                    "folder": folder_name,
                     "title": meta.get("title", pid),
                     "year": year,
                     "authors": authors,
@@ -142,6 +173,9 @@ class MarkdownExporter:
             except Exception:
                 continue
 
+        # Sort by paper_num so the table order is stable
+        entries.sort(key=lambda e: (e["num"] is None, e["num"] or 0))
+
         lines = [
             "# Paper Index\n",
             f"> total {len(entries)} papers\n",
@@ -149,15 +183,16 @@ class MarkdownExporter:
             "| # | title | year | authors | keywords |",
             "|---|------|------|------|--------|",
         ]
-        for i, entry in enumerate(entries, 1):
+        for entry in entries:
+            num_str = f"{entry['num']:03d}" if entry["num"] is not None else "—"
             title = entry["title"]
             year = entry["year"]
             authors = ", ".join(entry["authors"][:2])
             if len(entry["authors"]) > 2:
                 authors += " et al."
-            pid = entry["id"]
+            folder = entry["folder"]
             kw_str = ", ".join(entry["keywords"][:3])
-            lines.append(f"| {i} | [[{pid}/summary\\|{title}]] | {year} | {authors} | {kw_str} |")
+            lines.append(f"| {num_str} | [[{folder}/summary\\|{title}]] | {year} | {authors} | {kw_str} |")
 
         index_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 

@@ -1,27 +1,27 @@
 {
   "title": "Intrusion Detection Using Hybrid Pearson Correlation and GS-PSO Optimized Random Forest Technique for RPL-Based IoT",
-  "summary": "이 논문은 RPL 기반 IoT에 대한 침입 탐지를 위한 하이브리드 Pearson 상관관계와 GS-PSO 최적화된 랜덤 포레스트 기법을 제안하며, 더 효과적인 실시간 이상 탐지 및 모니터링을 제공합니다.",
-  "problem": "RPL 기반 IoT 네트워크는 자원 제한 장치의 내재적 제약과 대규모 배치의 확장성 도전으로 인해 심각한 보안 취약점을 노출하고 있습니다. 이로 인해 경량 침입 탐지 시스템(IDS)의 필요성이 증가하고 있습니다.",
-  "key_idea": "RPL 기반 IoT의 보안을 강화하기 위해 네 가지 RPL 라우팅 공격 유형을 커버하는 새로운 공격 데이터셋을 생성하고, 침입 탐지 모델의 효율성과 정확성을 향상시키기 위해 GS-PSO 최적화된 랜덤 포레스트를 사용합니다.",
-  "method": "GS-PSO 최적화된 랜덤 포레스트 기법과 Pearson 상관관계를 사용하여 RPL 기반 IoT 네트워크의 침입 탐지를 수행합니다. Cooja IoT 플랫폼에서 시뮬레이션을 통해 RPL 라우팅 공격 유형을 커버하는 데이터셋을 생성하고, 24가지 특징을 추출하는 특징 추출 알고리즘을 개발하여 IDS 모델 훈련에 적용합니다.",
-  "experiment": "- **Dataset**: Cooja IoT 플랫폼에서 시뮬레이션을 통해 생성된 네 가지 RPL 라우팅 공격 유형을 커버하는 데이터셋\n- **Simulator**: Cooja IoT 플랫폼\n- **Metric**: N/A",
-  "results": "GS-PSO 최적화된 랜덤 포레스트 기법이 기존 방법에 비해 더 높은 탐지 정확도와 낮은 계산 오버헤드를 달성하여 RPL 기반 IoT 네트워크의 보안성을 향상시킨다는 것을 보여줍니다.",
+  "summary": "이 논문은 RPL 기반 IoT에서 보안 취약점을 해결하기 위해 하이브리드 Pearson 상관관계와 GS-PSO 최적화된 랜덤 포레스트 기법을 사용한 침입 탐지 시스템을 제안합니다.",
+  "problem": "RPL 기반 IoT 네트워크는 침입자에 의한 라우팅 스푸핑, 자원 고갈 전략, 토폴로지 조작 등의 공격을 받고 있으며, 이에 따른 보안 취약점을 해결해야 합니다.",
+  "key_idea": "하이브리드 Pearson 상관관계와 GS-PSO 최적화된 랜덤 포레스트 기법을 사용하여 RPL 기반 IoT의 침입 탐지 시스템의 효율성과 정확성을 향상시킵니다.",
+  "method": "Cooja IoT 플랫폼을 사용하여 시뮬레이션을 통해 네 가지 RPL 라우팅 공격 유형을 포함한 새로운 라우팅 공격 데이터셋을 구축하고, 24가지 특징을 추출하는 특징 추출 알고리즘을 개발하며, GS-PSO 알고리즘을 사용하여 IDS 모델의 하이퍼파라미터를 최적화합니다.",
+  "experiment": "- **Dataset**: Cooja IoT 플랫폼을 통해 시뮬레이션된 네 가지 RPL 라우팅 공격 유형 데이터셋\n- **Simulator**: Cooja IoT 플랫폼\n- **Metric**: 탐지 정확도와 계산 시간",
+  "results": "제안된 IDS 모델은 기존 모델보다 높은 탐지 정확도와 낮은 계산 시간을 보여줍니다.",
   "contributions": [
-    "RPL 기반 IoT의 보안성을 향상시키기 위한 하이브리드 Pearson 상관관계와 GS-PSO 최적화된 랜덤 포레스트 기법을 제안합니다.",
-    "네 가지 RPL 라우팅 공격 유형을 커버하는 새로운 공격 데이터셋을 생성합니다.",
-    "침입 탐지 모델의 효율성과 정확성을 향상시키기 위한 특징 추출 알고리즘을 개발합니다."
+    "RPL 라우팅 공격의 네 가지 유형을 포함한 새로운 라우팅 공격 데이터셋을 구축합니다.",
+    "하이브리드 Pearson 상관관계와 GS-PSO 최적화된 랜덤 포레스트 기법을 사용한 효율적인 라우팅 탐지 방법을 제안합니다.",
+    "Pearson 상관관계를 사용하여 다양한 라우팅 공격에 대한 핵심 데이터 특징을 효과적으로 추출하고, GS-PSO 알고리즘을 사용하여 IDS 모델의 하이퍼파라미터를 최적화하여 탐지 정확도를 향상시킵니다."
   ],
-  "limitations": "특정 공격 유형에 대한 데이터셋의 커버리지와 시뮬레이션 환경에서 실제 운영 환경으로의 일반화 가능성이 제한될 수 있습니다.",
-  "future_work": "다양한 공격 유형을 커버하는 더 포괄적인 데이터셋 개발 및 실제 운영 환경에서의 확장 가능성 향상을 통해 모델의 일반화 가능성을 향상시키는 것을 제안합니다.",
+  "limitations": "현재 IDS 모델은 라우팅 공격 데이터셋의 다양성을 충분히 커버하지 못하고, 탐지 방법은 상당한 계산 부담을 가지고 있습니다.",
+  "future_work": "다양한 IoT 환경에서 제안된 방법의 적용 가능성을 탐구하고, 다양한 공격 유형을 포함한 보다 다양한 데이터셋을 구축할 필요가 있습니다.",
   "keywords": [
-    "Intrusion Detection",
-    "RPL-based IoT",
-    "Hybrid Pearson Correlation",
-    "GS-PSO Optimized",
-    "Random Forest",
-    "IoT Security",
-    "Routing Attacks",
-    "Feature Extraction"
+    "Anomaly detection",
+    "RPL",
+    "routing attacks",
+    "random forest",
+    "IoT",
+    "IDS",
+    "GS-PSO",
+    "Pearson Correlation"
   ],
-  "obsidian_markdown": "# Intrusion Detection Using Hybrid Pearson Correlation and GS-PSO Optimized Random Forest Technique for RPL-Based IoT\n\n## One-line Summary\n이 논문은 RPL 기반 IoT에 대한 침입 탐지를 위한 하이브리드 Pearson 상관관계와 GS-PSO 최적화된 랜덤 포레스트 기법을 제안하며, 더 효과적인 실시간 이상 탐지 및 모니터링을 제공합니다.\n\n## Problem\nRPL 기반 IoT 네트워크는 자원 제한 장치의 내재적 제약과 대규모 배치의 확장성 도전으로 인해 심각한 보안 취약점을 노출하고 있습니다. 이로 인해 경량 침입 탐지 시스템(IDS)의 필요성이 증가하고 있습니다.\n\n## Key Idea\nRPL 기반 IoT의 보안을 강화하기 위해 네 가지 RPL 라우팅 공격 유형을 커버하는 새로운 공격 데이터셋을 생성하고, 침입 탐지 모델의 효율성과 정확성을 향상시키기 위해 GS-PSO 최적화된 랜덤 포레스트를 사용합니다.\n\n## Method\nGS-PSO 최적화된 랜덤 포레스트 기법과 Pearson 상관관계를 사용하여 RPL 기반 IoT 네트워크의 침입 탐지를 수행합니다. Cooja IoT 플랫폼에서 시뮬레이션을 통해 RPL 라우팅 공격 유형을 커버하는 데이터셋을 생성하고, 24가지 특징을 추출하는 특징 추출 알고리즘을 개발하여 IDS 모델 훈련에 적용합니다.\n\n## Experiment\n- **Dataset**: Cooja IoT 플랫폼에서 시뮬레이션을 통해 생성된 네 가지 RPL 라우팅 공격 유형을 커버하는 데이터셋\n- **Simulator**: Cooja IoT 플랫폼\n\n## Results\nGS-PSO 최적화된 랜덤 포레스트 기법이 기존 방법에 비해 더 높은 탐지 정확도와 낮은 계산 오버헤드를 달성하여 RPL 기반 IoT 네트워크의 보안성을 향상시킨다는 것을 보여줍니다.\n\n## Contributions\n- RPL 기반 IoT의 보안성을 향상시키기 위한 하이브리드 Pearson 상관관계와 GS-PSO 최적화된 랜덤 포레스트 기법을 제안합니다.\n- 네 가지 RPL 라우팅 공격 유형을 커버하는 새로운 공격 데이터셋을 생성합니다.\n- 침입 탐지 모델의 효율성과 정확성을 향상시키기 위한 특징 추출 알고리즘을 개발합니다.\n\n## Limitations\n특정 공격 유형에 대한 데이터셋의 커버리지와 시뮬레이션 환경에서 실제 운영 환경으로의 일반화 가능성이 제한될 수 있습니다.\n\n## Future Work\n다양한 공격 유형을 커버하는 더 포괄적인 데이터셋 개발 및 실제 운영 환경에서의 확장 가능성 향상을 통해 모델의 일반화 가능성을 향상시키는 것을 제안합니다.\n\n## Keywords\nIntrusion Detection, RPL-based IoT, Hybrid Pearson Correlation, GS-PSO Optimized, Random Forest, IoT Security, Routing Attacks, Feature Extraction\n"
+  "obsidian_markdown": "# Intrusion Detection Using Hybrid Pearson Correlation and GS-PSO Optimized Random Forest Technique for RPL-Based IoT\n\n## One-line Summary\n이 논문은 RPL 기반 IoT에서 보안 취약점을 해결하기 위해 하이브리드 Pearson 상관관계와 GS-PSO 최적화된 랜덤 포레스트 기법을 사용한 침입 탐지 시스템을 제안합니다.\n\n## Problem\nRPL 기반 IoT 네트워크는 침입자에 의한 라우팅 스푸핑, 자원 고갈 전략, 토폴로지 조작 등의 공격을 받고 있으며, 이에 따른 보안 취약점을 해결해야 합니다.\n\n## Key Idea\n하이브리드 Pearson 상관관계와 GS-PSO 최적화된 랜덤 포레스트 기법을 사용하여 RPL 기반 IoT의 침입 탐지 시스템의 효율성과 정확성을 향상시킵니다.\n\n## Method\nCooja IoT 플랫폼을 사용하여 시뮬레이션을 통해 네 가지 RPL 라우팅 공격 유형을 포함한 새로운 라우팅 공격 데이터셋을 구축하고, 24가지 특징을 추출하는 특징 추출 알고리즘을 개발하며, GS-PSO 알고리즘을 사용하여 IDS 모델의 하이퍼파라미터를 최적화합니다.\n\n## Experiment\n- **Dataset**: Cooja IoT 플랫폼을 통해 시뮬레이션된 네 가지 RPL 라우팅 공격 유형 데이터셋\n- **Simulator**: Cooja IoT 플랫폼\n- **Metric**: 탐지 정확도와 계산 시간\n\n## Results\n제안된 IDS 모델은 기존 모델보다 높은 탐지 정확도와 낮은 계산 시간을 보여줍니다.\n\n## Contributions\n- RPL 라우팅 공격의 네 가지 유형을 포함한 새로운 라우팅 공격 데이터셋을 구축합니다.\n- 하이브리드 Pearson 상관관계와 GS-PSO 최적화된 랜덤 포레스트 기법을 사용한 효율적인 라우팅 탐지 방법을 제안합니다.\n- Pearson 상관관계를 사용하여 다양한 라우팅 공격에 대한 핵심 데이터 특징을 효과적으로 추출하고, GS-PSO 알고리즘을 사용하여 IDS 모델의 하이퍼파라미터를 최적화하여 탐지 정확도를 향상시킵니다.\n\n## Limitations\n현재 IDS 모델은 라우팅 공격 데이터셋의 다양성을 충분히 커버하지 못하고, 탐지 방법은 상당한 계산 부담을 가지고 있습니다.\n\n## Future Work\n다양한 IoT 환경에서 제안된 방법의 적용 가능성을 탐구하고, 다양한 공격 유형을 포함한 보다 다양한 데이터셋을 구축할 필요가 있습니다.\n\n## Keywords\nAnomaly detection, RPL, routing attacks, random forest, IoT, IDS, GS-PSO, Pearson Correlation\n"
 }
