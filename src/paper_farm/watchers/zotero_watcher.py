@@ -49,6 +49,8 @@ class ZoteroWatcher:
         self._pending_names: list[str] = []    # filenames waiting in queue
         self._failed: list[str] = []           # recently failed filenames
         self._completed_session: int = 0
+        self._retry_counts: dict[str, int] = {}  # pdf_str → fail count
+        self._max_retries = 3
 
     # ------------------------------------------------------------------
     # Public API
@@ -107,8 +109,16 @@ class ZoteroWatcher:
                     self._queued_paths.discard(str(pdf))
                     self._pending_names = [n for n in self._pending_names if n != pdf.name]
                     self._processing = None
+                    self._retry_counts[str(pdf)] = self._retry_counts.get(str(pdf), 0) + 1
                     if pdf.name not in self._failed:
                         self._failed.append(pdf.name)
+                    if self._retry_counts[str(pdf)] >= self._max_retries:
+                        log.error(
+                            "Giving up on %s after %d failures — move to permanent failed list.",
+                            pdf.name, self._retry_counts[str(pdf)],
+                        )
+                        # Keep in _queued_paths to prevent re-queuing
+                        self._queued_paths.add(str(pdf))
             finally:
                 self._flush_queue_status()
                 self._work_queue.task_done()

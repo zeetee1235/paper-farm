@@ -95,6 +95,7 @@ model   = read_config("llm", "model", "llama3:8b")
 base_url = read_config("llm", "base_url", "http://localhost:11434")
 
 raw_pdf_root  = PROJECT_ROOT / "data" / "raw_pdf"
+metadata_root = PROJECT_ROOT / "data" / "metadata"
 parsed_root   = PROJECT_ROOT / "data" / "parsed"
 summary_root  = PROJECT_ROOT / "data" / "summary"
 legacy_raw_pdf_root = PROJECT_ROOT / "papers" / "raw_pdf"
@@ -184,7 +185,7 @@ completed_sess  = queue_status.get("completed_session", 0)
 queue_size      = queue_status.get("queue_size", 0)
 
 # state file
-papers: list[dict] = []
+state_entries: list[dict] = []
 if STATE_FILE.exists():
     try:
         data = json.loads(STATE_FILE.read_text())
@@ -192,14 +193,69 @@ if STATE_FILE.exists():
         for pdf_path, paper_id in processed.items():
             filename = pathlib.Path(pdf_path).name
             short = filename[:45] + "…" if len(filename) > 46 else filename
-            papers.append({
+            state_entries.append({
                 "zotero_pdf": pdf_path,
                 "paper_id":   paper_id,
                 "filename":   short,
                 "raw_name":   filename,
+                "source":     "state",
             })
     except Exception:
         pass
+
+papers_by_id: dict[str, dict] = {}
+
+for meta_path in sorted(metadata_root.glob("*.json")):
+    paper_id = meta_path.stem
+    papers_by_id[paper_id] = {
+        "paper_id": paper_id,
+        "filename": paper_id,
+        "raw_name": paper_id,
+        "zotero_pdf": None,
+        "source": "metadata",
+    }
+
+for summary_path in sorted(obsidian_vault.glob("*/summary.md")):
+    paper_id = summary_path.parent.name
+    papers_by_id.setdefault(
+        paper_id,
+        {
+            "paper_id": paper_id,
+            "filename": paper_id,
+            "raw_name": paper_id,
+            "zotero_pdf": None,
+            "source": "vault",
+        },
+    )
+
+for entry in state_entries:
+    paper_id = entry.get("paper_id")
+    if paper_id:
+        existing = papers_by_id.get(paper_id, {})
+        papers_by_id[paper_id] = {
+            **entry,
+            **existing,
+            "paper_id": paper_id,
+            "zotero_pdf": entry.get("zotero_pdf"),
+            "raw_name": entry.get("raw_name", existing.get("raw_name", paper_id)),
+            "filename": existing.get("filename", entry.get("filename", paper_id)),
+            "source": "metadata+state" if existing else "state",
+        }
+    else:
+        synthetic_id = f"state::{entry['raw_name']}"
+        papers_by_id[synthetic_id] = entry
+
+papers = list(papers_by_id.values())
+
+def has_stale_state(paper: dict) -> bool:
+    pdf_path = paper.get("zotero_pdf")
+    paper_id = paper.get("paper_id")
+    if not pdf_path or not paper_id:
+        return False
+    return (
+        not pathlib.Path(pdf_path).exists()
+        and stage_done(paper_id, "obsidian")
+    )
 
 # stats
 total_tracked = len(papers)
@@ -207,6 +263,7 @@ ingested   = sum(1 for p in papers if p["paper_id"] and stage_done(p["paper_id"]
 parsed     = sum(1 for p in papers if p["paper_id"] and stage_done(p["paper_id"], "parse"))
 summarized = sum(1 for p in papers if p["paper_id"] and stage_done(p["paper_id"], "summarize"))
 completed  = sum(1 for p in papers if p["paper_id"] and stage_done(p["paper_id"], "obsidian"))
+stale_state_count = sum(1 for p in papers if has_stale_state(p))
 
 total_zotero = 0
 if zotero_storage.is_dir():
@@ -278,6 +335,8 @@ print(row(f"  ingest          : {stat_bar(ingested,   total_tracked, GRN)}  {GRN
 print(row(f"  parse           : {stat_bar(parsed,     total_tracked, CYN)}  {CYN}{parsed}{R}/{total_tracked}"))
 print(row(f"  summarize       : {stat_bar(summarized, total_tracked, YLW)}  {YLW}{summarized}{R}/{total_tracked}"))
 print(row(f"  obsidian        : {stat_bar(completed,  total_tracked, MGN)}  {MGN}{completed}{R}/{total_tracked}"))
+if stale_state_count:
+    print(row(f"  watcher state   : {YLW}stale entries{R}  {YLW}{stale_state_count}{R}"))
 
 if processing_name or queue_size > 0:
     proc_str = f"  {YLW}⟳ processing{R}" if processing_name else ""
@@ -301,6 +360,8 @@ if papers:
             return (-2, 0, p["filename"])
         if raw_name in failed_names:
             return (-1, 0, p["filename"])
+        if has_stale_state(p):
+            return (-0.5, 0, p["filename"])
         if not p["paper_id"]:
             return (2, "")
         done_count = sum(stage_done(p["paper_id"], k) for _, k, _ in STAGES)
@@ -331,7 +392,10 @@ if papers:
             bar = stage_bar(pid)
             cur = current_stage_label(pid)
             if cur == "done":
-                status_str = f"{GRN}done{R}"
+                if has_stale_state(p):
+                    status_str = f"{YLW}done (stale state){R}"
+                else:
+                    status_str = f"{GRN}done{R}"
             elif raw_name == processing_name:
                 status_str = f"{YLW}⟳ {cur}ing{R}"
             else:

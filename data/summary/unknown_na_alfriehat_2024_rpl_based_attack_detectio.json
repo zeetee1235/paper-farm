@@ -1,0 +1,27 @@
+{
+  "title": "Alfriehat 등 - 2024 - RPL-based attack detection approaches in IoT networks review and taxonomy",
+  "summary": "이 연구는 IoT 네트워크의 RPL 프로토콜을 대상으로 하는 공격 탐지 접근 방식의 종합적인 검토와 분류법을 제시합니다.",
+  "problem": "RPL 프로토콜의 보안이 중요하며, 여러 공격에 취약하여 데이터 전송을 방해하고 네트워크 토폴로지를 심각하게 손상시킬 수 있습니다.",
+  "key_idea": "RPL 프로토콜을 향한 잠재적인 공격을 분류하고 이에 대한 보안 메커니즘을 제안합니다.",
+  "method": "비교 연구와 문헌 검토를 통해 RPL 공격을 분류하고 탐지 방법을 분석합니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
+  "results": "RPL 기반 공격 탐지 방법에 대한 포괄적인 검토를 통해 여러 연구자의 관심과 초점을 제시하며, VNA가 가장 파괴적인 공격임을 밝혀냅니다.",
+  "contributions": [
+    "RPL 프로토콜에 대한 공격을 체계적으로 분류하고 검토",
+    "RPL 기반 IoT 네트워크의 공격과 분류에 대한 포괄적인 참고 자료 제공",
+    "다중 공격 동시 탐지와 기존 공격 탐지 방법의 한계 분석"
+  ],
+  "limitations": "RPL-특화 공격만 검토하며, 실제 네트워크 환경에서의 실험 데이터나 시뮬레이터를 사용하지 않습니다.",
+  "future_work": "더 정교한 알고리즘 개발에 중점을 두어 가장 심각한 공격을 완화하고 동시에 여러 공격을 탐지할 수 있도록 합니다.",
+  "keywords": [
+    "RPL",
+    "IoT networks",
+    "Intrusion detection system",
+    "Artificial intelligence",
+    "Security",
+    "Taxonomy",
+    "Survey",
+    "Routing attacks"
+  ],
+  "obsidian_markdown": "# Alfriehat 등 - 2024 - RPL-based attack detection approaches in IoT networks review and taxonomy\n\n## One-line Summary\n이 연구는 IoT 네트워크의 RPL 프로토콜을 대상으로 하는 공격 탐지 접근 방식의 종합적인 검토와 분류법을 제시합니다.\n\n## Problem\nRPL 프로토콜의 보안이 중요하며, 여러 공격에 취약하여 데이터 전송을 방해하고 네트워크 토폴로지를 심각하게 손상시킬 수 있습니다.\n\n## Key Idea\nRPL 프로토콜을 향한 잠재적인 공격을 분류하고 이에 대한 보안 메커니즘을 제안합니다.\n\n## Method\n비교 연구와 문헌 검토를 통해 RPL 공격을 분류하고 탐지 방법을 분석합니다.\n\n## Experiment\nN/A\n\n## Results\nRPL 기반 공격 탐지 방법에 대한 포괄적인 검토를 통해 여러 연구자의 관심과 초점을 제시하며, VNA가 가장 파괴적인 공격임을 밝혀냅니다.\n\n## Contributions\n- RPL 프로토콜에 대한 공격을 체계적으로 분류하고 검토\n- RPL 기반 IoT 네트워크의 공격과 분류에 대한 포괄적인 참고 자료 제공\n- 다중 공격 동시 탐지와 기존 공격 탐지 방법의 한계 분석\n\n## Limitations\nRPL-특화 공격만 검토하며, 실제 네트워크 환경에서의 실험 데이터나 시뮬레이터를 사용하지 않습니다.\n\n## Future Work\n더 정교한 알고리즘 개발에 중점을 두어 가장 심각한 공격을 완화하고 동시에 여러 공격을 탐지할 수 있도록 합니다.\n\n## Keywords\nRPL, IoT networks, Intrusion detection system, Artificial intelligence, Security, Taxonomy, Survey, Routing attacks\n"
+}

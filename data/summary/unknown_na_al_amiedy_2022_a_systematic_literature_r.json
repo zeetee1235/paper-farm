@@ -1,0 +1,27 @@
+{
+  "title": "Al-Amiedy 등 - 2022 - A Systematic Literature Review on Machine and Deep Learning Approaches for Detecting Attacks in RPL-",
+  "summary": "이 논문은 RPL 기반 6LoWPAN IoT 환경에서 기계학습과 딥러닝 접근법의 문헌을 체계적으로 검토합니다.",
+  "problem": "6LoWPAN 노드의 제한된 자원은 보안 환경을 유지하기 어렵게 하여 공격에 취약합니다.",
+  "key_idea": "RPL 기반 6LoWPAN IoT 환경에서 공격 탐지를 위한 기계학습과 딥러닝 접근법을 체계적으로 검토하는 것입니다.",
+  "method": "문헌 조사와 분석을 통해 기계학습과 딥러닝 접근법을 조사합니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
+  "results": "다양한 기계학습과 딥러닝 기법이 RPL 기반 6LoWPAN IoT 환경에서 공격 탐지에 효과적임을 발견했습니다.",
+  "contributions": [
+    "RPL 기반 6LoWPAN IoT 환경에서 공격 탐지를 위한 기계학습과 딥러닝 접근법의 체계적인 문헌 조사",
+    "현재 문헌에서 사용된 다양한 기계학습과 딥러닝 기법의 분류와 비교",
+    "6LoWPAN 환경에서의 보안 위협과 도전 과제에 대한 통찰력 제공"
+  ],
+  "limitations": "특정 기계학습과 딥러닝 모델의 실험적 평가가 부족하며, 데이터셋 및 시뮬레이터 사용에 대한 구체적인 정보가 부족합니다.",
+  "future_work": "특정 기계학습과 딥러닝 모델의 실험적 평가를 포함한 더 깊은 연구가 필요하며, 보안 위협에 대한 새로운 접근법을 탐구해야 합니다.",
+  "keywords": [
+    "IoT",
+    "RPL",
+    "6LoWPAN",
+    "Machine Learning",
+    "Deep Learning",
+    "Attack Detection",
+    "Security",
+    "Literature Review"
+  ],
+  "obsidian_markdown": "# Al-Amiedy 등 - 2022 - A Systematic Literature Review on Machine and Deep Learning Approaches for Detecting Attacks in RPL-\n\n## One-line Summary\n이 논문은 RPL 기반 6LoWPAN IoT 환경에서 기계학습과 딥러닝 접근법의 문헌을 체계적으로 검토합니다.\n\n## Problem\n6LoWPAN 노드의 제한된 자원은 보안 환경을 유지하기 어렵게 하여 공격에 취약합니다.\n\n## Key Idea\nRPL 기반 6LoWPAN IoT 환경에서 공격 탐지를 위한 기계학습과 딥러닝 접근법을 체계적으로 검토하는 것입니다.\n\n## Method\n문헌 조사와 분석을 통해 기계학습과 딥러닝 접근법을 조사합니다.\n\n## Experiment\nN/A\n\n## Results\n다양한 기계학습과 딥러닝 기법이 RPL 기반 6LoWPAN IoT 환경에서 공격 탐지에 효과적임을 발견했습니다.\n\n## Contributions\n- RPL 기반 6LoWPAN IoT 환경에서 공격 탐지를 위한 기계학습과 딥러닝 접근법의 체계적인 문헌 조사\n- 현재 문헌에서 사용된 다양한 기계학습과 딥러닝 기법의 분류와 비교\n- 6LoWPAN 환경에서의 보안 위협과 도전 과제에 대한 통찰력 제공\n\n## Limitations\n특정 기계학습과 딥러닝 모델의 실험적 평가가 부족하며, 데이터셋 및 시뮬레이터 사용에 대한 구체적인 정보가 부족합니다.\n\n## Future Work\n특정 기계학습과 딥러닝 모델의 실험적 평가를 포함한 더 깊은 연구가 필요하며, 보안 위협에 대한 새로운 접근법을 탐구해야 합니다.\n\n## Keywords\nIoT, RPL, 6LoWPAN, Machine Learning, Deep Learning, Attack Detection, Security, Literature Review\n"
+}

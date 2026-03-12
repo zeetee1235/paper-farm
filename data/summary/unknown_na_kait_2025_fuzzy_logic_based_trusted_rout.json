@@ -1,0 +1,27 @@
+{
+  "title": "Kait 등 - 2025 - Fuzzy logic‐based trusted routing protocol using vehicular cloud networks for smart cities",
+  "summary": "이 연구는 자동차 클라우드 네트워크를 활용한 불확실성 기반 신뢰 경로 프로토콜(FTRP)을 제안하여, 스마트 시티에서의 데이터 전파 경로를 안전하게 결정하는 방법을 제시합니다.",
+  "problem": "자동차 허브 없는 네트워크의 이동성 증가와 무선 통신의 불안정성은 경로 설정에 큰 도전 과제를 제시하며, 이러한 네트워크는 다양한 공격에 취약하여 원천과 목적지 노드 간의 인증 방법이 필수적입니다.",
+  "key_idea": "피지오논리를 기반으로 한 FTRP은 노드의 이동성 특성과 역사적 데이터를 고려하여 안전한 데이터 전파 경로를 결정하는 것을 목표로 합니다.",
+  "method": "피지오논리는 노드 후보 가치를 결정하고, 클라우드는 각 차량에 신뢰도 점수를 부여합니다. 신뢰, 속도, 다른 노드에 대한 근접성, 신호 강도, 이웃 노드와의 거리 등을 고려하여 안전한 경로를 식별합니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: 시뮬레이션을 통한 신규 프로토콜의 테스트\n- **Metric**: 패킷 전달 비율, 오버헤드, 지연 시간",
+  "results": "FTRP은 높은 패킷 전달 비율, 낮은 오버헤드, 그리고 낮은 지연 시간을 유지함을 시뮬레이션 결과로 보여줍니다.",
+  "contributions": [
+    "자동차 클라우드 네트워크를 위한 피지오논리 기반 신뢰 경로 프로토콜(FTRP) 제안",
+    "노드 이동성 및 역사적 데이터를 고려한 경로 결정",
+    "신뢰, 속도, 근접성, 신호 강도, 이웃 거리 등 다양한 요소를 고려한 안전 경로 식별"
+  ],
+  "limitations": "시뮬레이션 환경에서의 실험으로 실제 환경에서의 성능이 다를 수 있으며, 특정 시나리오에 대한 테스트가 제한적일 수 있습니다.",
+  "future_work": "실제 운영 환경에서의 평가 및 다양한 시나리오에서의 프로토콜 성능 최적화가 필요합니다.",
+  "keywords": [
+    "fuzzy routing",
+    "smart cities",
+    "trust computation",
+    "vehicular cloud networks",
+    "electric vehicle technologies",
+    "Internet of Things",
+    "data dissemination",
+    "VANETs"
+  ],
+  "obsidian_markdown": "# Kait 등 - 2025 - Fuzzy logic‐based trusted routing protocol using vehicular cloud networks for smart cities\n\n## One-line Summary\n이 연구는 자동차 클라우드 네트워크를 활용한 불확실성 기반 신뢰 경로 프로토콜(FTRP)을 제안하여, 스마트 시티에서의 데이터 전파 경로를 안전하게 결정하는 방법을 제시합니다.\n\n## Problem\n자동차 허브 없는 네트워크의 이동성 증가와 무선 통신의 불안정성은 경로 설정에 큰 도전 과제를 제시하며, 이러한 네트워크는 다양한 공격에 취약하여 원천과 목적지 노드 간의 인증 방법이 필수적입니다.\n\n## Key Idea\n피지오논리를 기반으로 한 FTRP은 노드의 이동성 특성과 역사적 데이터를 고려하여 안전한 데이터 전파 경로를 결정하는 것을 목표로 합니다.\n\n## Method\n피지오논리는 노드 후보 가치를 결정하고, 클라우드는 각 차량에 신뢰도 점수를 부여합니다. 신뢰, 속도, 다른 노드에 대한 근접성, 신호 강도, 이웃 노드와의 거리 등을 고려하여 안전한 경로를 식별합니다.\n\n## Experiment\n- **Simulator**: 시뮬레이션을 통한 신규 프로토콜의 테스트\n- **Metric**: 패킷 전달 비율, 오버헤드, 지연 시간\n\n## Results\nFTRP은 높은 패킷 전달 비율, 낮은 오버헤드, 그리고 낮은 지연 시간을 유지함을 시뮬레이션 결과로 보여줍니다.\n\n## Contributions\n- 자동차 클라우드 네트워크를 위한 피지오논리 기반 신뢰 경로 프로토콜(FTRP) 제안\n- 노드 이동성 및 역사적 데이터를 고려한 경로 결정\n- 신뢰, 속도, 근접성, 신호 강도, 이웃 거리 등 다양한 요소를 고려한 안전 경로 식별\n\n## Limitations\n시뮬레이션 환경에서의 실험으로 실제 환경에서의 성능이 다를 수 있으며, 특정 시나리오에 대한 테스트가 제한적일 수 있습니다.\n\n## Future Work\n실제 운영 환경에서의 평가 및 다양한 시나리오에서의 프로토콜 성능 최적화가 필요합니다.\n\n## Keywords\nfuzzy routing, smart cities, trust computation, vehicular cloud networks, electric vehicle technologies, Internet of Things, data dissemination, VANETs\n"
+}
