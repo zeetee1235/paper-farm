@@ -1,23 +1,27 @@
 {
   "title": "RPL-based attack detection approaches in IoT networks: review and taxonomy",
-  "summary": "이 논문은 RPL 프로토콜을 통한 IoT 네트워크에서의 공격 탐지 접근 방식을 검토하고 분류하며, 주요 공격 유형과 그 해결 방법을 제시합니다.",
-  "problem": "RPL 프로토콜의 보안이 중요하며, 다양한 공격이 데이터 전송을 방해하고 네트워크 토폴로지를 손상시킬 수 있습니다.",
-  "key_idea": "RPL 프로토콜을 대상으로 하는 공격을 분류하고, 이에 대한 보안 메커니즘을 탐구하는 포괄적인 검토를 제공합니다.",
-  "method": "이 논문은 문헌 검토를 통해 RPL 프로토콜에 대한 공격을 분류하고, 보안 도전 과제를 식별합니다.",
+  "summary": "이 논문은 IoT 네트워크에서 RPL 기반 공격 탐지 접근 방식을 종합적으로 검토하고 분류하며, 특히 RPL 프로토콜을 대상으로 한 공격 유형에 대한 포괄적인 분류를 제시한다.",
+  "problem": "RPL 프로토콜은 IoT 네트워크에서 데이터 전송을 방해하고 네트워크 토폴로지를 손상시킬 수 있는 다양한 공격에 취약하다.",
+  "key_idea": "RPL 기반 공격 탐지 접근 방식을 종합적으로 검토하고 분류하며, 가장 파괴적이고 문제가 되는 위협을 식별하여 보안 방안을 강화하는 것이다.",
+  "method": "RPL 프로토콜을 대상으로 한 공격 유형을 종합적으로 분류하고, 이러한 공격에 대한 탐지 및 대응 방안을 검토한다.",
   "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
-  "results": "RPL 기반 공격의 종류와 수를 철저히 검토하고, DL 알고리즘의 제한점과 공격 탐지의 미래 방향을 연구했습니다.",
+  "results": "다양한 공격 탐지 방법이 효과적으로 작동하며, 맥락별 보안 모드와 보호 기법을 지원한다. VNA 공격이 가장 파괴적이라는 것을 확인했다.",
   "contributions": [
-    "RPL 프로토콜에 대한 공격의 종류와 수를 철저히 검토하고 분류했습니다.",
-    "공격 탐지 기법에 대한 포괄적인 참고 자료를 제공합니다.",
-    "복잡한 공격을 효과적으로 탐지하고 완화하기 위한 알고리즘 개발의 필요성을 강조했습니다."
+    "RPL 기반 공격 탐지 접근 방식에 대한 포괄적인 검토를 제공한다.",
+    "RPL 프로토콜을 대상으로 한 공격의 종류와 수를 분류한다.",
+    "특히 가장 파괴적이고 문제가 되는 위협을 식별한다."
   ],
-  "limitations": "RPL-특정 공격에만 초점을 맞춘 것이 한계입니다.",
-  "future_work": "다양한 공격의 동시 탐지와 복잡한 공격을 효과적으로 탐지하고 완화할 수 있는 더 발전된 알고리즘의 개발을 제안합니다.",
+  "limitations": "RPL 특화 공격만 검토하고 다중 공격의 동시 탐지를 다루지 않는 등의 제한이 있다.",
+  "future_work": "더 복잡한 알고리즘을 개발하여 가장 파괴적인 공격을 완화하고 동시에 여러 공격을 탐지할 수 있는 연구를 제안한다.",
   "keywords": [
     "RPL",
     "IoT networks",
     "Intrusion detection system",
-    "Artificial intelligence"
+    "Artificial intelligence",
+    "6LoWPAN",
+    "security",
+    "attack detection",
+    "taxonomy"
   ],
-  "obsidian_markdown": "# RPL-based attack detection approaches in IoT networks: review and taxonomy\n\n## One-line Summary\n이 논문은 RPL 프로토콜을 통한 IoT 네트워크에서의 공격 탐지 접근 방식을 검토하고 분류하며, 주요 공격 유형과 그 해결 방법을 제시합니다.\n\n## Problem\nRPL 프로토콜의 보안이 중요하며, 다양한 공격이 데이터 전송을 방해하고 네트워크 토폴로지를 손상시킬 수 있습니다.\n\n## Key Idea\nRPL 프로토콜을 대상으로 하는 공격을 분류하고, 이에 대한 보안 메커니즘을 탐구하는 포괄적인 검토를 제공합니다.\n\n## Method\n이 논문은 문헌 검토를 통해 RPL 프로토콜에 대한 공격을 분류하고, 보안 도전 과제를 식별합니다.\n\n## Experiment\nN/A\n\n## Results\nRPL 기반 공격의 종류와 수를 철저히 검토하고, DL 알고리즘의 제한점과 공격 탐지의 미래 방향을 연구했습니다.\n\n## Contributions\n- RPL 프로토콜에 대한 공격의 종류와 수를 철저히 검토하고 분류했습니다.\n- 공격 탐지 기법에 대한 포괄적인 참고 자료를 제공합니다.\n- 복잡한 공격을 효과적으로 탐지하고 완화하기 위한 알고리즘 개발의 필요성을 강조했습니다.\n\n## Limitations\nRPL-특정 공격에만 초점을 맞춘 것이 한계입니다.\n\n## Future Work\n다양한 공격의 동시 탐지와 복잡한 공격을 효과적으로 탐지하고 완화할 수 있는 더 발전된 알고리즘의 개발을 제안합니다.\n\n## Keywords\nRPL, IoT networks, Intrusion detection system, Artificial intelligence\n"
+  "obsidian_markdown": "# RPL-based attack detection approaches in IoT networks: review and taxonomy\n\n## One-line Summary\n이 논문은 IoT 네트워크에서 RPL 기반 공격 탐지 접근 방식을 종합적으로 검토하고 분류하며, 특히 RPL 프로토콜을 대상으로 한 공격 유형에 대한 포괄적인 분류를 제시한다.\n\n## Problem\nRPL 프로토콜은 IoT 네트워크에서 데이터 전송을 방해하고 네트워크 토폴로지를 손상시킬 수 있는 다양한 공격에 취약하다.\n\n## Key Idea\nRPL 기반 공격 탐지 접근 방식을 종합적으로 검토하고 분류하며, 가장 파괴적이고 문제가 되는 위협을 식별하여 보안 방안을 강화하는 것이다.\n\n## Method\nRPL 프로토콜을 대상으로 한 공격 유형을 종합적으로 분류하고, 이러한 공격에 대한 탐지 및 대응 방안을 검토한다.\n\n## Experiment\nN/A\n\n## Results\n다양한 공격 탐지 방법이 효과적으로 작동하며, 맥락별 보안 모드와 보호 기법을 지원한다. VNA 공격이 가장 파괴적이라는 것을 확인했다.\n\n## Contributions\n- RPL 기반 공격 탐지 접근 방식에 대한 포괄적인 검토를 제공한다.\n- RPL 프로토콜을 대상으로 한 공격의 종류와 수를 분류한다.\n- 특히 가장 파괴적이고 문제가 되는 위협을 식별한다.\n\n## Limitations\nRPL 특화 공격만 검토하고 다중 공격의 동시 탐지를 다루지 않는 등의 제한이 있다.\n\n## Future Work\n더 복잡한 알고리즘을 개발하여 가장 파괴적인 공격을 완화하고 동시에 여러 공격을 탐지할 수 있는 연구를 제안한다.\n\n## Keywords\nRPL, IoT networks, Intrusion detection system, Artificial intelligence, 6LoWPAN, security, attack detection, taxonomy\n"
 }

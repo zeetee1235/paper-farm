@@ -1,0 +1,25 @@
+{
+  "title": "Optimization on TEEN routing protocol in cognitive wireless sensor network",
+  "summary": "본 논문은 인지 무선 센서 네트워크에서 TEEN 라우팅 프로토콜을 최적화하여 에너지 효율성을 향상시킨 A-TEEN을 제시하였다.",
+  "problem": "인지 무선 센서 네트워크의 에너지 효율성과 수명을 개선하는 것이다.",
+  "key_idea": "TEEN 라우팅 프로토콜을 인지 무선 센서 네트워크에 도입하고 클러스터 헤드 선출 방식을 최적화한 A-TEEN을 제안하여 라우팅 및 스펙트럼의 안정성을 높이는 것이다.",
+  "method": "A-TEEN은 TEEN의 클러스터 헤드 선출 방법을 최적화하여 빈 채널 수를 가중치로 사용하여 노드가 클러스터 헤드가 되는 확률을 조정한다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: 실험은 시뮬레이션을 통해 수행되었다.\n- **Metric**: 노드의 에너지 소비와 네트워크 수명",
+  "results": "A-TEEN은 TEEN과 비교하여 에너지 효율성과 네트워크 수명을 더욱 향상시키며, LEACH와 비교하여 노드의 에너지 소비를 줄이고 네트워크 수명을 연장시켰다.",
+  "contributions": [
+    "인지 무선 센서 네트워크에 TEEN 라우팅 프로토콜을 적용하여 에너지 효율성을 향상시켰다.",
+    "A-TEEN을 통해 클러스터 헤드 선출 방식을 최적화하고 라우팅 및 스펙트럼의 안정성을 높였다.",
+    "A-TEEN이 TEEN과 비교하여 더 높은 에너지 효율성과 네트워크 수명을 제공한다는 것을 시뮬레이션 결과를 통해 입증했다."
+  ],
+  "limitations": "랜덤 클러스터 헤드 선출 메커니즘의 제한, 시뮬레이션 환경에 대한 특정 가정",
+  "future_work": "다른 인지 무선 센서 네트워크에서 A-TEEN의 성능을 평가하고, 더욱 발전된 클러스터 헤드 선출 알고리즘을 탐구하고, 실제 인지 무선 센서 네트워크 환경에서 A-TEEN을 실험하는 것이다.",
+  "keywords": [
+    "Cognitive wireless sensor network",
+    "TEEN routing protocol",
+    "Cluster head election",
+    "Energy efficiency",
+    "A-TEEN",
+    "Spectrum detection"
+  ],
+  "obsidian_markdown": "# Optimization on TEEN routing protocol in cognitive wireless sensor network\n\n## One-line Summary\n본 논문은 인지 무선 센서 네트워크에서 TEEN 라우팅 프로토콜을 최적화하여 에너지 효율성을 향상시킨 A-TEEN을 제시하였다.\n\n## Problem\n인지 무선 센서 네트워크의 에너지 효율성과 수명을 개선하는 것이다.\n\n## Key Idea\nTEEN 라우팅 프로토콜을 인지 무선 센서 네트워크에 도입하고 클러스터 헤드 선출 방식을 최적화한 A-TEEN을 제안하여 라우팅 및 스펙트럼의 안정성을 높이는 것이다.\n\n## Method\nA-TEEN은 TEEN의 클러스터 헤드 선출 방법을 최적화하여 빈 채널 수를 가중치로 사용하여 노드가 클러스터 헤드가 되는 확률을 조정한다.\n\n## Experiment\n- **Simulator**: 실험은 시뮬레이션을 통해 수행되었다.\n- **Metric**: 노드의 에너지 소비와 네트워크 수명\n\n## Results\nA-TEEN은 TEEN과 비교하여 에너지 효율성과 네트워크 수명을 더욱 향상시키며, LEACH와 비교하여 노드의 에너지 소비를 줄이고 네트워크 수명을 연장시켰다.\n\n## Contributions\n- 인지 무선 센서 네트워크에 TEEN 라우팅 프로토콜을 적용하여 에너지 효율성을 향상시켰다.\n- A-TEEN을 통해 클러스터 헤드 선출 방식을 최적화하고 라우팅 및 스펙트럼의 안정성을 높였다.\n- A-TEEN이 TEEN과 비교하여 더 높은 에너지 효율성과 네트워크 수명을 제공한다는 것을 시뮬레이션 결과를 통해 입증했다.\n\n## Limitations\n랜덤 클러스터 헤드 선출 메커니즘의 제한, 시뮬레이션 환경에 대한 특정 가정\n\n## Future Work\n다른 인지 무선 센서 네트워크에서 A-TEEN의 성능을 평가하고, 더욱 발전된 클러스터 헤드 선출 알고리즘을 탐구하고, 실제 인지 무선 센서 네트워크 환경에서 A-TEEN을 실험하는 것이다.\n\n## Keywords\nCognitive wireless sensor network, TEEN routing protocol, Cluster head election, Energy efficiency, A-TEEN, Spectrum detection\n"
+}

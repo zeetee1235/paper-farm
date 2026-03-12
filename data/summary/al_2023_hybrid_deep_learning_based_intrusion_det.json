@@ -1,0 +1,25 @@
+{
+  "title": "Hybrid Deep Learning-Based Intrusion Detection System for RPL IoT Networks",
+  "summary": "이 논문은 RPL IoT 네트워크를 위한 하이브리드 딥러닝 기반 침입 탐지 시스템(이하 Hybrid DL-Based IDS)을 제안하여 알려진 및 알려지지 않은 이상 행동을 감지하고 분류합니다.",
+  "problem": "IoT 장치의 제약된 특성으로 인해 다양한 보안 공격에 노출되며, 기존의 머신러닝 기반 침입 탐지 시스템은 IoT 트래픽 분석에 적합하지 않습니다.",
+  "key_idea": "RPL IoT 트래픽 분류를 위한 하이브리드 딥러닝 접근 방식을 사용하여 알려진 및 알려지지 않은 이상 행동을 감지합니다.",
+  "method": "지도 및 비지도 딥러닝의 하이브리드화를 사용하여 IoTR-DS 데이터셋을 통해 다양한 보안 공격을 분류합니다.",
+  "experiment": "- **Dataset**: IoTR-DS (RPL 프로토콜 기반 IoT 특화 데이터셋)\n- **Simulator**: N/A\n- **Metric**: 정확도, f1-score",
+  "results": "알려진 공격 트래픽에서 98%의 정확도 감지율과 92%의 f1-score, 알려지지 않은 공격 행동에서 평균 95%의 정확도와 87%의 f1-score를 달성했습니다.",
+  "contributions": [
+    "RPL IoT 네트워크를 위한 하이브리드 딥러닝 기반 IDS 제안",
+    "IoTR-DS라는 새로운 IoT 특화 데이터셋 개발",
+    "알려진 및 알려지지 않은 공격 행동 감지를 위한 IDS 성능 평가 및 비교"
+  ],
+  "limitations": "이 논문은 특정 공격 유형에 초점을 맞추었으며, 다른 유형의 공격에 대한 평가가 미흡할 수 있습니다. 또한, 시뮬레이터를 사용한 실험이 없었습니다.",
+  "future_work": "다양한 유형의 공격에 대한 IDS 성능 평가, 시뮬레이터 환경에서의 추가 실험, 더 큰 데이터셋에 대한 일반화 가능성 향상.",
+  "keywords": [
+    "intrusion detection systems",
+    "deep learning",
+    "machine learning",
+    "security",
+    "RPL",
+    "routing protocols"
+  ],
+  "obsidian_markdown": "# Hybrid Deep Learning-Based Intrusion Detection System for RPL IoT Networks\n\n## One-line Summary\n이 논문은 RPL IoT 네트워크를 위한 하이브리드 딥러닝 기반 침입 탐지 시스템(이하 Hybrid DL-Based IDS)을 제안하여 알려진 및 알려지지 않은 이상 행동을 감지하고 분류합니다.\n\n## Problem\nIoT 장치의 제약된 특성으로 인해 다양한 보안 공격에 노출되며, 기존의 머신러닝 기반 침입 탐지 시스템은 IoT 트래픽 분석에 적합하지 않습니다.\n\n## Key Idea\nRPL IoT 트래픽 분류를 위한 하이브리드 딥러닝 접근 방식을 사용하여 알려진 및 알려지지 않은 이상 행동을 감지합니다.\n\n## Method\n지도 및 비지도 딥러닝의 하이브리드화를 사용하여 IoTR-DS 데이터셋을 통해 다양한 보안 공격을 분류합니다.\n\n## Experiment\n- **Dataset**: IoTR-DS (RPL 프로토콜 기반 IoT 특화 데이터셋)\n- **Metric**: 정확도, f1-score\n\n## Results\n알려진 공격 트래픽에서 98%의 정확도 감지율과 92%의 f1-score, 알려지지 않은 공격 행동에서 평균 95%의 정확도와 87%의 f1-score를 달성했습니다.\n\n## Contributions\n- RPL IoT 네트워크를 위한 하이브리드 딥러닝 기반 IDS 제안\n- IoTR-DS라는 새로운 IoT 특화 데이터셋 개발\n- 알려진 및 알려지지 않은 공격 행동 감지를 위한 IDS 성능 평가 및 비교\n\n## Limitations\n이 논문은 특정 공격 유형에 초점을 맞추었으며, 다른 유형의 공격에 대한 평가가 미흡할 수 있습니다. 또한, 시뮬레이터를 사용한 실험이 없었습니다.\n\n## Future Work\n다양한 유형의 공격에 대한 IDS 성능 평가, 시뮬레이터 환경에서의 추가 실험, 더 큰 데이터셋에 대한 일반화 가능성 향상.\n\n## Keywords\nintrusion detection systems, deep learning, machine learning, security, RPL, routing protocols\n"
+}

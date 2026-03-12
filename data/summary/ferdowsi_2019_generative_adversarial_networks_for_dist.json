@@ -1,24 +1,24 @@
 {
   "title": "Generative Adversarial Networks for Distributed Intrusion Detection in the Internet of Things",
-  "summary": "이 논문은 IoT에서 분산된 GAN을 제안하여 IoT 장치 간 데이터 공유 없이 침입 탐지의 정확도를 향상시킵니다.",
-  "problem": "IoT 시스템의 대규모 분산성과 데이터 프라이버시 요구로 인해 중앙 컨트롤러에 의존하지 않고 침입을 탐지할 수 있는 분산된 IDS가 필요합니다.",
-  "key_idea": "분산된 GAN을 사용하여 IoT 장치가 자체 데이터와 이웃 장치의 데이터를 모니터링하여 중앙 컨트롤러 없이 내부 및 외부 침입을 탐지합니다.",
-  "method": "분산된 GAN 모델을 사용하여 각 IoT 장치가 자체 데이터와 이웃 IoT 장치의 데이터를 모니터링하고 비교하여 침입을 탐지합니다.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 정확도, 정밀도, 잘못된 긍정 비율",
-  "results": "제안된 분산된 GAN 기반 IDS는 단일 IoT 장치 데이터를 사용하는 독립적인 GAN 기반 IDS에 비해 최대 20% 더 높은 정확도, 25% 더 높은 정밀도, 60% 낮은 잘못된 긍정 비율을 달성했습니다.",
+  "summary": "이 논문은 IoT 환경에서 분산형 적대 신경망(Generative Adversarial Networks, GAN) 기반 침입 탐지 시스템을 제안하며, 중앙 컨트롤러에 의존하지 않고 사이버 공격으로 인한 이상 행위를 감지하는 높은 정확성을 달성한다.",
+  "problem": "IoT 환경에서 중앙 컨트롤러에 의존하지 않고, 사용자 데이터의 개인 정보 보호를 유지하면서 높은 정확성으로 침입 탐지를 수행하는 것이 문제이다.",
+  "key_idea": "분산형 GAN을 사용하여 각 IoT 장치가 자신과 이웃 장치의 데이터를 모니터링하여 내부와 외부 공격을 감지하는 방법을 제안한다.",
+  "method": "분산형 GAN 기반 침입 탐지 시스템을 구축하며, 데이터를 공유하지 않고 각 IoT 장치가 자율적으로 작동하도록 설계한다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 정확도, 정밀도, 거짓 양성 비율",
+  "results": "제안된 분산형 GAN 기반 침입 탐지 시스템은 단독 GAN 기반 시스템에 비해 최대 20% 높은 정확도, 25% 높은 정밀도, 그리고 60% 낮은 거짓 양성 비율을 달성한다.",
   "contributions": [
-    "프라이버시를 유지하면서 IoT에서 분산된 IDS를 제공하는 분산된 GAN 아키텍처를 제안합니다.",
-    "분산된 GAN 기반 IDS의 정확도가 단일 IoT 장치 데이터를 사용하는 IDS보다 높음을 분석적으로 증명합니다.",
-    "실제 시뮬레이션 결과를 통해 분산된 GAN 기반 IDS의 성능 향상을 입증합니다."
+    "중앙 컨트롤러에 의존하지 않는 분산형 GAN 기반 침입 탐지 시스템을 제안한다.",
+    "사용자 데이터의 개인 정보를 보호하면서도 높은 정확성의 침입 탐지를 수행한다.",
+    "단독 GAN 기반 시스템보다 더 높은 정확도, 정밀도, 그리고 낮은 거짓 양성 비율을 실험적으로 증명한다."
   ],
-  "limitations": "실험은 시뮬레이션 환경에서 수행되었으며 실제 IoT 환경에서의 효과는 추가적인 검증이 필요합니다.",
-  "future_work": "실제 IoT 환경에서의 분산된 GAN 기반 IDS의 효과를 검증하고, 다양한 IoT 응용 분야에서의 적용 가능성을 탐구하는 것이 제안됩니다.",
+  "limitations": "실험 데이터셋과 시뮬레이터에 대한 구체적인 정보가 제공되지 않았다.",
+  "future_work": "다양한 IoT 환경에서의 실제 데이터를 활용한 추가 실험과, 다른 네트워크 공격 유형에 대한 확장성을 평가하는 것이 필요하다.",
   "keywords": [
     "Generative Adversarial Networks",
     "Distributed Intrusion Detection",
     "Internet of Things",
-    "Privacy",
-    "Security"
+    "Privacy Preservation",
+    "Machine Learning"
   ],
-  "obsidian_markdown": "# Generative Adversarial Networks for Distributed Intrusion Detection in the Internet of Things\n\n## One-line Summary\n이 논문은 IoT에서 분산된 GAN을 제안하여 IoT 장치 간 데이터 공유 없이 침입 탐지의 정확도를 향상시킵니다.\n\n## Problem\nIoT 시스템의 대규모 분산성과 데이터 프라이버시 요구로 인해 중앙 컨트롤러에 의존하지 않고 침입을 탐지할 수 있는 분산된 IDS가 필요합니다.\n\n## Key Idea\n분산된 GAN을 사용하여 IoT 장치가 자체 데이터와 이웃 장치의 데이터를 모니터링하여 중앙 컨트롤러 없이 내부 및 외부 침입을 탐지합니다.\n\n## Method\n분산된 GAN 모델을 사용하여 각 IoT 장치가 자체 데이터와 이웃 IoT 장치의 데이터를 모니터링하고 비교하여 침입을 탐지합니다.\n\n## Experiment\n- **Metric**: 정확도, 정밀도, 잘못된 긍정 비율\n\n## Results\n제안된 분산된 GAN 기반 IDS는 단일 IoT 장치 데이터를 사용하는 독립적인 GAN 기반 IDS에 비해 최대 20% 더 높은 정확도, 25% 더 높은 정밀도, 60% 낮은 잘못된 긍정 비율을 달성했습니다.\n\n## Contributions\n- 프라이버시를 유지하면서 IoT에서 분산된 IDS를 제공하는 분산된 GAN 아키텍처를 제안합니다.\n- 분산된 GAN 기반 IDS의 정확도가 단일 IoT 장치 데이터를 사용하는 IDS보다 높음을 분석적으로 증명합니다.\n- 실제 시뮬레이션 결과를 통해 분산된 GAN 기반 IDS의 성능 향상을 입증합니다.\n\n## Limitations\n실험은 시뮬레이션 환경에서 수행되었으며 실제 IoT 환경에서의 효과는 추가적인 검증이 필요합니다.\n\n## Future Work\n실제 IoT 환경에서의 분산된 GAN 기반 IDS의 효과를 검증하고, 다양한 IoT 응용 분야에서의 적용 가능성을 탐구하는 것이 제안됩니다.\n\n## Keywords\nGenerative Adversarial Networks, Distributed Intrusion Detection, Internet of Things, Privacy, Security\n"
+  "obsidian_markdown": "# Generative Adversarial Networks for Distributed Intrusion Detection in the Internet of Things\n\n## One-line Summary\n이 논문은 IoT 환경에서 분산형 적대 신경망(Generative Adversarial Networks, GAN) 기반 침입 탐지 시스템을 제안하며, 중앙 컨트롤러에 의존하지 않고 사이버 공격으로 인한 이상 행위를 감지하는 높은 정확성을 달성한다.\n\n## Problem\nIoT 환경에서 중앙 컨트롤러에 의존하지 않고, 사용자 데이터의 개인 정보 보호를 유지하면서 높은 정확성으로 침입 탐지를 수행하는 것이 문제이다.\n\n## Key Idea\n분산형 GAN을 사용하여 각 IoT 장치가 자신과 이웃 장치의 데이터를 모니터링하여 내부와 외부 공격을 감지하는 방법을 제안한다.\n\n## Method\n분산형 GAN 기반 침입 탐지 시스템을 구축하며, 데이터를 공유하지 않고 각 IoT 장치가 자율적으로 작동하도록 설계한다.\n\n## Experiment\n- **Metric**: 정확도, 정밀도, 거짓 양성 비율\n\n## Results\n제안된 분산형 GAN 기반 침입 탐지 시스템은 단독 GAN 기반 시스템에 비해 최대 20% 높은 정확도, 25% 높은 정밀도, 그리고 60% 낮은 거짓 양성 비율을 달성한다.\n\n## Contributions\n- 중앙 컨트롤러에 의존하지 않는 분산형 GAN 기반 침입 탐지 시스템을 제안한다.\n- 사용자 데이터의 개인 정보를 보호하면서도 높은 정확성의 침입 탐지를 수행한다.\n- 단독 GAN 기반 시스템보다 더 높은 정확도, 정밀도, 그리고 낮은 거짓 양성 비율을 실험적으로 증명한다.\n\n## Limitations\n실험 데이터셋과 시뮬레이터에 대한 구체적인 정보가 제공되지 않았다.\n\n## Future Work\n다양한 IoT 환경에서의 실제 데이터를 활용한 추가 실험과, 다른 네트워크 공격 유형에 대한 확장성을 평가하는 것이 필요하다.\n\n## Keywords\nGenerative Adversarial Networks, Distributed Intrusion Detection, Internet of Things, Privacy Preservation, Machine Learning\n"
 }

@@ -1,18 +1,18 @@
 {
   "title": "PEGASIS: Power-efficient gathering in sensor information systems",
-  "summary": "PEGASIS는 각 노드가 인접한 노드와 데이터를 주고받고 리더가 전송되는 주기를 가지면서 에너지 소비를 효율적으로 관리하여 센서 네트워크의 수명을 늘리는 방법을 제안합니다.",
-  "problem": "센서 노드가 제한된 배터리 전력을 가지고 있으며, 특히 기지국에서 멀리 떨어진 노드들은 긴 거리 데이터 전송으로 인해 에너지를 빠르게 소모하여 네트워크 수명이 제한됩니다.",
-  "key_idea": "PEGASIS는 각 센서 노드가 인접한 노드와 데이터를 주고받고, 주기적으로 리더 역할을 맡아 전송을 수행하면서 에너지 소비를 균등하게 분배하여 네트워크 수명을 연장합니다.",
-  "method": "PEGASIS는 센서 노드들이 그리디 알고리즘을 사용하여 체인을 형성하고, 균등한 에너지 소모를 위한 알고리즘을 통해 에너지 소모 문제를 해결합니다.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
-  "results": "PEGASIS 접근 방식은 에너지 소모를 균등하게 분배하여 센서 네트워크의 수명을 연장하는 것을 목표로 합니다.",
+  "summary": "PEGASIS improves energy efficiency in sensor networks by forming a chain of nodes that take turns in transmitting data to the base station, distributing energy consumption evenly.",
+  "problem": "In wireless sensor networks, nodes with limited battery power experience uneven energy depletion, especially those far from the base station, reducing network lifetime.",
+  "key_idea": "PEGASIS organizes nodes in a chain using a greedy algorithm, allowing nodes to take turns transmitting data to the base station, thereby balancing energy consumption.",
+  "method": "The method involves forming a chain of nodes using a greedy algorithm where nodes take turns in data transmission to the base station.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: Energy efficiency and network lifetime",
+  "results": "PEGASIS achieves balanced energy consumption among nodes, extending the network lifetime by ensuring no single node depletes its battery rapidly.",
   "contributions": [
-    "센서 네트워크 에너지 소모를 균등하게 분배하는 PEGASIS 접근 방식을 제안합니다.",
-    "그리디 알고리즘을 사용하여 체인 형성을 위한 방법을 소개합니다.",
-    "에너지 소모 문제를 해결하기 위한 효과적인 알고리즘을 개발합니다."
+    "Introduces a chain-based data transmission method to balance energy consumption.",
+    "Utilizes a greedy algorithm for organizing nodes in a chain.",
+    "Enhances network lifetime by evenly distributing energy load among nodes."
   ],
-  "limitations": "실제 데이터셋 및 시뮬레이션 환경에 대한 실험 결과가 제공되지 않았습니다.",
-  "future_work": "실제 데이터셋 및 시뮬레이션 환경에서의 실험을 통해 PEGASIS 접근 방식의 효과를 더욱 검증하는 작업이 필요합니다.",
+  "limitations": "The paper does not provide specific datasets or simulation results, limiting the empirical validation of PEGASIS.",
+  "future_work": "Future research could focus on optimizing the greedy algorithm for node chaining and exploring real-world deployment scenarios.",
   "keywords": [
     "LEACH",
     "MSC",
@@ -21,5 +21,5 @@
     "Wireless Sensor Network",
     "Greedy Algorithms"
   ],
-  "obsidian_markdown": "# PEGASIS: Power-efficient gathering in sensor information systems\n\n## One-line Summary\nPEGASIS는 각 노드가 인접한 노드와 데이터를 주고받고 리더가 전송되는 주기를 가지면서 에너지 소비를 효율적으로 관리하여 센서 네트워크의 수명을 늘리는 방법을 제안합니다.\n\n## Problem\n센서 노드가 제한된 배터리 전력을 가지고 있으며, 특히 기지국에서 멀리 떨어진 노드들은 긴 거리 데이터 전송으로 인해 에너지를 빠르게 소모하여 네트워크 수명이 제한됩니다.\n\n## Key Idea\nPEGASIS는 각 센서 노드가 인접한 노드와 데이터를 주고받고, 주기적으로 리더 역할을 맡아 전송을 수행하면서 에너지 소비를 균등하게 분배하여 네트워크 수명을 연장합니다.\n\n## Method\nPEGASIS는 센서 노드들이 그리디 알고리즘을 사용하여 체인을 형성하고, 균등한 에너지 소모를 위한 알고리즘을 통해 에너지 소모 문제를 해결합니다.\n\n## Experiment\nN/A\n\n## Results\nPEGASIS 접근 방식은 에너지 소모를 균등하게 분배하여 센서 네트워크의 수명을 연장하는 것을 목표로 합니다.\n\n## Contributions\n- 센서 네트워크 에너지 소모를 균등하게 분배하는 PEGASIS 접근 방식을 제안합니다.\n- 그리디 알고리즘을 사용하여 체인 형성을 위한 방법을 소개합니다.\n- 에너지 소모 문제를 해결하기 위한 효과적인 알고리즘을 개발합니다.\n\n## Limitations\n실제 데이터셋 및 시뮬레이션 환경에 대한 실험 결과가 제공되지 않았습니다.\n\n## Future Work\n실제 데이터셋 및 시뮬레이션 환경에서의 실험을 통해 PEGASIS 접근 방식의 효과를 더욱 검증하는 작업이 필요합니다.\n\n## Keywords\nLEACH, MSC, PEGASIS, BS, Wireless Sensor Network, Greedy Algorithms\n"
+  "obsidian_markdown": "# PEGASIS: Power-efficient gathering in sensor information systems\n\n## One-line Summary\nPEGASIS improves energy efficiency in sensor networks by forming a chain of nodes that take turns in transmitting data to the base station, distributing energy consumption evenly.\n\n## Problem\nIn wireless sensor networks, nodes with limited battery power experience uneven energy depletion, especially those far from the base station, reducing network lifetime.\n\n## Key Idea\nPEGASIS organizes nodes in a chain using a greedy algorithm, allowing nodes to take turns transmitting data to the base station, thereby balancing energy consumption.\n\n## Method\nThe method involves forming a chain of nodes using a greedy algorithm where nodes take turns in data transmission to the base station.\n\n## Experiment\n- **Metric**: Energy efficiency and network lifetime\n\n## Results\nPEGASIS achieves balanced energy consumption among nodes, extending the network lifetime by ensuring no single node depletes its battery rapidly.\n\n## Contributions\n- Introduces a chain-based data transmission method to balance energy consumption.\n- Utilizes a greedy algorithm for organizing nodes in a chain.\n- Enhances network lifetime by evenly distributing energy load among nodes.\n\n## Limitations\nThe paper does not provide specific datasets or simulation results, limiting the empirical validation of PEGASIS.\n\n## Future Work\nFuture research could focus on optimizing the greedy algorithm for node chaining and exploring real-world deployment scenarios.\n\n## Keywords\nLEACH, MSC, PEGASIS, BS, Wireless Sensor Network, Greedy Algorithms\n"
 }

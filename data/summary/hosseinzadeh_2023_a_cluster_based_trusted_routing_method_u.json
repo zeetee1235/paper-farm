@@ -1,24 +1,24 @@
 {
   "title": "A cluster-based trusted routing method using fire hawk optimizer (FHO) in wireless sensor networks (WSNs)",
-  "summary": "이 논문은 WSN에서 데이터 전송 보안을 향상시키기 위한 클러스터 기반 신뢰 경로 방법인 CTRF를 제안하여, WTM과 FHO를 사용하여 클러스터 헤드를 선택하고 신뢰 경로를 결정합니다.",
-  "problem": "WSN에서의 데이터 전송 보안을 보장하면서 에너지 소비를 최소화하는 것이 문제입니다.",
-  "key_idea": "신뢰 관리를 기반으로 한 클러스터 기반 경로 방법을 사용하여 WSN의 보안을 향상시킵니다.",
-  "method": "이 논문은 FHO와 WTM을 사용하여 클러스터 헤드를 선택하고 신뢰 경로를 결정합니다.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 남은 에너지, 트래픽 처리량, 패킷 손실률, 지연, 탐지율, 정확도",
-  "results": "CTRF는 3LWT-GWO, SASR, AFTNS와 비교하여 남은 에너지, 트래픽 처리량, 지연, 탐지율, 정확도를 향상시켰습니다.",
+  "summary": "본 논문은 화재 하키 최적화기(FTO)를 사용한 신뢰 기반 군집화 라우팅 기법(CTRF)을 소개하여 WSNs의 보안을 향상시키는 방법을 제시한다.",
+  "problem": "WSNs에서 데이터 전송 과정에서의 보안 문제와 에너지 제약을 해결하면서 신뢰 관리를 효과적으로 구현하는 것",
+  "key_idea": "CTRF는 에너지 상태, 수신률, 중복률을 고려한 가중 신뢰 메커니즘(WTM)과 FTO를 기반으로 한 군집화 기법을 통해 라우팅 경로를 안전하게 선택한다.",
+  "method": "신뢰 메커니즘, FTO 기반 군집화, 신뢰 라우팅을 포함한 CTRF 프로토콜",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: NS2\n- **Metric**: 에너지, 통신량, 패킷 손실률, 지연 시간, 탐지 비율, 정확도",
+  "results": "CTRF는 3LWT-GWO, SASR, AFTNS에 비해 에너지 소비 절약률, 통신량, 지연 시간 개선률, 탐지 비율, 정확도를 높여 성능을 입증한다.",
   "contributions": [
-    "신뢰 관리를 기반으로 한 클러스터 기반 신뢰 경로 방법 CTRF를 제안했습니다.",
-    "WTM을 통해 신뢰 수준을 계산하는 방법을 도입했습니다.",
-    "FHO를 사용하여 클러스터 헤드를 선택하는 새로운 클러스터링 메커니즘을 개발했습니다."
+    "신뢰 메커니즘에 에너지 및 수신률을 고려한 CTRF 프로토콜 개발",
+    "화재 하키 최적화기를 사용한 군집화 기법 제안",
+    "신뢰 라우팅 알고리즘을 통한 안전한 데이터 전송 경로 선택"
   ],
-  "limitations": "CTR의 WTM은 자기 조직화 및 자가 적응 능력이 부족합니다.",
-  "future_work": "신뢰 메커니즘의 정확성을 향상시키기 위해 ANNs와 RL, 특히 Q-learning을 사용한 적응형 신뢰 메커니즘을 설계할 계획입니다.",
+  "limitations": "CTRF의 WTM은 자기 조직화 및 적응 능력이 부족하다.",
+  "future_work": "ANNs와 강화 학습을 사용하여 CTRF의 보안 메커니즘의 정확성을 개선하고, 다른 최적화 알고리즘을 사용한 군집화 알고리즘 설계와 평가",
   "keywords": [
     "Wireless Sensor Networks",
-    "Fire Hawk Optimizer",
-    "Cluster-based Routing",
     "Trust Management",
-    "Wireless Security"
+    "Fire Hawk Optimizer",
+    "Routing Protocol",
+    "Network Security"
   ],
-  "obsidian_markdown": "# A cluster-based trusted routing method using fire hawk optimizer (FHO) in wireless sensor networks (WSNs)\n\n## One-line Summary\n이 논문은 WSN에서 데이터 전송 보안을 향상시키기 위한 클러스터 기반 신뢰 경로 방법인 CTRF를 제안하여, WTM과 FHO를 사용하여 클러스터 헤드를 선택하고 신뢰 경로를 결정합니다.\n\n## Problem\nWSN에서의 데이터 전송 보안을 보장하면서 에너지 소비를 최소화하는 것이 문제입니다.\n\n## Key Idea\n신뢰 관리를 기반으로 한 클러스터 기반 경로 방법을 사용하여 WSN의 보안을 향상시킵니다.\n\n## Method\n이 논문은 FHO와 WTM을 사용하여 클러스터 헤드를 선택하고 신뢰 경로를 결정합니다.\n\n## Experiment\n- **Metric**: 남은 에너지, 트래픽 처리량, 패킷 손실률, 지연, 탐지율, 정확도\n\n## Results\nCTRF는 3LWT-GWO, SASR, AFTNS와 비교하여 남은 에너지, 트래픽 처리량, 지연, 탐지율, 정확도를 향상시켰습니다.\n\n## Contributions\n- 신뢰 관리를 기반으로 한 클러스터 기반 신뢰 경로 방법 CTRF를 제안했습니다.\n- WTM을 통해 신뢰 수준을 계산하는 방법을 도입했습니다.\n- FHO를 사용하여 클러스터 헤드를 선택하는 새로운 클러스터링 메커니즘을 개발했습니다.\n\n## Limitations\nCTR의 WTM은 자기 조직화 및 자가 적응 능력이 부족합니다.\n\n## Future Work\n신뢰 메커니즘의 정확성을 향상시키기 위해 ANNs와 RL, 특히 Q-learning을 사용한 적응형 신뢰 메커니즘을 설계할 계획입니다.\n\n## Keywords\nWireless Sensor Networks, Fire Hawk Optimizer, Cluster-based Routing, Trust Management, Wireless Security\n"
+  "obsidian_markdown": "# A cluster-based trusted routing method using fire hawk optimizer (FHO) in wireless sensor networks (WSNs)\n\n## One-line Summary\n본 논문은 화재 하키 최적화기(FTO)를 사용한 신뢰 기반 군집화 라우팅 기법(CTRF)을 소개하여 WSNs의 보안을 향상시키는 방법을 제시한다.\n\n## Problem\nWSNs에서 데이터 전송 과정에서의 보안 문제와 에너지 제약을 해결하면서 신뢰 관리를 효과적으로 구현하는 것\n\n## Key Idea\nCTRF는 에너지 상태, 수신률, 중복률을 고려한 가중 신뢰 메커니즘(WTM)과 FTO를 기반으로 한 군집화 기법을 통해 라우팅 경로를 안전하게 선택한다.\n\n## Method\n신뢰 메커니즘, FTO 기반 군집화, 신뢰 라우팅을 포함한 CTRF 프로토콜\n\n## Experiment\n- **Simulator**: NS2\n- **Metric**: 에너지, 통신량, 패킷 손실률, 지연 시간, 탐지 비율, 정확도\n\n## Results\nCTRF는 3LWT-GWO, SASR, AFTNS에 비해 에너지 소비 절약률, 통신량, 지연 시간 개선률, 탐지 비율, 정확도를 높여 성능을 입증한다.\n\n## Contributions\n- 신뢰 메커니즘에 에너지 및 수신률을 고려한 CTRF 프로토콜 개발\n- 화재 하키 최적화기를 사용한 군집화 기법 제안\n- 신뢰 라우팅 알고리즘을 통한 안전한 데이터 전송 경로 선택\n\n## Limitations\nCTRF의 WTM은 자기 조직화 및 적응 능력이 부족하다.\n\n## Future Work\nANNs와 강화 학습을 사용하여 CTRF의 보안 메커니즘의 정확성을 개선하고, 다른 최적화 알고리즘을 사용한 군집화 알고리즘 설계와 평가\n\n## Keywords\nWireless Sensor Networks, Trust Management, Fire Hawk Optimizer, Routing Protocol, Network Security\n"
 }

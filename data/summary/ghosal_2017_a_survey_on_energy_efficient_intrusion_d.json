@@ -1,28 +1,27 @@
 {
   "title": "A survey on energy efficient intrusion detection in wireless sensor networks",
-  "summary": "본 논문은 무선 센서 네트워크에서 에너지 효율적 침입 탐지의 주요 주제를 검토하며, 기존 문제를 요약하고 개선 방안을 제시합니다.",
-  "problem": "무선 센서 네트워크는 제한된 자원과 에너지를 가지고 있으며, 이러한 네트워크의 보안을 유지하는 것은 주요한 과제입니다.",
-  "key_idea": "에너지 효율적인 침입 탐지 시스템을 통해 무선 센서 네트워크의 보안을 강화하고 에너지 소모를 최소화하는 것입니다.",
-  "method": "기존 연구를 검토하여 침입 탐지의 기본 개념, 에너지 절약 메커니즘, 그리고 침입 탐지 시스템의 다양한 아키텍처 모델을 분석합니다.",
+  "summary": "이 논문은 WSN에서 에너지 효율적 침입 탐지의 기존 접근 방식과 미래 방향을 분석하며, 에너지 절약과 탐지 정확성을 균형 있게 유지하는 방법에 대해 설명합니다.",
+  "problem": "WSN의 자원 제약으로 인해 에너지 효율적인 침입 탐지가 필요하며, 이는 네트워크의 보안을 강화하는 데 중요합니다.",
+  "key_idea": "WSN에서 에너지 효율적인 침입 탐지 시스템(IDS)을 설계하여 에너지 절약을 최적화하면서 탐지 정확성을 유지하는 것입니다.",
+  "method": "WSN에서의 침입 탐지의 기본 개념, 에너지 절약 메커니즘, 기존 접근 방식의 분류 및 비교 분석을 통해 연구합니다.",
   "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
-  "results": "침입 탐지 시스템의 세 가지 주요 범주(중앙 집중식 접근법, 분산 접근법, 혁신적 접근법)와 그 성능 평가를 통해 에너지 효율적인 침입 탐지에 대한 비교 분석을 제공합니다.",
+  "results": "중앙 집중식, 분산식, 혁신적 접근 방식으로 WSN을 위한 IDS 접근 방식을 분류하고, 에너지 효율성을 기준으로 비교 분석을 수행했습니다.",
   "contributions": [
-    "무선 센서 네트워크에서 에너지 효율적인 침입 탐지의 주요 주제를 체계적으로 검토합니다.",
-    "기존 침입 탐지 시스템의 세 가지 범주를 분류하고 비교 분석합니다.",
-    "침입 탐지 시스템의 에너지 소비에 영향을 미치는 다양한 요인을 설명합니다."
+    "WSN에서 에너지 효율적 침입 탐지를 위한 기본 개념과 접근 방식에 대한 종합적인 조사를 제공합니다.",
+    "기존 에너지 효율적 침입 탐지 접근 방식을 세 가지 주요 범주로 분류하고 비교 분석을 수행합니다.",
+    "WSN에서 침입 탐지 시스템의 미래 방향에 대한 통찰을 제공합니다."
   ],
-  "limitations": "이 검토 논문은 실험 데이터셋이나 시뮬레이터를 사용한 실험 결과를 제공하지 않으며, 특정 환경에서의 결과는 일반화할 수 없을 수 있습니다.",
-  "future_work": "다양한 응용 분야에서 에너지 효율적인 침입 탐지 시스템을 개선하기 위한 추가 연구를 제안하며, 이를 통해 더욱 효율적인 보안 솔루션을 개발할 수 있습니다.",
+  "limitations": "실험적 검증을 위한 데이터셋, 시뮬레이터, 메트릭에 대한 구체적인 정보가 부족합니다.",
+  "future_work": "WSN에서 에너지 효율적 침입 탐지를 위한 향후 연구 방향으로, 에너지 소비에 영향을 미치는 다양한 요소와 에너지 절약이 중요한 다양한 응용 분야를 탐구하며, 더욱 효율적인 IDS를 개발하는 방안을 제시합니다.",
   "keywords": [
-    "Wireless Sensor Networks",
-    "Intrusion Detection System",
-    "Energy Efficiency",
-    "Security",
-    "Anomaly Detection",
-    "Signature-based Detection",
-    "Intrusion Prevention",
-    "Centralized Approach",
-    "Distributed Approach"
+    "Anomaly based detection",
+    "intrusion detection system",
+    "intrusion prevention",
+    "signature based detection",
+    "wireless sensor network",
+    "WSN",
+    "energy efficiency",
+    "IDS"
   ],
-  "obsidian_markdown": "# A survey on energy efficient intrusion detection in wireless sensor networks\n\n## One-line Summary\n본 논문은 무선 센서 네트워크에서 에너지 효율적 침입 탐지의 주요 주제를 검토하며, 기존 문제를 요약하고 개선 방안을 제시합니다.\n\n## Problem\n무선 센서 네트워크는 제한된 자원과 에너지를 가지고 있으며, 이러한 네트워크의 보안을 유지하는 것은 주요한 과제입니다.\n\n## Key Idea\n에너지 효율적인 침입 탐지 시스템을 통해 무선 센서 네트워크의 보안을 강화하고 에너지 소모를 최소화하는 것입니다.\n\n## Method\n기존 연구를 검토하여 침입 탐지의 기본 개념, 에너지 절약 메커니즘, 그리고 침입 탐지 시스템의 다양한 아키텍처 모델을 분석합니다.\n\n## Experiment\nN/A\n\n## Results\n침입 탐지 시스템의 세 가지 주요 범주(중앙 집중식 접근법, 분산 접근법, 혁신적 접근법)와 그 성능 평가를 통해 에너지 효율적인 침입 탐지에 대한 비교 분석을 제공합니다.\n\n## Contributions\n- 무선 센서 네트워크에서 에너지 효율적인 침입 탐지의 주요 주제를 체계적으로 검토합니다.\n- 기존 침입 탐지 시스템의 세 가지 범주를 분류하고 비교 분석합니다.\n- 침입 탐지 시스템의 에너지 소비에 영향을 미치는 다양한 요인을 설명합니다.\n\n## Limitations\n이 검토 논문은 실험 데이터셋이나 시뮬레이터를 사용한 실험 결과를 제공하지 않으며, 특정 환경에서의 결과는 일반화할 수 없을 수 있습니다.\n\n## Future Work\n다양한 응용 분야에서 에너지 효율적인 침입 탐지 시스템을 개선하기 위한 추가 연구를 제안하며, 이를 통해 더욱 효율적인 보안 솔루션을 개발할 수 있습니다.\n\n## Keywords\nWireless Sensor Networks, Intrusion Detection System, Energy Efficiency, Security, Anomaly Detection, Signature-based Detection, Intrusion Prevention, Centralized Approach, Distributed Approach\n"
+  "obsidian_markdown": "# A survey on energy efficient intrusion detection in wireless sensor networks\n\n## One-line Summary\n이 논문은 WSN에서 에너지 효율적 침입 탐지의 기존 접근 방식과 미래 방향을 분석하며, 에너지 절약과 탐지 정확성을 균형 있게 유지하는 방법에 대해 설명합니다.\n\n## Problem\nWSN의 자원 제약으로 인해 에너지 효율적인 침입 탐지가 필요하며, 이는 네트워크의 보안을 강화하는 데 중요합니다.\n\n## Key Idea\nWSN에서 에너지 효율적인 침입 탐지 시스템(IDS)을 설계하여 에너지 절약을 최적화하면서 탐지 정확성을 유지하는 것입니다.\n\n## Method\nWSN에서의 침입 탐지의 기본 개념, 에너지 절약 메커니즘, 기존 접근 방식의 분류 및 비교 분석을 통해 연구합니다.\n\n## Experiment\nN/A\n\n## Results\n중앙 집중식, 분산식, 혁신적 접근 방식으로 WSN을 위한 IDS 접근 방식을 분류하고, 에너지 효율성을 기준으로 비교 분석을 수행했습니다.\n\n## Contributions\n- WSN에서 에너지 효율적 침입 탐지를 위한 기본 개념과 접근 방식에 대한 종합적인 조사를 제공합니다.\n- 기존 에너지 효율적 침입 탐지 접근 방식을 세 가지 주요 범주로 분류하고 비교 분석을 수행합니다.\n- WSN에서 침입 탐지 시스템의 미래 방향에 대한 통찰을 제공합니다.\n\n## Limitations\n실험적 검증을 위한 데이터셋, 시뮬레이터, 메트릭에 대한 구체적인 정보가 부족합니다.\n\n## Future Work\nWSN에서 에너지 효율적 침입 탐지를 위한 향후 연구 방향으로, 에너지 소비에 영향을 미치는 다양한 요소와 에너지 절약이 중요한 다양한 응용 분야를 탐구하며, 더욱 효율적인 IDS를 개발하는 방안을 제시합니다.\n\n## Keywords\nAnomaly based detection, intrusion detection system, intrusion prevention, signature based detection, wireless sensor network, WSN, energy efficiency, IDS\n"
 }

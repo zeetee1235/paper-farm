@@ -1,27 +1,26 @@
 {
   "title": "LEADER: Low Overhead Rank Attack Detection for Securing RPL based IoT",
-  "summary": "이 논문은 IoT 환경에서 RPL 기반 네트워크를 보호하기 위한 저오버헤드 순위 공격 탐지 방식을 제안한다.",
-  "problem": "RPL(Routing Protocol for Low power and Lossy Networks)에서 순위 공격이 네트워크에 심각한 영향을 미치며 가짜 토폴로지를 생성한다는 문제를 다룬다.",
-  "key_idea": "RPL의 비저장 모드에서 증가 및 감소된 순위 공격을 탐지하기 위한 저오버헤드 순위 공격 탐지 방식을 제안한다.",
-  "method": "RPL의 DODAG 형성 알고리즘을 수정하여 탐지 모듈을 분산 및 중앙 집중식으로 실행하고, DAO 제어 메시지를 수정하며 HMAC-LOCHA를 사용하여 제어 메시지의 무결성 및 인증을 검증한다.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: Contiki 기반 Cooja 시뮬레이터\n- **Metric**: 탐지 정확도, 잘못된 양성/음성 비율, 에너지 소비",
-  "results": "제안된 방식은 기존 방식에 비해 탐지 정확도와 에너지 효율성이 뛰어나며, 잘못된 양성/음성 비율도 개선된다.",
+  "summary": "이 논문은 IoT 환경에서 RPL의 랭크 공격에 대한 저 오버헤드 탐지 방식을 제안하여 네트워크의 무결성과 진위성을 보장한다.",
+  "problem": "RPL에서 발견된 보안 취약점 중 랭크 공격은 네트워크에 심각한 영향을 미치며, 이를 대처하기 위한 방법이 필요하다.",
+  "key_idea": "RPL의 DODAG 형성 알고리즘을 수정하여 랭크 공격을 탐지하고, DAO 제어 메시지를 수정하여 저 오버헤드를 유지하는 방식을 제안한다.",
+  "method": "DODAG 형성 알고리즘의 분산 및 중앙화된 모듈과 HMAC-LOCHA를 사용한 제어 메시지의 무결성 및 진위성 확인.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: Contiki-based Cooja simulator\n- **Metric**: 탐지 정확도, 잘못된 양성/음성 비율, 에너지 소비, 탐지 지연시간, 패킷 전달 비율",
+  "results": "제안된 방식이 기존 방식에 비해 탐지 정확도와 에너지 효율성이 뛰어나며, 허용 가능한 네트워크 성능을 유지한다.",
   "contributions": [
-    "RPL의 DODAG 형성 알고리즘을 수정하여 순위 공격을 탐지하는 저오버헤드 방식을 제안함",
-    "DAO 제어 메시지를 수정하여 오버헤드를 줄임",
-    "HMAC-LOCHA를 사용하여 제어 메시지의 무결성과 인증을 검증함"
+    "RPL의 랭크 공격을 탐지하는 저 오버헤드 방식을 제안함.",
+    "DAO 제어 메시지를 수정하여 탐지 방식의 오버헤드를 낮춤.",
+    "HMAC-LOCHA를 사용하여 제어 메시지의 무결성과 진위성을 검증함."
   ],
-  "limitations": "실제 환경에서의 성능 평가가 이루어지지 않았으며, 특정 시나리오에서의 탐지 정확도가 추가로 검증되어야 함.",
-  "future_work": "실제 IoT 환경에서의 성능 평가와 다양한 시나리오에서의 탐지 정확도를 더욱 검증해야 한다.",
+  "limitations": "실제 네트워크 환경에서의 검증 및 다양한 공격 시나리오에 대한 확장성을 검증하지 않음.",
+  "future_work": "실제 네트워크 환경에서의 평가, 다양한 공격 시나리오에 대한 확장성 검증, 에너지 소비 최적화",
   "keywords": [
     "RPL",
-    "IoT",
-    "Rank Attack",
     "DODAG",
-    "Low Overhead",
-    "HMAC-LOCHA",
-    "Contiki-based Cooja",
-    "Simulation"
+    "rank attacks",
+    "integrity",
+    "authenticity",
+    "Cooja",
+    "Contiki"
   ],
-  "obsidian_markdown": "# LEADER: Low Overhead Rank Attack Detection for Securing RPL based IoT\n\n## One-line Summary\n이 논문은 IoT 환경에서 RPL 기반 네트워크를 보호하기 위한 저오버헤드 순위 공격 탐지 방식을 제안한다.\n\n## Problem\nRPL(Routing Protocol for Low power and Lossy Networks)에서 순위 공격이 네트워크에 심각한 영향을 미치며 가짜 토폴로지를 생성한다는 문제를 다룬다.\n\n## Key Idea\nRPL의 비저장 모드에서 증가 및 감소된 순위 공격을 탐지하기 위한 저오버헤드 순위 공격 탐지 방식을 제안한다.\n\n## Method\nRPL의 DODAG 형성 알고리즘을 수정하여 탐지 모듈을 분산 및 중앙 집중식으로 실행하고, DAO 제어 메시지를 수정하며 HMAC-LOCHA를 사용하여 제어 메시지의 무결성 및 인증을 검증한다.\n\n## Experiment\n- **Simulator**: Contiki 기반 Cooja 시뮬레이터\n- **Metric**: 탐지 정확도, 잘못된 양성/음성 비율, 에너지 소비\n\n## Results\n제안된 방식은 기존 방식에 비해 탐지 정확도와 에너지 효율성이 뛰어나며, 잘못된 양성/음성 비율도 개선된다.\n\n## Contributions\n- RPL의 DODAG 형성 알고리즘을 수정하여 순위 공격을 탐지하는 저오버헤드 방식을 제안함\n- DAO 제어 메시지를 수정하여 오버헤드를 줄임\n- HMAC-LOCHA를 사용하여 제어 메시지의 무결성과 인증을 검증함\n\n## Limitations\n실제 환경에서의 성능 평가가 이루어지지 않았으며, 특정 시나리오에서의 탐지 정확도가 추가로 검증되어야 함.\n\n## Future Work\n실제 IoT 환경에서의 성능 평가와 다양한 시나리오에서의 탐지 정확도를 더욱 검증해야 한다.\n\n## Keywords\nRPL, IoT, Rank Attack, DODAG, Low Overhead, HMAC-LOCHA, Contiki-based Cooja, Simulation\n"
+  "obsidian_markdown": "# LEADER: Low Overhead Rank Attack Detection for Securing RPL based IoT\n\n## One-line Summary\n이 논문은 IoT 환경에서 RPL의 랭크 공격에 대한 저 오버헤드 탐지 방식을 제안하여 네트워크의 무결성과 진위성을 보장한다.\n\n## Problem\nRPL에서 발견된 보안 취약점 중 랭크 공격은 네트워크에 심각한 영향을 미치며, 이를 대처하기 위한 방법이 필요하다.\n\n## Key Idea\nRPL의 DODAG 형성 알고리즘을 수정하여 랭크 공격을 탐지하고, DAO 제어 메시지를 수정하여 저 오버헤드를 유지하는 방식을 제안한다.\n\n## Method\nDODAG 형성 알고리즘의 분산 및 중앙화된 모듈과 HMAC-LOCHA를 사용한 제어 메시지의 무결성 및 진위성 확인.\n\n## Experiment\n- **Simulator**: Contiki-based Cooja simulator\n- **Metric**: 탐지 정확도, 잘못된 양성/음성 비율, 에너지 소비, 탐지 지연시간, 패킷 전달 비율\n\n## Results\n제안된 방식이 기존 방식에 비해 탐지 정확도와 에너지 효율성이 뛰어나며, 허용 가능한 네트워크 성능을 유지한다.\n\n## Contributions\n- RPL의 랭크 공격을 탐지하는 저 오버헤드 방식을 제안함.\n- DAO 제어 메시지를 수정하여 탐지 방식의 오버헤드를 낮춤.\n- HMAC-LOCHA를 사용하여 제어 메시지의 무결성과 진위성을 검증함.\n\n## Limitations\n실제 네트워크 환경에서의 검증 및 다양한 공격 시나리오에 대한 확장성을 검증하지 않음.\n\n## Future Work\n실제 네트워크 환경에서의 평가, 다양한 공격 시나리오에 대한 확장성 검증, 에너지 소비 최적화\n\n## Keywords\nRPL, DODAG, rank attacks, integrity, authenticity, Cooja, Contiki\n"
 }

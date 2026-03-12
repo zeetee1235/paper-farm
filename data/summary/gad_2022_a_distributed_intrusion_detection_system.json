@@ -1,26 +1,27 @@
 {
   "title": "A Distributed Intrusion Detection System using Machine Learning for IoT based on ToN-IoT Dataset",
-  "summary": "이 논문은 ToN-IoT 데이터셋을 기반으로 IoT 환경에서 분산된 기계 학습 기반 침입 탐지 시스템(DIDS)을 제안하여 IoT 네트워크의 보안을 강화합니다.",
-  "problem": "IoT 네트워크가 인기를 얻으면서 보안 위협에 취약해지고 있으며, 특히 새로운 공격 유형에 대한 침입 탐지 시스템(IDS)이 필요합니다.",
-  "key_idea": "ToN-IoT 데이터셋을 사용한 기계 학습 기반의 분산 침입 탐지 시스템을 제안하여 모든 IoT 시스템 계층에서 수집된 데이터를 활용합니다.",
-  "method": "기계 학습(Machine Learning) 알고리즘을 사용하여 ToN-IoT 데이터셋의 각 계층별 파티션에서 다양한 기법을 테스트합니다.",
-  "experiment": "- **Dataset**: ToN-IoT 데이터셋\n- **Simulator**: N/A\n- **Metric**: N/A",
-  "results": "ToN-IoT 데이터셋에서 수집된 다양한 계층의 데이터를 기반으로 한 새로운 모델이 기존의 기계 학습 기반 침입 탐지 시스템에 비해 더 나은 성능을 보입니다.",
+  "summary": "이 논문은 ToN-IoT 데이터셋을 기반으로 IoT 환경에서 분산 침입 탐지 시스템을 제안하며, 여러 ML 접근 방식을 통해 공격 탐지를 향상시킨다.",
+  "problem": "IoT 네트워크가 보안 침해에 점점 더 취약해지고, 기존의 오래된 데이터셋을 사용한 기존 연구가 최신의 공격에 대응하지 못한다는 문제.",
+  "key_idea": "ToN-IoT 데이터셋을 사용하여 새롭게 제안된 분산 탐지 시스템이 IoT 환경에서 공격을 탐지하고 악성 발생을 완화하는 데 초점을 맞춘다.",
+  "method": "Chi2 기법과 상관 행렬을 통한 특징 선택, SMOTE 방법을 이용한 클래스 균형 조정, 그리고 XGBoost 등의 ML 접근법을 테스트하여 이진 및 다중 클래스 분류 문제를 해결한다.",
+  "experiment": "- **Dataset**: ToN-IoT 데이터셋\n- **Simulator**: N/A\n- **Metric**: 공격 탐지 성능",
+  "results": "XGBoost 알고리즘이 제안된 모델에서 다른 ML 알고리즘들보다 우수한 성능을 보인다.",
   "contributions": [
-    "ToN-IoT 데이터셋을 사용한 최초의 분산 침입 탐지 모델 제안",
-    "기계 학습 알고리즘을 통한 IoT 계층별 공격 탐지",
-    "신뢰성 높은 IoT 보안 솔루션 제공"
+    "ToN-IoT 데이터셋을 사용한 최초의 모델 제안",
+    "다양한 ML 방법을 통한 공격 탐지 모델 개발",
+    "Chi2 및 상관 행렬을 이용한 효율적인 특징 선택"
   ],
-  "limitations": "실험에서 사용된 메트릭과 시뮬레이터에 대한 정보가 부족합니다.",
-  "future_work": "다른 최신 공격 유형을 포함한 데이터셋 확장, 실제 IoT 환경에서의 모델 검증, 메트릭 및 시뮬레이터 사용을 포함한 실험 확장",
+  "limitations": "ToN-IoT 데이터셋이 사용된 환경의 특정성 때문에 다른 IoT 시스템에서의 적용 가능성에 제한이 있을 수 있다.",
+  "future_work": "다양한 IoT 환경에서의 모델의 일반화 가능성을 탐구하고, 실시간 데이터 처리 능력을 향상시키는 방안을 연구할 것을 제안한다.",
   "keywords": [
-    "IoT",
-    "Intrusion Detection System",
-    "Machine Learning",
-    "Distributed Detection System",
-    "ToN-IoT Dataset",
-    "Cybersecurity",
-    "ML Algorithms"
+    "Intrusion detection system (IDS)",
+    "internet of things (IoT)",
+    "ToN-IoT dataset",
+    "machine learning (ML)",
+    "XGBoost",
+    "feature selection",
+    "SMOTE",
+    "binary and multi-class classification"
   ],
-  "obsidian_markdown": "# A Distributed Intrusion Detection System using Machine Learning for IoT based on ToN-IoT Dataset\n\n## One-line Summary\n이 논문은 ToN-IoT 데이터셋을 기반으로 IoT 환경에서 분산된 기계 학습 기반 침입 탐지 시스템(DIDS)을 제안하여 IoT 네트워크의 보안을 강화합니다.\n\n## Problem\nIoT 네트워크가 인기를 얻으면서 보안 위협에 취약해지고 있으며, 특히 새로운 공격 유형에 대한 침입 탐지 시스템(IDS)이 필요합니다.\n\n## Key Idea\nToN-IoT 데이터셋을 사용한 기계 학습 기반의 분산 침입 탐지 시스템을 제안하여 모든 IoT 시스템 계층에서 수집된 데이터를 활용합니다.\n\n## Method\n기계 학습(Machine Learning) 알고리즘을 사용하여 ToN-IoT 데이터셋의 각 계층별 파티션에서 다양한 기법을 테스트합니다.\n\n## Experiment\n- **Dataset**: ToN-IoT 데이터셋\n\n## Results\nToN-IoT 데이터셋에서 수집된 다양한 계층의 데이터를 기반으로 한 새로운 모델이 기존의 기계 학습 기반 침입 탐지 시스템에 비해 더 나은 성능을 보입니다.\n\n## Contributions\n- ToN-IoT 데이터셋을 사용한 최초의 분산 침입 탐지 모델 제안\n- 기계 학습 알고리즘을 통한 IoT 계층별 공격 탐지\n- 신뢰성 높은 IoT 보안 솔루션 제공\n\n## Limitations\n실험에서 사용된 메트릭과 시뮬레이터에 대한 정보가 부족합니다.\n\n## Future Work\n다른 최신 공격 유형을 포함한 데이터셋 확장, 실제 IoT 환경에서의 모델 검증, 메트릭 및 시뮬레이터 사용을 포함한 실험 확장\n\n## Keywords\nIoT, Intrusion Detection System, Machine Learning, Distributed Detection System, ToN-IoT Dataset, Cybersecurity, ML Algorithms\n"
+  "obsidian_markdown": "# A Distributed Intrusion Detection System using Machine Learning for IoT based on ToN-IoT Dataset\n\n## One-line Summary\n이 논문은 ToN-IoT 데이터셋을 기반으로 IoT 환경에서 분산 침입 탐지 시스템을 제안하며, 여러 ML 접근 방식을 통해 공격 탐지를 향상시킨다.\n\n## Problem\nIoT 네트워크가 보안 침해에 점점 더 취약해지고, 기존의 오래된 데이터셋을 사용한 기존 연구가 최신의 공격에 대응하지 못한다는 문제.\n\n## Key Idea\nToN-IoT 데이터셋을 사용하여 새롭게 제안된 분산 탐지 시스템이 IoT 환경에서 공격을 탐지하고 악성 발생을 완화하는 데 초점을 맞춘다.\n\n## Method\nChi2 기법과 상관 행렬을 통한 특징 선택, SMOTE 방법을 이용한 클래스 균형 조정, 그리고 XGBoost 등의 ML 접근법을 테스트하여 이진 및 다중 클래스 분류 문제를 해결한다.\n\n## Experiment\n- **Dataset**: ToN-IoT 데이터셋\n- **Metric**: 공격 탐지 성능\n\n## Results\nXGBoost 알고리즘이 제안된 모델에서 다른 ML 알고리즘들보다 우수한 성능을 보인다.\n\n## Contributions\n- ToN-IoT 데이터셋을 사용한 최초의 모델 제안\n- 다양한 ML 방법을 통한 공격 탐지 모델 개발\n- Chi2 및 상관 행렬을 이용한 효율적인 특징 선택\n\n## Limitations\nToN-IoT 데이터셋이 사용된 환경의 특정성 때문에 다른 IoT 시스템에서의 적용 가능성에 제한이 있을 수 있다.\n\n## Future Work\n다양한 IoT 환경에서의 모델의 일반화 가능성을 탐구하고, 실시간 데이터 처리 능력을 향상시키는 방안을 연구할 것을 제안한다.\n\n## Keywords\nIntrusion detection system (IDS), internet of things (IoT), ToN-IoT dataset, machine learning (ML), XGBoost, feature selection, SMOTE, binary and multi-class classification\n"
 }

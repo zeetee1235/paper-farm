@@ -1,26 +1,26 @@
 {
   "title": "RPL Attack Detection and Prevention in the Internet of Things Networks Using a GRU Based Deep Learning",
-  "summary": "이 연구는 RPL 프로토콜에 대한 HF 공격을 예측하고 방지하기 위해 GRU 기반 딥러닝 모델을 제안하여 IoT 네트워크의 보안을 강화합니다.",
-  "problem": "RPL 프로토콜은 IoT 네트워크에서 중요한 역할을 하지만, 여러 가지 공격에 취약하여 데이터 전송 및 네트워크 토폴로지에 큰 손상을 줍니다.",
-  "key_idea": "Gated Recurrent Unit (GRU) 기반 딥러닝 모델을 사용하여 RPL 프로토콜에 대한 HF 공격을 예측하고 방지하는 것입니다.",
-  "method": "GRU 기반 딥러닝 모델을 제안하고, SVM 및 Logistic Regression 방법과 비교하여 다양한 노드의 전력 상태 및 총 에너지 소비를 고려하여 실험을 수행합니다.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 소스 효율성 및 IoT 보안 성능",
-  "results": "모델이 소스 효율성과 IoT 보안 측면에서 약속된 성능을 보여주며, 문헌에 비해 HF 공격 탐지의 오류율이 낮습니다.",
+  "summary": "이 연구는 IoT 네트워크에서 RPL 프로토콜에 대한 HF 공격을 GRU 기반 딥러닝 모델을 사용하여 탐지 및 방지하는 것을 제안합니다.",
+  "problem": "IoT 네트워크에서 RPL 프로토콜이 HF 공격과 같은 다양한 공격에 노출되어 자원 소모와 안전성 문제를 야기합니다.",
+  "key_idea": "GRU(게이티드 리커런트 유닛) 네트워크 모델을 사용하여 RPL 프로토콜에 대한 HF 공격을 예측하고 방지하는 것입니다.",
+  "method": "GRU 기반 딥러닝 모델을 사용하여 HF 공격을 탐지하고 방지하며, SVM(서포트 벡터 머신)과 로지스틱 회귀 방법과 비교합니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 소스 효율성 및 IoT 보안 측면에서 모델의 성능을 평가합니다.",
+  "results": "모델은 소스 효율성과 IoT 보안 측면에서 예상된 성능을 보여주며, 문헌 연구에 비해 HF 공격 탐지에서 낮은 오류율을 달성했습니다.",
   "contributions": [
-    "RPL 프로토콜에 대한 HF 공격을 탐지 및 방지하기 위한 GRU 기반 딥러닝 모델을 제안함",
-    "GRU 모델의 성능을 SVM 및 Logistic Regression 방법과 비교하여 평가함",
-    "노드의 전력 상태 및 총 에너지 소비를 고려하여 실험을 수행함"
+    "GRU 기반 딥러닝 모델을 사용한 RPL 공격 탐지 및 방지 방법을 제안합니다.",
+    "SVM 및 로지스틱 회귀와의 성능 비교를 통해 모델의 효과를 입증합니다.",
+    "네트워크 노드의 다양한 전력 상태와 총 에너지 소비를 고려한 실험을 수행합니다."
   ],
-  "limitations": "노드의 메모리, 처리 및 에너지 소비의 제약을 고려하지만, 실제 네트워크 환경에서의 성능은 검증되지 않았습니다.",
-  "future_work": "더 많은 실제 데이터셋을 사용한 실험 및 다른 유형의 공격에 대한 모델의 적용을 탐구함",
+  "limitations": "이 연구는 특정 데이터셋과 시뮬레이터를 사용하지 않았으며, 더 많은 공격 유형에 대한 일반화 가능성에 대한 제한이 있을 수 있습니다.",
+  "future_work": "다른 공격 유형에 대한 모델의 일반화 가능성을 조사하고, 추가적인 성능 메트릭을 포함한 더 광범위한 실험을 수행하는 것을 제안합니다.",
   "keywords": [
+    "deep learning",
+    "gated recurrent unit",
+    "hello flooding",
+    "Internet of Things",
     "RPL",
-    "IoT",
-    "GRU",
-    "HF Attack",
-    "Deep Learning",
-    "SVM",
-    "Logistic Regression"
+    "attack detection",
+    "security"
   ],
-  "obsidian_markdown": "# RPL Attack Detection and Prevention in the Internet of Things Networks Using a GRU Based Deep Learning\n\n## One-line Summary\n이 연구는 RPL 프로토콜에 대한 HF 공격을 예측하고 방지하기 위해 GRU 기반 딥러닝 모델을 제안하여 IoT 네트워크의 보안을 강화합니다.\n\n## Problem\nRPL 프로토콜은 IoT 네트워크에서 중요한 역할을 하지만, 여러 가지 공격에 취약하여 데이터 전송 및 네트워크 토폴로지에 큰 손상을 줍니다.\n\n## Key Idea\nGated Recurrent Unit (GRU) 기반 딥러닝 모델을 사용하여 RPL 프로토콜에 대한 HF 공격을 예측하고 방지하는 것입니다.\n\n## Method\nGRU 기반 딥러닝 모델을 제안하고, SVM 및 Logistic Regression 방법과 비교하여 다양한 노드의 전력 상태 및 총 에너지 소비를 고려하여 실험을 수행합니다.\n\n## Experiment\n- **Metric**: 소스 효율성 및 IoT 보안 성능\n\n## Results\n모델이 소스 효율성과 IoT 보안 측면에서 약속된 성능을 보여주며, 문헌에 비해 HF 공격 탐지의 오류율이 낮습니다.\n\n## Contributions\n- RPL 프로토콜에 대한 HF 공격을 탐지 및 방지하기 위한 GRU 기반 딥러닝 모델을 제안함\n- GRU 모델의 성능을 SVM 및 Logistic Regression 방법과 비교하여 평가함\n- 노드의 전력 상태 및 총 에너지 소비를 고려하여 실험을 수행함\n\n## Limitations\n노드의 메모리, 처리 및 에너지 소비의 제약을 고려하지만, 실제 네트워크 환경에서의 성능은 검증되지 않았습니다.\n\n## Future Work\n더 많은 실제 데이터셋을 사용한 실험 및 다른 유형의 공격에 대한 모델의 적용을 탐구함\n\n## Keywords\nRPL, IoT, GRU, HF Attack, Deep Learning, SVM, Logistic Regression\n"
+  "obsidian_markdown": "# RPL Attack Detection and Prevention in the Internet of Things Networks Using a GRU Based Deep Learning\n\n## One-line Summary\n이 연구는 IoT 네트워크에서 RPL 프로토콜에 대한 HF 공격을 GRU 기반 딥러닝 모델을 사용하여 탐지 및 방지하는 것을 제안합니다.\n\n## Problem\nIoT 네트워크에서 RPL 프로토콜이 HF 공격과 같은 다양한 공격에 노출되어 자원 소모와 안전성 문제를 야기합니다.\n\n## Key Idea\nGRU(게이티드 리커런트 유닛) 네트워크 모델을 사용하여 RPL 프로토콜에 대한 HF 공격을 예측하고 방지하는 것입니다.\n\n## Method\nGRU 기반 딥러닝 모델을 사용하여 HF 공격을 탐지하고 방지하며, SVM(서포트 벡터 머신)과 로지스틱 회귀 방법과 비교합니다.\n\n## Experiment\n- **Metric**: 소스 효율성 및 IoT 보안 측면에서 모델의 성능을 평가합니다.\n\n## Results\n모델은 소스 효율성과 IoT 보안 측면에서 예상된 성능을 보여주며, 문헌 연구에 비해 HF 공격 탐지에서 낮은 오류율을 달성했습니다.\n\n## Contributions\n- GRU 기반 딥러닝 모델을 사용한 RPL 공격 탐지 및 방지 방법을 제안합니다.\n- SVM 및 로지스틱 회귀와의 성능 비교를 통해 모델의 효과를 입증합니다.\n- 네트워크 노드의 다양한 전력 상태와 총 에너지 소비를 고려한 실험을 수행합니다.\n\n## Limitations\n이 연구는 특정 데이터셋과 시뮬레이터를 사용하지 않았으며, 더 많은 공격 유형에 대한 일반화 가능성에 대한 제한이 있을 수 있습니다.\n\n## Future Work\n다른 공격 유형에 대한 모델의 일반화 가능성을 조사하고, 추가적인 성능 메트릭을 포함한 더 광범위한 실험을 수행하는 것을 제안합니다.\n\n## Keywords\ndeep learning, gated recurrent unit, hello flooding, Internet of Things, RPL, attack detection, security\n"
 }

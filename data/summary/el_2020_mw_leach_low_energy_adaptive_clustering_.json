@@ -1,25 +1,25 @@
 {
   "title": "MW‐LEACH: Low energy adaptive clustering hierarchy approach for WSN",
-  "summary": "이 연구에서는 낮은 에너지 소모를 위한 적응형 클러스터 계층(MW-LEACH) 프로토콜을 제안하여 센서 네트워크의 성능을 개선하고, 에너지 소모를 줄이며 네트워크 수명을 연장하는 것을 목표로 합니다.",
-  "problem": "센서 노드의 배터리는 대부분 충전 또는 교체하기 어렵고, 전통적인 노드 배치는 복잡하고 고 에너지 수요로 인해 비효율적입니다. 이는 적절한 클러스터 헤드(초기 선정)와 에너지 소모를 최적화하여 네트워크 수명을 연장하는 도전 과제를 제기합니다.",
-  "key_idea": "MW-LEACH 프로토콜은 남은 에너지와 클러스터 헤드 간의 거리를 기반으로 클러스터 헤드를 선정하고, 초기 세트 내의 높은 남은 에너지를 가진 노드들을 밀집 중심에 가깝게 선택합니다. 이를 통해 에너지 소모를 최소화하고 네트워크 수명을 연장합니다.",
-  "method": "제안된 MW-LEACH 프로토콜은 남은 에너지와 노드 간 거리를 기반으로 클러스터 헤드를 선정하며, 초기 세트 내의 높은 남은 에너지 노드들을 중심에 가깝게 선택하는 알고리즘을 활용합니다.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: 실험 시뮬레이션\n- **Metric**: 처리량, 에너지 소비, 패킷 전달율, 네트워크 수명, 대기 시간",
-  "results": "제안된 방법은 BeeCluster, O-LEACH, LEACH 등의 현존하는 프로토콜에 비해 처리량, 에너지 소비, 패킷 전달율, 네트워크 수명, 대기 시간 등의 성능 지표에서 우수한 성능을 보였습니다.",
+  "summary": "이 논문은 와이어러스 센서 네트워크(WSN)에서 저전력 적응 클러스터링 계층(MW-LEACH) 프로토콜을 제안하여 전력 소비를 줄이고 네트워크 수명을 연장하는 방법을 제시합니다.",
+  "problem": "WSN의 클러스터 헤드(주요 노드) 선택 문제와 전력 소비의 최적화, 그리고 네트워크 수명 연장이 필요한 문제를 다룹니다.",
+  "key_idea": "클러스터 헤드는 잔여 에너지와 다른 노드들과의 거리, 그리고 최적의 멤버 노드 수를 기반으로 선택하여 클러스터의 초기 후보 세트를 형성합니다.",
+  "method": "MW-LEACH는 주요 노드를 선택할 때 잔여 에너지와 노드 간의 거리를 고려하는 중앙집중식 클러스터 기반 접근 방식을 사용합니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: 시뮬레이션 설정\n- **Metric**: 처리량, 에너지 소비, 패킷 전달, 네트워크 수명, 지연",
+  "results": "BeeCluster, O-LEACH, LEACH와 같은 최첨단 프로토콜에 비해 처리량, 에너지 소비, 패킷 전달, 네트워크 수명, 지연성능 지표에서 우수한 성능을 발휘했습니다.",
   "contributions": [
-    "MW-LEACH 프로토콜의 제안",
-    "에너지 소모 최소화와 네트워크 수명 연장",
-    "클러스터 헤드 선정을 위한 새로운 방법론 제시"
+    "저전력 적응 클러스터링 계층(MW-LEACH) 프로토콜을 제안",
+    "주요 노드 선택 시 잔여 에너지와 노드 간 거리를 고려한 새로운 방법 제시",
+    "시뮬레이션 평가에서 최첨단 프로토콜을 능가하는 성능 향상"
   ],
-  "limitations": "실제 센서 테스트베드와 특정 응용 도메인에서의 네트워크 시나리오 구현이 필요합니다.",
-  "future_work": "실제 센서 테스트베드와 특정 응용 도메인에서의 네트워크 시나리오 구현을 통한 추가 연구",
+  "limitations": "실제 센서 테스트베드에서의 네트워크 시나리오를 구현하지 않은 점입니다.",
+  "future_work": "특정 응용 도메인의 실제 센서 테스트베드에서의 네트워크 시나리오 구현이 미래 연구 방향입니다.",
   "keywords": [
-    "MW-LEACH",
     "WSN",
+    "MW-LEACH",
     "clustering",
-    "energy efficiency",
+    "energy consumption",
     "network lifetime",
-    "performance metrics"
+    "sensor networks"
   ],
-  "obsidian_markdown": "# MW‐LEACH: Low energy adaptive clustering hierarchy approach for WSN\n\n## One-line Summary\n이 연구에서는 낮은 에너지 소모를 위한 적응형 클러스터 계층(MW-LEACH) 프로토콜을 제안하여 센서 네트워크의 성능을 개선하고, 에너지 소모를 줄이며 네트워크 수명을 연장하는 것을 목표로 합니다.\n\n## Problem\n센서 노드의 배터리는 대부분 충전 또는 교체하기 어렵고, 전통적인 노드 배치는 복잡하고 고 에너지 수요로 인해 비효율적입니다. 이는 적절한 클러스터 헤드(초기 선정)와 에너지 소모를 최적화하여 네트워크 수명을 연장하는 도전 과제를 제기합니다.\n\n## Key Idea\nMW-LEACH 프로토콜은 남은 에너지와 클러스터 헤드 간의 거리를 기반으로 클러스터 헤드를 선정하고, 초기 세트 내의 높은 남은 에너지를 가진 노드들을 밀집 중심에 가깝게 선택합니다. 이를 통해 에너지 소모를 최소화하고 네트워크 수명을 연장합니다.\n\n## Method\n제안된 MW-LEACH 프로토콜은 남은 에너지와 노드 간 거리를 기반으로 클러스터 헤드를 선정하며, 초기 세트 내의 높은 남은 에너지 노드들을 중심에 가깝게 선택하는 알고리즘을 활용합니다.\n\n## Experiment\n- **Simulator**: 실험 시뮬레이션\n- **Metric**: 처리량, 에너지 소비, 패킷 전달율, 네트워크 수명, 대기 시간\n\n## Results\n제안된 방법은 BeeCluster, O-LEACH, LEACH 등의 현존하는 프로토콜에 비해 처리량, 에너지 소비, 패킷 전달율, 네트워크 수명, 대기 시간 등의 성능 지표에서 우수한 성능을 보였습니다.\n\n## Contributions\n- MW-LEACH 프로토콜의 제안\n- 에너지 소모 최소화와 네트워크 수명 연장\n- 클러스터 헤드 선정을 위한 새로운 방법론 제시\n\n## Limitations\n실제 센서 테스트베드와 특정 응용 도메인에서의 네트워크 시나리오 구현이 필요합니다.\n\n## Future Work\n실제 센서 테스트베드와 특정 응용 도메인에서의 네트워크 시나리오 구현을 통한 추가 연구\n\n## Keywords\nMW-LEACH, WSN, clustering, energy efficiency, network lifetime, performance metrics\n"
+  "obsidian_markdown": "# MW‐LEACH: Low energy adaptive clustering hierarchy approach for WSN\n\n## One-line Summary\n이 논문은 와이어러스 센서 네트워크(WSN)에서 저전력 적응 클러스터링 계층(MW-LEACH) 프로토콜을 제안하여 전력 소비를 줄이고 네트워크 수명을 연장하는 방법을 제시합니다.\n\n## Problem\nWSN의 클러스터 헤드(주요 노드) 선택 문제와 전력 소비의 최적화, 그리고 네트워크 수명 연장이 필요한 문제를 다룹니다.\n\n## Key Idea\n클러스터 헤드는 잔여 에너지와 다른 노드들과의 거리, 그리고 최적의 멤버 노드 수를 기반으로 선택하여 클러스터의 초기 후보 세트를 형성합니다.\n\n## Method\nMW-LEACH는 주요 노드를 선택할 때 잔여 에너지와 노드 간의 거리를 고려하는 중앙집중식 클러스터 기반 접근 방식을 사용합니다.\n\n## Experiment\n- **Simulator**: 시뮬레이션 설정\n- **Metric**: 처리량, 에너지 소비, 패킷 전달, 네트워크 수명, 지연\n\n## Results\nBeeCluster, O-LEACH, LEACH와 같은 최첨단 프로토콜에 비해 처리량, 에너지 소비, 패킷 전달, 네트워크 수명, 지연성능 지표에서 우수한 성능을 발휘했습니다.\n\n## Contributions\n- 저전력 적응 클러스터링 계층(MW-LEACH) 프로토콜을 제안\n- 주요 노드 선택 시 잔여 에너지와 노드 간 거리를 고려한 새로운 방법 제시\n- 시뮬레이션 평가에서 최첨단 프로토콜을 능가하는 성능 향상\n\n## Limitations\n실제 센서 테스트베드에서의 네트워크 시나리오를 구현하지 않은 점입니다.\n\n## Future Work\n특정 응용 도메인의 실제 센서 테스트베드에서의 네트워크 시나리오 구현이 미래 연구 방향입니다.\n\n## Keywords\nWSN, MW-LEACH, clustering, energy consumption, network lifetime, sensor networks\n"
 }

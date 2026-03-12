@@ -1,27 +1,30 @@
 {
   "title": "Reputation-Based Trust Systems for Wireless Sensor Networks: A Comprehensive Review",
-  "summary": "이 논문은 무선 센서 네트워크(WSN)에서 평판 기반 신뢰 시스템의 포괄적인 검토를 제공하며, 센서 노드 간의 신뢰도를 향상시키는 동기, 잠재적인 위협, 그리고 현재의 시스템을 분류하고 비교합니다.",
-  "problem": "암호화 메커니즘만으로는 WSN을 충분히 보호할 수 없으며, 센서 노드의 탈취가 가능하여 신뢰성 문제가 발생할 수 있습니다.",
-  "key_idea": "무선 센서 네트워크에서의 신뢰도를 향상시키기 위한 평판 기반 신뢰 시스템의 통합",
-  "method": "평판 시스템의 구성 요소와 보호하는 공격 유형을 비교하며, 다섯 가지 범주로 분류: 일반적, 위치 기반, 이동성, 라우팅, 집계",
+  "summary": "이 논문은 무선 센서 네트워크(WSNs)에서 평판 기반 신뢰 시스템의 현재 상태를 철저히 분석하고, 기존 시스템의 불안정성을 분석하여 미래 디자인에 대한 기초를 마련한다.",
+  "problem": "암호화 메커니즘만으로는 무선 센서 네트워크를 완전히 보호할 수 없으며, 이는 물리적 공격에 취약하다.",
+  "key_idea": "평판 기반 신뢰 시스템을 사용하여 센서 간의 신뢰성을 강화하고, 무선 센서 네트워크 관련 및 평판 관련 공격에 대한 시스템의 탄력성을 분석한다.",
+  "method": "논문은 기존 평판 기반 신뢰 시스템의 분석을 통해 이러한 시스템의 '현황'을 조사하고, 이를 통해 미래의 공격에 강한 신뢰 시스템을 설계하는 방향을 제시한다.",
   "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: N/A",
-  "results": "신뢰 기반 시스템의 취약점을 이해하고, 현재의 시스템을 다양한 기준으로 분석하고 비교함으로써, WSN에서의 신뢰성을 향상시키는 방법을 제시",
+  "results": "기존 평판 기반 신뢰 시스템을 5가지 카테고리로 분류하고, 다양한 방법으로 비교하여 주요 구성 요소와 보호되는 공격을 분석했다.",
   "contributions": [
-    "WSN에 평판 기반 신뢰 시스템의 중요성을 설명함",
-    "WSN과 평판 시스템의 통합에 따른 잠재적 위협을 분석함",
-    "현재의 평판 기반 신뢰 시스템을 분류하고 비교함"
+    "무선 센서 네트워크에서 평판 기반 신뢰 시스템의 현재 상태에 대한 철저한 분석",
+    "기존 신뢰 시스템의 불안정성 분석",
+    "신뢰 시스템 카테고리화 및 비교를 통한 미래 디자인에 대한 기초 제공"
   ],
-  "limitations": "현재 시스템의 성능을 시뮬레이션하거나 구체적인 메트릭 데이터를 제공하지 않음",
-  "future_work": "신뢰 평가를 위한 보안 솔루션 개선 및 더 많은 실제 환경에서의 테스트",
+  "limitations": "기존 평판 기반 신뢰 시스템이 모든 잠재적인 공격에 대한 탄력성을 조사하지 않았으며, 이는 추가 연구가 필요하다.",
+  "future_work": "공격에 강한 평판 기반 신뢰 시스템을 미래에 설계하기 위한 방법론 개발과 실제 환경에서의 평가를 제안한다.",
   "keywords": [
-    "Reputation-based Trust Systems",
-    "Wireless Sensor Networks",
-    "Trust",
-    "Reputation",
-    "Node Compromise",
-    "Security",
-    "WSN Security",
-    "Trust Management"
+    "reputation",
+    "sensor networks",
+    "taxonomy",
+    "ballot",
+    "bad mouthing",
+    "newcomer",
+    "on-off",
+    "selective forwarding",
+    "sybil",
+    "spoofed data",
+    "replay"
   ],
-  "obsidian_markdown": "# Reputation-Based Trust Systems for Wireless Sensor Networks: A Comprehensive Review\n\n## One-line Summary\n이 논문은 무선 센서 네트워크(WSN)에서 평판 기반 신뢰 시스템의 포괄적인 검토를 제공하며, 센서 노드 간의 신뢰도를 향상시키는 동기, 잠재적인 위협, 그리고 현재의 시스템을 분류하고 비교합니다.\n\n## Problem\n암호화 메커니즘만으로는 WSN을 충분히 보호할 수 없으며, 센서 노드의 탈취가 가능하여 신뢰성 문제가 발생할 수 있습니다.\n\n## Key Idea\n무선 센서 네트워크에서의 신뢰도를 향상시키기 위한 평판 기반 신뢰 시스템의 통합\n\n## Method\n평판 시스템의 구성 요소와 보호하는 공격 유형을 비교하며, 다섯 가지 범주로 분류: 일반적, 위치 기반, 이동성, 라우팅, 집계\n\n## Experiment\nN/A\n\n## Results\n신뢰 기반 시스템의 취약점을 이해하고, 현재의 시스템을 다양한 기준으로 분석하고 비교함으로써, WSN에서의 신뢰성을 향상시키는 방법을 제시\n\n## Contributions\n- WSN에 평판 기반 신뢰 시스템의 중요성을 설명함\n- WSN과 평판 시스템의 통합에 따른 잠재적 위협을 분석함\n- 현재의 평판 기반 신뢰 시스템을 분류하고 비교함\n\n## Limitations\n현재 시스템의 성능을 시뮬레이션하거나 구체적인 메트릭 데이터를 제공하지 않음\n\n## Future Work\n신뢰 평가를 위한 보안 솔루션 개선 및 더 많은 실제 환경에서의 테스트\n\n## Keywords\nReputation-based Trust Systems, Wireless Sensor Networks, Trust, Reputation, Node Compromise, Security, WSN Security, Trust Management\n"
+  "obsidian_markdown": "# Reputation-Based Trust Systems for Wireless Sensor Networks: A Comprehensive Review\n\n## One-line Summary\n이 논문은 무선 센서 네트워크(WSNs)에서 평판 기반 신뢰 시스템의 현재 상태를 철저히 분석하고, 기존 시스템의 불안정성을 분석하여 미래 디자인에 대한 기초를 마련한다.\n\n## Problem\n암호화 메커니즘만으로는 무선 센서 네트워크를 완전히 보호할 수 없으며, 이는 물리적 공격에 취약하다.\n\n## Key Idea\n평판 기반 신뢰 시스템을 사용하여 센서 간의 신뢰성을 강화하고, 무선 센서 네트워크 관련 및 평판 관련 공격에 대한 시스템의 탄력성을 분석한다.\n\n## Method\n논문은 기존 평판 기반 신뢰 시스템의 분석을 통해 이러한 시스템의 '현황'을 조사하고, 이를 통해 미래의 공격에 강한 신뢰 시스템을 설계하는 방향을 제시한다.\n\n## Experiment\nN/A\n\n## Results\n기존 평판 기반 신뢰 시스템을 5가지 카테고리로 분류하고, 다양한 방법으로 비교하여 주요 구성 요소와 보호되는 공격을 분석했다.\n\n## Contributions\n- 무선 센서 네트워크에서 평판 기반 신뢰 시스템의 현재 상태에 대한 철저한 분석\n- 기존 신뢰 시스템의 불안정성 분석\n- 신뢰 시스템 카테고리화 및 비교를 통한 미래 디자인에 대한 기초 제공\n\n## Limitations\n기존 평판 기반 신뢰 시스템이 모든 잠재적인 공격에 대한 탄력성을 조사하지 않았으며, 이는 추가 연구가 필요하다.\n\n## Future Work\n공격에 강한 평판 기반 신뢰 시스템을 미래에 설계하기 위한 방법론 개발과 실제 환경에서의 평가를 제안한다.\n\n## Keywords\nreputation, sensor networks, taxonomy, ballot, bad mouthing, newcomer, on-off, selective forwarding, sybil, spoofed data, replay\n"
 }

@@ -1,24 +1,28 @@
 {
   "title": "Secure IoT Routing: Selective Forwarding Attacks and Trust-based Defenses in RPL Network",
-  "summary": "이 논문은 RPL 네트워크에서 신뢰 기반 방어 솔루션을 제안하여 선택적 전달 공격을 감지하고 제거하는 데 초점을 맞추고 있습니다.",
-  "problem": "RPL 네트워크에서 선택적 전달 공격이 IoT 네트워크의 보안을 해치고 있으며, 전통적인 보안 솔루션은 리소스 제한된 IoT 네트워크에 직접 적용하기에는 계산적으로 비싸다는 문제가 있습니다.",
-  "key_idea": "리소스 제한된 IoT 네트워크에서 쉽게 구현할 수 있는 신뢰 기반 방어 솔루션을 제안하여 선택적 전달 공격을 감지하고 제거하는 것입니다.",
-  "method": "RPL 네트워크에서 고급 선택적 전달 공격을 설계하고 구현하고, 신뢰 기반 방어 솔루션을 제안하여 감지 및 제거를 수행합니다.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 전송된 패킷의 수, 감지 정확도, 에너지 사용량",
-  "results": "제안된 공격은 감지되지 않으면서 최대의 공격 결과를 달성할 수 있으며, 제안된 방어 솔루션은 매우 제한된 추가 에너지 사용(즉, 3.4%)로 높은 감지 정확도를 달성합니다.",
+  "summary": "이 논문은 리소스 제약 IoT 네트워크에서 RPL 네트워크에 대한 선택적 전달 공격의 세부 설계와 가벼운 신뢰 기반 방어 솔루션을 제시합니다.",
+  "problem": "RPL 네트워크에서의 선택적 전달 공격은 IoT 네트워크의 안전한 라우팅에 큰 도전 과제를 제시하며, 기존 방어 솔루션은 리소스 제약 IoT 네트워크에서 직접 적용하기에 계산적으로 무거워져 가벼운 안전 라우팅 솔루션이 급히 필요합니다.",
+  "key_idea": "선택적 전달 공격을 설계하여 유연하게 전달 패킷 유형과 비율을 선택하고, 네트워크 내 무죄한 노드를 나쁘게 말하는 것과 함께, 신뢰 기반 방어 솔루션을 제안하여 제한된 추가 에너지 사용으로 높은 감지 정확도를 달성합니다.",
+  "method": "선택적 전달 공격을 위한 고급 공격 설계 및 신뢰 기반 방어 솔루션 구현.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: 실험 결과는 선택적 전달 공격이 최대의 공격 결과를 달성하면서 감지되지 않는다는 것을 보여줍니다.\n- **Metric**: 감지 정확도 및 추가 에너지 사용",
+  "results": "설계된 공격은 최대의 공격 결과를 달성하면서 감지되지 않으며, 제안된 방어 솔루션은 3.4%의 추가 에너지 사용으로 높은 감지 정확도를 달성합니다.",
   "contributions": [
-    "RPL 네트워크에서 고급 선택적 전달 공격을 설계하고 구현",
-    "리소스 제한된 IoT 네트워크에 적합한 신뢰 기반 방어 솔루션 제안",
-    "제안된 방어 솔루션의 높은 감지 정확도와 낮은 에너지 사용을 입증"
+    "선택적 전달 공격을 위한 고급 공격 설계.",
+    "신뢰 기반 방어 솔루션을 통한 가벼운 방어 메커니즘 제안.",
+    "제한된 추가 에너지 사용으로 높은 감지 정확도 달성."
   ],
-  "limitations": "실험 환경이 실제 환경과 약간 다를 수 있으며, 다른 유형의 공격에 대한 방어 솔루션의 효과는 확인되지 않았습니다.",
-  "future_work": "다른 유형의 공격에 대한 방어 솔루션을 확장하고, 실제 환경에서의 성능을 추가로 검증하는 것을 제안합니다.",
+  "limitations": "N/A",
+  "future_work": "더욱 발전된 공격에 대한 방어 메커니즘과 더욱 효율적인 에너지 사용을 탐구할 필요가 있습니다.",
   "keywords": [
-    "selective forwarding attack",
+    "Selective forwarding attack",
     "RPL",
-    "routing security",
+    "Routing security",
     "IoT",
-    "trust-based defense"
+    "Trust",
+    "IoT routing",
+    "Network security",
+    "Trust-based defense",
+    "Resource-constrained networks"
   ],
-  "obsidian_markdown": "# Secure IoT Routing: Selective Forwarding Attacks and Trust-based Defenses in RPL Network\n\n## One-line Summary\n이 논문은 RPL 네트워크에서 신뢰 기반 방어 솔루션을 제안하여 선택적 전달 공격을 감지하고 제거하는 데 초점을 맞추고 있습니다.\n\n## Problem\nRPL 네트워크에서 선택적 전달 공격이 IoT 네트워크의 보안을 해치고 있으며, 전통적인 보안 솔루션은 리소스 제한된 IoT 네트워크에 직접 적용하기에는 계산적으로 비싸다는 문제가 있습니다.\n\n## Key Idea\n리소스 제한된 IoT 네트워크에서 쉽게 구현할 수 있는 신뢰 기반 방어 솔루션을 제안하여 선택적 전달 공격을 감지하고 제거하는 것입니다.\n\n## Method\nRPL 네트워크에서 고급 선택적 전달 공격을 설계하고 구현하고, 신뢰 기반 방어 솔루션을 제안하여 감지 및 제거를 수행합니다.\n\n## Experiment\n- **Metric**: 전송된 패킷의 수, 감지 정확도, 에너지 사용량\n\n## Results\n제안된 공격은 감지되지 않으면서 최대의 공격 결과를 달성할 수 있으며, 제안된 방어 솔루션은 매우 제한된 추가 에너지 사용(즉, 3.4%)로 높은 감지 정확도를 달성합니다.\n\n## Contributions\n- RPL 네트워크에서 고급 선택적 전달 공격을 설계하고 구현\n- 리소스 제한된 IoT 네트워크에 적합한 신뢰 기반 방어 솔루션 제안\n- 제안된 방어 솔루션의 높은 감지 정확도와 낮은 에너지 사용을 입증\n\n## Limitations\n실험 환경이 실제 환경과 약간 다를 수 있으며, 다른 유형의 공격에 대한 방어 솔루션의 효과는 확인되지 않았습니다.\n\n## Future Work\n다른 유형의 공격에 대한 방어 솔루션을 확장하고, 실제 환경에서의 성능을 추가로 검증하는 것을 제안합니다.\n\n## Keywords\nselective forwarding attack, RPL, routing security, IoT, trust-based defense\n"
+  "obsidian_markdown": "# Secure IoT Routing: Selective Forwarding Attacks and Trust-based Defenses in RPL Network\n\n## One-line Summary\n이 논문은 리소스 제약 IoT 네트워크에서 RPL 네트워크에 대한 선택적 전달 공격의 세부 설계와 가벼운 신뢰 기반 방어 솔루션을 제시합니다.\n\n## Problem\nRPL 네트워크에서의 선택적 전달 공격은 IoT 네트워크의 안전한 라우팅에 큰 도전 과제를 제시하며, 기존 방어 솔루션은 리소스 제약 IoT 네트워크에서 직접 적용하기에 계산적으로 무거워져 가벼운 안전 라우팅 솔루션이 급히 필요합니다.\n\n## Key Idea\n선택적 전달 공격을 설계하여 유연하게 전달 패킷 유형과 비율을 선택하고, 네트워크 내 무죄한 노드를 나쁘게 말하는 것과 함께, 신뢰 기반 방어 솔루션을 제안하여 제한된 추가 에너지 사용으로 높은 감지 정확도를 달성합니다.\n\n## Method\n선택적 전달 공격을 위한 고급 공격 설계 및 신뢰 기반 방어 솔루션 구현.\n\n## Experiment\n- **Simulator**: 실험 결과는 선택적 전달 공격이 최대의 공격 결과를 달성하면서 감지되지 않는다는 것을 보여줍니다.\n- **Metric**: 감지 정확도 및 추가 에너지 사용\n\n## Results\n설계된 공격은 최대의 공격 결과를 달성하면서 감지되지 않으며, 제안된 방어 솔루션은 3.4%의 추가 에너지 사용으로 높은 감지 정확도를 달성합니다.\n\n## Contributions\n- 선택적 전달 공격을 위한 고급 공격 설계.\n- 신뢰 기반 방어 솔루션을 통한 가벼운 방어 메커니즘 제안.\n- 제한된 추가 에너지 사용으로 높은 감지 정확도 달성.\n\n## Limitations\nN/A\n\n## Future Work\n더욱 발전된 공격에 대한 방어 메커니즘과 더욱 효율적인 에너지 사용을 탐구할 필요가 있습니다.\n\n## Keywords\nSelective forwarding attack, RPL, Routing security, IoT, Trust, IoT routing, Network security, Trust-based defense, Resource-constrained networks\n"
 }

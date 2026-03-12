@@ -1,26 +1,26 @@
 {
-  "title": "Muzammal 등 - 2022 - A Trust-Based Model for Secure Routing against RPL Attacks in Internet of Things",
-  "summary": "이 연구는 RPL 기반 IoT에서 신뢰 기반 모델을 사용하여 보안 라우팅을 향상시켜 랭크 및 블랙홀 공격에 대한 방어를 제공합니다.",
-  "problem": "IoT 네트워크에서 RPL은 다양한 공격에 취약하며, 이는 라우팅 보안을 향상시키기 위한 해결책이 필요합니다.",
-  "key_idea": "이 연구는 IoT 네트워크에서 RPL 라우팅 보안을 향상시키기 위해 신뢰 기반 접근 방식을 제안합니다.",
-  "method": "이 연구에서는 신뢰 모델을 사용하여 랭크 및 블랙홀 공격에 대한 방어를 제공하고, 이 모델을 RPL 라우팅 작업과 통합합니다.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: ContikiOS/Cooja\n- **Metric**: 토폴로지 안정성, 스루풋, 패킷 손실율, 전력 소비",
-  "results": "제안된 SMTrust 모델은 기존 접근 방식보다 뛰어난 성능을 보여 RPL 랭크 및 블랙홀 공격에 대한 보안을 강화하며, 네트워크 성능을 향상시킵니다.",
+  "title": "A Trust-Based Model for Secure Routing against RPL Attacks in Internet of Things",
+  "summary": "이 연구는 IoT 네트워크의 보안을 강화하기 위해 RPL 트러스트 기반 모델(SMTrust)을 제안하여 Rank 및 Blackhole 공격에 대한 방어를 강화하는 것을 기여한다.",
+  "problem": "RPL 기반 IoT 네트워크는 여러 공격에 취약하며, 특히 Rank 및 Blackhole 공격이 문제가 된다.",
+  "key_idea": "SMTrust는 특별히 선택된 트러스트 요소와 메트릭, 이동성 기반 메트릭을 포함하여 RPL의 보안을 강화한다.",
+  "method": "SMTrust는 RPL과 트러스트 기반 모델을 통합하여 Rank 및 Blackhole 공격을 방어하는 방법을 제안한다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: ContikiOS/Cooja\n- **Metric**: 토폴로지 안정성, 통신량, 패킷 손실률, 전력 소비",
+  "results": "SMTrust는 기존 접근 방식보다 46%의 토폴로지 안정성 향상, 45%의 패킷 손실률 감소, 35%의 통신량 증가, 2.3%의 전력 소비 증가를 보인다.",
   "contributions": [
-    "자원이 제한된 IoT 노드 간의 라우팅을 통한 안전한 통신 제공",
-    "자원 제한된 IoT 노드로 구성된 P2P 분산 네트워크와의 통합이 가능",
-    "IoT에서 안전하고 신뢰할 수 있으며 신뢰할 수 있는 통신을 강화"
+    "자원 제약 IoT 노드 간의 안전한 통신을 제공한다.",
+    "자원 제약 IoT 노드가 포함된 P2P 분산 네트워크에 통합이 적합하다.",
+    "IoT 내 안전하고 신뢰할 수 있으며 신뢰성 있는 통신을 강화한다."
   ],
-  "limitations": "N/A",
-  "future_work": "신뢰 기반 모델의 더 넓은 범위의 공격에 대한 확장 가능성 및 다른 IoT 응용 분야에서의 적용 가능성 탐구",
+  "limitations": "이동성을 충분히 고려하지 않은 기존 트러스트 기반 솔루션의 부족함",
+  "future_work": "자원 이용 최적화를 고려한 RPL 라우팅 공격에 대한 트러스트 기반 보안 방법을 탐구한다.",
   "keywords": [
-    "IoT",
-    "RPL",
-    "trust-based",
-    "secure routing",
-    "Rank attack",
-    "Blackhole attack",
-    "SMTrust"
+    "internet of things",
+    "IoT security",
+    "trust",
+    "RPL attacks",
+    "routing attacks",
+    "rank",
+    "blackhole"
   ],
-  "obsidian_markdown": "# Muzammal 등 - 2022 - A Trust-Based Model for Secure Routing against RPL Attacks in Internet of Things\n\n## One-line Summary\n이 연구는 RPL 기반 IoT에서 신뢰 기반 모델을 사용하여 보안 라우팅을 향상시켜 랭크 및 블랙홀 공격에 대한 방어를 제공합니다.\n\n## Problem\nIoT 네트워크에서 RPL은 다양한 공격에 취약하며, 이는 라우팅 보안을 향상시키기 위한 해결책이 필요합니다.\n\n## Key Idea\n이 연구는 IoT 네트워크에서 RPL 라우팅 보안을 향상시키기 위해 신뢰 기반 접근 방식을 제안합니다.\n\n## Method\n이 연구에서는 신뢰 모델을 사용하여 랭크 및 블랙홀 공격에 대한 방어를 제공하고, 이 모델을 RPL 라우팅 작업과 통합합니다.\n\n## Experiment\n- **Simulator**: ContikiOS/Cooja\n- **Metric**: 토폴로지 안정성, 스루풋, 패킷 손실율, 전력 소비\n\n## Results\n제안된 SMTrust 모델은 기존 접근 방식보다 뛰어난 성능을 보여 RPL 랭크 및 블랙홀 공격에 대한 보안을 강화하며, 네트워크 성능을 향상시킵니다.\n\n## Contributions\n- 자원이 제한된 IoT 노드 간의 라우팅을 통한 안전한 통신 제공\n- 자원 제한된 IoT 노드로 구성된 P2P 분산 네트워크와의 통합이 가능\n- IoT에서 안전하고 신뢰할 수 있으며 신뢰할 수 있는 통신을 강화\n\n## Limitations\nN/A\n\n## Future Work\n신뢰 기반 모델의 더 넓은 범위의 공격에 대한 확장 가능성 및 다른 IoT 응용 분야에서의 적용 가능성 탐구\n\n## Keywords\nIoT, RPL, trust-based, secure routing, Rank attack, Blackhole attack, SMTrust\n"
+  "obsidian_markdown": "# A Trust-Based Model for Secure Routing against RPL Attacks in Internet of Things\n\n## One-line Summary\n이 연구는 IoT 네트워크의 보안을 강화하기 위해 RPL 트러스트 기반 모델(SMTrust)을 제안하여 Rank 및 Blackhole 공격에 대한 방어를 강화하는 것을 기여한다.\n\n## Problem\nRPL 기반 IoT 네트워크는 여러 공격에 취약하며, 특히 Rank 및 Blackhole 공격이 문제가 된다.\n\n## Key Idea\nSMTrust는 특별히 선택된 트러스트 요소와 메트릭, 이동성 기반 메트릭을 포함하여 RPL의 보안을 강화한다.\n\n## Method\nSMTrust는 RPL과 트러스트 기반 모델을 통합하여 Rank 및 Blackhole 공격을 방어하는 방법을 제안한다.\n\n## Experiment\n- **Simulator**: ContikiOS/Cooja\n- **Metric**: 토폴로지 안정성, 통신량, 패킷 손실률, 전력 소비\n\n## Results\nSMTrust는 기존 접근 방식보다 46%의 토폴로지 안정성 향상, 45%의 패킷 손실률 감소, 35%의 통신량 증가, 2.3%의 전력 소비 증가를 보인다.\n\n## Contributions\n- 자원 제약 IoT 노드 간의 안전한 통신을 제공한다.\n- 자원 제약 IoT 노드가 포함된 P2P 분산 네트워크에 통합이 적합하다.\n- IoT 내 안전하고 신뢰할 수 있으며 신뢰성 있는 통신을 강화한다.\n\n## Limitations\n이동성을 충분히 고려하지 않은 기존 트러스트 기반 솔루션의 부족함\n\n## Future Work\n자원 이용 최적화를 고려한 RPL 라우팅 공격에 대한 트러스트 기반 보안 방법을 탐구한다.\n\n## Keywords\ninternet of things, IoT security, trust, RPL attacks, routing attacks, rank, blackhole\n"
 }

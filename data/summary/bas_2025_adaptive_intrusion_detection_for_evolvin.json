@@ -1,25 +1,27 @@
 {
   "title": "Adaptive Intrusion Detection for Evolving RPL IoT Attacks Using Incremental Learning",
-  "summary": "이 논문은 증분 학습을 사용하여 RPL 기반 IoT 네트워크의 진화하는 침입 탐지에 적응적인 접근 방식을 제시한다.",
-  "problem": "RPL IoT 네트워크의 진화하는 침입에 대한 탐지가 필요하며, 전통적인 대책은 새로운 또는 제로데이 공격에 대해 실패한다.",
-  "key_idea": "증분 학습을 사용하여 새로운 공격 클래스의 탐지 성능을 복원하고 이전에 학습된 위협을 잊지 않도록 하며, 전체 재학습보다 훈련 시간을 줄이는 것.",
-  "method": "5가지 모델 패밀리를 체계적으로 평가하며, 앙상블 모델과 딥러닝 모델을 포함한다.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 탐지 성능, 잊음 행동, 효율성",
-  "results": "증분 학습은 새로운 공격 클래스에 대한 탐지 성능을 복원하고, 이전에 학습된 위협을 잊지 않으며, 전체 재학습보다 훈련 시간을 줄인다.",
+  "summary": "이 논문은 RPL 기반 IoT 네트워크에서 증분 학습을 사용하여 진화하는 침입 탐지에 대한 적응적 전략을 제시한다.",
+  "problem": "RPL의 가벼운 설계는 다양한 라우팅 계층 공격에 노출되며, 새로운 공격에 대해 전통적인 방어 수단이 불충분하다.",
+  "key_idea": "RPL 기반 네트워크에서 증분 학습을 사용하여 새로운 공격을 탐지하고 이전에 학습한 위협의 재앙적인 기억 상실을 완화하는 것.",
+  "method": "증분 학습, 앙상블 모델, 딥러닝 모델을 사용한 시스템적 평가",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: N/A\n- **Metric**: 탐지 성능 복원, 재앙적 기억 상실 완화, 훈련 시간 단축",
+  "results": "새로운 공격 클래스에서 탐지 성능 복원, 이전에 학습한 위협의 기억 상실 감소, 전체 재학습에 비해 훈련 시간 단축",
   "contributions": [
-    "증분 학습을 사용한 RPL 기반 IoT 네트워크의 적응적인 침입 탐지.",
-    "5가지 모델 패밀리의 체계적인 평가를 통한 탐지 성능 복원.",
-    "종합적인 증거 제공: 증분 학습은 RPL 기반 IoT 네트워크에서 탐지 탄력성을 유지하는 확장 가능한 경로를 제공한다."
+    "증분 학습을 사용하여 RPL 기반 IoT 네트워크에서 적응적 침입 탐지를 실용적으로 제안.",
+    "다양한 모델과 공격 특정 분석을 결합하여 증분 학습의 시스템적 증거 제공.",
+    "증분 학습을 통해 RPL 기반 IoT 네트워크의 탄력적 침입 탐지 유지를 위한 확장 가능한 경로 제시."
   ],
-  "limitations": "실험 데이터셋과 시뮬레이터가 명시되지 않았으며, 구현의 실제 환경에서의 효과는 검증되지 않았다.",
-  "future_work": "실제 환경에서의 증분 학습 방법의 확장과 다양한 IoT 시나리오에서의 적용.",
+  "limitations": "논문에서는 데이터셋, 시뮬레이터 또는 특정 실험 세부 정보가 명시되지 않았다.",
+  "future_work": "RPL 기반 IoT 네트워크에서 증분 학습의 보다 광범위한 적용 가능성 탐색 및 모델 성능 개선.",
   "keywords": [
+    "Internet of Things (IoT)",
     "RPL",
-    "IoT",
-    "Intrusion Detection",
-    "Incremental Learning",
-    "Machine Learning",
-    "Network Security"
+    "incremental learning",
+    "transfer learning",
+    "intrusion detection",
+    "machine learning",
+    "deep learning",
+    "ensemble models"
   ],
-  "obsidian_markdown": "# Adaptive Intrusion Detection for Evolving RPL IoT Attacks Using Incremental Learning\n\n## One-line Summary\n이 논문은 증분 학습을 사용하여 RPL 기반 IoT 네트워크의 진화하는 침입 탐지에 적응적인 접근 방식을 제시한다.\n\n## Problem\nRPL IoT 네트워크의 진화하는 침입에 대한 탐지가 필요하며, 전통적인 대책은 새로운 또는 제로데이 공격에 대해 실패한다.\n\n## Key Idea\n증분 학습을 사용하여 새로운 공격 클래스의 탐지 성능을 복원하고 이전에 학습된 위협을 잊지 않도록 하며, 전체 재학습보다 훈련 시간을 줄이는 것.\n\n## Method\n5가지 모델 패밀리를 체계적으로 평가하며, 앙상블 모델과 딥러닝 모델을 포함한다.\n\n## Experiment\n- **Metric**: 탐지 성능, 잊음 행동, 효율성\n\n## Results\n증분 학습은 새로운 공격 클래스에 대한 탐지 성능을 복원하고, 이전에 학습된 위협을 잊지 않으며, 전체 재학습보다 훈련 시간을 줄인다.\n\n## Contributions\n- 증분 학습을 사용한 RPL 기반 IoT 네트워크의 적응적인 침입 탐지.\n- 5가지 모델 패밀리의 체계적인 평가를 통한 탐지 성능 복원.\n- 종합적인 증거 제공: 증분 학습은 RPL 기반 IoT 네트워크에서 탐지 탄력성을 유지하는 확장 가능한 경로를 제공한다.\n\n## Limitations\n실험 데이터셋과 시뮬레이터가 명시되지 않았으며, 구현의 실제 환경에서의 효과는 검증되지 않았다.\n\n## Future Work\n실제 환경에서의 증분 학습 방법의 확장과 다양한 IoT 시나리오에서의 적용.\n\n## Keywords\nRPL, IoT, Intrusion Detection, Incremental Learning, Machine Learning, Network Security\n"
+  "obsidian_markdown": "# Adaptive Intrusion Detection for Evolving RPL IoT Attacks Using Incremental Learning\n\n## One-line Summary\n이 논문은 RPL 기반 IoT 네트워크에서 증분 학습을 사용하여 진화하는 침입 탐지에 대한 적응적 전략을 제시한다.\n\n## Problem\nRPL의 가벼운 설계는 다양한 라우팅 계층 공격에 노출되며, 새로운 공격에 대해 전통적인 방어 수단이 불충분하다.\n\n## Key Idea\nRPL 기반 네트워크에서 증분 학습을 사용하여 새로운 공격을 탐지하고 이전에 학습한 위협의 재앙적인 기억 상실을 완화하는 것.\n\n## Method\n증분 학습, 앙상블 모델, 딥러닝 모델을 사용한 시스템적 평가\n\n## Experiment\n- **Metric**: 탐지 성능 복원, 재앙적 기억 상실 완화, 훈련 시간 단축\n\n## Results\n새로운 공격 클래스에서 탐지 성능 복원, 이전에 학습한 위협의 기억 상실 감소, 전체 재학습에 비해 훈련 시간 단축\n\n## Contributions\n- 증분 학습을 사용하여 RPL 기반 IoT 네트워크에서 적응적 침입 탐지를 실용적으로 제안.\n- 다양한 모델과 공격 특정 분석을 결합하여 증분 학습의 시스템적 증거 제공.\n- 증분 학습을 통해 RPL 기반 IoT 네트워크의 탄력적 침입 탐지 유지를 위한 확장 가능한 경로 제시.\n\n## Limitations\n논문에서는 데이터셋, 시뮬레이터 또는 특정 실험 세부 정보가 명시되지 않았다.\n\n## Future Work\nRPL 기반 IoT 네트워크에서 증분 학습의 보다 광범위한 적용 가능성 탐색 및 모델 성능 개선.\n\n## Keywords\nInternet of Things (IoT), RPL, incremental learning, transfer learning, intrusion detection, machine learning, deep learning, ensemble models\n"
 }

@@ -1,18 +1,18 @@
 {
   "title": "Detecting the RPL Version Number Attack in IoT Networks using Deep Learning Models",
-  "summary": "이 연구는 IoT 네트워크에서 RPL 버전 번호 공격을 LSTM 및 DNN과 같은 딥러닝 모델을 사용하여 감지하는 새로운 접근 방식을 제시한다.",
-  "problem": "RPL 버전 번호 공격은 IoT 네트워크 보안에 심각한 위협을 가하며, 전통적인 침입 탐지 시스템이 이러한 고급 공격에 대응하는 데 어려움을 겪는다.",
-  "key_idea": "RPL 버전 번호 공격을 효과적으로 감지하기 위해 LSTM과 DNN과 같은 딥러닝 모델을 활용하는 것이다.",
-  "method": "Cooja 시뮬레이터를 사용하여 공격 시뮬레이션 데이터 세트를 생성하고, LSTM 및 DNN 모델을 이 데이터 세트로 학습하여 복잡한 공격 패턴을 학습하는 방법을 사용했다.",
-  "experiment": "- **Dataset**: Cooja 시뮬레이터를 사용하여 생성된 RPL 버전 번호 공격 시뮬레이션 데이터 세트\n- **Simulator**: Cooja\n- **Metric**: 정확도률",
-  "results": "실험 결과, 딥러닝 모델이 전통적인 머신러닝 알고리즘보다 우수한 정확도를 보여 IoT 네트워크 침입 탐지에서 뛰어난 성능을 발휘했다.",
+  "summary": "이 연구는 LSTM 및 DNN을 사용하여 IoT 네트워크의 RPL 버전 번호 공격을 감지하는 새로운 접근 방식을 제시합니다.",
+  "problem": "IoT 네트워크에서 발생하는 RPL 버전 번호 공격을 효과적으로 감지하는 것입니다.",
+  "key_idea": "Cooja 시뮬레이터를 사용하여 데이터셋을 생성하고 LSTM 및 DNN 모델을 통해 복잡한 공격 패턴을 학습하여 RPL 버전 번호 공격을 감지합니다.",
+  "method": "Cooja 시뮬레이터를 사용하여 공격 시뮬레이션 데이터셋을 생성하고, LSTM(Long Short-Term Memory) 및 DNN(Deep Neural Networks)을 통해 데이터를 학습 및 분석합니다.",
+  "experiment": "- **Dataset**: Cooja 시뮬레이터를 통해 생성된 RPL 버전 번호 공격 데이터셋\n- **Simulator**: Cooja 시뮬레이터\n- **Metric**: 정확도율 및 전통적인 기계학습 알고리즘과의 비교",
+  "results": "실험 결과는 LSTM 및 DNN 모델이 전통적인 기계학습 알고리즘보다 뛰어난 정확도를 보여주며, IoT 네트워크 보안을 강화합니다.",
   "contributions": [
-    "RPL 버전 번호 공격을 감지하기 위한 LSTM 및 DNN과 같은 딥러닝 모델을 사용한 새로운 접근 방식을 제시한다.",
-    "Cooja 시뮬레이터를 사용하여 RPL 버전 번호 공격을 시뮬레이션한 데이터 세트를 생성한다.",
-    "딥러닝 모델이 전통적인 머신러닝 알고리즘보다 우수한 성능을 보여 IoT 네트워크 보안을 강화하는 데 기여한다."
+    "IoT 네트워크에서 RPL 버전 번호 공격을 감지하기 위한 LSTM 및 DNN 모델 사용",
+    "Cooja 시뮬레이터를 통한 공격 시뮬레이션 데이터셋 생성",
+    "전통적인 기계학습 알고리즘에 비해 뛰어난 감지 정확도를 달성"
   ],
-  "limitations": "이 연구는 특정 시뮬레이션 환경에서의 실험에 국한되어 있으며, 실제 IoT 환경에서의 성능은 더 광범위한 검증이 필요할 수 있다.",
-  "future_work": "실제 IoT 환경에서의 성능 검증 및 다양한 공격 시나리오에 대한 딥러닝 모델의 적용을 확장하는 것이 추천된다.",
+  "limitations": "실험은 특정한 시뮬레이션 환경에서만 수행되었으며, 실제 환경에서의 테스트는 추가 연구가 필요합니다.",
+  "future_work": "다양한 실제 IoT 환경에서의 테스트 및 다른 공격 유형에 대한 모델 적용 가능성을 조사합니다.",
   "keywords": [
     "Attack",
     "deep learning",
@@ -23,5 +23,5 @@
     "security",
     "version number"
   ],
-  "obsidian_markdown": "# Detecting the RPL Version Number Attack in IoT Networks using Deep Learning Models\n\n## One-line Summary\n이 연구는 IoT 네트워크에서 RPL 버전 번호 공격을 LSTM 및 DNN과 같은 딥러닝 모델을 사용하여 감지하는 새로운 접근 방식을 제시한다.\n\n## Problem\nRPL 버전 번호 공격은 IoT 네트워크 보안에 심각한 위협을 가하며, 전통적인 침입 탐지 시스템이 이러한 고급 공격에 대응하는 데 어려움을 겪는다.\n\n## Key Idea\nRPL 버전 번호 공격을 효과적으로 감지하기 위해 LSTM과 DNN과 같은 딥러닝 모델을 활용하는 것이다.\n\n## Method\nCooja 시뮬레이터를 사용하여 공격 시뮬레이션 데이터 세트를 생성하고, LSTM 및 DNN 모델을 이 데이터 세트로 학습하여 복잡한 공격 패턴을 학습하는 방법을 사용했다.\n\n## Experiment\n- **Dataset**: Cooja 시뮬레이터를 사용하여 생성된 RPL 버전 번호 공격 시뮬레이션 데이터 세트\n- **Simulator**: Cooja\n- **Metric**: 정확도률\n\n## Results\n실험 결과, 딥러닝 모델이 전통적인 머신러닝 알고리즘보다 우수한 정확도를 보여 IoT 네트워크 침입 탐지에서 뛰어난 성능을 발휘했다.\n\n## Contributions\n- RPL 버전 번호 공격을 감지하기 위한 LSTM 및 DNN과 같은 딥러닝 모델을 사용한 새로운 접근 방식을 제시한다.\n- Cooja 시뮬레이터를 사용하여 RPL 버전 번호 공격을 시뮬레이션한 데이터 세트를 생성한다.\n- 딥러닝 모델이 전통적인 머신러닝 알고리즘보다 우수한 성능을 보여 IoT 네트워크 보안을 강화하는 데 기여한다.\n\n## Limitations\n이 연구는 특정 시뮬레이션 환경에서의 실험에 국한되어 있으며, 실제 IoT 환경에서의 성능은 더 광범위한 검증이 필요할 수 있다.\n\n## Future Work\n실제 IoT 환경에서의 성능 검증 및 다양한 공격 시나리오에 대한 딥러닝 모델의 적용을 확장하는 것이 추천된다.\n\n## Keywords\nAttack, deep learning, detection, IoT, machine learning, RPL, security, version number\n"
+  "obsidian_markdown": "# Detecting the RPL Version Number Attack in IoT Networks using Deep Learning Models\n\n## One-line Summary\n이 연구는 LSTM 및 DNN을 사용하여 IoT 네트워크의 RPL 버전 번호 공격을 감지하는 새로운 접근 방식을 제시합니다.\n\n## Problem\nIoT 네트워크에서 발생하는 RPL 버전 번호 공격을 효과적으로 감지하는 것입니다.\n\n## Key Idea\nCooja 시뮬레이터를 사용하여 데이터셋을 생성하고 LSTM 및 DNN 모델을 통해 복잡한 공격 패턴을 학습하여 RPL 버전 번호 공격을 감지합니다.\n\n## Method\nCooja 시뮬레이터를 사용하여 공격 시뮬레이션 데이터셋을 생성하고, LSTM(Long Short-Term Memory) 및 DNN(Deep Neural Networks)을 통해 데이터를 학습 및 분석합니다.\n\n## Experiment\n- **Dataset**: Cooja 시뮬레이터를 통해 생성된 RPL 버전 번호 공격 데이터셋\n- **Simulator**: Cooja 시뮬레이터\n- **Metric**: 정확도율 및 전통적인 기계학습 알고리즘과의 비교\n\n## Results\n실험 결과는 LSTM 및 DNN 모델이 전통적인 기계학습 알고리즘보다 뛰어난 정확도를 보여주며, IoT 네트워크 보안을 강화합니다.\n\n## Contributions\n- IoT 네트워크에서 RPL 버전 번호 공격을 감지하기 위한 LSTM 및 DNN 모델 사용\n- Cooja 시뮬레이터를 통한 공격 시뮬레이션 데이터셋 생성\n- 전통적인 기계학습 알고리즘에 비해 뛰어난 감지 정확도를 달성\n\n## Limitations\n실험은 특정한 시뮬레이션 환경에서만 수행되었으며, 실제 환경에서의 테스트는 추가 연구가 필요합니다.\n\n## Future Work\n다양한 실제 IoT 환경에서의 테스트 및 다른 공격 유형에 대한 모델 적용 가능성을 조사합니다.\n\n## Keywords\nAttack, deep learning, detection, IoT, machine learning, RPL, security, version number\n"
 }

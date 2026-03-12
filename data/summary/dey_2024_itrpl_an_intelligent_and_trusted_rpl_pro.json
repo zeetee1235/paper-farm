@@ -1,27 +1,27 @@
 {
   "title": "iTRPL: An Intelligent and Trusted RPL Protocol based on Multi-Agent Reinforcement Learning",
-  "summary": "이 연구는 RPL이 내부 위협으로부터 보호하기 위해 신뢰 기반의 iTRPL 프레임워크를 제안하며, 이는 다중 에이전트 강화 학습(MARL)을 활용하여 DODAG 내부의 정직하고 악성 노드를 구분하는 것입니다.",
-  "problem": "RPL은 내부 위협에 취약하여, 단단한 보안 조치만으로는 이러한 위협을 방지할 수 없습니다.",
-  "key_idea": "신뢰 기반의 iTRPL 프레임워크를 제안하여 DODAG 내부의 정직한 노드와 악성 노드를 구분하고, MARL을 사용하여 자율적인 결정을 내립니다.",
-  "method": "다중 에이전트 강화 학습(MARL)을 사용하여 부모 노드가 자식 노드의 신뢰도를 계산하고 DODAG에 참여할 수 있는지를 결정합니다. 또한 루트가 모든 노드의 보상/처벌을 합산하고 ϵ-Greedy MARL 모듈을 사용하여 DODAG을 유지하거나 수정할지를 결정합니다.",
-  "experiment": "- **Dataset**: N/A\n- **Simulator**: 시뮬레이션 기반 성능 평가\n- **Metric**: 적절한 결정을 내리는 능력을 학습하는 것",
-  "results": "iTRPL은 시간이 지남에 따라 최적의 결정을 내리는 능력을 학습한다는 것을 시뮬레이션 기반 성능 평가가 보여줍니다.",
+  "summary": "이 논문은 RPL에 행동 기반 신뢰 메커니즘을 통합하여 내부자 공격에 대응하는 iTRPL을 제안합니다.",
+  "problem": "RPL은 내부자 공격에 취약하여 네트워크 성능에 영향을 미치고, 표준 보안 메커니즘이 이를 완전히 방지할 수 없습니다.",
+  "key_idea": "신뢰 기반의 iTRPL 프레임워크를 통해 DODAG 내의 정직한 노드와 악성 노드를 구별하고, MARL을 사용하여 자율적인 결정을 내립니다.",
+  "method": "행동 기반 신뢰 점수를 사용하여 iTRPL 프레임워크를 구축하고, ϵ-Greedy Multi-Agent Reinforcement Learning (MARL) 모델을 사용하여 DODAG의 유지 또는 수정 결정을 내립니다.",
+  "experiment": "- **Dataset**: N/A\n- **Simulator**: 시뮬레이션 기반 성능 평가\n- **Metric**: N/A",
+  "results": "iTRPL은 시간이 지남에 따라 최적의 결정을 내리며, 내부자 공격으로 인한 위협을 완화하는 것을 시뮬레이션 기반 분석을 통해 입증합니다.",
   "contributions": [
-    "RPL에 대한 신뢰 기반 보안 접근 방식인 iTRPL을 제안합니다.",
-    "다중 에이전트 강화 학습(MARL)을 통합하여 DODAG 내부의 악성 노드를 식별합니다.",
-    "시뮬레이션 기반 성능 평가를 통해 iTRPL의 효과를 검증합니다."
+    "RPL에 행동 기반 신뢰 메커니즘을 통합한 iTRPL 프레임워크를 제안합니다.",
+    "DODAG의 유지 또는 수정 결정을 내리기 위해 ϵ-Greedy MARL 모델을 도입합니다.",
+    "시뮬레이션 기반 평가를 통해 iTRPL이 시간이 지남에 따라 최적의 결정을 내릴 수 있음을 입증합니다."
   ],
-  "limitations": "현재 단일 DODAG에 초점을 맞추고 있으며, 실제 환경에서 여러 연결된 DODAG을 고려하지 않았습니다.",
-  "future_work": "실제 환경에서 여러 연결된 DODAG을 포함하는 환경을 확장하여 성능을 연구할 계획입니다.",
+  "limitations": "실제 시나리오에서 여러 연결된 DODAG를 고려하지 않았으며, 모든 종류의 내부자 공격을 완전히 방지하지는 못할 수 있습니다.",
+  "future_work": "실제 환경에서 여러 연결된 DODAG를 포함하여 iTRPL의 범위를 확장하고 성능을 평가할 계획입니다.",
   "keywords": [
     "RPL",
     "Trust-based systems",
     "Ad hoc networks",
     "Multi-agent reinforcement learning",
-    "DODAG",
     "IoT",
-    "Security",
+    "MARL",
+    "DODAG",
     "Insider attacks"
   ],
-  "obsidian_markdown": "# iTRPL: An Intelligent and Trusted RPL Protocol based on Multi-Agent Reinforcement Learning\n\n## One-line Summary\n이 연구는 RPL이 내부 위협으로부터 보호하기 위해 신뢰 기반의 iTRPL 프레임워크를 제안하며, 이는 다중 에이전트 강화 학습(MARL)을 활용하여 DODAG 내부의 정직하고 악성 노드를 구분하는 것입니다.\n\n## Problem\nRPL은 내부 위협에 취약하여, 단단한 보안 조치만으로는 이러한 위협을 방지할 수 없습니다.\n\n## Key Idea\n신뢰 기반의 iTRPL 프레임워크를 제안하여 DODAG 내부의 정직한 노드와 악성 노드를 구분하고, MARL을 사용하여 자율적인 결정을 내립니다.\n\n## Method\n다중 에이전트 강화 학습(MARL)을 사용하여 부모 노드가 자식 노드의 신뢰도를 계산하고 DODAG에 참여할 수 있는지를 결정합니다. 또한 루트가 모든 노드의 보상/처벌을 합산하고 ϵ-Greedy MARL 모듈을 사용하여 DODAG을 유지하거나 수정할지를 결정합니다.\n\n## Experiment\n- **Simulator**: 시뮬레이션 기반 성능 평가\n- **Metric**: 적절한 결정을 내리는 능력을 학습하는 것\n\n## Results\niTRPL은 시간이 지남에 따라 최적의 결정을 내리는 능력을 학습한다는 것을 시뮬레이션 기반 성능 평가가 보여줍니다.\n\n## Contributions\n- RPL에 대한 신뢰 기반 보안 접근 방식인 iTRPL을 제안합니다.\n- 다중 에이전트 강화 학습(MARL)을 통합하여 DODAG 내부의 악성 노드를 식별합니다.\n- 시뮬레이션 기반 성능 평가를 통해 iTRPL의 효과를 검증합니다.\n\n## Limitations\n현재 단일 DODAG에 초점을 맞추고 있으며, 실제 환경에서 여러 연결된 DODAG을 고려하지 않았습니다.\n\n## Future Work\n실제 환경에서 여러 연결된 DODAG을 포함하는 환경을 확장하여 성능을 연구할 계획입니다.\n\n## Keywords\nRPL, Trust-based systems, Ad hoc networks, Multi-agent reinforcement learning, DODAG, IoT, Security, Insider attacks\n"
+  "obsidian_markdown": "# iTRPL: An Intelligent and Trusted RPL Protocol based on Multi-Agent Reinforcement Learning\n\n## One-line Summary\n이 논문은 RPL에 행동 기반 신뢰 메커니즘을 통합하여 내부자 공격에 대응하는 iTRPL을 제안합니다.\n\n## Problem\nRPL은 내부자 공격에 취약하여 네트워크 성능에 영향을 미치고, 표준 보안 메커니즘이 이를 완전히 방지할 수 없습니다.\n\n## Key Idea\n신뢰 기반의 iTRPL 프레임워크를 통해 DODAG 내의 정직한 노드와 악성 노드를 구별하고, MARL을 사용하여 자율적인 결정을 내립니다.\n\n## Method\n행동 기반 신뢰 점수를 사용하여 iTRPL 프레임워크를 구축하고, ϵ-Greedy Multi-Agent Reinforcement Learning (MARL) 모델을 사용하여 DODAG의 유지 또는 수정 결정을 내립니다.\n\n## Experiment\n- **Simulator**: 시뮬레이션 기반 성능 평가\n\n## Results\niTRPL은 시간이 지남에 따라 최적의 결정을 내리며, 내부자 공격으로 인한 위협을 완화하는 것을 시뮬레이션 기반 분석을 통해 입증합니다.\n\n## Contributions\n- RPL에 행동 기반 신뢰 메커니즘을 통합한 iTRPL 프레임워크를 제안합니다.\n- DODAG의 유지 또는 수정 결정을 내리기 위해 ϵ-Greedy MARL 모델을 도입합니다.\n- 시뮬레이션 기반 평가를 통해 iTRPL이 시간이 지남에 따라 최적의 결정을 내릴 수 있음을 입증합니다.\n\n## Limitations\n실제 시나리오에서 여러 연결된 DODAG를 고려하지 않았으며, 모든 종류의 내부자 공격을 완전히 방지하지는 못할 수 있습니다.\n\n## Future Work\n실제 환경에서 여러 연결된 DODAG를 포함하여 iTRPL의 범위를 확장하고 성능을 평가할 계획입니다.\n\n## Keywords\nRPL, Trust-based systems, Ad hoc networks, Multi-agent reinforcement learning, IoT, MARL, DODAG, Insider attacks\n"
 }
